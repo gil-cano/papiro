@@ -11,6 +11,8 @@ To learn how to update and manage this documentation and its tools, read `??? <h
 Building The Documentation
 --------------------------
 
+::
+
   $ git clone git://github.com/gil-cano/papiro.git
 
 After cloning this package from the repository, do the following::
@@ -39,3 +41,17 @@ License
 -------
 
 Copyright © 2011-2012 Gildardo Bautista.
+
+https://github.com/collective/collective.developermanual/blob/master/README.rst
+
+https://github.com/miohtama/corneti.recipes.codeintel
+http://opensourcehacker.com/page/3/
+https://github.com/cewing/templer.manual
+http://docs.diazo.org/en/latest/introduction.html
+http://pypi.python.org/pypi/plone.app.theming
+http://docs.diazo.org/en/latest/quickstart.html
+http://mattkersley.com/responsive/
+http://plone.org/products/beyondskins.responsive/#id10
+http://lettuce.it/
+http://opendatastructures.org/
+
