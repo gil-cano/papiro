@@ -3,17 +3,19 @@ Introduction
 
 This package provides the source for documentation of some tools used for Plone development.
 
-To read the documentation (formatted) in your web browser, please head to `??? <>`_.
+To read the documentation (formatted) in your web browser, please head to `??? <http://localhost>`_.
 
-To learn how to update and manage this documentation and its tools, read `??? <>`_.
+To learn how to update and manage this documentation and its tools, read `??? <http://localhost>`_.
 
 
 Building The Documentation
 --------------------------
 
+  $ git clone git://github.com/gil-cano/papiro.git
+
 After cloning this package from the repository, do the following::
 
-  $ cd templer.maual  # the location of your local copy
+  $ cd papiro            # the location of your local copy
   $ python bootstrap.py  # must be Python 2.6 or 2.7
   $ ../bin/buildout
   $ ../bin/sphinx
