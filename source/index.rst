@@ -16,6 +16,8 @@ Plone add-ons
    :maxdepth: 2
 
    collective-elections
+   sublimeText2
+
 
 Indices and tables
 ==================
