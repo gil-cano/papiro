@@ -1,22 +1,52 @@
-.. papiro documentation master file, created by
-   sphinx-quickstart on Tue Jul 31 15:28:43 2012.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+.. line-block::
 
+    WARNING: If you are reading this on GitHub, DON'T! Read it on ReadTheDocs:
+    http://papiro.readthedocs.org/en/latest/index.html so you have working
+    references and proper formatting.
+
+**********************
 InfoMatem System Notes
-======================
+**********************
 
-Table of Content
-================
+The intention of this package is to be a guide to further development.
 
-Plone add-ons
--------------
+.. warning::
+
+    This package is still under heavy development.
+
+Zope
+====
 
 .. toctree::
    :maxdepth: 2
 
-   collective-elections
-   sublimeText2
+   catalog.rst
+
+Plone add-ons
+=============
+
+.. toctree::
+   :maxdepth: 2
+
+   collective-elections.rst
+
+
+Development tools
+=================
+
+.. toctree::
+   :maxdepth: 2
+
+   sublimeText2.rst
+
+
+Administration tools
+====================
+
+.. toctree::
+   :maxdepth: 2
+
+   munin.rst
 
 
 Indices and tables
