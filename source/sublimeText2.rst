@@ -1,6 +1,8 @@
 Sublime Text 2
 ==============
 
+.. _chapter_content:
+
 Linea de comandos en OS X
 -------------------------
 
@@ -58,10 +60,52 @@ SublimeCodeIntel
 
 `SublimeCodeIntel <https://github.com/Kronuz/SublimeCodeIntel>`_
 
-Instalacion: ⌘+shift+p → “install” → ENTER → “codeintel” → ENTER → Restart ST2
 
 SublimeLinter
 -------------
+SublimeLinter is a plugin that supports "lint" programs (known as "linters").
+SublimeLinter highlights lines of code the linter deems to contain (potential) errors.
+It also supports highlighting special annotations (for example: TODO) so that they can be quickly located.
+
+C/C++ - lint via cppcheck
+CSS - lint via built-in csslint
+HTML - lint via tidy
+Java - lint via javac -Xlint
+Javascript - lint via built in jshint
+Python - lint via built-in pylint 
+
+Javascript-based linters
+~~~~~~~~~~~~~~~~~~~~~~~~
+If you plan to edit files that use a Javascript-based linter (Javascript, CSS), your system must have a Javascript engine installed.
+On Mac OS X, you must install Node.js if you plan to edit Javascript or CSS files that use non-ASCII characters in strings or comments.
+
+instalamos node engine for javascript linters (jshint, csslint)
+
+Node (v0.8.12) was installed at
+
+   /usr/local/bin/node
+
+npm was installed at
+
+   /usr/local/bin/npm
+
+Make sure that /usr/local/bin is in your $PATH.
+
+c linter
+~~~~~~~~
+instalamos cpplint.py in local/bin for c/c++ linter
+
+
+add these adjustments to the SublimeLinter User Settings file. 
+Instalacion: ⌘+shift+p → “install” → ENTER → “codeintel” → ENTER → Restart ST2
+
+change the linter language for C and C++ to c_cpplint via sublimelinter_syntax_map
+
+
+configuración
+~~~~~~~~~~~~~
+Preferences->Package Settings->SublimeLinter->Settings - User
+
 
 Sublime HTMLPrettify
 --------------------
