@@ -50,6 +50,29 @@ Starting Munin-Node: started beforehand.
 Setting up munin-plugins-extra (2.0.6-1~bpo60+1) ...
 
 
+/etc/munin/munin-node.conf
+
+cidr_allow 132.248.17.41/32
+
+
+/etc/munin/munin.conf
+
+# a simple host tree
+[localhost.localdomain]
+    address 127.0.0.1
+    use_node_name yes
+
+[caoba.matem.unam.mx]
+    address 127.0.0.1
+    use_node_name yes
+
+[jacaranda.matem.unam.mx]
+    address 132.248.17.205
+    use_node_name yes
+
+
+
+
 http://packages.debian.org/squeeze-backports/munin
 http://backports-master.debian.org/Instructions/
 
