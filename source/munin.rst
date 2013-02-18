@@ -4,24 +4,29 @@ Munin (Debian squeeze)
 Add backports to your sources.list
 ----------------------------------
 
-* Add this line
-deb http://backports.debian.org/debian-backports squeeze-backports main
-to your sources.list (or add a new file to /etc/apt/sources.list.d/)
-* Run apt-get update
+* Add this line to your sources.list (or add a new file to /etc/apt/sources.list.d/) ::
+
+    deb http://backports.debian.org/debian-backports squeeze-backports main
+
+* Run ::
+
+    $ apt-get update
 
 Install a package from backports
 --------------------------------
 
-$ aptitude -t squeeze-backports show munin-node
-Package: munin-node                      
-State: not installed
-Version: 2.0.6-1~bpo60+1
-Priority: optional
-Section: net
-Maintainer: Munin Debian Maintainers <packaging@munin-monitoring.org>
-Uncompressed Size: 430 k
-Depends: perl, libnet-server-perl, procps, adduser, lsb-base (>= 3.2-4), gawk, munin-common (>= 2.0.6-1~bpo60+1), munin-plugins-core
-Recommends: libnet-snmp-perl, munin-plugins-extra
+.. sourcecode:: sh
+
+    $ aptitude -t squeeze-backports show munin-node
+    Package: munin-node                      
+    State: not installed
+    Version: 2.0.6-1~bpo60+1
+    Priority: optional
+    Section: net
+    Maintainer: Munin Debian Maintainers <packaging@munin-monitoring.org>
+    Uncompressed Size: 430 k
+    Depends: perl, libnet-server-perl, procps, adduser, lsb-base (>= 3.2-4), gawk, munin-common (>= 2.0.6-1~bpo60+1), munin-plugins-core
+    Recommends: libnet-snmp-perl, munin-plugins-extra
 
 
 $ aptitude -t squeeze-backports install munin-node
