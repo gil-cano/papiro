@@ -14,6 +14,14 @@ The intention of this package is to be a guide to further development.
 
     This package is still under heavy development.
 
+Python
+======
+
+.. toctree::
+   :maxdepth: 2
+
+   python_patterns.rst
+
 Zope
 ====
 
