@@ -10,7 +10,7 @@ InfoMatem System Notes
 
 The intention of this package is to be a guide to further development.
 
-.. warning::
+.. note::
 
     This package is still under heavy development.
 
@@ -39,21 +39,14 @@ Plone add-ons
    collective-elections.rst
 
 
-Development tools
-=================
+Development tools and Administrations tools
+===========================================
 
 .. toctree::
    :maxdepth: 2
 
    sublimeText2.rst
-
-
-Administration tools
-====================
-
-.. toctree::
-   :maxdepth: 2
-
+   jenkins.rst
    munin.rst
 
 
