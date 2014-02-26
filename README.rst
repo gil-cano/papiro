@@ -1,7 +1,12 @@
-.. contents::
+Papiro
+=======
+
+This repository is a work in progress
+
+.. contents:: :local:
 
 Introduction
-============
+------------
 
 This package provides the source for documentation of some tools used for Plone development.
 
@@ -13,16 +18,15 @@ To learn how to update and manage this documentation and its tools, read `??? <h
 Building The Documentation
 --------------------------
 
-::
+0. Clone and bootstrap
 
-  $ git clone git://github.com/gil-cano/papiro.git
+   .. code:: bash
 
-After cloning this package from the repository, do the following::
+      $ git clone git://github.com/gil-cano/papiro.git
+      $ cd papiro
 
-  $ cd papiro            # the location of your local copy
-  $ python bootstrap.py  # must be Python 2.6 or 2.7
-  $ ../bin/buildout
-  $ ../bin/sphinx
+      $ python bootstrap.py
+      $ bin/buildout
 
 At the end of a successful build, you will see the location of the
 resulting HTML pages.
@@ -33,7 +37,7 @@ Continous Integration
 
 This code base uses Travis CI continuous integration to check the integrity of the source files.
 
-Failed manual complies will be reported 
+Failed manual complies will be reported
 
 See ``.travis.yml`` file for continuous integration settings.
 
