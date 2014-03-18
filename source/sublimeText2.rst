@@ -10,7 +10,7 @@ Sublime Text 2 incluye el comando, *subl*, para abrir archivos desde una termina
 
 .. code-block:: bash
 
-   $ ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ~/local/bin/subl
+   $ ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/local/bin/subl
 
 Agregamos el directorio local/bin a nuestro path en el archivo .profile
 
@@ -72,7 +72,7 @@ CSS - lint via built-in csslint
 HTML - lint via tidy
 Java - lint via javac -Xlint
 Javascript - lint via built in jshint
-Python - lint via built-in pylint 
+Python - lint via built-in pylint
 
 Javascript-based linters
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -96,7 +96,7 @@ c linter
 instalamos cpplint.py in local/bin for c/c++ linter
 
 
-add these adjustments to the SublimeLinter User Settings file. 
+add these adjustments to the SublimeLinter User Settings file.
 Instalacion: ⌘+shift+p → “install” → ENTER → “codeintel” → ENTER → Restart ST2
 
 change the linter language for C and C++ to c_cpplint via sublimelinter_syntax_map

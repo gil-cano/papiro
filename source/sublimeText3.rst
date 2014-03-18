@@ -1,0 +1,111 @@
+Sublime Text 3
+==============
+
+.. _chapter_content:
+
+Linea de comandos en OS X
+-------------------------
+
+Sublime Text 3 incluye el comando, *subl*, para abrir archivos desde una terminal.
+
+.. code-block:: bash
+
+   $ ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /opt/local/bin/subl
+
+Agregamos el directorio /opt/local/bin a nuestro path en el archivo .bash_profile
+
+.. code-block:: console
+
+   export PATH=/opt/local/bin/:$PATH
+
+User Settings
+-------------
+
+Configura tus preferencias abriendo *Preferences* -> *Settings - User*.
+
+.. code-block:: json
+
+    {
+        "ignored_packages":
+        [
+            "Vintage"
+        ],
+        "rulers":
+        [
+            // set text rulers so I can judge line length for pep8
+            72, // docstrings
+            79, // optimum code line length
+            100  // maximum allowable length
+        ],
+        "tab_size": 4,
+        "translate_tabs_to_spaces": true,
+        "trim_trailing_white_space_on_save": true,
+        "use_tab_stops": true,
+    }
+
+Package Control
+---------------
+
+La instalación de `Package Control <https://sublime.wbond.net/installation>`_ es atravez de la consola de Sublime Text (ctrl + \`). Una vez abierta pegamos lo siguiente (Es mejor tomarlo de la pagina original):
+
+.. code-block:: console
+
+   import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)
+
+Este comando descarga el paquete *Control.sublime-package*.
+
+Para instalar nuevos plugins abrimos la paleta de comandos con *shift + command + p*. Cuando se habra la paleta escribimos *install* y buscamos el comando *Package Control: Install Package*.
+
+
+Autocompletar
+-------------
+
+`SublimeJedi <https://github.com/srusskih/SublimeJEDI>`_
+
+.. code-block:: json
+
+    {
+        "folders":
+        [
+            {
+                "follow_symlinks": true,
+                "path": "src-git"
+            }
+        ],
+        "settings": {
+            // ...
+            "python_interpreter_path": "/opt/local/bin/python2.7",
+
+            "python_package_paths": [
+                "/Users/gil/projects/plone/matem-buildout/parts/omelette"
+            ]
+        }
+    }
+
+
+Referencias
+-----------
+
+`OS X Command Line <http://www.sublimetext.com/docs/3/osx_command_line.html>`_
+
+`Reverting to a Freshly Installed State <http://www.sublimetext.com/docs/3/revert.html>`_
+
+`Turning Sublime Text Into a Lightweight Python IDE <http://cewing.github.io/training.codefellows/assignments/day01/sublime_as_ide.html>`_
+
+`Sublime Text 3 for Python JavaScript and web developers <http://opensourcehacker.com/2014/03/10/sublime-text-3-for-python-javascript-and-web-developers>`_
+
+
+
+`Using Sublime Text 2 for Development <http://www.rockettheme.com/magazine/1319-using-sublime-text-2-for-development>`_
+
+
+`Sublime Text 2 for Zope and Plone <http://www.martinaspeli.net/articles/sublime-text-2-for-zope-and-plone>`_
+
+`Configuració del Sublime Text 2 <http://documentacio.readthedocs.org/en/latest/howto/sublimetext2.html>`_
+
+
+`Font Book 2 <http://docs.info.apple.com/article.html?path=FontBook/2.0/en/fb680.html>`_
+
+
+`An Editor You Will Regret You Havent Used Before <http://o2js.com/2011/10/29/fell-in-love-with-sublime-text-2/>`_
+

@@ -45,6 +45,7 @@ Development tools and Administrations tools
 .. toctree::
    :maxdepth: 2
 
+   sublimeText3.rst
    sublimeText2.rst
    jenkins.rst
    munin.rst
