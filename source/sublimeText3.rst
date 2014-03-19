@@ -126,7 +126,43 @@ Instalamos los paquetes necesarios
     Cleaning up...
     (sublenv)$
 
+Instalamos SublimeLinter y despues SublimeLinter-flake8 usando el Package Control.
 
+Agregamos la siguiente configuración en *Preferences -> Package Settings -> SublimeLinter -> Settings - User*:
+
+.. code-block:: json
+
+    {
+        //...
+        "linters": {
+            "flake8": {
+                "@disable": false,
+                "args": [],
+                "builtins": "",
+                "excludes": [],
+                "ignore": "",
+                "max-complexity": 10,
+                "max-line-length": null,
+                "select": ""
+            }
+        },
+        //...
+        "paths": {
+            "linux": [],
+            "osx": [
+                "/Users/gil/buildout.python/sublenv/bin"
+            ],
+            "windows": []
+        },
+        "python_paths": {
+            "linux": [],
+            "osx": [
+                "/Users/gil/buildout.python/sublenv/bin"
+            ],
+            "windows": []
+        },
+        //...
+    }
 
 Referencias
 -----------
