@@ -39,7 +39,7 @@ Configura tus preferencias abriendo *Preferences* -> *Settings - User*.
         ],
         "tab_size": 4,
         "translate_tabs_to_spaces": true,
-        "trim_trailing_white_space_on_save": true,
+        // "trim_trailing_white_space_on_save": true,
         "use_tab_stops": true,
     }
 
@@ -62,6 +62,12 @@ Autocompletar
 
 `SublimeJedi <https://github.com/srusskih/SublimeJEDI>`_
 
+Usamos la siguiente configuración para definir el interprete de python usado en el proyecto. Por default el archivo de un proyecto es *<project name>.sublime-project*
+
+(para crear un proyecto abrir los archivos son sublimetext y despues *Project -> save Project as*)
+
+(para editarlo *Project -> Edit Project*)
+
 .. code-block:: json
 
     {
@@ -81,6 +87,45 @@ Autocompletar
             ]
         }
     }
+
+Para ir a la definición de un simbolo usamos *ctrl + shift + g*.
+
+Para buscar otros lugares donde se use el simbolo usamos *alt + shift + f*.
+
+Lint
+----
+Muestra errores que cometiste en el código.
+
+Primero creamos un ambiente virtual y lo activamos
+
+.. code-block:: console
+
+    $ cd /Users/gil/buildout.python
+    $ virtualenv-2.7 sublenv
+    New python executable in sublenv/bin/python2.7
+    Installing setuptools, pip...done.
+    $ source sublenv/bin/activate
+    (sublenv)$
+
+Instalamos los paquetes necesarios
+
+.. code-block:: console
+
+    (sublenv)$ pip install flake8
+    Downloading/unpacking flake8
+    [...]
+    Downloading/unpacking pyflakes>=0.7.3 (from flake8)
+    [...]
+    Downloading/unpacking pep8>=1.4.6 (from flake8)
+    [...]
+    Downloading/unpacking mccabe>=0.2.1 (from flake8)
+    [...]
+    Installing collected packages: flake8, pyflakes, pep8, mccabe
+    [...]
+    Successfully installed flake8 pyflakes pep8 mccabe
+    Cleaning up...
+    (sublenv)$
+
 
 
 Referencias
