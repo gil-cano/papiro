@@ -107,7 +107,7 @@ Primero creamos un ambiente virtual y lo activamos
     $ source sublenv/bin/activate
     (sublenv)$
 
-Instalamos los paquetes necesarios
+Instalamos los paquetes necesarios (`flake8 <https://pypi.python.org/pypi/flake8>`_)
 
 .. code-block:: console
 
@@ -126,7 +126,7 @@ Instalamos los paquetes necesarios
     Cleaning up...
     (sublenv)$
 
-Instalamos SublimeLinter y despues SublimeLinter-flake8 usando el Package Control.
+Instalamos `SublimeLinter <http://sublimelinter.readthedocs.org/en/latest/>`_ y despues `SublimeLinter-flake8 <https://github.com/SublimeLinter/SublimeLinter-flake8>`_ usando el Package Control.
 
 Agregamos la siguiente configuración en *Preferences -> Package Settings -> SublimeLinter -> Settings - User*:
 
@@ -163,6 +163,47 @@ Agregamos la siguiente configuración en *Preferences -> Package Settings -> Sub
         },
         //...
     }
+
+Manejo de espacios
+------------------
+
+Para eliminart espacios en blanco al final de una linea o en lineas vacias usamos `TrailingSpaces <https://github.com/SublimeText/TrailingSpaces>`_
+
+La siguiente configuración nos permite eliminar los espacios en blanco al momento se salvar un archivo, pero solo en lineas de codigo que hemos modificado.
+
+El archivo a modificar es *Preferences -> Package Settings -> Trailing Spaces -> Settings User*
+
+.. code-block:: json
+
+    {
+        //...
+        "trailing_spaces_modified_lines_only": true,
+        "trailing_spaces_trim_on_save": true,
+        // ...
+    }
+
+Debug de Sesión
+---------------
+`PDBSublimeTextSupport <https://pypi.python.org/pypi/PdbSublimeTextSupport>`_
+
+.. code-block:: console
+
+    (projectenv)$ pip install PDBSublimeTextSupport
+
+Lint
+----
+
+sublimelinter-jshint (javascript, jshint)
+
+sublimelinter-csslint (CSS)
+
+sublimelinter-pep257 (python docstrings conventions)
+
+HTML
+----
+
+`Emmet <http://docs.emmet.io/>`_
+
 
 Referencias
 -----------
