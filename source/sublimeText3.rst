@@ -92,8 +92,9 @@ Para ir a la definición de un simbolo usamos *ctrl + shift + g*.
 
 Para buscar otros lugares donde se use el simbolo usamos *alt + shift + f*.
 
-Lint
-----
+Lint (flake8)
+-------------
+
 Muestra errores que cometiste en el código.
 
 Primero creamos un ambiente virtual y lo activamos
@@ -164,6 +165,75 @@ Agregamos la siguiente configuración en *Preferences -> Package Settings -> Sub
         //...
     }
 
+Lints (jshint / csslit)
+-----------------------
+
+Instalamos `node.js <http://nodejs.org/>`_ (v0.10.26)
+
+.. code-block:: console
+
+    Node was installed at
+
+       /usr/local/bin/node
+
+    npm was installed at
+
+       /usr/local/bin/npm
+
+    Make sure that /usr/local/bin is in your $PATH.
+
+Instalamos `jslint <http://www.jshint.com/>`_ y `csslint <http://csslint.net/>`_
+
+.. code-block:: console
+
+    $ sudo npm install -g jslint
+    $ sudo npm install -g csslint
+
+En sublimetext instalamos `sublimelinter-jshint <https://github.com/SublimeLinter/SublimeLinter-jshint>`_ y `sublimelinter-csslint <https://github.com/SublimeLinter/SublimeLinter-csslint>`_.
+
+Agregamos la siguiente configuración en *Preferences -> Package Settings -> SublimeLinter -> Settings - User*:
+
+.. code-block:: json
+
+    {
+        //...
+        "linters": {
+            "csslint": {
+                "@disable": false,
+                "args": [],
+                "errors": "",
+                "excludes": [],
+                "ignore": "",
+                "warnings": ""
+            },
+            //...
+            "jshint": {
+                "@disable": false,
+                "args": [],
+                "excludes": []
+            },
+        },
+        //...
+        "paths": {
+            "linux": [],
+            "osx": [
+                //...,
+                "/usr/local/bin"
+            ],
+            "windows": []
+        },
+        //...
+    }
+
+
+sublimelinter-pep257 (python docstrings conventions)
+
+HTML
+----
+
+`Emmet <http://docs.emmet.io/>`_
+
+
 Manejo de espacios
 ------------------
 
@@ -190,20 +260,6 @@ Debug de Sesión
 
     (projectenv)$ pip install PDBSublimeTextSupport
 
-Lint
-----
-
-sublimelinter-jshint (javascript, jshint)
-
-sublimelinter-csslint (CSS)
-
-sublimelinter-pep257 (python docstrings conventions)
-
-HTML
-----
-
-`Emmet <http://docs.emmet.io/>`_
-
 
 Referencias
 -----------
@@ -215,6 +271,8 @@ Referencias
 `Turning Sublime Text Into a Lightweight Python IDE <http://cewing.github.io/training.codefellows/assignments/day01/sublime_as_ide.html>`_
 
 `Sublime Text 3 for Python JavaScript and web developers <http://opensourcehacker.com/2014/03/10/sublime-text-3-for-python-javascript-and-web-developers>`_
+
+`Jenkins buildout fro Plone projects <https://buildoutjenkins.readthedocs.org/en/latest/index.html>`_
 
 
 
