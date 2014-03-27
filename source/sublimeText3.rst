@@ -92,7 +92,7 @@ Para ir a la definición de un simbolo usamos *ctrl + shift + g*.
 
 Para buscar otros lugares donde se use el simbolo usamos *alt + shift + f*.
 
-Lint (flake8)
+Lint (flake8, pep257)
 -------------
 
 Muestra errores que cometiste en el código.
@@ -125,9 +125,15 @@ Instalamos los paquetes necesarios (`flake8 <https://pypi.python.org/pypi/flake8
     [...]
     Successfully installed flake8 pyflakes pep8 mccabe
     Cleaning up...
+    (sublenv)$ pip install pep257
+    Downloading/unpacking pep257
+    Downloading pep257-0.3.2.tar.gz
+    [...]
+    Successfully installed pep257
+    Cleaning up...
     (sublenv)$
 
-Instalamos `SublimeLinter <http://sublimelinter.readthedocs.org/en/latest/>`_ y despues `SublimeLinter-flake8 <https://github.com/SublimeLinter/SublimeLinter-flake8>`_ usando el Package Control.
+Instalamos `SublimeLinter <http://sublimelinter.readthedocs.org/en/latest/>`_ , despues `SublimeLinter-flake8 <https://github.com/SublimeLinter/SublimeLinter-flake8>`_ y `SublimeLinter-pep257 <https://github.com/SublimeLinter/SublimeLinter-pep257>`_ usando el Package Control.
 
 Agregamos la siguiente configuración en *Preferences -> Package Settings -> SublimeLinter -> Settings - User*:
 
@@ -146,11 +152,17 @@ Agregamos la siguiente configuración en *Preferences -> Package Settings -> Sub
                 "max-line-length": null,
                 "select": ""
             }
+            "pep257": {
+                "@disable": false,
+                "args": [],
+                "excludes": []
+            }
         },
         //...
         "paths": {
             "linux": [],
             "osx": [
+                // points to the path that contains the flake8 executable command
                 "/Users/gil/buildout.python/sublenv/bin"
             ],
             "windows": []
@@ -158,6 +170,7 @@ Agregamos la siguiente configuración en *Preferences -> Package Settings -> Sub
         "python_paths": {
             "linux": [],
             "osx": [
+                // points to the location of the python executable to be used
                 "/Users/gil/buildout.python/sublenv/bin"
             ],
             "windows": []
