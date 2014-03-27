@@ -252,6 +252,23 @@ El archivo a modificar es *Preferences -> Package Settings -> Trailing Spaces ->
         // ...
     }
 
+ST3 snippet para insertar un breakpoint
+-----------------------------------------
+
+Para poder poner un break point con solo escribir pdb y completar con tab,
+debemos poner la siguiente configuración en:
+"~/Library/Application Support/Sublime Text 3/Packages/User/pdb.sublime-snippet"
+
+.. code-block:: xml
+
+    <snippet>
+        <content><![CDATA[import pdb; pdb.set_trace()]]></content>
+        <tabTrigger>pdb</tabTrigger>
+        <scope>source.python</scope>
+        <description>pdb debug tool</description>
+    </snippet>
+
+
 Debug de Sesión
 ---------------
 `PDBSublimeTextSupport <https://pypi.python.org/pypi/PdbSublimeTextSupport>`_
@@ -273,19 +290,3 @@ Referencias
 `Sublime Text 3 for Python JavaScript and web developers <http://opensourcehacker.com/2014/03/10/sublime-text-3-for-python-javascript-and-web-developers>`_
 
 `Jenkins buildout fro Plone projects <https://buildoutjenkins.readthedocs.org/en/latest/index.html>`_
-
-
-
-`Using Sublime Text 2 for Development <http://www.rockettheme.com/magazine/1319-using-sublime-text-2-for-development>`_
-
-
-`Sublime Text 2 for Zope and Plone <http://www.martinaspeli.net/articles/sublime-text-2-for-zope-and-plone>`_
-
-`Configuració del Sublime Text 2 <http://documentacio.readthedocs.org/en/latest/howto/sublimetext2.html>`_
-
-
-`Font Book 2 <http://docs.info.apple.com/article.html?path=FontBook/2.0/en/fb680.html>`_
-
-
-`An Editor You Will Regret You Havent Used Before <http://o2js.com/2011/10/29/fell-in-love-with-sublime-text-2/>`_
-
