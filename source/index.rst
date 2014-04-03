@@ -29,6 +29,7 @@ Zope
    :maxdepth: 2
 
    catalog.rst
+   vocabularies.rst
 
 Plone add-ons
 =============

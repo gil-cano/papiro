@@ -57,8 +57,8 @@ Este comando descarga el paquete *Control.sublime-package*.
 Para instalar nuevos plugins abrimos la paleta de comandos con *shift + command + p*. Cuando se habra la paleta escribimos *install* y buscamos el comando *Package Control: Install Package*.
 
 
-Autocompletar
--------------
+Autocompletar python
+--------------------
 
 `SublimeJedi <https://github.com/srusskih/SublimeJEDI>`_
 
@@ -93,7 +93,7 @@ Para ir a la definición de un simbolo usamos *ctrl + shift + g*.
 Para buscar otros lugares donde se use el simbolo usamos *alt + shift + f*.
 
 Lint (flake8, pep257)
--------------
+---------------------
 
 Muestra errores que cometiste en el código.
 
@@ -231,15 +231,13 @@ Agregamos la siguiente configuración en *Preferences -> Package Settings -> Sub
             "linux": [],
             "osx": [
                 //...,
+                // points to the path that contains jslint and csslint
                 "/usr/local/bin"
             ],
             "windows": []
         },
         //...
     }
-
-
-sublimelinter-pep257 (python docstrings conventions)
 
 HTML
 ----
@@ -289,6 +287,35 @@ Debug de Sesión
 .. code-block:: console
 
     (projectenv)$ pip install PDBSublimeTextSupport
+
+
+Color Scheme
+------------
+
+`Monokai Extended <https://github.com/jonschlinkert/sublime-monokai-extended>`_
+
+Preferences -> Color Scheme -> Monokai Extended -> Monokai Extended
+
+Theme
+-----
+
+`Soda Theme <https://github.com/buymeasoda/soda-theme/>`_
+
+Abrimios el archivo de preferencias globales de Sublime Text 3 (Sublime Text -> Preferences -> Settings - User)
+
+.. code-block:: json
+
+    {
+        //...
+        "theme": "Soda Dark 3.sublime-theme"
+        //...
+    }
+
+Iluminación de archivos buildout.cfg
+------------------------------------
+
+Usamos los paquetes de TextMate modificados por Martin Aspeli.
+Copiamos el directorio `Buildout <https://github.com/optilude/SublimeTextMisc/tree/master/Packages>`_  en ``Sublime Text -> Preferences -> Brows Pakages ...``
 
 
 Referencias
