@@ -46,18 +46,8 @@ See ``.travis.yml`` file for continuous integration settings.
 License
 -------
 
-Copyright © 2011-2012 Gildardo Bautista.
+Copyright © 2011-2014 Gildardo Bautista.
 
 https://github.com/collective/collective.developermanual/blob/master/README.rst
 
-https://github.com/miohtama/corneti.recipes.codeintel
-http://opensourcehacker.com/page/3/
 https://github.com/cewing/templer.manual
-http://docs.diazo.org/en/latest/introduction.html
-http://pypi.python.org/pypi/plone.app.theming
-http://docs.diazo.org/en/latest/quickstart.html
-http://mattkersley.com/responsive/
-http://plone.org/products/beyondskins.responsive/#id10
-http://lettuce.it/
-http://opendatastructures.org/
-
