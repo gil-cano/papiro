@@ -245,6 +245,9 @@ HTML
 `Emmet <http://docs.emmet.io/>`_
 
 
+Edición de CSS en tiempo real `Emmet LiveStyle <http://livestyle.emmet.io/>`_
+
+
 Manejo de espacios
 ------------------
 
@@ -330,3 +333,5 @@ Referencias
 `Sublime Text 3 for Python JavaScript and web developers <http://opensourcehacker.com/2014/03/10/sublime-text-3-for-python-javascript-and-web-developers>`_
 
 `Jenkins buildout fro Plone projects <https://buildoutjenkins.readthedocs.org/en/latest/index.html>`_
+
+`Introducing LiveStyle: Better, Stronger And Smarter CSS Live Reload <http://www.smashingmagazine.com/2013/08/08/release-livestyle-css-live-reload/>`_
