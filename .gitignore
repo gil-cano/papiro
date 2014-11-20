@@ -1,9 +1,9 @@
-# Packages
-*.egg
-*.egg-info
-build
-parts
-bin
-var
-develop-eggs
-.installed.cfg
+*~
+*.mo
+build/
+bin/
+include/
+lib/
+local/
+.vagrant
+.doctrees
