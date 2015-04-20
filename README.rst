@@ -22,11 +22,12 @@ Building The Documentation
 
    .. code:: bash
 
-      $ git clone git://github.com/gil-cano/papiro.git
-      $ cd papiro
-
-      $ python bootstrap.py
-      $ bin/buildout
+        $ git clone https://github.com/gil-cano/tdi.doc.git
+        $ cd tdi.doc
+        $ virtualenv-2.7 .
+        $ source bin/activate
+        (tdi.doc)$ pip install -r requirements.txt
+        (tdi.doc)$ make html
 
 At the end of a successful build, you will see the location of the
 resulting HTML pages.
@@ -47,7 +48,3 @@ License
 -------
 
 Copyright © 2011-2014 Gildardo Bautista.
-
-https://github.com/collective/collective.developermanual/blob/master/README.rst
-
-https://github.com/cewing/templer.manual

@@ -20,7 +20,7 @@ Python
 .. toctree::
    :maxdepth: 2
 
-   python_patterns.rst
+   python/python_patterns.rst
 
 Zope
 ====
@@ -58,4 +58,3 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
-
