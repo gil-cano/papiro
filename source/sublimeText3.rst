@@ -242,11 +242,18 @@ Agregamos la siguiente configuración en *Preferences -> Package Settings -> Sub
 HTML
 ----
 
-`Emmet <http://docs.emmet.io/>`_
+Soporte para CSS en sublime Text 3: `CSS3 <https://github.com/y0ssar1an/CSS3>`_
+It's strongly recommended that you disable the default CSS package, as its completions will interfere with the improved CSS3 completions.
+  Mac:           cmd+shift+p  -> Package Control: Disable Package -> CSS
 
+Edición de CSS en tiempo real: `Emmet LiveStyle <http://livestyle.emmet.io/>`_
 
-Edición de CSS en tiempo real `Emmet LiveStyle <http://livestyle.emmet.io/>`_
+Coloracion de sintaxis para .less: `Less <https://github.com/danro/LESS-sublime>`_
 
+EditorConfig
+------------
+
+`EditorConfig <https://github.com/sindresorhus/editorconfig-sublime>`_ ayuda a mantener estilos de codigo consistentes entre distintos editores.
 
 Manejo de espacios
 ------------------
