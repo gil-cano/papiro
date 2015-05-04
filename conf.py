@@ -48,7 +48,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'papiro'
-copyright = u'2014, Gildardo Bautista'
+copyright = u'2015, Gildardo Bautista'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -71,7 +71,7 @@ language = 'es'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
-exclude_patterns = ['_build']
+exclude_patterns = ['_build', 'lib', 'README.rst']
 
 # The reST default role (used for this markup: `text`) to use for all
 # documents.
@@ -103,7 +103,6 @@ pygments_style = 'sphinx'
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 # html_theme = 'default'
-# html_theme = 'armstrong'
 html_theme = "sphinx_rtd_theme"
 
 # Theme options are theme-specific and customize the look and feel of a theme
@@ -131,7 +130,7 @@ html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
 # pixels large.
 #html_favicon = None
-html_favicon = 'favicon.ico'
+html_favicon = '_static/favicon.ico'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,

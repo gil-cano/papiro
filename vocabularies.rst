@@ -1,38 +1,41 @@
 Static vocabularies
 -------------------
 
-from zope.schema.vocabulary import SimpleVocabulary, SimpleTerm
+.. sourcecode:: python
 
-organizers = SimpleVocabulary(
-    [SimpleTerm(value=u'Bill', title=_(u'Bill')),
-     SimpleTerm(value=u'Bob', title=_(u'Bob')),
-     SimpleTerm(value=u'Jim', title=_(u'Jim'))]
-    )
+    from zope.schema.vocabulary import SimpleVocabulary, SimpleTerm
 
-organizer = schema.Choice(
-            title=_(u"Organiser"),
-            vocabulary=organizers,
-            required=False,
+    organizers = SimpleVocabulary(
+        [SimpleTerm(value=u'Bill', title=_(u'Bill')),
+         SimpleTerm(value=u'Bob', title=_(u'Bob')),
+         SimpleTerm(value=u'Jim', title=_(u'Jim'))]
         )
+
+    organizer = schema.Choice(
+                title=_(u"Organiser"),
+                vocabulary=organizers,
+                required=False,
+            )
 
 Since required is False, there will be a no value option in the drop-down list.
 
+.. sourcecode:: python
 
-class SimpleTerm(object):
-    """Simple tokenized term used by SimpleVocabulary."""
+    class SimpleTerm(object):
+        """Simple tokenized term used by SimpleVocabulary."""
 
-    def __init__(self, value, token=None, title=None):
-        """Create a term for value and token. If token is omitted,
-        str(value) is used for the token.  If title is provided, 
-        term implements ITitledTokenizedTerm.
-        """
-        self.value = value
-        if token is None:
-            token = value
-        self.token = str(token)
-        self.title = title
-        if title is not None:
-            directlyProvides(self, ITitledTokenizedTerm)
+        def __init__(self, value, token=None, title=None):
+            """Create a term for value and token. If token is omitted,
+            str(value) is used for the token.  If title is provided,
+            term implements ITitledTokenizedTerm.
+            """
+            self.value = value
+            if token is None:
+                token = value
+            self.token = str(token)
+            self.title = title
+            if title is not None:
+                directlyProvides(self, ITitledTokenizedTerm)
 
 
 

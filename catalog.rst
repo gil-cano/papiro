@@ -19,15 +19,10 @@ ZCTextIndex
 A ZCTextIndex is an index for performing full text searches over
 bodies of text. It includes the following features:
 
-- A new query language, supporting both explicit and implicit Boolean
-operators, parentheses, globbing, and phrase searching.  Apart from
-explicit operators and globbing, the syntax is roughly the same as
-that popularized by Google.
+- A new query language, supporting both explicit and implicit Boolean operators, parentheses, globbing, and phrase searching.  Apart from explicit operators and globbing, the syntax is roughly the same as that popularized by Google.
 
-- Two selectable relevance scoring algorithms: 
-The Cosine ranking from the Managing Gigabytes book, and Okapi from 
-more recent research papers.  Okapi usually does better, so it is 
-the default.
+- Two selectable relevance scoring algorithms:
+    The Cosine ranking from the Managing Gigabytes book, and Okapi from  more recent research papers.  Okapi usually does better, so it is the default.
 
 ZCTextIndex is designed as a replacement for standard TextIndex, and
 has several advantages over it.

@@ -1,8 +1,6 @@
 Sublime Text 2
 ==============
 
-.. _chapter_content:
-
 Linea de comandos en OS X
 -------------------------
 

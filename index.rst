@@ -51,10 +51,3 @@ Development tools and Administrations tools
    jenkins.rst
    munin.rst
 
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`

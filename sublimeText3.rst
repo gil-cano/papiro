@@ -1,8 +1,6 @@
 Sublime Text 3
 ==============
 
-.. _chapter_content:
-
 Linea de comandos en OS X
 -------------------------
 
@@ -244,7 +242,10 @@ HTML
 
 Soporte para CSS en sublime Text 3: `CSS3 <https://github.com/y0ssar1an/CSS3>`_
 It's strongly recommended that you disable the default CSS package, as its completions will interfere with the improved CSS3 completions.
-  Mac:           cmd+shift+p  -> Package Control: Disable Package -> CSS
+
+.. sourcecode:: sh
+
+    Mac:           cmd+shift+p  -> Package Control: Disable Package -> CSS
 
 Edición de CSS en tiempo real: `Emmet LiveStyle <http://livestyle.emmet.io/>`_
 
