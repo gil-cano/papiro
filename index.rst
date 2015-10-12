@@ -48,6 +48,7 @@ Development tools and Administrations tools
 
    sublimeText3.rst
    sublimeText2.rst
+   nginx/nginx.rst
    jenkins.rst
    munin.rst
 
