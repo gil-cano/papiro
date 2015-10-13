@@ -8,7 +8,7 @@ as well as a mail proxy server.
 Instalación
 -----------
 
-Para instalar `<nginx http://nginx.org/>`_ 1.8.0-1~jessie en Debian GNU/Linux 8.2 (jessie)
+Para instalar `nginx <http://nginx.org/>`_ 1.8.0-1~jessie en Debian GNU/Linux 8.2 (jessie)
 
 .. code-block:: bash
 
@@ -60,7 +60,7 @@ Configuración
 
 El archivo de configuración se llama *nginx.conf* y encuentra en */etc/nginx/nginx.conf*
 
-Para verificar que el archivo de configuración es valido ejecutamos
+Para verificar que el archivo de configuración es valido, ejecutamos
 
 .. code-block:: bash
 
@@ -74,12 +74,19 @@ Una directiva simple consiste en el nombre y parametros separados por espacios y
     :language: bash
     :lines: 1-5
 
-Una directiva de bloque tiene la misma estructura que una directiva simple, pero en vez del punto y coma termina con un conjunto adicional de instrucciones entre corchetes (*{* *}*).
+Una directiva de bloque tiene la misma estructura que una directiva simple, pero en vez del punto y coma termina con un conjunto adicional de instrucciones entre corchetes ({ }).
 
 .. literalinclude:: nginx.conf
     :language: bash
-    :lines: 7-11, 28-29
+    :lines: 7-14, 25-28
 
+
+Contenido estatico
+~~~~~~~~~~~~~~~~~~
+
+.. literalinclude:: nginx.conf
+    :language: bash
+    :lines: 30-38
 
 Sublime Text 3
 --------------

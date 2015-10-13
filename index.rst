@@ -18,37 +18,37 @@ Python
 ======
 
 .. toctree::
-   :maxdepth: 2
+    :maxdepth: 2
 
-   python/python_patterns.rst
+    python/python_patterns.rst
 
-Zope
-====
+Plone
+=====
 
 .. toctree::
-   :maxdepth: 2
+    :maxdepth: 2
 
-   catalog.rst
-   vocabularies.rst
+    plone/catalog.rst
+    plone/vocabularies.rst
+    plone/diazo.rst
 
 Plone add-ons
 =============
 
 .. toctree::
-   :maxdepth: 2
+    :maxdepth: 2
 
-   collective-elections.rst
+    collective-elections.rst
 
 
 Development tools and Administrations tools
 ===========================================
 
 .. toctree::
-   :maxdepth: 2
+    :maxdepth: 2
 
-   sublimeText3.rst
-   sublimeText2.rst
-   nginx/nginx.rst
-   jenkins.rst
-   munin.rst
-
+    sublimeText3.rst
+    sublimeText2.rst
+    nginx/nginx.rst
+    jenkins.rst
+    munin.rst
