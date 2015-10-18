@@ -51,4 +51,5 @@ Development tools and Administrations tools
     sublimeText2.rst
     nginx/nginx.rst
     jenkins.rst
+    webpagetest.rst
     munin.rst
