@@ -9,22 +9,22 @@ Jenkins Installation
 To use the Debian package repository of Jenkins to automate installation and 
 upgrade, first add the key to your system:
 
-.. code-block:: sh
+.. code-block:: bash
 
-   wget -q -O - http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add -
+    $ wget -q -O - http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add -
 
 Then add the following entry in your `/etc/apt/sources.list`:
 
-.. code-block:: sh
+.. code-block:: bash
 
-   deb http://pkg.jenkins-ci.org/debian binary/
+    deb http://pkg.jenkins-ci.org/debian binary/
 
 Update your local package index, then finally install Jenkins:
 
-.. code-block:: sh
+.. code-block:: bash
 
-   sudo apt-get update
-   sudo apt-get install jenkins
+    $ sudo apt-get update
+    $ sudo apt-get install jenkins
 
 * `/etc/default/jenkins` will capture configuration parameters for the launch.
 * By default, Jenkins listen on port 8080. Access this port with your browser to start configuration.
@@ -35,10 +35,10 @@ Upgrade
 
 Once installed like this, you can update to the later version of Jenkins (when it comes out) by running the following commands:
 
-.. code-block:: sh
+.. code-block:: bash
 
-   sudo apt-get update
-   sudo apt-get install jenkins
+    $ sudo apt-get update
+    $ sudo apt-get install jenkins
 
 
 Standard Security Setup
@@ -53,9 +53,15 @@ Standard Security Setup
 * Give yourself a full access by checking the entire row for your user name
 * Scroll all the way to the bottom, click "save"
 
+.. image:: gsecurity.png
+
 At this point, you'll be taken back to the top page, and Jenkins is successfully secured.
 
-Restart Jenkins (service jenkins restart)
+Restart Jenkins
+
+.. code-block:: bash
+
+    $ sudo service jenkins restart
 
 Now you need to create an user account for yourself. 
 
