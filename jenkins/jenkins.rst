@@ -71,8 +71,26 @@ Now you need to create an user account for yourself.
 * If everything works smoothly, you are now logged on as yourself with full permissions
 
 
-GIT plugin 
-==========
+Plug-in's
+=========
+
+Para instalar nuevos plug-in’s en el Panel de control vamos a ‘Manage Jenkins - Manage Plugins’ y seleccionamos los necesarios. Para que tome los cambios hay que reiniciar el servidor.
+
+`Green Balls <https://wiki.jenkins-ci.org/display/JENKINS/Green+Balls>`_
+------------------------------------------------------------------------
+Changes Hudson to use green balls instead of blue for successful builds.
+
+`Workspace Cleanup <https://wiki.jenkins-ci.org/display/JENKINS/Workspace+Cleanup+Plugin>`_
+--------------------------------------------------------------------------------------------
+This plugin deletes the workspace before the build or when a build is finished and artifacts saved.
+Option for deleting workspace before build is in Build Environment section:
+
+`Cobertura Plugin <https://wiki.jenkins-ci.org/display/JENKINS/Cobertura+Plugin>`_
+----------------------------------------------------------------------------------
+This plugin allows you to capture code coverage report from Cobertura.
+
+`Git Plugin <https://wiki.jenkins-ci.org/display/JENKINS/Git+Plugin>`_
+----------------------------------------------------------------------
 
 You may need to tell git who the user Jenkins is running as. 
 To do this on a Linux/Unix system switch to that user which is probably `jenkins`.
@@ -91,18 +109,26 @@ Now cd to the directory where the clone Jenkins created is and use `git config u
     $ git config user.email "some@email.com"
     $ git config user.name "jenkins"
 
-
-Violations plugin
-=================
-
-This plug-in generates reports static code violation detectors.
-
-
-
-Warnings Plugin
-===============
-
+`Warnings Plugin <https://wiki.jenkins-ci.org/display/JENKINS/Warnings+Plugin>`_
+--------------------------------------------------------------------------------
 This plugin generates the trend report for compiler warnings in the console log or in log files.
+
+
+`Violations <https://wiki.jenkins-ci.org/display/JENKINS/Violations>`_
+----------------------------------------------------------------------
+This plug-in generates reports static code violation detectors such as checkstyle, pmd, cpd, findbugs, codenarc, fxcop, stylecop and simian.
+
+`Static Code Analysis <https://wiki.jenkins-ci.org/display/JENKINS/Static+Code+Analysis+Plug-ins>`_
+---------------------------------------------------------------------------------------------------
+This plug-in provides utilities for the static code analysis plug-ins.
+
+
+    Monitoring (crash on Mac 1.4) (M. Aspeli)
+    Plot Plug-in (M. Aspeli)
+    Dashboard View (M. Aspeli)
+    ChuckNorris Plug-in (M. Aspeli)
+    SetEnv Plug-in (rtyler Hudson labs)
+
 
 Ubuntu Node
 ===========
