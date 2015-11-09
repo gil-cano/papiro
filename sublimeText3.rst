@@ -8,13 +8,13 @@ Sublime Text 3 incluye el comando, *subl*, para abrir archivos desde una termina
 
 .. code-block:: bash
 
-   $ ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /opt/local/bin/subl
+   $ ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
 
-Agregamos el directorio /opt/local/bin a nuestro path en el archivo .bash_profile
+Agregamos el directorio /usr/local/bin a nuestro path en el archivo .bash_profile
 
 .. code-block:: console
 
-   export PATH=/opt/local/bin/:$PATH
+   export PATH=/usr/local/bin/:$PATH
 
 User Settings
 -------------
@@ -24,22 +24,29 @@ Configura tus preferencias abriendo *Preferences* -> *Settings - User*.
 .. code-block:: json
 
     {
+        "font_face": "Source Code Pro",
+        "font_size": 15,
         "ignored_packages":
         [
             "Vintage"
         ],
         "rulers":
         [
-            // set text rulers so I can judge line length for pep8
-            72, // docstrings
-            79, // optimum code line length
-            100  // maximum allowable length
+            72,
+            79,
+            100,
         ],
         "tab_size": 4,
         "translate_tabs_to_spaces": true,
-        // "trim_trailing_white_space_on_save": true,
         "use_tab_stops": true,
     }
+
+
+* 72, // docstrings
+* 79, // optimum code line length
+* 100  // maximum allowable length
+
+En este aso estamos usando el tipo de letra `Source Code Pro <https://github.com/adobe-fonts/source-code-pro>`_
 
 Package Control
 ---------------
@@ -52,13 +59,18 @@ La instalación de `Package Control <https://sublime.wbond.net/installation>`_ e
 
 Este comando descarga el paquete *Control.sublime-package*.
 
-Para instalar nuevos plugins abrimos la paleta de comandos con *shift + command + p*. Cuando se habra la paleta escribimos *install* y buscamos el comando *Package Control: Install Package*.
+Para instalar nuevos plugins abrimos la paleta de comandos con *shift + ⌘ + P*. Cuando se habra la paleta escribimos *install* y buscamos el comando *Package Control: Install Package*.
 
 
 Autocompletar python
 --------------------
 
 `SublimeJedi <https://github.com/srusskih/SublimeJEDI>`_
+
+.. note::
+
+    Comparar con `Anaconda <http://damnwidget.github.io/anaconda/#>`_
+
 
 Usamos la siguiente configuración para definir el interprete de python usado en el proyecto. Por default el archivo de un proyecto es *<project name>.sublime-project*
 
@@ -77,7 +89,6 @@ Usamos la siguiente configuración para definir el interprete de python usado en
             }
         ],
         "settings": {
-            // ...
             "python_interpreter_path": "/opt/local/bin/python2.7",
 
             "python_package_paths": [
@@ -86,9 +97,11 @@ Usamos la siguiente configuración para definir el interprete de python usado en
         }
     }
 
-Para ir a la definición de un simbolo usamos *ctrl + shift + g*.
+Para ir a la definición de un simbolo usamos *ctrl + shift + G*.
 
-Para buscar otros lugares donde se use el simbolo usamos *alt + shift + f*.
+Para buscar otros lugares donde se use el simbolo usamos *⌥ + shift + F*.
+
+
 
 Lint (flake8, pep257)
 ---------------------
@@ -99,12 +112,13 @@ Primero creamos un ambiente virtual y lo activamos
 
 .. code-block:: console
 
-    $ cd /Users/gil/buildout.python
-    $ virtualenv-2.7 sublenv
-    New python executable in sublenv/bin/python2.7
+    $ cd /Users/myuser/buildout.python
+    $ virtualenv-3.5 python-3-sublenv
+    New python executable in python-3-sublenv/bin/python3.5
+    Also creating executable in python-3-sublenv/bin/python
     Installing setuptools, pip...done.
-    $ source sublenv/bin/activate
-    (sublenv)$
+    $ source python-3-sublenv/bin/activate
+    (python-3-sublenv)$
 
 Instalamos los paquetes necesarios (`flake8 <https://pypi.python.org/pypi/flake8>`_)
 
@@ -138,42 +152,42 @@ Agregamos la siguiente configuración en *Preferences -> Package Settings -> Sub
 .. code-block:: json
 
     {
-        //...
-        "linters": {
-            "flake8": {
-                "@disable": false,
-                "args": [],
-                "builtins": "",
-                "excludes": [],
-                "ignore": "",
-                "max-complexity": 10,
-                "max-line-length": null,
-                "select": ""
-            }
-            "pep257": {
-                "@disable": false,
-                "args": [],
-                "excludes": []
-            }
-        },
-        //...
-        "paths": {
-            "linux": [],
-            "osx": [
-                // points to the path that contains the flake8 executable command
-                "/Users/gil/buildout.python/sublenv/bin"
-            ],
-            "windows": []
-        },
-        "python_paths": {
-            "linux": [],
-            "osx": [
-                // points to the location of the python executable to be used
-                "/Users/gil/buildout.python/sublenv/bin"
-            ],
-            "windows": []
-        },
-        //...
+        "user": {
+            "linters": {
+                 "flake8": {
+                    "@disable": false,
+                    "args": [],
+                    "builtins": "",
+                    "excludes": [],
+                    "ignore": "",
+                    "jobs": "1",
+                    "max-complexity": 10,
+                    "max-line-length": null,
+                    "select": "",
+                    "show-code": false
+                },
+                "pep257": {
+                    "@disable": false,
+                    "args": [],
+                    "excludes": [],
+                    "ignore": ""
+                }
+            },
+            "paths": {
+                "linux": [],
+                "osx": [
+                    "/Users/gil/plone/buildout.python/python-3-sublenv/bin"
+                ],
+                "windows": []
+            },
+            "python_paths": {
+                "linux": [],
+                "osx": [
+                    "/Users/gil/plone/buildout.python/python-3-sublenv/bin"
+                ],
+                "windows": []
+            },
+        }
     }
 
 Lints (jshint / csslit)
@@ -193,11 +207,11 @@ Instalamos `node.js <http://nodejs.org/>`_ (v0.10.26)
 
     Make sure that /usr/local/bin is in your $PATH.
 
-Instalamos `jslint <http://www.jshint.com/>`_ y `csslint <http://csslint.net/>`_
+Instalamos `jshint <http://www.jshint.com/>`_ y `csslint <http://csslint.net/>`_
 
 .. code-block:: console
 
-    $ sudo npm install -g jslint
+    $ sudo npm install -g jshint
     $ sudo npm install -g csslint
 
 En sublimetext instalamos `sublimelinter-jshint <https://github.com/SublimeLinter/SublimeLinter-jshint>`_ y `sublimelinter-csslint <https://github.com/SublimeLinter/SublimeLinter-csslint>`_.
@@ -207,54 +221,30 @@ Agregamos la siguiente configuración en *Preferences -> Package Settings -> Sub
 .. code-block:: json
 
     {
-        //...
-        "linters": {
-            "csslint": {
-                "@disable": false,
-                "args": [],
-                "errors": "",
-                "excludes": [],
-                "ignore": "",
-                "warnings": ""
+        "user": {
+            "linters": {
+                "csslint": {
+                    "@disable": false,
+                    "args": [],
+                    "errors": "",
+                    "excludes": [],
+                    "ignore": "",
+                    "warnings": ""
+                },
+                "jshint": {
+                    "@disable": false,
+                    "args": [],
+                    "excludes": []
+                },
             },
-            //...
-            "jshint": {
-                "@disable": false,
-                "args": [],
-                "excludes": []
+            "paths": {
+                "osx": [
+                    "/usr/local/bin"
+                ],
             },
-        },
-        //...
-        "paths": {
-            "linux": [],
-            "osx": [
-                //...,
-                // points to the path that contains jslint and csslint
-                "/usr/local/bin"
-            ],
-            "windows": []
-        },
-        //...
+        }
     }
 
-HTML
-----
-
-Soporte para CSS en sublime Text 3: `CSS3 <https://github.com/y0ssar1an/CSS3>`_
-It's strongly recommended that you disable the default CSS package, as its completions will interfere with the improved CSS3 completions.
-
-.. sourcecode:: sh
-
-    Mac:           cmd+shift+p  -> Package Control: Disable Package -> CSS
-
-Edición de CSS en tiempo real: `Emmet LiveStyle <http://livestyle.emmet.io/>`_
-
-Coloracion de sintaxis para .less: `Less <https://github.com/danro/LESS-sublime>`_
-
-EditorConfig
-------------
-
-`EditorConfig <https://github.com/sindresorhus/editorconfig-sublime>`_ ayuda a mantener estilos de codigo consistentes entre distintos editores.
 
 Manejo de espacios
 ------------------
@@ -268,18 +258,31 @@ El archivo a modificar es *Preferences -> Package Settings -> Trailing Spaces ->
 .. code-block:: json
 
     {
-        //...
         "trailing_spaces_modified_lines_only": true,
         "trailing_spaces_trim_on_save": true,
-        // ...
     }
+
+
+EditorConfig
+------------
+
+`EditorConfig <https://github.com/sindresorhus/editorconfig-sublime>`_ ayuda a mantener estilos de codigo consistentes entre distintos editores.
+
+
+GitGutter
+---------
+
+`GitGutter <https://github.com/jisaacks/GitGutter>`_ muestra un icono en el area de "gutter"
+indicando si la linea ha sido insertada, modificada o borrada.
+
 
 ST3 snippet para insertar un breakpoint
 -----------------------------------------
 
 Para poder poner un break point con solo escribir pdb y completar con tab,
 debemos poner la siguiente configuración en:
-"~/Library/Application Support/Sublime Text 3/Packages/User/pdb.sublime-snippet"
+"~/Library/Application Support/Sublime Text 3/Packages/User/pdb.sublime-snippet".
+o en *Tools -> New Snippet ...*
 
 .. code-block:: xml
 
@@ -300,33 +303,73 @@ Debug de Sesión
     (projectenv)$ pip install PDBSublimeTextSupport
 
 
-Color Scheme
-------------
+Iluminación de archivos buildout.cfg
+------------------------------------
 
-`Monokai Extended <https://github.com/jonschlinkert/sublime-monokai-extended>`_
+Usamos los paquetes de TextMate modificados por Martin Aspeli.
+Copiamos el directorio `Buildout <https://github.com/optilude/SublimeTextMisc/tree/master/Packages>`_  en ``Sublime Text -> Preferences -> Brows Pakages ...``
 
-Preferences -> Color Scheme -> Monokai Extended -> Monokai Extended
 
 Theme
 -----
 
-`Soda Theme <https://github.com/buymeasoda/soda-theme/>`_
+`Soda Theme <http://buymeasoda.github.io/soda-theme/>`_
 
 Abrimios el archivo de preferencias globales de Sublime Text 3 (Sublime Text -> Preferences -> Settings - User)
 
 .. code-block:: json
 
     {
-        //...
-        "theme": "Soda Dark 3.sublime-theme"
-        //...
+        "soda_classic_tabs": true,
+        "theme": "Soda Dark 3.sublime-theme",
     }
 
-Iluminación de archivos buildout.cfg
-------------------------------------
 
-Usamos los paquetes de TextMate modificados por Martin Aspeli.
-Copiamos el directorio `Buildout <https://github.com/optilude/SublimeTextMisc/tree/master/Packages>`_  en ``Sublime Text -> Preferences -> Brows Pakages ...``
+
+* Descargar `colour-schemes.zip <http://buymeasoda.github.com/soda-theme/extras/colour-schemes.zip>`_.
+* Descomprimir y mover los archivos **tmttheme** en el folder Pakages/User.
+* Abilitar el esquema de colores via:
+
+*Preferences -> Color Scheme -> User -> Monokai Soda*
+
+
+Color Scheme (opcional)
+-----------------------
+
+`Monokai Extended <https://github.com/jonschlinkert/sublime-monokai-extended>`_
+
+*Preferences -> Color Scheme -> Monokai Extended -> Monokai Extended*
+
+
+OmniMarkupPreviewer
+-------------------
+
+Plugin para mostrar rst files en el navegador.
+
+.. sourcecode:: sh
+
+    ⌘ + ⌥ + O: Muestra el archivo en el navegador.
+
+
+HTML
+----
+
+Soporte para CSS en sublime Text 3: `CSS3 <https://github.com/y0ssar1an/CSS3>`_
+
+It's strongly recommended that you disable the default CSS package, as its completions will interfere with the improved CSS3 completions.
+
+.. sourcecode:: sh
+
+    Mac:      shift + ⌘ + P  -> Package Control: Disable Package -> CSS
+
+Coloracion de sintaxis para .less: `Less <https://github.com/danro/LESS-sublime>`_
+
+
+JavaScript
+----------
+
+`JavaScriptNext <https://github.com/Benvie/JavaScriptNext.tmLanguage>`_
+es  una mejor definicion de JavaScript para SublimeText.
 
 
 Referencias
@@ -340,6 +383,6 @@ Referencias
 
 `Sublime Text 3 for Python JavaScript and web developers <http://opensourcehacker.com/2014/03/10/sublime-text-3-for-python-javascript-and-web-developers>`_
 
-`Jenkins buildout fro Plone projects <https://buildoutjenkins.readthedocs.org/en/latest/index.html>`_
+`Sublime Text for Front End Developers <https://css-tricks.com/sublime-text-front-end-developers/>`_
 
-`Introducing LiveStyle: Better, Stronger And Smarter CSS Live Reload <http://www.smashingmagazine.com/2013/08/08/release-livestyle-css-live-reload/>`_
+`Emmet LiveStyle <http://livestyle.emmet.io/>`_
