@@ -89,10 +89,10 @@ Usamos la siguiente configuración para definir el interprete de python usado en
             }
         ],
         "settings": {
-            "python_interpreter_path": "/opt/local/bin/python2.7",
+            "python_interpreter_path": "/usr/local/bin/python2.7",
 
             "python_package_paths": [
-                "/Users/gil/projects/plone/matem-buildout/parts/omelette"
+                "/Users/user/projects/plone/matem-buildout/parts/omelette"
             ]
         }
     }
@@ -176,14 +176,14 @@ Agregamos la siguiente configuración en *Preferences -> Package Settings -> Sub
             "paths": {
                 "linux": [],
                 "osx": [
-                    "/Users/gil/plone/buildout.python/python-3-sublenv/bin"
+                    "/Users/user/buildout.python/python-3-sublenv/bin"
                 ],
                 "windows": []
             },
             "python_paths": {
                 "linux": [],
                 "osx": [
-                    "/Users/gil/plone/buildout.python/python-3-sublenv/bin"
+                    "/Users/user/buildout.python/python-3-sublenv/bin"
                 ],
                 "windows": []
             },
