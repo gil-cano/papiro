@@ -24,7 +24,7 @@ Clone
 
         $ git clone https://github.com/gil-cano/papiro.git
         $ cd papiro
-        $ virtualenv-2.7 .
+        $ virtualenv-3.5 .
         $ source bin/activate
         (papiro)$ pip install -r requirements.txt
         (papiro)$ make html
@@ -36,4 +36,4 @@ resulting HTML pages.
 License
 -------
 
-Copyright © 2011-2014 Gildardo Bautista.
+Copyright © 2011-2015 Gildardo Bautista.
