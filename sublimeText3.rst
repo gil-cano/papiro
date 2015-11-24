@@ -374,6 +374,13 @@ es  una mejor definicion de JavaScript para SublimeText.
 Para seleccionarlo como default para JavaScript, abre un archivo javascript, selecciona
 View -> Syntax -> Open all with current extension as... -> JavascriptNext.
 
+
+Latex
+-----
+`LaTeXTools <https://github.com/SublimeText/LaTeXTools>`_
+
+Si instalamos Skim podemos generar automaticamente el pdf.
+
 Referencias
 -----------
 
