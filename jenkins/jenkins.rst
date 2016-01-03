@@ -70,6 +70,7 @@ Now you need to create an user account for yourself.
 * Use the user name you've used in the above step, and fill in the rest.
 * If everything works smoothly, you are now logged on as yourself with full permissions
 
+.. image:: loggedon.png
 
 Plug-in's
 =========
