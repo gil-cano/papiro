@@ -20,14 +20,14 @@ Building The Documentation
 
 Clone
 
-   .. code:: bash
+.. code:: bash
 
-        $ git clone https://github.com/gil-cano/papiro.git
-        $ cd papiro
-        $ virtualenv-3.5 .
-        $ source bin/activate
-        (papiro)$ pip install -r requirements.txt
-        (papiro)$ make html
+    $ git clone https://github.com/gil-cano/papiro.git
+    $ cd papiro
+    $ virtualenv-3.5 .
+    $ source bin/activate
+    (papiro)$ pip install -r requirements.txt
+    (papiro)$ make html
 
 At the end of a successful build, you will see the location of the
 resulting HTML pages.
