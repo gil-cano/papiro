@@ -1,25 +1,30 @@
 Sublime Text 3
 ==============
 
-Linea de comandos en OS X
--------------------------
+Línea de comandos en Mac OS X
+-----------------------------
 
-Sublime Text 3 incluye el comando, *subl*, para abrir archivos desde una terminal.
+`Sublime Text 3 <https://www.sublimetext.com/3>`_ incluye el comando, ``subl``, para trabajar con archivos desde una terminal.
+
+Para poder usarlo hacemos un enlace simbólico:
 
 .. code-block:: bash
 
    $ ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
 
-Agregamos el directorio /usr/local/bin a nuestro path en el archivo .bash_profile
+Debemos asegurarnos que el directorio ``/usr/local/bin`` se encuntra en nuestro ``$PATH``, de no ser así podemos agregarlo en el archivo ``.bash_profile``
 
 .. code-block:: console
 
    export PATH=/usr/local/bin/:$PATH
 
-User Settings
--------------
+.. seealso::
+    `OS X Command Line - Sublime Text 3 Documentation <http://www.sublimetext.com/docs/3/osx_command_line.html>`_
 
-Configura tus preferencias abriendo *Preferences* -> *Settings - User*.
+Configuración de Usuario
+------------------------
+
+El archivo de configuración de usurio se abre desde el menú ``Sublime Text -> Preferences -> Settings - User``.
 
 .. code-block:: json
 
@@ -28,7 +33,8 @@ Configura tus preferencias abriendo *Preferences* -> *Settings - User*.
         "font_size": 15,
         "ignored_packages":
         [
-            "Vintage"
+            "CSS",
+            "Vintage",
         ],
         "rulers":
         [
@@ -42,28 +48,29 @@ Configura tus preferencias abriendo *Preferences* -> *Settings - User*.
     }
 
 
-* 72, // docstrings
-* 79, // optimum code line length
-* 100  // maximum allowable length
+Sublime Text mostrará un margen en las columnas:
+
+    -  72 docstrings
+    -  79 longitud optima de linea de codigo
+    - 100 longitud maxima permitida
 
 En este aso estamos usando el tipo de letra `Source Code Pro <https://github.com/adobe-fonts/source-code-pro>`_
 
-Package Control
----------------
+Control de paquetes
+-------------------
 
-La instalación de `Package Control <https://sublime.wbond.net/installation>`_ es atravez de la consola de Sublime Text (ctrl + \`). Una vez abierta pegamos lo siguiente (Es mejor tomarlo de la pagina original):
+Para la administración de paquetes se recomienda usar `Package Control <https://sublime.wbond.net/installation>`_. La instalación es atravez de la consola de Sublime Text (``ctrl + ```). En la consola ejecutamos lo siguiente (es mejor tomarlo de la pagina original):
 
 .. code-block:: console
 
-   import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)
+   import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)
 
-Este comando descarga el paquete *Control.sublime-package*.
+Este comando descarga el paquete ``Control.sublime-package``.
 
-Para instalar nuevos plugins abrimos la paleta de comandos con *shift + ⌘ + P*. Cuando se habra la paleta escribimos *install* y buscamos el comando *Package Control: Install Package*.
+Para instalar nuevos plugins abrimos la paleta de comandos con ``⇧ + ⌘ + P``, escribimos *install* y buscamos el comando ``Package Control: Install Package``.
 
-
-Autocompletar python
---------------------
+Autocompletar código python
+---------------------------
 
 `SublimeJedi <https://github.com/srusskih/SublimeJEDI>`_
 
@@ -71,12 +78,7 @@ Autocompletar python
 
     Comparar con `Anaconda <http://damnwidget.github.io/anaconda/#>`_
 
-
-Usamos la siguiente configuración para definir el interprete de python usado en el proyecto. Por default el archivo de un proyecto es *<project name>.sublime-project*
-
-(para crear un proyecto abrir los archivos son sublimetext y despues *Project -> save Project as*)
-
-(para editarlo *Project -> Edit Project*)
+Usamos la siguiente configuración para definir el interprete de python que usaremos en nuestro proyecto.
 
 .. code-block:: json
 
@@ -96,6 +98,10 @@ Usamos la siguiente configuración para definir el interprete de python usado en
             ]
         }
     }
+
+| Por default el archivo de un proyecto es ``<project name>.sublime-project``
+| Para crear un proyecto ``Project -> save Project as``
+| Para editarlo ``Project -> Edit Project``
 
 Para ir a la definición de un simbolo usamos *ctrl + shift + G*.
 
@@ -381,17 +387,28 @@ Latex
 
 Si instalamos Skim podemos generar automaticamente el pdf.
 
-Referencias
------------
+Acordeón
+--------
 
-`OS X Command Line <http://www.sublimetext.com/docs/3/osx_command_line.html>`_
+.. note::
 
-`Reverting to a Freshly Installed State <http://www.sublimetext.com/docs/3/revert.html>`_
+    ======  ==================
+    ctrl `  muestra la consola
+    ⇧ ⌘ P   paleta de comandos
+    ======  ==================
 
-`Turning Sublime Text Into a Lightweight Python IDE <http://cewing.github.io/training.codefellows/assignments/day01/sublime_as_ide.html>`_
 
-`Sublime Text 3 for Python JavaScript and web developers <http://opensourcehacker.com/2014/03/10/sublime-text-3-for-python-javascript-and-web-developers>`_
+Bibliografía
+------------
 
-`Sublime Text for Front End Developers <https://css-tricks.com/sublime-text-front-end-developers/>`_
+* `Reverting to a freshly installed state - Sublime Text 3 Documentation <http://www.sublimetext.com/docs/3/revert.html>`_
 
-`Emmet LiveStyle <http://livestyle.emmet.io/>`_
+* `Turning Sublime Text Into a Lightweight Python IDE <http://cewing.github.io/training.codefellows/assignments/day01/sublime_as_ide.html>`_
+
+* `Sublime Text 3 for Python JavaScript and web developers <http://opensourcehacker.com/2014/03/10/sublime-text-3-for-python-javascript-and-web-developers>`_
+
+* `Sublime Text for Front End Developers <https://css-tricks.com/sublime-text-front-end-developers/>`_
+
+* `Emmet LiveStyle <http://livestyle.emmet.io/>`_
+
+
