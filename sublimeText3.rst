@@ -54,7 +54,7 @@ Sublime Text mostrará un margen en las columnas:
     -  79 longitud optima de linea de codigo
     - 100 longitud maxima permitida
 
-En este aso estamos usando el tipo de letra `Source Code Pro <https://github.com/adobe-fonts/source-code-pro>`_
+En este caso estamos usando el tipo de letra `Source Code Pro <https://github.com/adobe-fonts/source-code-pro>`_
 
 Control de paquetes
 -------------------
@@ -87,32 +87,30 @@ Usamos la siguiente configuración para definir el interprete de python que usar
         [
             {
                 "follow_symlinks": true,
-                "path": "src-git"
+                "path": "src-git",
+                "folder_exclude_patterns": ["develop-eggs"],
             }
         ],
         "settings": {
             "python_interpreter_path": "/usr/local/bin/python2.7",
-
             "python_package_paths": [
-                "/Users/user/projects/plone/matem-buildout/parts/omelette"
+                "/Users/user/projects/plone/package/parts/omelette"
             ]
         }
     }
 
-| Por default el archivo de un proyecto es ``<project name>.sublime-project``
-| Para crear un proyecto ``Project -> save Project as``
-| Para editarlo ``Project -> Edit Project``
+Por default el archivo de un proyecto es ``<project name>.sublime-project``
 
-Para ir a la definición de un simbolo usamos *ctrl + shift + G*.
+Para crear un proyecto ``Project -> save Project as``
 
-Para buscar otros lugares donde se use el simbolo usamos *⌥ + shift + F*.
+Para editarlo ``Project -> Edit Project``
 
 
+Verificación de código (flake8, pep257)
+---------------------------------------
 
-Lint (flake8, pep257)
----------------------
-
-Muestra errores que cometiste en el código.
+`Flake8 <https://pypi.python.org/pypi/flake8>`_ reporta errores en el código,
+haciendo uso de las herramientas `PyFlakes <https://pypi.python.org/pypi/pyflakes>`_, `pep8 <https://pypi.python.org/pypi/pep8>`_ y `mccabe <https://pypi.python.org/pypi/mccabe>`_
 
 Primero creamos un ambiente virtual y lo activamos
 
@@ -130,7 +128,7 @@ Instalamos los paquetes necesarios (`flake8 <https://pypi.python.org/pypi/flake8
 
 .. code-block:: console
 
-    (sublenv)$ pip install flake8
+    (python-3-sublenv)$ pip install flake8
     Downloading/unpacking flake8
     [...]
     Downloading/unpacking pyflakes>=0.7.3 (from flake8)
@@ -143,17 +141,18 @@ Instalamos los paquetes necesarios (`flake8 <https://pypi.python.org/pypi/flake8
     [...]
     Successfully installed flake8 pyflakes pep8 mccabe
     Cleaning up...
-    (sublenv)$ pip install pep257
+    (python-3-sublenv)$ pip install flake8-blind-except
+    (python-3-sublenv)$ pip install pep257
     Downloading/unpacking pep257
     Downloading pep257-0.3.2.tar.gz
     [...]
     Successfully installed pep257
     Cleaning up...
-    (sublenv)$
+    (python-3-sublenv)$
 
-Instalamos `SublimeLinter <http://sublimelinter.readthedocs.org/en/latest/>`_ , despues `SublimeLinter-flake8 <https://github.com/SublimeLinter/SublimeLinter-flake8>`_ y `SublimeLinter-pep257 <https://github.com/SublimeLinter/SublimeLinter-pep257>`_ usando el Package Control.
+Instalamos `SublimeLinter <http://sublimelinter.readthedocs.org/en/latest/>`_ usando el Package Control. Despues instalamos `SublimeLinter-flake8 <https://github.com/SublimeLinter/SublimeLinter-flake8>`_ y `SublimeLinter-pep257 <https://github.com/SublimeLinter/SublimeLinter-pep257>`_
 
-Agregamos la siguiente configuración en *Preferences -> Package Settings -> SublimeLinter -> Settings - User*:
+Agregamos la siguiente configuración en ``Sublime Text -> Preferences -> Package Settings -> SublimeLinter -> Settings - User``:
 
 .. code-block:: json
 
@@ -392,10 +391,12 @@ Acordeón
 
 .. note::
 
-    ======  ==================
-    ctrl `  muestra la consola
-    ⇧ ⌘ P   paleta de comandos
-    ======  ==================
+    ========  =============================================
+    ctrl `    muestra la consola
+    ⇧ ⌘ P     paleta de comandos
+    ctrl ⇧ G  ir a la definición de un simbolo
+    ⌥ ⇧ F     buscar otros lugares donde se use el simbolo
+    ========  =============================================
 
 
 Bibliografía
