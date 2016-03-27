@@ -466,9 +466,12 @@ Acordeón
     ========  =========================================================
     ctrl `    muestra la consola
     ⇧ ⌘ P     paleta de comandos
-    ctrl ⇧ G  Encuentra la definición de una función, variable o clase
-    ⌥ ⇧ F     Encuentra donde se usa el metodo, varibale o clase
-    ⌘ ⌥ O     Muestra un archivo rst en el navegador
+    ctrl ⇧ G  encuentra la definición de una función, variable o clase
+    ⌥ ⇧ F     encuentra donde se usa el metodo, varibale o clase
+    ⌘ ⌥ O     muestra un archivo rst en el navegador
+    ⌘ ⇧ L     selecciona lineas multiples
+    ctrl ⌘ G  selecciona todas las apariciones
+    ctrl G    ir a linea
     ========  =========================================================
 
 Bibliografía
