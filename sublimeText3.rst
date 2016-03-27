@@ -33,7 +33,6 @@ El archivo de configuración de usurio se abre desde el menú ``Sublime Text -> 
         "font_size": 15,
         "ignored_packages":
         [
-            "CSS",
             "Vintage",
         ],
         "rulers":
@@ -69,14 +68,22 @@ Este comando descarga el paquete ``Control.sublime-package``.
 
 Para instalar nuevos plugins abrimos la paleta de comandos con ``⇧ + ⌘ + P``, escribimos *install* y buscamos el comando ``Package Control: Install Package``.
 
+.. note::
+
+    ========  =============================================
+    ctrl `    muestra la consola
+    ⇧ ⌘ P     paleta de comandos
+    ========  =============================================
+
+
 Autocompletar código python
 ---------------------------
 
 `SublimeJedi <https://github.com/srusskih/SublimeJEDI>`_
 
-.. note::
+.. seealso::
 
-    Comparar con `Anaconda <http://damnwidget.github.io/anaconda/#>`_
+    `Anaconda <http://damnwidget.github.io/anaconda/#>`_
 
 Usamos la siguiente configuración para definir el interprete de python que usaremos en nuestro proyecto.
 
@@ -92,7 +99,7 @@ Usamos la siguiente configuración para definir el interprete de python que usar
             }
         ],
         "settings": {
-            "python_interpreter_path": "/usr/local/bin/python2.7",
+            "python_interpreter": "/usr/local/bin/python2.7",
             "python_package_paths": [
                 "/Users/user/projects/plone/package/parts/omelette"
             ]
@@ -104,6 +111,21 @@ Por default el archivo de un proyecto es ``<project name>.sublime-project``
 Para crear un proyecto ``Project -> save Project as``
 
 Para editarlo ``Project -> Edit Project``
+
+Para solo usar el autocomplete de jedi editamos ``Sublime Text -> Preferences -> Packages Settings -> Jedi -> Settings - User``
+
+.. code-block:: json
+
+    {
+        "sublime_completions_visibility": "jedi"
+    }
+
+.. note::
+
+    ========  =========================================================
+    ctrl ⇧ G  Encuentra la definición de una función, variable o clase
+    ⌥ ⇧ F     Encuentra donde se usa el metodo, varibale o clase
+    ========  =========================================================
 
 
 Verificación de código (flake8, pep257)
@@ -143,16 +165,64 @@ Instalamos los paquetes necesarios (`flake8 <https://pypi.python.org/pypi/flake8
     Cleaning up...
     (python-3-sublenv)$ pip install flake8-blind-except
     (python-3-sublenv)$ pip install pep257
-    Downloading/unpacking pep257
-    Downloading pep257-0.3.2.tar.gz
-    [...]
-    Successfully installed pep257
-    Cleaning up...
     (python-3-sublenv)$
 
-Instalamos `SublimeLinter <http://sublimelinter.readthedocs.org/en/latest/>`_ usando el Package Control. Despues instalamos `SublimeLinter-flake8 <https://github.com/SublimeLinter/SublimeLinter-flake8>`_ y `SublimeLinter-pep257 <https://github.com/SublimeLinter/SublimeLinter-pep257>`_
+Instalamos `SublimeLinter <http://sublimelinter.readthedocs.org/en/latest/>`_ usando el Package Control. 
 
-Agregamos la siguiente configuración en ``Sublime Text -> Preferences -> Package Settings -> SublimeLinter -> Settings - User``:
+Editamos el archivo de configuración de SublimeLinter ``Sublime Text -> Preferences -> Package Settings -> SublimeLinter -> Settings - User``:
+
+.. code-block:: json
+
+    {
+
+    }
+
+Salvamos y reiniciamos SublimeText. El archivo de configuración tendra la siguiente configuración:
+
+.. code-block:: json
+
+    {
+        "user": {
+            "debug": false,
+            "delay": 0.25,
+            "error_color": "D02000",
+            "gutter_theme": "Packages/SublimeLinter/gutter-themes/Default/Default.gutter-theme",
+            "gutter_theme_excludes": [],
+            "lint_mode": "background",
+            "linters": {},
+            "mark_style": "outline",
+            "no_column_highlights_line": false,
+            "passive_warnings": false,
+            "paths": {
+                "linux": [],
+                "osx": [],
+                "windows": []
+            },
+            "python_paths": {
+                "linux": [],
+                "osx": [],
+                "windows": []
+            },
+            "rc_search_limit": 3,
+            "shell_timeout": 10,
+            "show_errors_on_save": false,
+            "show_marks_in_minimap": true,
+            "syntax_map": {
+                "html (django)": "html",
+                "html (rails)": "html",
+                "html 5": "html",
+                "javascript (babel)": "javascript",
+                "magicpython": "python",
+                "php": "html",
+                "python django": "python",
+                "pythonimproved": "python"
+            },
+            "warning_color": "DDB700",
+            "wrap_find": true
+        }
+    }
+
+Agregamos la siguiente:
 
 .. code-block:: json
 
@@ -169,13 +239,7 @@ Agregamos la siguiente configuración en ``Sublime Text -> Preferences -> Packag
                     "max-complexity": 10,
                     "max-line-length": null,
                     "select": "",
-                    "show-code": false
-                },
-                "pep257": {
-                    "@disable": false,
-                    "args": [],
-                    "excludes": [],
-                    "ignore": ""
+                    "show-code": true
                 }
             },
             "paths": {
@@ -194,6 +258,8 @@ Agregamos la siguiente configuración en ``Sublime Text -> Preferences -> Packag
             },
         }
     }
+
+Instalamos `SublimeLinter-flake8 <https://github.com/SublimeLinter/SublimeLinter-flake8>`_
 
 Lints (jshint / csslit)
 -----------------------
@@ -221,7 +287,7 @@ Instalamos `jshint <http://www.jshint.com/>`_ y `csslint <http://csslint.net/>`_
 
 En sublimetext instalamos `sublimelinter-jshint <https://github.com/SublimeLinter/SublimeLinter-jshint>`_ y `sublimelinter-csslint <https://github.com/SublimeLinter/SublimeLinter-csslint>`_.
 
-Agregamos la siguiente configuración en *Preferences -> Package Settings -> SublimeLinter -> Settings - User*:
+Agregamos la siguiente configuración en ``Sublime Text -> Preferences -> Package Settings -> SublimeLinter -> Settings - User``:
 
 .. code-block:: json
 
@@ -250,6 +316,13 @@ Agregamos la siguiente configuración en *Preferences -> Package Settings -> Sub
         }
     }
 
+Iluminación de archivos buildout.cfg
+------------------------------------
+
+Usamos los paquetes de TextMate modificados por Martin Aspeli.
+Copiamos el directorio `Buildout <https://github.com/optilude/SublimeTextMisc/tree/master/Packages>`_  en ``Sublime Text -> Preferences -> Browse Pakages ...``
+
+Abrimos un archivo ``buildout.cfg`` y seleccionamos ``View -> Syntax -> Open all with current extension as... -> Buildout config``
 
 Manejo de espacios
 ------------------
@@ -258,7 +331,7 @@ Para eliminart espacios en blanco al final de una linea o en lineas vacias usamo
 
 La siguiente configuración nos permite eliminar los espacios en blanco al momento se salvar un archivo, pero solo en lineas de codigo que hemos modificado.
 
-El archivo a modificar es *Preferences -> Package Settings -> Trailing Spaces -> Settings User*
+El archivo a modificar es ``Preferences -> Package Settings -> Trailing Spaces -> Settings User``
 
 .. code-block:: json
 
@@ -286,8 +359,8 @@ ST3 snippet para insertar un breakpoint
 
 Para poder poner un break point con solo escribir pdb y completar con tab,
 debemos poner la siguiente configuración en:
-"~/Library/Application Support/Sublime Text 3/Packages/User/pdb.sublime-snippet".
-o en *Tools -> New Snippet ...*
+``~/Library/Application Support/Sublime Text 3/Packages/User/pdb.sublime-snippet``.
+o en ``Tools -> New Snippet ...``
 
 .. code-block:: xml
 
@@ -308,19 +381,13 @@ Debug de Sesión
     (projectenv)$ pip install PDBSublimeTextSupport
 
 
-Iluminación de archivos buildout.cfg
-------------------------------------
-
-Usamos los paquetes de TextMate modificados por Martin Aspeli.
-Copiamos el directorio `Buildout <https://github.com/optilude/SublimeTextMisc/tree/master/Packages>`_  en ``Sublime Text -> Preferences -> Brows Pakages ...``
-
 
 Theme
 -----
 
 `Soda Theme <http://buymeasoda.github.io/soda-theme/>`_
 
-Abrimios el archivo de preferencias globales de Sublime Text 3 (Sublime Text -> Preferences -> Settings - User)
+Abrimios el archivo de preferencias globales de Sublime Text 3 ``Sublime Text -> Preferences -> Settings - User``
 
 .. code-block:: json
 
@@ -332,10 +399,10 @@ Abrimios el archivo de preferencias globales de Sublime Text 3 (Sublime Text -> 
 
 
 * Descargar `colour-schemes.zip <http://buymeasoda.github.com/soda-theme/extras/colour-schemes.zip>`_.
-* Descomprimir y mover los archivos **tmttheme** en el folder Pakages/User.
+* Descomprimir y mover los archivos **tmttheme** en el folder ``Pakages/User``.
 * Abilitar el esquema de colores via:
 
-*Preferences -> Color Scheme -> User -> Monokai Soda*
+``Sublime Text -> Preferences -> Color Scheme -> User -> Monokai Soda``
 
 
 Color Scheme (opcional)
@@ -351,21 +418,20 @@ OmniMarkupPreviewer
 
 Plugin para mostrar rst files en el navegador.
 
-.. sourcecode:: sh
+.. note::
 
-    ⌘ + ⌥ + O: Muestra el archivo en el navegador.
+    ========  =========================================================
+    ⌘ ⌥ O     Muestra un archivo rst en el navegador
+    ========  =========================================================
 
-
-HTML
+CSS
 ----
 
 Soporte para CSS en sublime Text 3: `CSS3 <https://github.com/y0ssar1an/CSS3>`_
 
-It's strongly recommended that you disable the default CSS package, as its completions will interfere with the improved CSS3 completions.
+Se recomienda desabilitar el paquete CSS desde la paleta de comandos ``Package Control: Disable Package -> CSS``
 
-.. sourcecode:: sh
-
-    Mac:      shift + ⌘ + P  -> Package Control: Disable Package -> CSS
+Asigna CSS3 como el lenguaje por omision para los archivos .css ``View -> Syntax -> Open all with current extension as... -> CSS3``
 
 Coloracion de sintaxis para .less: `Less <https://github.com/danro/LESS-sublime>`_
 
@@ -379,6 +445,7 @@ es  una mejor definicion de JavaScript para SublimeText.
 Para seleccionarlo como default para JavaScript, abre un archivo javascript, selecciona
 View -> Syntax -> Open all with current extension as... -> JavascriptNext.
 
+Asigna JavaScriptNext como el lenguaje por omision para los archivos .js ``View -> Syntax -> Open all with current extension as... -> JavaScript Next``
 
 Latex
 -----
@@ -386,18 +453,23 @@ Latex
 
 Si instalamos Skim podemos generar automaticamente el pdf.
 
+Comparar archivos
+-----------------
+
+`sublime-compare-side-by-side <https://github.com/DougTy/sublime-compare-side-by-side>`_
+
 Acordeón
 --------
 
 .. note::
 
-    ========  =============================================
+    ========  =========================================================
     ctrl `    muestra la consola
     ⇧ ⌘ P     paleta de comandos
-    ctrl ⇧ G  ir a la definición de un simbolo
-    ⌥ ⇧ F     buscar otros lugares donde se use el simbolo
-    ========  =============================================
-
+    ctrl ⇧ G  Encuentra la definición de una función, variable o clase
+    ⌥ ⇧ F     Encuentra donde se usa el metodo, varibale o clase
+    ⌘ ⌥ O     Muestra un archivo rst en el navegador
+    ========  =========================================================
 
 Bibliografía
 ------------
