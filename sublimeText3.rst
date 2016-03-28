@@ -324,6 +324,11 @@ Copiamos el directorio `Buildout <https://github.com/optilude/SublimeTextMisc/tr
 
 Abrimos un archivo ``buildout.cfg`` y seleccionamos ``View -> Syntax -> Open all with current extension as... -> Buildout config``
 
+Iluminación de archivos zcml
+----------------------------
+
+Abrimos un archivo ``.zcml`` y seleccionamos ``View -> Syntax -> Open all with current extension as... -> XML``
+
 Manejo de espacios
 ------------------
 
