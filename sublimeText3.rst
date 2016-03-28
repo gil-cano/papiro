@@ -128,8 +128,8 @@ Para solo usar el autocomplete de jedi editamos ``Sublime Text -> Preferences ->
     ========  =========================================================
 
 
-Verificación de código (flake8, pep257)
----------------------------------------
+Verificación de código (flake8)
+-------------------------------
 
 `Flake8 <https://pypi.python.org/pypi/flake8>`_ reporta errores en el código,
 haciendo uso de las herramientas `PyFlakes <https://pypi.python.org/pypi/pyflakes>`_, `pep8 <https://pypi.python.org/pypi/pep8>`_ y `mccabe <https://pypi.python.org/pypi/mccabe>`_
@@ -164,7 +164,10 @@ Instalamos los paquetes necesarios (`flake8 <https://pypi.python.org/pypi/flake8
     Successfully installed flake8 pyflakes pep8 mccabe
     Cleaning up...
     (python-3-sublenv)$ pip install flake8-blind-except
-    (python-3-sublenv)$ pip install pep257
+    (python-3-sublenv)$ pip install flake8-coding
+    (python-3-sublenv)$ pip install flake8-docstrings
+    (python-3-sublenv)$ pip install pep8-naming
+    (python-3-sublenv)$ pip install
     (python-3-sublenv)$
 
 Instalamos `SublimeLinter <http://sublimelinter.readthedocs.org/en/latest/>`_ usando el Package Control. 
@@ -234,7 +237,7 @@ Agregamos la siguiente:
                     "args": [],
                     "builtins": "",
                     "excludes": [],
-                    "ignore": "",
+                    "ignore": "E501,D100,T000",
                     "jobs": "1",
                     "max-complexity": 10,
                     "max-line-length": null,
