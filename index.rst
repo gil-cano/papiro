@@ -53,3 +53,7 @@ Development tools and Administrations tools
     jenkins/jenkins.rst
     webpagetest.rst
     munin.rst
+
+    debian.rst
+    brew.rst
+    haproxy.rst

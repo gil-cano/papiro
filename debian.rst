@@ -26,7 +26,7 @@ Debian
 
 
 `buildout.python <https://github.com/collective/buildout.python>`_
----------------
+------------------------------------------------------------------
 
 Trying to install PIL for python2.4
 
