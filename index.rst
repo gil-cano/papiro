@@ -57,3 +57,5 @@ Development tools and Administrations tools
     debian.rst
     brew.rst
     haproxy.rst
+    vagrant.rst
+    node.rst
