@@ -43,3 +43,18 @@ Para instalar un paquete de manera global (/usr/local/lib/node_modules) usamos e
     /usr/local/bin/jshint -> /usr/local/lib/node_modules/jshint/bin/jshint
     $ sudo npm install -g csslint
     /usr/local/bin/csslint -> /usr/local/lib/node_modules/csslint/cli.js
+
+
+Para instalar un paquete de manera local
+
+.. code-block:: console
+
+    $ npm install <package_name>
+
+This will create the node_modules directory in your current directory(if one doesn't exist yet), and will download the package to that directory.
+
+Ejemplo:
+
+.. code-block:: console
+
+    $ npm install d3@next
