@@ -58,3 +58,65 @@ Ejemplo:
 .. code-block:: console
 
     $ npm install d3@next
+
+
+Manejo de paquetes
+------------------
+
+Para crear un archivo package.json ejecutamos:
+
+
+.. code-block:: console
+
+    $ npm init
+    This utility will walk you through creating a package.json file.
+    ...
+    name: (voronoi)
+    version: (1.0.0)
+    description: voronoi diagram
+    entry point: (index.js)
+    test command:
+    git repository:
+    keywords: voronoi
+    license: (ISC) MIT
+    About to write to /Users/gil/projects/javascript/voronoi/package.json:
+
+    {
+      "name": "voronoi",
+      "version": "1.0.0",
+      "description": "voronoi diagram",
+      "main": "index.js",
+      "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+      },
+      "keywords": [
+        "voronoi"
+      ],
+      "author": "gilo <gil.cano@gmail.com>",
+      "license": "MIT"
+    }
+
+
+    Is this ok? (yes)
+
+para instalar un paquete y agregarlo al archivo package.json ejecutamos:
+
+.. code-block:: console
+
+    $ npm install <pkg> --save
+
+para paquetes que solo se usaran para desarrollo se usara --save-dev
+
+.. code-block:: console
+
+    $ npm install <pkg> --save-dev
+
+Si tenemos un archivo package.json y queremos instalar sus dependencias ejecutamos:
+
+.. code-block:: console
+
+    $ npm install
+
+
+
+`Creating Node.js modules <https://docs.npmjs.com/getting-started/creating-node-modules>`_
