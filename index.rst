@@ -31,6 +31,7 @@ Plone
     plone/catalog.rst
     plone/vocabularies.rst
     plone/diazo.rst
+    plone/translations.rst
 
 Plone add-ons
 =============
