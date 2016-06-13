@@ -32,6 +32,7 @@ Plone
     plone/vocabularies.rst
     plone/diazo.rst
     plone/translations.rst
+    plone/testing.rst
 
 Plone add-ons
 =============
