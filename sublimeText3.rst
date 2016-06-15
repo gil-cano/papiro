@@ -165,9 +165,11 @@ Instalamos los paquetes necesarios (`flake8 <https://pypi.python.org/pypi/flake8
     Cleaning up...
     (python-3-sublenv)$ pip install flake8-blind-except
     (python-3-sublenv)$ pip install flake8-coding
+    (python-3-sublenv)$ pip install flake8-debugger
+    (python-3-sublenv)$ pip install flake8-deprecated
     (python-3-sublenv)$ pip install flake8-docstrings
+    (python-3-sublenv)$ pip install flake8-plone-hasattr
     (python-3-sublenv)$ pip install pep8-naming
-    (python-3-sublenv)$ pip install
     (python-3-sublenv)$
 
 Instalamos `SublimeLinter <http://sublimelinter.readthedocs.org/en/latest/>`_ usando el Package Control. 
