@@ -166,13 +166,23 @@ Instalamos los paquetes necesarios (`flake8 <https://pypi.python.org/pypi/flake8
     (python-3-sublenv)$ pip install flake8-blind-except
     (python-3-sublenv)$ pip install flake8-coding
     (python-3-sublenv)$ pip install flake8-debugger
-    (python-3-sublenv)$ pip install flake8-deprecated
     (python-3-sublenv)$ pip install flake8-docstrings
-    (python-3-sublenv)$ pip install flake8-plone-hasattr
-    (python-3-sublenv)$ pip install pep8-naming
-    (python-3-sublenv)$
 
-Instalamos `SublimeLinter <http://sublimelinter.readthedocs.org/en/latest/>`_ usando el Package Control. 
+Si queremos usar un archivo requirements.txt debe contener los siguiente
+
+.. code-block:: text
+
+    flake8==2.5.4
+    flake8-blind-except==0.1.0
+    flake8-coding==1.2.1
+    flake8-debugger==1.4.0
+    flake8-docstrings==0.2.7
+    mccabe==0.4.0
+    pep257==0.7.0
+    pep8==1.7.0
+    pyflakes==1.0.0
+
+Instalamos `SublimeLinter <http://sublimelinter.readthedocs.org/en/latest/>`_ usando el Package Control.
 
 Editamos el archivo de configuración de SublimeLinter ``Sublime Text -> Preferences -> Package Settings -> SublimeLinter -> Settings - User``:
 
@@ -497,4 +507,4 @@ Bibliografía
 
 * `Emmet LiveStyle <http://livestyle.emmet.io/>`_
 
-
+BracketHighlighter
