@@ -14,6 +14,13 @@ For each test:
 
     bin/test -t TestInstallation
 
-http://docs.plone.org/external/plone.app.testing/docs/source/README.html
+Bibliografía
+------------
 
-http://plonetrainingtesting.readthedocs.io/en/latest/index.html
+* `plone.app.testing's documentation <http://docs.plone.org/external/plone.app.testing/docs/source/README.html>`_
+
+* `Dexterity Integration tests <http://docs.plone.org/external/plone.app.dexterity/docs/testing/integration-tests.html>`_
+
+* `plonetraining.testing <http://plonetrainingtesting.readthedocs.io/en/latest/index.html>`_
+
+* `collective.nitf testing <https://github.com/collective/collective.nitf/blob/master/src/collective/nitf/tests/test_views.py>`_
