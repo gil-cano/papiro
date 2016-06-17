@@ -21,6 +21,7 @@ Python
     :maxdepth: 2
 
     python/python_patterns.rst
+    python/python.rst
 
 Plone
 =====
