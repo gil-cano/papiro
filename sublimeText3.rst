@@ -476,7 +476,14 @@ Si instalamos Skim podemos generar automaticamente el pdf.
 Comparar archivos
 -----------------
 
-`sublime-compare-side-by-side <https://github.com/DougTy/sublime-compare-side-by-side>`_
+`sublimerge <http://www.sublimerge.com>`_
+
+.. note::
+
+    ========   ======================================
+    ctrl ⌥ d   muestra panel con comandos disponibles
+    ========   ======================================
+
 
 Acordeón
 --------
@@ -492,6 +499,7 @@ Acordeón
     ⌘ ⇧ L     selecciona lineas multiples
     ctrl ⌘ G  selecciona todas las apariciones
     ctrl G    ir a linea
+    ctrl ⌥ d  muestra panel para comparar archivos
     ========  =========================================================
 
 Bibliografía
