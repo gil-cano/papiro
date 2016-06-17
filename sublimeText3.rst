@@ -371,6 +371,11 @@ El archivo a modificar es ``Preferences -> Package Settings -> Trailing Spaces -
         "trailing_spaces_trim_on_save": true,
     }
 
+Resaltar bloques
+----------------
+
+`BracketHighlighter <https://github.com/facelessuser/BracketHighlighter>`_ muestra alcance de bloques.
+
 
 EditorConfig
 ------------
@@ -412,9 +417,32 @@ Debug de Sesión
     (projectenv)$ pip install PDBSublimeTextSupport
 
 
+Mejoras a la barra lateral
+--------------------------
+`SideBarEnhancements <https://github.com/titoBouzout/SideBarEnhancements>`_
+
 
 Theme
 -----
+
+`Material Theme <http://equinusocio.github.io/material-theme/>`_
+
+`Material Theme - Appbar <https://github.com/equinusocio/material-theme-appbar>`_
+
+Abrimios el archivo de preferencias globales de Sublime Text 3 ``Sublime Text -> Preferences -> Settings - User``
+
+.. code-block:: json
+
+    {
+        "theme": "Material-Theme-Darker.sublime-theme",
+        "color_scheme": "Packages/Material Theme/schemes/Material-Theme-Darker.tmTheme",
+        "overlay_scroll_bars"           : "enabled",
+        "always_show_minimap_viewport"  : true,
+        "bold_folder_labels"            : true,
+        "material_theme_compact_sidebar": true,
+        "material_theme_small_tab"      : true,
+    }
+
 
 `Soda Theme <http://buymeasoda.github.io/soda-theme/>`_
 
@@ -559,5 +587,3 @@ Bibliografía
 * `Sublime Text for Front End Developers <https://css-tricks.com/sublime-text-front-end-developers/>`_
 
 * `Emmet LiveStyle <http://livestyle.emmet.io/>`_
-
-BracketHighlighter
