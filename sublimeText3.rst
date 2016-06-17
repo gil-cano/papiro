@@ -8,7 +8,7 @@ Línea de comandos en Mac OS X
 
 Para poder usarlo hacemos un enlace simbólico:
 
-.. code-block:: bash
+.. code-block:: console
 
    $ ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
 
@@ -128,59 +128,8 @@ Para solo usar el autocomplete de jedi editamos ``Sublime Text -> Preferences ->
     ========  =========================================================
 
 
-Verificación de código (flake8)
--------------------------------
-
-`Flake8 <https://pypi.python.org/pypi/flake8>`_ reporta errores en el código,
-haciendo uso de las herramientas `PyFlakes <https://pypi.python.org/pypi/pyflakes>`_, `pep8 <https://pypi.python.org/pypi/pep8>`_ y `mccabe <https://pypi.python.org/pypi/mccabe>`_
-
-Primero creamos un ambiente virtual y lo activamos
-
-.. code-block:: console
-
-    $ cd /Users/myuser/buildout.python
-    $ virtualenv-3.5 python-3-sublenv
-    New python executable in python-3-sublenv/bin/python3.5
-    Also creating executable in python-3-sublenv/bin/python
-    Installing setuptools, pip...done.
-    $ source python-3-sublenv/bin/activate
-    (python-3-sublenv)$
-
-Instalamos los paquetes necesarios (`flake8 <https://pypi.python.org/pypi/flake8>`_)
-
-.. code-block:: console
-
-    (python-3-sublenv)$ pip install flake8
-    Downloading/unpacking flake8
-    [...]
-    Downloading/unpacking pyflakes>=0.7.3 (from flake8)
-    [...]
-    Downloading/unpacking pep8>=1.4.6 (from flake8)
-    [...]
-    Downloading/unpacking mccabe>=0.2.1 (from flake8)
-    [...]
-    Installing collected packages: flake8, pyflakes, pep8, mccabe
-    [...]
-    Successfully installed flake8 pyflakes pep8 mccabe
-    Cleaning up...
-    (python-3-sublenv)$ pip install flake8-blind-except
-    (python-3-sublenv)$ pip install flake8-coding
-    (python-3-sublenv)$ pip install flake8-debugger
-    (python-3-sublenv)$ pip install flake8-docstrings
-
-Si queremos usar un archivo requirements.txt debe contener los siguiente
-
-.. code-block:: text
-
-    flake8==2.5.4
-    flake8-blind-except==0.1.0
-    flake8-coding==1.2.1
-    flake8-debugger==1.4.0
-    flake8-docstrings==0.2.7
-    mccabe==0.4.0
-    pep257==0.7.0
-    pep8==1.7.0
-    pyflakes==1.0.0
+SublimeLinter
+-------------
 
 Instalamos `SublimeLinter <http://sublimelinter.readthedocs.org/en/latest/>`_ usando el Package Control.
 
@@ -237,6 +186,62 @@ Salvamos y reiniciamos SublimeText. El archivo de configuración tendra la sigui
         }
     }
 
+
+SublimeLinter-flake8
+~~~~~~~~~~~~~~~~~~~~
+
+`Flake8 <https://pypi.python.org/pypi/flake8>`_ reporta errores en el código,
+haciendo uso de las herramientas `PyFlakes <https://pypi.python.org/pypi/pyflakes>`_, `pep8 <https://pypi.python.org/pypi/pep8>`_ y `mccabe <https://pypi.python.org/pypi/mccabe>`_
+
+Primero creamos un ambiente virtual y lo activamos
+
+.. code-block:: console
+
+    $ cd /Users/myuser/buildout.python
+    $ virtualenv-3.5 python-3-sublenv
+    New python executable in python-3-sublenv/bin/python3.5
+    Also creating executable in python-3-sublenv/bin/python
+    Installing setuptools, pip...done.
+    $ source python-3-sublenv/bin/activate
+    (python-3-sublenv)$
+
+Instalamos los paquetes necesarios (`flake8 <https://pypi.python.org/pypi/flake8>`_)
+
+.. code-block:: console
+
+    (python-3-sublenv)$ pip install flake8
+    Downloading/unpacking flake8
+    [...]
+    Downloading/unpacking pyflakes>=0.7.3 (from flake8)
+    [...]
+    Downloading/unpacking pep8>=1.4.6 (from flake8)
+    [...]
+    Downloading/unpacking mccabe>=0.2.1 (from flake8)
+    [...]
+    Installing collected packages: flake8, pyflakes, pep8, mccabe
+    [...]
+    Successfully installed flake8 pyflakes pep8 mccabe
+    Cleaning up...
+    (python-3-sublenv)$ pip install flake8-blind-except
+    (python-3-sublenv)$ pip install flake8-coding
+    (python-3-sublenv)$ pip install flake8-debugger
+    (python-3-sublenv)$ pip install flake8-docstrings
+
+Si queremos usar un archivo requirements.txt debe contener los siguiente
+
+.. code-block:: text
+
+    flake8==2.5.4
+    flake8-blind-except==0.1.0
+    flake8-coding==1.2.1
+    flake8-debugger==1.4.0
+    flake8-docstrings==0.2.7
+    mccabe==0.4.0
+    pep257==0.7.0
+    pep8==1.7.0
+    pyflakes==1.0.0
+
+
 Agregamos la siguiente:
 
 .. code-block:: json
@@ -276,8 +281,8 @@ Agregamos la siguiente:
 
 Instalamos `SublimeLinter-flake8 <https://github.com/SublimeLinter/SublimeLinter-flake8>`_
 
-Lints (jshint / csslit)
------------------------
+sublimelinter-jshint / sublimelinter-csslint
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Instalamos `node.js <http://nodejs.org/>`_ (v0.10.26)
 
@@ -330,6 +335,12 @@ Agregamos la siguiente configuración en ``Sublime Text -> Preferences -> Packag
             },
         }
     }
+
+sublimelinter-json
+~~~~~~~~~~~~~~~~~~
+
+En sublimetext instalamos `sublimelinter-json <https://github.com/SublimeLinter/SublimeLinter-json>`_
+
 
 Iluminación de archivos buildout.cfg
 ------------------------------------
@@ -432,18 +443,6 @@ Color Scheme (opcional)
 
 *Preferences -> Color Scheme -> Monokai Extended -> Monokai Extended*
 
-
-OmniMarkupPreviewer
--------------------
-
-Plugin para mostrar rst files en el navegador.
-
-.. note::
-
-    ========  =========================================================
-    ⌘ ⌥ O     Muestra un archivo rst en el navegador
-    ========  =========================================================
-
 CSS
 ----
 
@@ -467,6 +466,49 @@ View -> Syntax -> Open all with current extension as... -> JavascriptNext.
 
 Asigna JavaScriptNext como el lenguaje por omision para los archivos .js ``View -> Syntax -> Open all with current extension as... -> JavaScript Next``
 
+Json
+----
+
+`Pretty JSON <https://github.com/dzhibas/SublimePrettyJson>`_ da formato y minimiza archivos json.
+
+Abrimios el archivo ``Sublime Text -> Preferences -> Key Bindings - User`` y agregamos
+
+.. code-block:: json
+
+    { "keys": [ "ctrl+command+m" ], "command": "un_pretty_json" }
+
+.. note::
+
+    ========   ======================================
+    ctrl ⌘ j   Da formato a un archivo json
+    ctrl ⌘ m   Minimiza archivo json (remueve espacios extras y saltos de linea)
+    ========   ======================================
+
+Tambien se puede usar `jq <https://stedolan.github.io/jq/>`_
+
+.. code-block:: console
+
+    $ brew install jq
+
+.. note::
+
+    ==========   ======================================
+    ctrl ⇧ ⌘ j   Consola de comandos de jq
+    ==========   ======================================
+
+
+OmniMarkupPreviewer
+-------------------
+
+`OmniMarkupPreviewer <https://github.com/timonwong/OmniMarkupPreviewer>`_ interpreta archivos rst en el navegador.
+
+.. note::
+
+    ========  =========================================================
+    ⌘ ⌥ O     Muestra un archivo rst en el navegador
+    ========  =========================================================
+
+
 Latex
 -----
 `LaTeXTools <https://github.com/SublimeText/LaTeXTools>`_
@@ -481,7 +523,7 @@ Comparar archivos
 .. note::
 
     ========   ======================================
-    ctrl ⌥ d   muestra panel con comandos disponibles
+    ctrl ⌥ d   muestra panel para comparar archivos
     ========   ======================================
 
 
@@ -490,17 +532,20 @@ Acordeón
 
 .. note::
 
-    ========  =========================================================
-    ctrl `    muestra la consola
-    ⇧ ⌘ P     paleta de comandos
-    ctrl ⇧ G  encuentra la definición de una función, variable o clase
-    ⌥ ⇧ F     encuentra donde se usa el metodo, varibale o clase
-    ⌘ ⌥ O     muestra un archivo rst en el navegador
-    ⌘ ⇧ L     selecciona lineas multiples
-    ctrl ⌘ G  selecciona todas las apariciones
-    ctrl G    ir a linea
-    ctrl ⌥ d  muestra panel para comparar archivos
-    ========  =========================================================
+    ==========  =========================================================
+    ctrl `      muestra la consola
+    ⇧ ⌘ P       paleta de comandos
+    ctrl ⇧ G    encuentra la definición de una función, variable o clase
+    ⌥ ⇧ F       encuentra donde se usa el metodo, varibale o clase
+    ctrl ⌘ j     Da formato a un archivo json
+    ctrl ⌘ m     Minimiza archivo json (remueve espacios extras y saltos de linea)
+    ctrl ⇧ ⌘ j   Consola de comandos de jq
+    ⌘ ⌥ O       muestra un archivo rst en el navegador
+    ctrl ⌥ d    muestra panel para comparar archivos
+    ⌘ ⇧ L       selecciona lineas multiples
+    ctrl ⌘ G    selecciona todas las apariciones
+    ctrl G      ir a linea
+    ==========  =========================================================
 
 Bibliografía
 ------------
