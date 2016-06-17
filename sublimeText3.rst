@@ -537,6 +537,11 @@ OmniMarkupPreviewer
     ========  =========================================================
 
 
+.. seealso::
+
+    https://gist.github.com/svx/885f2d870ed6aab1b9cc
+
+
 Latex
 -----
 `LaTeXTools <https://github.com/SublimeText/LaTeXTools>`_
@@ -546,7 +551,7 @@ Si instalamos Skim podemos generar automaticamente el pdf.
 Comparar archivos
 -----------------
 
-`sublimerge <http://www.sublimerge.com>`_
+`sublimerge <http://www.sublimerge.com>`_. Diff lado a lado
 
 .. note::
 
@@ -586,4 +591,4 @@ Bibliografía
 
 * `Sublime Text for Front End Developers <https://css-tricks.com/sublime-text-front-end-developers/>`_
 
-* `Emmet LiveStyle <http://livestyle.emmet.io/>`_
+* `My Sublime Text 3 setup <https://fredrikaverpil.github.io/2016/05/20/my-sublime-3-setup/>`_
