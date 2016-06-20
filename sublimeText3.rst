@@ -436,11 +436,13 @@ Abrimios el archivo de preferencias globales de Sublime Text 3 ``Sublime Text ->
     {
         "theme": "Material-Theme-Darker.sublime-theme",
         "color_scheme": "Packages/Material Theme/schemes/Material-Theme-Darker.tmTheme",
-        "overlay_scroll_bars"           : "enabled",
         "always_show_minimap_viewport"  : true,
         "bold_folder_labels"            : true,
+        "material_theme_bold_tab"       : true,
         "material_theme_compact_sidebar": true,
+        "material_theme_small_statusbar": true,
         "material_theme_small_tab"      : true,
+        "overlay_scroll_bars"           : "enabled",
     }
 
 
