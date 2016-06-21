@@ -110,6 +110,32 @@ Now cd to the directory where the clone Jenkins created is and use `git config u
     $ git config user.email "some@email.com"
     $ git config user.name "jenkins"
 
+
+La llave privada y publica, para clonar de `github <https://github.com>`_ con ssh, se debe guardar en:
+
+.. code-block:: bash
+
+    /var/lib/jenkins/.ssh
+
+y debe estar registrada en `github <https://github.com>`_:
+
+.. image:: sshandgpg.png
+
+para generar una nueva llave leer `Generating an SSH key <https://help.github.com/articles/generating-an-ssh-key/>`_.
+
+Si se opta por usar HTTPS,  podemos almacenar la llave en un cache tempral:
+
+.. code-block:: sh
+
+    $ git config --global credential.helper cache
+
+o por mas tiempo (el default es ~/.git-credentials)
+
+.. code-block:: sh
+
+    git config --global credential.helper 'store --file ~/.my-credentials'
+
+
 `Warnings Plugin <https://wiki.jenkins-ci.org/display/JENKINS/Warnings+Plugin>`_
 --------------------------------------------------------------------------------
 This plugin generates the trend report for compiler warnings in the console log or in log files.
@@ -157,3 +183,5 @@ References
 `Violations plugin <https://wiki.jenkins-ci.org/display/JENKINS/Violations>`_
 
 `Warnings Plugin <https://wiki.jenkins-ci.org/display/JENKINS/Warnings+Plugin>`_
+
+`Git Tools - Credential Storage <https://git-scm.com/book/en/v2/Git-Tools-Credential-Storage>`_
