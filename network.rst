@@ -22,14 +22,71 @@ Network
 .. code-block:: bash
 
     $ nc -zv 127.0.0.1 111
+    localhost [127.0.0.1] 111 (sunrpc) : Connection refused
+
+    $ nc -zv 127.0.0.1 22
+    localhost [127.0.0.1] 22 (ssh) open
+
 
 .. code-block:: bash
 
     $ netstat -an | grep 111
+    unix  3      [ ]         STREAM     CONNECTED     11143
 
+    $ netstat -an | grep 22
+    tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN
+    tcp        0      0 132.248.17.62:22        132.248.17.41:62844     ESTABLISHED
+    tcp6       0      0 :::22                   :::*                    LISTEN
+    unix  2      [ ]         DGRAM                    13195    /run/user/122/systemd/notify
+    unix  2      [ ACC ]     STREAM     LISTENING     13197    /run/user/122/systemd/private
+    unix  2      [ ]         DGRAM                    22748
+    unix  3      [ ]         STREAM     CONNECTED     14224
+    unix  2      [ ]         STREAM     CONNECTED     15223
+    unix  3      [ ]         STREAM     CONNECTED     22757    /var/run/dbus/system_bus_socket
+    unix  3      [ ]         STREAM     CONNECTED     22746
+    unix  3      [ ]         STREAM     CONNECTED     14225    /var/run/dbus/system_bus_socket
+    unix  3      [ ]         STREAM     CONNECTED     22747    /run/systemd/journal/stdout
+    unix  3      [ ]         STREAM     CONNECTED     22756
+    unix  2      [ ]         DGRAM                    22311
+
+rpcbind
+-------
 .. code-block:: bash
 
     $ service rpcbind stop
-    $ update-rc.d nfs-common disable
-    $ update-rc.d rpcbind disable
-    $ update-rc.d -f rpcbind remove
+
+Uninstall rpcbind
+~~~~~~~~~~~~~~~~~
+
+To remove just rpcbind package itself from Debian 8 (Jessie) execute on terminal:
+
+.. code-block:: bash
+
+    $ apt-get -s remove rpcbind
+    $ sudo apt-get remove rpcbind
+
+Uninstall rpcbind and it's dependent packages
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To remove the rpcbind package and any other dependant package which are no longer needed from Debian Jessie.
+
+
+.. code-block:: bash
+
+    $ sudo apt-get remove --auto-remove rpcbind
+
+Purging rpcbind
+~~~~~~~~~~~~~~~
+
+If you also want to delete configuration and/or data files of rpcbind from Debian Jessie then this will work:
+
+.. code-block:: bash
+
+    $ sudo apt-get purge rpcbind
+
+To delete configuration and/or data files of rpcbind and it's dependencies from Debian Jessie then execute:
+
+.. code-block:: bash
+
+    $ apt-get -s purge --auto-remove rpcbind
+    $ sudo apt-get purge --auto-remove rpcbind
