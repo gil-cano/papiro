@@ -6,7 +6,7 @@ Node.js
 Instalación
 -----------
 
-Instalamos `node.js <http://nodejs.org/>`_ (v4.4.5)
+Instalamos `node.js <http://nodejs.org/>`_ (v4.6.0)
 
 .. code-block:: console
 
