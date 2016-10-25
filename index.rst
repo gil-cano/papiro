@@ -50,6 +50,7 @@ Development tools and Administrations tools
 .. toctree::
     :maxdepth: 2
 
+    iterm2.rst
     sublimeText3.rst
     sublimeText2.rst
     nginx/nginx.rst
