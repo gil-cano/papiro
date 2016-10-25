@@ -6,7 +6,7 @@ Node.js
 Instalación
 -----------
 
-Instalamos `node.js <http://nodejs.org/>`_ (v4.6.0)
+Instalamos `node.js <http://nodejs.org/>`_ (v6.9.1)
 
 .. code-block:: console
 
@@ -30,7 +30,7 @@ Node comes with `npm <https://www.npmjs.com/>`_ installed so you should have a v
     $ sudo npm install npm -g
       Password:
       /usr/local/bin/npm -> /usr/local/lib/node_modules/npm/bin/npm-cli.js
-      npm@3.9.3 /usr/local/lib/node_modules/npm
+      npm@3.10.9 /usr/local/lib/node_modules/npm
 
 Test: Run npm -v. The version should be higher than 2.1.8.
 
@@ -58,6 +58,13 @@ Ejemplo:
 .. code-block:: console
 
     $ npm install d3@next
+
+grunt-cli
+---------
+
+.. code-block:: console
+
+    $ npm install -g grunt-cli
 
 
 Manejo de paquetes
