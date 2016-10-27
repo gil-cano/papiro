@@ -41,3 +41,11 @@ The version of freetype is 2, I guess it's the problem.
 
     $ cd /usr/include
     $ ln -s freetype2 freetype
+
+
+Procesos muertos
+----------------
+
+.. code-block:: bash
+
+    $ ps -ef | grep defunct
