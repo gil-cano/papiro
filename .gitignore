@@ -9,3 +9,5 @@ local/
 .vagrant
 .doctrees
 .DS_Store
+# Files
+pip-selfcheck.json
