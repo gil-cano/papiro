@@ -22,6 +22,7 @@ Python
 
     python/python_patterns.rst
     python/python.rst
+    python/string.rst
 
 Plone
 =====
@@ -34,6 +35,7 @@ Plone
     plone/diazo.rst
     plone/translations.rst
     plone/testing.rst
+    plone/mail.rst
 
 Plone add-ons
 =============
@@ -63,3 +65,5 @@ Development tools and Administrations tools
     haproxy.rst
     vagrant.rst
     node.rst
+    network.rst
+
