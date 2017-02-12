@@ -66,4 +66,6 @@ Development tools and Administrations tools
     vagrant.rst
     node.rst
     network.rst
+    gpg.rst
+
 
