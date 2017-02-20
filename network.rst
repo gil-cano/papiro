@@ -90,3 +90,49 @@ To delete configuration and/or data files of rpcbind and it's dependencies from 
 
     $ apt-get -s purge --auto-remove rpcbind
     $ sudo apt-get purge --auto-remove rpcbind
+
+
+Find hostname from an IP Address
+--------------------------------
+
+.. code-block:: bash
+
+    $ nslookup ip
+
+
+The basic network reconfiguration
+---------------------------------
+
+When you try to reconfigure the interface, e.g. eth0, you must disable it first with the "sudo ifdown eth0" command. This removes the entry of eth0 from the "/etc/network/run/ifstate" file. (This may result in some error message if eth0 is not active or it is configured improperly previously. So far, it seems to be safe to do this for the simple single user work station at any time.)
+
+You are now free to rewrite the "/etc/network/interfaces" contents as needed to reconfigure the network interface, eth0.
+
+Then, you can reactivate eth0 with the "sudo ifup eth0" command.
+
+Para agregar una direccion ip al server
+
+.. code-block:: bash
+
+    $ nano -w /etc/network/interfaces
+
+    auto eth1:1
+    iface eth1:1 inet static
+    address 192.168.1.23
+    netmask 255.255.255.0
+    broadcast 192.168.1.255
+
+    $ sudo service networking restart
+
+DNS se define en:
+
+.. code-block:: bash
+
+    $ nano -w /etc/resolv.conf
+
+Nombre en:
+
+.. code-block:: bash
+
+    $ nano -w /etc/hostname
+
+
