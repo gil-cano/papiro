@@ -136,3 +136,10 @@ Nombre en:
     $ nano -w /etc/hostname
 
 
+Honetwork adapter
+-----------------
+
+.. code-block:: bash
+
+    $ sudo ethtool eth0
+
