@@ -135,11 +135,16 @@ Nombre en:
 
     $ nano -w /etc/hostname
 
+Network adapter
+---------------
 
-Honetwork adapter
------------------
-
+Linux
 .. code-block:: bash
 
     $ sudo ethtool eth0
+Mac
+.. code-block:: bash
+
+    $ ifconfig en0 
+
 
