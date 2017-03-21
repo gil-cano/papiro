@@ -139,10 +139,13 @@ Network adapter
 ---------------
 
 Linux
+
 .. code-block:: bash
 
     $ sudo ethtool eth0
+
 Mac
+
 .. code-block:: bash
 
     $ ifconfig en0 
