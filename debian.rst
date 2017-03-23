@@ -54,11 +54,6 @@ Procesos muertos
 Cron
 ----
 
-
-
-Para gregar un trabajo como root
-
-
 La sintaxis es:
 
 .. code-block:: bash
@@ -77,6 +72,10 @@ Donde
     | | --------- Día del mes (1 - 31)
     | ----------- Hora (0 - 23)
     ------------- Minuto (0 - 59)
+
+Los archivos del cron viven en: /var/spool/cron/crontabs, se be editar con contrab
+
+Para gregar un trabajo como root
 
 .. code-block:: bash
 
