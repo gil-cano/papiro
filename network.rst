@@ -53,7 +53,8 @@ rpcbind
 -------
 .. code-block:: bash
 
-    $ service rpcbind stop
+    $ sudo service rpcbind stop
+    $ sudo systemctl disable rpcbind.service
 
 Uninstall rpcbind
 ~~~~~~~~~~~~~~~~~
