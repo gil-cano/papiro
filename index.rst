@@ -68,4 +68,6 @@ Development tools and Administrations tools
     network.rst
     gpg.rst
 
+    mysql.rst
+
 
