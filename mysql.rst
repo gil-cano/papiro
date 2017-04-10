@@ -3,6 +3,10 @@ MySQL
 
 .. code-block:: bash
 
+    sudo apt-get install mysql-server
+
+.. code-block:: bash
+
     $ mysql -u user -p
     mysql> CREATE DATABASE databasename;
     mysql> SHOW DATABASES;
