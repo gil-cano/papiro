@@ -8,9 +8,12 @@ MySQL
 .. code-block:: bash
 
     $ mysql -u user -p
-    mysql> CREATE USER 'user'@'localhost' IDENTIFIED BY 'some_password';
     mysql> CREATE DATABASE databasename;
     mysql> SHOW DATABASES;
+    mysql> CREATE USER 'user'@'localhost' IDENTIFIED BY 'some_password';
+    mysql> GRANT SELECT,INSERT,UPDATE,DELETE,CREATE,DROP
+        -> ON cons_cmo.*
+        -> TO 'cons_cmo'@'localhost';
     mysql> \q
     $ mysql -u user -p databasename < dump_file.sql
 
