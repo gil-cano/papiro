@@ -26,6 +26,12 @@ Installation
 
 This is going to download a virtual box kit, download and install `Virtualenv <https://pypi.python.org/pypi/virtualenv/>`_, `python <https://www.python.org/>`_ 3.4.3, `Django <https://www.djangoproject.com/>`_ 1.8.4, and set up some convenience scripts.
 
+How you get a command prompt on your "guest" machine will depend on your host operating system. On Unix workalikes, use the command::
+
+
+    $ vagrant ssh
+
+
 Using the Vagrant-installed VirtualBox
 --------------------------------------
 
@@ -37,14 +43,22 @@ stops the virtual machine, saving an image of its state so that you may later re
 
     $ vagrant resume
 
+halt::
+    $ vagrant halt
+
 Finally, you may remove the VirtualBox (deleting its image) with the command::
 
     $ vagrant destroy
 
-How you get a command prompt on your "guest" machine will depend on your host operating system. On Unix workalikes, use the command::
+Versions
+--------
 
+.. code-block:: bash
 
-    $ vagrant ssh
+    $ vboxmanage --version
+    $ vagrant -v
+    $ vagrant plugin install vagrant-vbguest
+    $ vagrant plugin list
 
 
 References
