@@ -8,6 +8,7 @@ MySQL
 .. code-block:: bash
 
     $ mysql -u user -p
+    mysql> CREATE USER 'user'@'localhost' IDENTIFIED BY 'some_password';
     mysql> CREATE DATABASE databasename;
     mysql> SHOW DATABASES;
     mysql> \q
