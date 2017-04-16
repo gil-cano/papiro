@@ -67,7 +67,7 @@ Development tools and Administrations tools
     node.rst
     network.rst
     gpg.rst
-
+    docker.rst
     mysql.rst
 
 
