@@ -118,6 +118,15 @@ fail2ban
 
     $ cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
 
+Plone
+-----
+
+.. code-block:: bash
+
+    $ sudo apt-get install build-essential libssl-dev libxml2-dev libxslt1-dev libbz2-dev libjpeg-dev
+    $ sudo apt-get install libreadline-dev wv poppler-utils
+    $ sudo apt-get install git
+
 
 Referencias
 -----------
@@ -125,3 +134,5 @@ Referencias
 `HowTo: Add Jobs To cron Under Linux or UNIX? <https://www.cyberciti.biz/faq/how-do-i-add-jobs-to-cron-under-linux-or-unix-oses/>`_
 
 `How To Protect SSH with fail2ban on Debian 7 <https://www.digitalocean.com/community/tutorials/how-to-protect-ssh-with-fail2ban-on-debian-7>`_
+
+`Installing Plone for the Training <https://training.plone.org/5/plone_training_config/instructions.html>`_
