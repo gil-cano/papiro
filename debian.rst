@@ -127,6 +127,22 @@ Plone
     $ sudo apt-get install libreadline-dev wv poppler-utils
     $ sudo apt-get install git
 
+Python
+------
+
+Install python from source in /usr/local/bin
+
+.. code-block:: bash
+
+    $ tar xfvz Python-2.7.13.tgz
+    $ cd Python-2.7.13
+    $ ./configure
+    $ make
+    $ make test
+    $ sudo make install
+    $ sudo /usr/local/bin/python2.7 -m ensurepip
+    $ sudo pip uninstall setuptools
+    $ sudo pip install virtualenv
 
 Referencias
 -----------
