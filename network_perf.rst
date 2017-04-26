@@ -84,6 +84,9 @@ Verificar la velocidad de la NIC (Network interface controller)
 
     $ sudo ethtool eth0
 
+    Speed: 1000Mb/s
+
+
 Referencias
 -----------
 
