@@ -77,6 +77,12 @@ En el cliente::
     [  4]  0.0-10.3 sec   116 MBytes  94.1 Mbits/sec
 
 
+Verificar la velocidad de la NIC (Network interface controller)
+----------------------------------------------------------------
+
+.. code-block:: bash
+
+    $ sudo ethtool eth0
 
 Referencias
 -----------
