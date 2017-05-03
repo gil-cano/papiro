@@ -3,7 +3,8 @@ Diazo
 
 Hacemos una copia del "Barceloneta Theme" en Site Setup - Theming.
 
-Creamos un archivo `styles.less`
+Creamos el archivo `styles.less` donde definiremos nuestros estilos.
+Basamos nuestro tema en el default (barceloneta.plone.less).
 
 .. code-block:: console
 
@@ -12,7 +13,7 @@ Creamos un archivo `styles.less`
 
     /* Customize whatever you want */
 
-En el archivo `manifest.cfg` hacemos referencia a este nuevo archivo:
+En el archivo `manifest.cfg` hacemos referencia a este nuevo archivo como el css de desarrollo y como el de producción asignamos el `styles.css`.
 
 .. code-block:: console
 
@@ -31,11 +32,29 @@ En el archivo `manifest.cfg` hacemos referencia a este nuevo archivo:
     development-js =
     production-js =
 
-seleccionamos el archivo `styles.less` y lo compilamos con el botón `Build CSS`
 
-Podemos cambiar el fondo de la barra de navegación::
+Para generar el archivo `styles.css` seleccionamos el archivo `styles.less` y lo compilamos con el botón `Build CSS`.
+
+
+Personalización
+---------------
+
+El font esta definido por::
+
+    @plone-font-family-base: @plone-font-family-sans-serif;
+
+El tamaño de letra se puede cambiar con::
+
+    @plone-font-size-base:  16px;
+
+
+El color del fondo de la barra de navegación::
 
     @plone-sitenav-bg: rgb(193,39,45);
+
+El color del elemento selecionado::
+
+    @plone-sitenav-link-hover-bg: rgb(127,127,127);
 
 
 El archivo `rules.xml` es el puente entre el contenido del sistema y el tema.
