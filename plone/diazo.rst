@@ -38,6 +38,15 @@ Podemos cambiar el fondo de la barra de navegación::
     @plone-sitenav-bg: rgb(193,39,45);
 
 
+El archivo `rules.xml` es el puente entre el contenido del sistema y el tema.
+
+Podemos agregar cosas como:
+
+.. code-block:: console
+
+
+    <drop css:content="#portal-breadcrumbs" />
+
 
 Referencias
 -----------
