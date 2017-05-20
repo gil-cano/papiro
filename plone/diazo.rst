@@ -52,6 +52,10 @@ El color del fondo de la barra de navegación::
 
     @plone-sitenav-bg: rgb(193,39,45);
 
+El color de la barra de breadcrumb::
+
+    @plone-breadcrumb-bg
+
 El color del elemento selecionado::
 
     @plone-sitenav-link-hover-bg: rgb(127,127,127);
@@ -59,12 +63,36 @@ El color del elemento selecionado::
 
 El archivo `rules.xml` es el puente entre el contenido del sistema y el tema.
 
-Podemos agregar cosas como:
+Podemos eliminar secciones del contenido como los breadcrumbs::
+
+    <drop css:content="#portal-breadcrumbs" />
+
+o la caja de busqueda::
+
+    <drop css:content="#portal-searchbox" />
+
+
+Header
+------
 
 .. code-block:: console
 
+    #content-header {
+        background: -webkit-linear-gradient(left, rgb(195,211,219) , rgb(200,216,223));
+        background: -moz-linear-gradient(right, rgb(195,211,219) , rgb(200,216,223));
+        background: linear-gradient(to right, rgb(195,211,219) , rgb(200,216,223));
+    }
 
-    <drop css:content="#portal-breadcrumbs" />
+    #portal-header {
+        width: 100%;
+        height: 215px;
+        padding: 0;
+        margin: 0;
+        background-image: url('banner_fordecyt.jpg');
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
 
 
 Referencias
