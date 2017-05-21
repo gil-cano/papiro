@@ -237,6 +237,19 @@ Reiniciamos NginX::
 
     $ sudo service nginx reload
 
+Plone
+=====
+
+Podemos crea un directorio para guardar los paquetes descargados:
+
+
+.. code-block:: sh
+
+    $ sudo su - -s /bin/bash jenkins
+    $ mkdir .buildout
+    $ cd .buildout/
+    $ mkdir downloads eggs extends
+    $ echo -e "[buildout]\neggs-directory = /var/lib/jenkins/.buildout/eggs\ndownload-cache = /var/lib/jenkins/.buildout/downloads\nextends-cache = /var/lib/jenkins/.buildout/extends\n" > default.cfg
 
 References
 ==========
