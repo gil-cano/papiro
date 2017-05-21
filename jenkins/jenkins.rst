@@ -11,13 +11,15 @@ upgrade, first add the key to your system:
 
 .. code-block:: bash
 
-    $ wget -q -O - http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add -
+    $ wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add -
+
 
 Then add the following entry in your `/etc/apt/sources.list`:
 
 .. code-block:: bash
 
-    deb http://pkg.jenkins-ci.org/debian binary/
+    deb https://pkg.jenkins.io/debian binary/
+
 
 Update your local package index, then finally install Jenkins:
 
@@ -170,7 +172,9 @@ manager you bin may be called nodejs so you just need to symlink it like so
 References
 ==========
 
-`Jenkins Debian packages <http://pkg.jenkins-ci.org/debian/>`_
+`Jenkins Debian packages <https://pkg.jenkins.io/debian-stable/>`_
+
+`How To Install Java with Apt-Get on Debian 8 <https://www.digitalocean.com/community/tutorials/how-to-install-java-with-apt-get-on-debian-8>`_
 
 `Installing Jenkins on Ubuntu <https://wiki.jenkins-ci.org/display/JENKINS/Installing+Jenkins+on+Ubuntu>`_
 
