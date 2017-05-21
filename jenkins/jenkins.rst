@@ -74,6 +74,11 @@ Now you need to create an user account for yourself.
 
 .. image:: loggedon.png
 
+
+Remove the:
+
+* Place a check mark next to "Allow users to sign up"
+
 Plug-in's
 =========
 
@@ -108,7 +113,7 @@ Now cd to the directory where the clone Jenkins created is and use `git config u
 
 .. code-block:: sh
 
-    $ cd /var/lib/jenkins/jobs/UNAM.imateCVct Plone 4.3/workspace
+    $ cd /var/lib/jenkins
     $ git config user.email "some@email.com"
     $ git config user.name "jenkins"
 
@@ -159,14 +164,16 @@ This plug-in provides utilities for the static code analysis plug-ins.
     SetEnv Plug-in (rtyler Hudson labs)
 
 
-Ubuntu Node
-===========
+Node
+====
+.. code-block:: sh
 
-`/usr/bin/env: node: No such file or directory`
+    /usr/bin/env: node: No such file or directory
 
 I've found this is often a misnaming error, if you install from a package 
-manager you bin may be called nodejs so you just need to symlink it like so
-`ln -s /usr/bin/nodejs /usr/bin/node`
+manager you bin may be called nodejs so you just need to symlink it like so::
+
+    ln -s /usr/bin/nodejs /usr/bin/node
 
 
 References
