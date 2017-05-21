@@ -176,14 +176,76 @@ manager you bin may be called nodejs so you just need to symlink it like so::
     ln -s /usr/bin/nodejs /usr/bin/node
 
 
+Nginx
+=====
+
+Editamos `/etc/default/jenkins`
+
+Asignamos valores para:
+
+* $HTTP_PORT
+* $PREFIX
+* $HTTP_HOST
+
+.. code-block:: sh
+
+    JENKINS_ARGS="--webroot=/var/cache/$NAME/war --httpPort=$HTTP_PORT --prefix=$PREFIX --httpListenAddress=127.0.0.1"
+
+
+Reiniciamos Jenkins::
+
+    $ sudo service jenkins restart
+
+
+El archivo de nginx `/etc/nginx/sites-enabled/jenkins` debe ser algo similar a:
+
+.. code-block:: sh
+
+    server {
+
+        listen 80;
+        server_name domain.tld;
+
+
+        # Nginx configuration specific to Jenkins
+        # In addition, you must ensure that Jenkins is configured to listen for requests to the /jenkins/ folder
+        # Do that by adding the parameter --prefix=/jenkins to the Jenkins default start-up configuration file
+        # the configuration file is /etc/default/jenkins
+        # Note that regex takes precedence, so use of "^~" ensures earlier evaluation
+        location ^~ /jenkins/ {
+
+          proxy_set_header        Host $host:$server_port;
+          proxy_set_header        X-Real-IP $remote_addr;
+          proxy_set_header        X-Forwarded-For $proxy_add_x_forwarded_for;
+          proxy_set_header        X-Forwarded-Proto $scheme;
+
+          # Fix the "It appears that your reverse proxy set up is broken" error.
+          # Convert inbound WAN requests for https://domain.tld/jenkins/ to
+          # local network requests for http://127.0.0.1:8080/jenkins/
+          proxy_pass          http://127.0.0.1:8080/jenkins/;
+          proxy_read_timeout  90;
+
+          #proxy_redirect      http://127.0.0.1:8080 http://domain.tld;
+
+          # Required for new HTTP-based CLI
+          proxy_http_version 1.1;
+          proxy_request_buffering off;
+        }
+    }
+
+Reiniciamos NginX::
+
+    $ sudo service nginx reload
+
+
 References
 ==========
 
 `Jenkins Debian packages <https://pkg.jenkins.io/debian-stable/>`_
 
-`How To Install Java with Apt-Get on Debian 8 <https://www.digitalocean.com/community/tutorials/how-to-install-java-with-apt-get-on-debian-8>`_
+`How To Install Java with AptGet on Debian 8 <https://www.digitalocean.com/community/tutorials/how-to-install-java-with-apt-get-on-debian-8>`_
 
-`Installing Jenkins on Ubuntu <https://wiki.jenkins-ci.org/display/JENKINS/Installing+Jenkins+on+Ubuntu>`_
+`Jenkins behind an NGinX reverse proxy <https://wiki.jenkins-ci.org/display/JENKINS/Jenkins+behind+an+NGinX+reverse+proxy>`_
 
 `Standard Security Setup <https://wiki.jenkins-ci.org/display/JENKINS/Standard+Security+Setup>`_
 
