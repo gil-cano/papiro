@@ -41,7 +41,9 @@ You can see at any time which database is currently selected using
 Python
 ------
 
-(venv)$ pip install mysql-connector==2.1.4
+.. code-block:: bash
+
+    (venv)$ pip install mysql-connector==2.1.4
 
 
 Referencias
