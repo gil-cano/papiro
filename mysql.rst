@@ -36,3 +36,17 @@ You can see at any time which database is currently selected using
     mysql> SHOW TABLES;
     mysql> DESCRIBE table;
     mysql> SELECT * FROM table;
+
+
+Python
+------
+
+(venv)$ pip install mysql-connector==2.1.4
+
+
+Referencias
+-----------
+
+`MySQL Connector/Python Developer Guide <https://dev.mysql.com/doc/connector-python/en/>`_
+
+`mysql-connector <https://github.com/sanpingz/mysql-connector>`_
