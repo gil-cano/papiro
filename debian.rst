@@ -144,6 +144,36 @@ Install python from source in /usr/local/bin
     $ sudo pip uninstall setuptools
     $ sudo pip install virtualenv
 
+Latex
+-----
+
+.. code-block:: bash
+
+    $ sudo apt-get install texlive
+
+
+Postfix
+-------
+
+.. code-block:: bash
+
+    $ sudo apt-get install mailutils
+    $ sudo apt-get install postfix
+
+
+El archivo de configuracion es::
+
+    $ sudo nano /etc/postfix/main.cf
+
+Cambiamos el valor de la variable `inet_interfaces`
+
+.. code-block:: bash
+
+    mailbox_size_limit = 0
+    recipient_delimiter = +
+    inet_interfaces = loopback-only
+
+
 Referencias
 -----------
 
@@ -152,3 +182,5 @@ Referencias
 `How To Protect SSH with fail2ban on Debian 7 <https://www.digitalocean.com/community/tutorials/how-to-protect-ssh-with-fail2ban-on-debian-7>`_
 
 `Installing Plone for the Training <https://training.plone.org/5/plone_training_config/instructions.html>`_
+
+`How to Install and Configure Postfix as a Send-Only SMTP Server on Ubuntu 16.04 <https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-postfix-as-a-send-only-smtp-server-on-ubuntu-16-04>`_
