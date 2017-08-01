@@ -19,6 +19,12 @@ Para dividir la terminal verticalmente ⌘+D y ⌘+⇧+D horizontal
 
 ⌘+/ resalta la posición del cursos.
 
+Para agregar gettext agregamos en .zshrc
+
+.. code-block:: bash
+
+    export PATH=/usr/local/opt/gettext/bin:$PATH
+
 
 oh-my-zsh
 =========
