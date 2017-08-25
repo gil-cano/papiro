@@ -1,11 +1,13 @@
-Debian
-======
+Actualizar Debian
+-----------------
 
 .. code-block:: bash
 
     $ sudo apt-get update
     $ sudo apt-get upgrade
 
+Mostrar versiones disponibles de un paquete
+-------------------------------------------
 
 .. code-block:: bash
 
@@ -22,25 +24,6 @@ Debian
             500 http://mmc.geofisica.unam.mx/debian/ jessie/main amd64 Packages
          1.5.8-3+deb8u1 0
             500 http://security.debian.org/ jessie/updates/main amd64 Packages
-
-
-
-`buildout.python <https://github.com/collective/buildout.python>`_
-------------------------------------------------------------------
-
-Trying to install PIL for python2.4
-
-.. code-block:: bash
-
-
-    fatal error: freetype/fterrors.h: No such file or directory
-
-The version of freetype is 2, I guess it's the problem.
-
-.. code-block:: bash
-
-    $ cd /usr/include
-    $ ln -s freetype2 freetype
 
 
 Procesos muertos
@@ -118,6 +101,66 @@ fail2ban
 
     $ cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
 
+
+Postfix
+-------
+
+.. code-block:: bash
+
+    $ sudo apt-get install mailutils
+    $ sudo apt-get install postfix
+
+
+El archivo de configuracion es::
+
+    $ sudo nano /etc/postfix/main.cf
+
+Cambiamos el valor de la variable `inet_interfaces`
+
+.. code-block:: bash
+
+    mailbox_size_limit = 0
+    recipient_delimiter = +
+    inet_interfaces = loopback-only
+
+Another directive you'll need to modify is mydestination, which is used to specify the list of domains that are delivered via the local_transport mail delivery transport.
+
+.. code-block:: bash
+
+    mydestination = $myhostname, localhost.$mydomain, localhost
+    mydestination = ceiba.matem.unam.mx, localhost.matem.unam.mx, , localhost
+
+Reiniciamos el servicio.
+
+.. code-block:: bash
+
+    $ sudo service postfix restart
+
+Para enviar un correo de prueba:
+
+.. code-block:: bash
+
+    $ echo "This is the body of the email" | mail -s "This is the subject line" your@email.address
+
+
+`buildout.python <https://github.com/collective/buildout.python>`_
+------------------------------------------------------------------
+
+Trying to install PIL for python2.4
+
+.. code-block:: bash
+
+
+    fatal error: freetype/fterrors.h: No such file or directory
+
+The version of freetype is 2, I guess it's the problem.
+
+.. code-block:: bash
+
+    $ cd /usr/include
+    $ ln -s freetype2 freetype
+
+
 Plone
 -----
 
@@ -150,28 +193,6 @@ Latex
 .. code-block:: bash
 
     $ sudo apt-get install texlive
-
-
-Postfix
--------
-
-.. code-block:: bash
-
-    $ sudo apt-get install mailutils
-    $ sudo apt-get install postfix
-
-
-El archivo de configuracion es::
-
-    $ sudo nano /etc/postfix/main.cf
-
-Cambiamos el valor de la variable `inet_interfaces`
-
-.. code-block:: bash
-
-    mailbox_size_limit = 0
-    recipient_delimiter = +
-    inet_interfaces = loopback-only
 
 
 Referencias

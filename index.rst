@@ -36,6 +36,7 @@ Plone
     plone/translations.rst
     plone/testing.rst
     plone/mail.rst
+    plone/Strings.rst
 
 Plone add-ons
 =============
@@ -44,6 +45,16 @@ Plone add-ons
     :maxdepth: 2
 
     collective-elections.rst
+
+Linux (Debian)
+==============
+
+.. toctree::
+    :maxdepth: 2
+
+    debian/debian.rst
+    debian/network.rst
+    debian/network_perf.rst
 
 
 Development tools and Administrations tools
@@ -59,14 +70,12 @@ Development tools and Administrations tools
     jenkins/jenkins.rst
     webpagetest.rst
     munin.rst
-
-    debian.rst
     brew.rst
     haproxy.rst
     vagrant.rst
     node.rst
-    network.rst
     gpg.rst
     docker.rst
     mysql.rst
     style-guide.rst
+
