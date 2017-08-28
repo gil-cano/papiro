@@ -1,6 +1,10 @@
 Network
 =======
 
+Escanear los puestos
+----
+Para escanear los puestos en un servidor podemos usar nmap:
+
 .. code-block:: bash
 
     $ nmap 192.168.1.254
@@ -18,6 +22,8 @@ Network
     8083/tcp open  us-srv
 
     Nmap done: 1 IP address (1 host up) scanned in 0.16 seconds
+
+o netcat [nc]:
 
 .. code-block:: bash
 
@@ -116,11 +122,21 @@ Para agregar una direccion ip al server
 
     $ nano -w /etc/network/interfaces
 
-    auto eth1:1
-    iface eth1:1 inet static
-    address 192.168.1.23
-    netmask 255.255.255.0
-    broadcast 192.168.1.255
+.. code-block:: bash
+
+    auto eth0:0
+    allow-hotplug eth0:0
+    iface eth0:0 inet static
+        address 192.168.1.23
+        netmask 255.255.255.0
+
+.. code-block:: bash
+
+    $ sudo ifup eth0:0
+
+De manera alternativa
+
+.. code-block:: bash
 
     $ sudo service networking restart
 
