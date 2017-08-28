@@ -53,6 +53,7 @@ Linux (Debian)
     :maxdepth: 2
 
     debian/debian.rst
+    debian/mail.rst
     debian/network.rst
     debian/network_perf.rst
 
