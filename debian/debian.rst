@@ -162,5 +162,3 @@ Referencias
 `How To Protect SSH with fail2ban on Debian 7 <https://www.digitalocean.com/community/tutorials/how-to-protect-ssh-with-fail2ban-on-debian-7>`_
 
 `Installing Plone for the Training <https://training.plone.org/5/plone_training_config/instructions.html>`_
-
-`How to Install and Configure Postfix as a Send-Only SMTP Server on Ubuntu 16.04 <https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-postfix-as-a-send-only-smtp-server-on-ubuntu-16-04>`_
