@@ -51,3 +51,7 @@ para eliminar todo el correo de la cola:
 .. code-block:: bash
 
     $ sudo postsuper -d ALL
+
+References
+----------
+`How to Install and Configure Postfix as a Send-Only SMTP Server on Ubuntu 16.04 <https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-postfix-as-a-send-only-smtp-server-on-ubuntu-16-04>`_
