@@ -78,7 +78,7 @@ Una directiva de bloque tiene la misma estructura que una directiva simple, pero
 
 .. literalinclude:: nginx.conf
     :language: bash
-    :lines: 7-14, 25-28, 59
+    :lines: 7-14, 25-28, 58
 
 
 Contenido estatico

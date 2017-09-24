@@ -2,7 +2,8 @@ Network
 =======
 
 Escanear los puestos
-----
+--------------------
+
 Para escanear los puestos en un servidor podemos usar nmap:
 
 .. code-block:: bash
