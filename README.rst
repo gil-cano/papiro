@@ -36,4 +36,4 @@ resulting HTML pages.
 License
 -------
 
-Copyright © 2011-2015 Gildardo Bautista.
+Copyright © 2011-2017 Gildardo Bautista.
