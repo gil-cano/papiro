@@ -162,3 +162,6 @@ Referencias
 `How To Protect SSH with fail2ban on Debian 7 <https://www.digitalocean.com/community/tutorials/how-to-protect-ssh-with-fail2ban-on-debian-7>`_
 
 `Installing Plone for the Training <https://training.plone.org/5/plone_training_config/instructions.html>`_
+
+`How To Use ps, kill, and nice to Manage Processes in Linux <https://www.digitalocean.com/community/tutorials/how-to-use-ps-kill-and-nice-to-manage-processes-in-linux>`_
+
