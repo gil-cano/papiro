@@ -153,6 +153,13 @@ Latex
 
     $ sudo apt-get install texlive
 
+Random Passwords via Command Line
+---------------------------------
+
+.. code-block:: bash
+
+    $ openssl rand -base64 6
+
 
 Referencias
 -----------
