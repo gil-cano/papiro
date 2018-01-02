@@ -103,7 +103,7 @@ Usamos la siguiente configuración para definir el interprete de python que usar
         "settings": {
             "python_interpreter": "$project_path/bin/python2.7",
             "python_package_paths": [
-                ""$project_path/parts/omelette"
+                "$project_path/parts/omelette"
             ]
         }
     }
