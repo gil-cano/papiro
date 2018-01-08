@@ -139,7 +139,7 @@ SublimeLinter
 
 Instalamos `SublimeLinter <http://sublimelinter.readthedocs.org/en/latest/>`_ usando el Package Control.
 
-Editamos el archivo de configuración de SublimeLinter ``Sublime Text -> Preferences -> Package Settings -> SublimeLinter -> Settings - User``:
+Editamos el archivo de configuración de SublimeLinter ``Sublime Text -> Preferences -> Package Settings -> SublimeLinter -> Settings``:
 
 .. code-block:: json
 
@@ -237,15 +237,14 @@ Si queremos usar un archivo requirements.txt debe contener los siguiente
 
 .. code-block:: text
 
-    flake8==2.5.4
-    flake8-blind-except==0.1.0
-    flake8-coding==1.2.1
+    flake8==3.3.0
+    flake8-blind-except==0.1.1
+    flake8-coding==1.3.0
     flake8-debugger==1.4.0
-    flake8-docstrings==0.2.7
-    mccabe==0.4.0
-    pep257==0.7.0
-    pep8==1.7.0
-    pyflakes==1.0.0
+    isort==4.2.15
+    mccabe==0.6.1
+    pycodestyle==2.3.1
+    pyflakes==1.5.0
 
 
 Agregamos la siguiente:
@@ -313,7 +312,7 @@ Instalamos `jshint <http://www.jshint.com/>`_ y `csslint <http://csslint.net/>`_
 
 En sublimetext instalamos `sublimelinter-jshint <https://github.com/SublimeLinter/SublimeLinter-jshint>`_ y `sublimelinter-csslint <https://github.com/SublimeLinter/SublimeLinter-csslint>`_.
 
-Agregamos la siguiente configuración en ``Sublime Text -> Preferences -> Package Settings -> SublimeLinter -> Settings - User``:
+Agregamos la siguiente configuración en ``Sublime Text -> Preferences -> Package Settings -> SublimeLinter -> Settings``:
 
 .. code-block:: json
 
