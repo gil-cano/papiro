@@ -90,21 +90,25 @@ Usamos la siguiente configuración para definir el interprete de python que usar
 .. code-block:: json
 
     {
-        "folders":[
+        "folders":
+        [
             {
                 "path": "src-git"
             },
             {
-                "path": "parts/omelette",
-                "follow_symlinks": true,
-                "folder_exclude_patterns": ["matem", "UNAM", "juriquilla"]
+                "path": "src-git",
+                "folder_exclude_patterns": ["*.egg-info"],
+            },
+            {
+                "path": "Extensions",
+                "folder_exclude_patterns": ["mathscinet*"],
+                "file_exclude_patterns": ["*.xlsx", "*.json"],
             }
         ],
-        "settings": {
+        "settings":
+        {
             "python_interpreter": "$project_path/bin/python2.7",
-            "python_package_paths": [
-                "$project_path/parts/omelette"
-            ]
+            "python_package_paths": ["$project_path/parts/omelette"]
         }
     }
 
