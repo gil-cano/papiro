@@ -62,8 +62,8 @@ Para la administración de paquetes se recomienda usar `Package Control <https:/
 
 .. code-block:: console
 
-    import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) 
-    
+    import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)
+
 Este comando descarga el paquete ``Control.sublime-package``.
 
 Para instalar nuevos plugins abrimos la paleta de comandos con ``⇧ + ⌘ + P``, escribimos *install* y buscamos el comando ``Package Control: Install Package``.
@@ -270,14 +270,14 @@ Agregamos la siguiente:
             "paths": {
                 "linux": [],
                 "osx": [
-                    "/Users/user/buildout.python/python-3-sublenv/bin"
+                    "~/buildout.python/python-3-sublenv/bin"
                 ],
                 "windows": []
             },
             "python_paths": {
                 "linux": [],
                 "osx": [
-                    "/Users/user/buildout.python/python-3-sublenv/bin"
+                    "~/buildout.python/python-3-sublenv/bin"
                 ],
                 "windows": []
             },
@@ -401,7 +401,7 @@ ST3 snippet para insertar un breakpoint
 Para poder poner un break point con solo escribir pdb y completar con tab,
 debemos poner la siguiente configuración en:
 ``~/Library/Application Support/Sublime Text 3/Packages/User/pdb.sublime-snippet``.
-o en ``Tools -> New Snippet ...``
+o en ``Tools -> Developer -> New Snippet ...``
 
 .. code-block:: xml
 
