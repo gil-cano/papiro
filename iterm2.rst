@@ -1,6 +1,16 @@
 iTerm2
 ======
 
+`iTerm2 <http://www.iterm2.com/>`_ es un remplazo de la Terminal de Apple.
+
+Instalación
+-----------
+
+Descarga la applicación y arrastrala al folder ``Applications``.
+
+Plone
+-----
+
 Cuando iniciamos una instancia de Plone marca el error
 
 .. code-block:: bash
@@ -15,11 +25,20 @@ para solucionar eso hay que agregar al .bash_profile o en el .zshrc
     export LC_ALL=en_US.UTF-8
     export LANG=en_US.UTF-8
 
-Para dividir la terminal verticalmente ⌘+D y ⌘+⇧+D horizontal
+.. note::
 
-⌘+/ resalta la posición del cursos.
+    ======  =========================================================
+    ⌘ D     divide la terminal verticalmente
+    ⌘ ⇧ D   dividir la terminal horizontalmente
+    ⌘ ⌥ UP  Cambia de terminal
+    ⌘ /      resalta la posición del cursos
+    ======  =========================================================
 
-Para agregar gettext agregamos en .zshrc
+
+PATH
+----
+
+Para agregar gettext al path modificamos el archivo .zshrc
 
 .. code-block:: bash
 
