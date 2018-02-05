@@ -78,5 +78,6 @@ Development tools and Administrations tools
     gpg.rst
     docker.rst
     mysql.rst
+    postgres.rst
     style-guide.rst
 
