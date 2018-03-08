@@ -20,9 +20,9 @@ Python
 .. toctree::
     :maxdepth: 2
 
-    python/python_patterns.rst
-    python/python.rst
-    python/string.rst
+    python/python_patterns
+    python/python
+    python/string
 
 Plone
 =====
@@ -30,13 +30,13 @@ Plone
 .. toctree::
     :maxdepth: 2
 
-    plone/catalog.rst
-    plone/vocabularies.rst
-    plone/diazo.rst
-    plone/translations.rst
-    plone/testing.rst
-    plone/mail.rst
-    plone/Strings.rst
+    plone/catalog
+    plone/vocabularies
+    plone/diazo
+    plone/translations
+    plone/testing
+    plone/mail
+    plone/Strings
 
 Plone add-ons
 =============
@@ -44,7 +44,7 @@ Plone add-ons
 .. toctree::
     :maxdepth: 2
 
-    collective-elections.rst
+    collective-elections
 
 Linux (Debian)
 ==============
@@ -52,10 +52,10 @@ Linux (Debian)
 .. toctree::
     :maxdepth: 2
 
-    debian/debian.rst
-    debian/mail.rst
-    debian/network.rst
-    debian/network_perf.rst
+    debian/debian
+    debian/mail
+    debian/network
+    debian/network_perf
 
 
 Development tools and Administrations tools
@@ -64,20 +64,21 @@ Development tools and Administrations tools
 .. toctree::
     :maxdepth: 2
 
-    iterm2.rst
-    sublimeText3.rst
-    sublimeText2.rst
-    nginx/nginx.rst
-    jenkins/jenkins.rst
-    webpagetest.rst
-    munin.rst
-    brew.rst
-    haproxy.rst
-    vagrant.rst
-    node.rst
-    gpg.rst
-    docker.rst
-    mysql.rst
-    postgres.rst
-    style-guide.rst
+    iterm2
+    sublimeText3
+    sublimeText2
+    nginx/nginx
+    jenkins/jenkins
+    webpagetest
+    munin
+    brew
+    haproxy
+    vagrant
+    node
+    gpg
+    docker
+    mysql
+    postgres
+    style-guide
+    firefox
 
