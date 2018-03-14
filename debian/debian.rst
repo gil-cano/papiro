@@ -1,5 +1,21 @@
-Actualizar Debian
------------------
+Debian
+======
+
+Mostrar la versión de Linux
+
+.. code-block:: bash
+
+    $ lsb_release -a
+
+Mostrar la versión del kernel
+
+.. code-block:: bash
+
+    $ uname -r
+
+
+Actualizar
+----------
 
 .. code-block:: bash
 
