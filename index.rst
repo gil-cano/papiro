@@ -20,7 +20,7 @@ Python
 .. toctree::
     :maxdepth: 2
 
-    python/python_patterns
+    python/python-patterns
     python/python
     python/string
 
@@ -55,7 +55,7 @@ Linux (Debian)
     debian/debian
     debian/mail
     debian/network
-    debian/network_perf
+    debian/network-perf
 
 
 Development tools and Administrations tools
