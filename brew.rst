@@ -1,5 +1,10 @@
+====
 Brew
 ====
+
+.. topic:: Description
+
+   This text will go to Plone's pages description field.
 
 Instalación
 -----------

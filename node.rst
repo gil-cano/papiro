@@ -1,8 +1,6 @@
 Node.js
 =======
 
-.. _chapter_content:
-
 Instalación
 -----------
 

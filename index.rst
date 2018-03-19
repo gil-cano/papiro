@@ -81,4 +81,4 @@ Development tools and Administrations tools
     postgres
     style-guide
     firefox
-
+    about

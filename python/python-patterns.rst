@@ -1,8 +1,6 @@
+=====================
 Basic Python Patterns
 =====================
-
-.. _chapter_content:
-
 
 Comparaciones
 -------------
@@ -16,26 +14,26 @@ En Python comparamos por igualdan con ``==`` y por identidad con ``is``
 
 Por ejemplo para comparar ``None`` en Python usamos:
 
-.. sourcecode:: python
+.. code-block:: python
 
    value is None
 
 y si queremos comparar si algo no es ``None``:
 
-.. sourcecode:: python
+.. code-block:: python
 
    value is not None
 
 Type check
 -----------
 
-.. sourcecode:: python
+.. code-block:: python
 
    if type(start_date) == date:
 
 o:
 
-.. sourcecode:: python
+.. code-block:: python
 
    if isinstance(start_date, date):
 

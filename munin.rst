@@ -15,7 +15,7 @@ Add backports to your sources.list
 Install a package from backports
 --------------------------------
 
-.. sourcecode:: sh
+.. sourcecode:: shell
 
     $ aptitude -t squeeze-backports show munin-node
     Package: munin-node
@@ -28,20 +28,12 @@ Install a package from backports
     Depends: perl, libnet-server-perl, procps, adduser, lsb-base (>= 3.2-4), gawk, munin-common (>= 2.0.6-1~bpo60+1), munin-plugins-core
     Recommends: libnet-snmp-perl, munin-plugins-extra
 
-.. sourcecode:: sh
+
+.. sourcecode:: shell
 
     $ aptitude -t squeeze-backports install munin-node
     The following NEW packages will be installed:
-      gawk{a} libcgi-fast-perl{a} libdate-manip-perl{a} libdbi0{a} libfcgi-perl{a} libhtml-template-perl{a} libio-multiplex-perl{a}
-      libio-socket-inet6-perl{a} libipc-shareable-perl{a} liblist-moreutils-perl{a} liblog-dispatch-perl{a} liblog-log4perl-perl{a}
-      libnet-cidr-perl{a} libnet-server-perl{a} libnet-snmp-perl{a} libparams-validate-perl{a} librrd4{a} librrds-perl{a} libsigsegv0{a}
-      libsocket6-perl{a} libyaml-syck-perl{a} munin munin-common{a} munin-doc{a} munin-node{a} munin-plugins-core{a} munin-plugins-extra{a}
-      rrdtool{a}
-    0 packages upgraded, 28 newly installed, 0 to remove and 107 not upgraded.
-    Need to get 6,615 kB of archives. After unpacking 27.9 MB will be used.
     Do you want to continue? [Y/n/?] y
-    ...
-    Setting up munin (2.0.6-1~bpo60+1) ...
     Adding system user `munin' (UID 110) ...
     Adding new group `munin' (GID 117) ...
     Adding new user `munin' (UID 110) with group `munin' ...
@@ -58,14 +50,14 @@ Install a package from backports
 
 /etc/munin/munin-node.conf
 
-.. sourcecode:: sh
+.. sourcecode:: shell
 
     cidr_allow 132.248.17.41/32
 
 
 /etc/munin/munin.conf
 
-.. sourcecode:: sh
+.. sourcecode:: shell
 
     # a simple host tree
     [localhost.localdomain]

@@ -4,7 +4,7 @@ Cadenas
 
 Para dar formato a nombres con acentos
 
-.. sourcecode:: python
+.. code-block:: python
 
     string.capwords(brain.Title)
 
@@ -16,7 +16,7 @@ URL's
 
 Pasar parametros en URLs
 
-.. sourcecode:: python
+.. code-block:: python
 
     import urllib
 
@@ -30,7 +30,7 @@ Requets
 
 Pasar parametros en URLs
 
-.. sourcecode:: python
+.. code-block:: python
 
     import requests
     form_fields = {'key1': 'value1', 'key2': 'value2'}
