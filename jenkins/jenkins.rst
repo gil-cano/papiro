@@ -3,32 +3,23 @@ Jenkins
 =======
 
 
-Jenkins Installation
-====================
+Instalación
+===========
 
-To use the Debian package repository of Jenkins to automate installation and 
-upgrade, first add the key to your system:
+To use the Debian package repository of Jenkins to automate installation and upgrade, first add the key to your system:
 
-.. code-block:: bash
+.. code-block:: shell
 
     $ wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add -
-
-
-Then add the following entry in your `/etc/apt/sources.list`:
-
-.. code-block:: bash
-
-    deb https://pkg.jenkins.io/debian binary/
-
-
-Update your local package index, then finally install Jenkins:
-
-.. code-block:: bash
-
+    $ sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
     $ sudo apt-get update
     $ sudo apt-get install jenkins
 
-* `/etc/default/jenkins` will capture configuration parameters for the launch.
+This package installation will:
+
+* Setup Jenkins as a daemon launched on start. See /etc/init.d/jenkins for more details.
+* Direct console log output to the file /var/log/jenkins/jenkins.log. Check this file if you are troubleshooting Jenkins.
+* Populate /etc/default/jenkins with configuration parameters for the launch, e.g JENKINS_HOME
 * By default, Jenkins listen on port 8080. Access this port with your browser to start configuration.
 
 
@@ -37,7 +28,7 @@ Upgrade
 
 Once installed like this, you can update to the later version of Jenkins (when it comes out) by running the following commands:
 
-.. code-block:: bash
+.. code-block:: shell
 
     $ sudo apt-get update
     $ sudo apt-get install jenkins
@@ -61,11 +52,11 @@ At this point, you'll be taken back to the top page, and Jenkins is successfully
 
 Restart Jenkins
 
-.. code-block:: bash
+.. code-block:: shell
 
     $ sudo service jenkins restart
 
-Now you need to create an user account for yourself. 
+Now you need to create an user account for yourself.
 
 * Click "login" link at the top right portion of the page
 * Choose "create an account"
@@ -100,18 +91,18 @@ This plugin allows you to capture code coverage report from Cobertura.
 `Git Plugin <https://wiki.jenkins-ci.org/display/JENKINS/Git+Plugin>`_
 ----------------------------------------------------------------------
 
-You may need to tell git who the user Jenkins is running as. 
+You may need to tell git who the user Jenkins is running as.
 To do this on a Linux/Unix system switch to that user which is probably `jenkins`.
 Do this by using either of the following, which work even if the user is not supposed to have shell access:
 
-.. code-block:: sh
+.. code-block:: shell
 
     $ sudo su - -s /bin/bash jenkins
 
 Now cd to the directory where the clone Jenkins created is and use `git config user.name` and `git config user.email` to set the values.
 
 
-.. code-block:: sh
+.. code-block:: shell
 
     $ cd /var/lib/jenkins
     $ git config user.email "some@email.com"
@@ -120,7 +111,7 @@ Now cd to the directory where the clone Jenkins created is and use `git config u
 
 La llave privada y publica, para clonar de `github <https://github.com>`_ con ssh, se debe guardar en:
 
-.. code-block:: bash
+.. code-block:: shell
 
     /var/lib/jenkins/.ssh
 
@@ -132,13 +123,13 @@ para generar una nueva llave leer `Generating an SSH key <https://help.github.co
 
 Si se opta por usar HTTPS,  podemos almacenar la llave en un cache tempral:
 
-.. code-block:: sh
+.. code-block:: shell
 
     $ git config --global credential.helper cache
 
 o por mas tiempo (el default es ~/.git-credentials)
 
-.. code-block:: sh
+.. code-block:: shell
 
     git config --global credential.helper 'store --file ~/.my-credentials'
 
@@ -166,7 +157,7 @@ This plug-in provides utilities for the static code analysis plug-ins.
 
 Node
 ====
-.. code-block:: sh
+.. code-block:: shell
 
     /usr/bin/env: node: No such file or directory
 
@@ -187,7 +178,7 @@ Asignamos valores para:
 * $PREFIX
 * $HTTP_HOST
 
-.. code-block:: sh
+.. code-block:: shell
 
     JENKINS_ARGS="--webroot=/var/cache/$NAME/war --httpPort=$HTTP_PORT --prefix=$PREFIX --httpListenAddress=127.0.0.1"
 
@@ -199,7 +190,7 @@ Reiniciamos Jenkins::
 
 El archivo de nginx `/etc/nginx/sites-enabled/jenkins` debe ser algo similar a:
 
-.. code-block:: sh
+.. code-block:: nginx
 
     server {
 
