@@ -38,6 +38,16 @@ Resaltado de codigo en linea
 
 This is :func:`aFunction`, this is the :mod:`some.module` that contains the :class:`some.module.MyClass`
 
+Resaltar nombres de archivos o cadenas
+
+.. code-block:: rst
+
+   :file:`index.rst` note la extension ``.rst``
+
+
+:file:`index.rst` note la extension ``.rst``
+
+
 Lista
 
 .. code-block:: rst

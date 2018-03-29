@@ -17,14 +17,18 @@ To use the Debian package repository of Jenkins to automate installation and upg
 
 This package installation will:
 
-* Setup Jenkins as a daemon launched on start. See /etc/init.d/jenkins for more details.
-* Direct console log output to the file /var/log/jenkins/jenkins.log. Check this file if you are troubleshooting Jenkins.
-* Populate /etc/default/jenkins with configuration parameters for the launch, e.g JENKINS_HOME
+* Setup Jenkins as a daemon launched on start. See :file:`/etc/init.d/jenkins` for more details.
+* Create a ``jenkins`` user to run this service.
+* Direct console log output to the file :file:`/var/log/jenkins/jenkins.log`. Check this file if you are troubleshooting Jenkins.
+* Populate :file:`/etc/default/jenkins` with configuration parameters for the launch, e.g ``JENKINS_HOME``
 * By default, Jenkins listen on port 8080. Access this port with your browser to start configuration.
 
+.. note::
 
-Upgrade
-=======
+  Para cambiar el puerto modificamos en el archivo :file:`/etc/default/jenkins` el valor de ``HTTP_PORT``
+
+Actualización
+=============
 
 Once installed like this, you can update to the later version of Jenkins (when it comes out) by running the following commands:
 
@@ -32,6 +36,29 @@ Once installed like this, you can update to the later version of Jenkins (when i
 
     $ sudo apt-get update
     $ sudo apt-get install jenkins
+
+Configuración
+=============
+
+.. image:: _static/jenkins-config01.png
+   :alt: Configuración de Jenkins (Desbloquear)
+
+.. image:: _static/jenkins-config02.png
+   :alt: Configuración de Jenkins (Selección de extensiones)
+
+.. image:: _static/jenkins-config03.png
+   :alt: Configuración de Jenkins (instalación de paquetes)
+
+.. image:: _static/jenkins-config04.png
+   :alt: Configuración de Jenkins (crear usuario)
+
+.. image:: _static/jenkins-config05.png
+   :alt: Configuración de Jenkins (listo)
+
+
+
+
+
 
 
 Standard Security Setup
