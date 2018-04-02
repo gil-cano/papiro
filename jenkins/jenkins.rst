@@ -42,20 +42,83 @@ Configuración
 
 .. image:: _static/jenkins-config01.png
    :alt: Configuración de Jenkins (Desbloquear)
+   :width: 49%
 
 .. image:: _static/jenkins-config02.png
    :alt: Configuración de Jenkins (Selección de extensiones)
+   :width: 49%
 
 .. image:: _static/jenkins-config03.png
    :alt: Configuración de Jenkins (instalación de paquetes)
+   :width: 49%
 
 .. image:: _static/jenkins-config04.png
    :alt: Configuración de Jenkins (crear usuario)
+   :width: 49%
 
 .. image:: _static/jenkins-config05.png
    :alt: Configuración de Jenkins (listo)
+   :width: 49%
 
 
+Configurar el plugin de `Git <https://plugins.jenkins.io/git>`_
+===============================================================
+
+You may need to tell git who the user Jenkins is running as.
+To do this on a Linux/Unix system switch to that user which is probably `jenkins`.
+Do this by using either of the following, which work even if the user is not supposed to have shell access:
+
+.. code-block:: shell
+
+    $ sudo su - -s /bin/bash jenkins
+
+
+La llave privada y publica, para clonar de `github <https://github.com>`_ con ssh, se debe guardar en:
+
+.. code-block:: shell
+
+    /var/lib/jenkins/.ssh
+
+y debe estar registrada en `github <https://github.com>`_:
+
+.. image:: sshandgpg.png
+
+para generar una nueva llave leer `Generating an SSH key <https://help.github.com/articles/generating-an-ssh-key/>`_.
+
+.. code-block:: shell
+
+    $ sudo su - -s /bin/bash jenkins
+    $ cd /var/lib/jenkins/workspace/
+    $ git ls-remote -h https://github.com/gil-cano/matem.sis.git HEAD
+
+    $ git clone https://github.com/gil-cano/matem.sis.git
+    Username for 'https://github.com':
+    Password for 'https://gil-cano@github.com':
+
+
+Now cd to the directory where the clone Jenkins created is and use `git config user.name` and `git config user.email` to set the values.
+
+
+.. code-block:: shell
+
+    $ cd /var/lib/jenkins
+    $ git config user.email "some@email.com"
+    $ git config user.name "jenkins"
+
+
+
+
+Si se opta por usar HTTPS,  podemos almacenar la llave en un cache tempral:
+
+.. code-block:: shell
+
+    $ git config --global credential.helper cache
+
+o por mas tiempo (el default es ~/.git-credentials)
+
+.. code-block:: shell
+
+    git config --global credential.helper 'store --file ~/.my-credentials'
 
 
 
@@ -114,51 +177,6 @@ Option for deleting workspace before build is in Build Environment section:
 `Cobertura Plugin <https://wiki.jenkins-ci.org/display/JENKINS/Cobertura+Plugin>`_
 ----------------------------------------------------------------------------------
 This plugin allows you to capture code coverage report from Cobertura.
-
-`Git Plugin <https://wiki.jenkins-ci.org/display/JENKINS/Git+Plugin>`_
-----------------------------------------------------------------------
-
-You may need to tell git who the user Jenkins is running as.
-To do this on a Linux/Unix system switch to that user which is probably `jenkins`.
-Do this by using either of the following, which work even if the user is not supposed to have shell access:
-
-.. code-block:: shell
-
-    $ sudo su - -s /bin/bash jenkins
-
-Now cd to the directory where the clone Jenkins created is and use `git config user.name` and `git config user.email` to set the values.
-
-
-.. code-block:: shell
-
-    $ cd /var/lib/jenkins
-    $ git config user.email "some@email.com"
-    $ git config user.name "jenkins"
-
-
-La llave privada y publica, para clonar de `github <https://github.com>`_ con ssh, se debe guardar en:
-
-.. code-block:: shell
-
-    /var/lib/jenkins/.ssh
-
-y debe estar registrada en `github <https://github.com>`_:
-
-.. image:: sshandgpg.png
-
-para generar una nueva llave leer `Generating an SSH key <https://help.github.com/articles/generating-an-ssh-key/>`_.
-
-Si se opta por usar HTTPS,  podemos almacenar la llave en un cache tempral:
-
-.. code-block:: shell
-
-    $ git config --global credential.helper cache
-
-o por mas tiempo (el default es ~/.git-credentials)
-
-.. code-block:: shell
-
-    git config --global credential.helper 'store --file ~/.my-credentials'
 
 
 `Warnings Plugin <https://wiki.jenkins-ci.org/display/JENKINS/Warnings+Plugin>`_
