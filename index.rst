@@ -81,5 +81,6 @@ Development tools and Administrations tools
     postgres
     style-guide
     firefox
+    chrome
     squid
     about

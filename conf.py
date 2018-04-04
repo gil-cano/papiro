@@ -36,7 +36,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'papiro'
-copyright = '2016, Gildardo Bautista'
+copyright = '2018, Gildardo Bautista'
 author = 'Gildardo Bautista'
 
 # The version info for the project you're documenting, acts as replacement for
