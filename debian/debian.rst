@@ -117,9 +117,29 @@ fail2ban
 
     $ cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
 
+Plone
+-----
+
+.. code-block:: shell
+
+   $ sudo apt-get install build-essential libssl-dev libxml2-dev libxslt1-dev libbz2-dev libjpeg62-dev
+   $ sudo apt-get install libreadline-dev wv poppler-utils
+   $ sudo apt-get install git
+
+Python
+------
+
+.. note::
+
+   Si quieres usar el python del sistema necesitamos.
+
+   .. code-block:: shell
+
+      $ sudo apt-get install python-setuptools python-virtualenv python-dev
+
 
 `buildout.python <https://github.com/collective/buildout.python>`_
-------------------------------------------------------------------
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 Trying to install PIL for python2.4
 
@@ -136,17 +156,6 @@ The version of freetype is 2, I guess it's the problem.
     $ ln -s freetype2 freetype
 
 
-Plone
------
-
-.. code-block:: bash
-
-    $ sudo apt-get install build-essential libssl-dev libxml2-dev libxslt1-dev libbz2-dev libjpeg-dev
-    $ sudo apt-get install libreadline-dev wv poppler-utils
-    $ sudo apt-get install git
-
-Python
-------
 
 Install python from source in /usr/local/bin
 
@@ -161,6 +170,7 @@ Install python from source in /usr/local/bin
     $ sudo /usr/local/bin/python2.7 -m ensurepip
     $ sudo pip uninstall setuptools
     $ sudo pip install virtualenv
+
 
 Latex
 -----
