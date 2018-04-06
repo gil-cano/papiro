@@ -75,6 +75,18 @@ Para ``pdftotext``
 
    $ brew install poppler
 
+   ==> Pouring gettext-0.19.8.1.el_capitan.bottle.tar.gz
+
+   For compilers to find this software you may need to set:
+       LDFLAGS:  -L/usr/local/opt/gettext/lib
+       CPPFLAGS: -I/usr/local/opt/gettext/include
+
+   ==> Pouring libffi-3.2.1.el_capitan.bottle.tar.gz
+
+   For compilers to find this software you may need to set:
+       LDFLAGS:  -L/usr/local/opt/libffi/lib
+
+
 ``wv`` permite el acceso a archivos de tipo Microsoft Word
 
 .. code-block:: shell
