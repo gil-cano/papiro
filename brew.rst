@@ -69,6 +69,23 @@ En macOS necesitasmos instalar algunas dependencias con Homebrew:
        CPPFLAGS: -I/usr/local/opt/readline/include
 
 
+Para ``pdftotext``
+
+.. code-block:: shell
+
+   $ brew install poppler
+
+``wv`` permite el acceso a archivos de tipo Microsoft Word
+
+.. code-block:: shell
+
+   $ brew install wv
+
+.. code-block:: shell
+
+   $ brew install wget pandoc gnupg
+
+
 
 Bibliografía
 ------------
