@@ -12,26 +12,30 @@ Instalación
 
 instalar paquete:
 
-    $ brew install <formula>
+   $ brew install <formula>
 
 
 Listar paquetes::
 
-    $ brew list
+   $ brew list
 
 
 Actualizar lista de paquetes disponibles::
 
-    $ brew update
+   $ brew update
 
-listar paquetes no actualizados::
+listar formulas no actualizadas::
 
-    $ brew outdated
+   $ brew outdated
 
-actualizar paquete::
+actualizar formula::
 
-    $ brew upgrade <formula>
+   $ brew upgrade <formula>
 
+
+información de formula::
+
+   $ brew info <formula>
 
 Compilar `buildout.python <https://github.com/collective/buildout.python>`_ y Plone
 -----------------------------------------------------------------------------------
@@ -97,7 +101,19 @@ Para ``pdftotext``
 
    $ brew install wget pandoc gnupg
 
+.. code-block:: shell
 
+   $ brew info cgal
+   $ brew install cgal --with-lapack --with-eigen --with-qt
+
+   ==> Pouring qt-5.10.1.el_capitan.bottle.tar.gz
+
+   If you need to have this software first in your PATH run:
+     echo 'export PATH="/usr/local/opt/qt/bin:$PATH"' >> ~/.zshrc
+
+   For compilers to find this software you may need to set:
+       LDFLAGS:  -L/usr/local/opt/qt/lib
+       CPPFLAGS: -I/usr/local/opt/qt/include
 
 Bibliografía
 ------------
