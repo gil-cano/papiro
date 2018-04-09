@@ -73,7 +73,7 @@ Do this by using either of the following, which work even if the user is not sup
     $ sudo su - -s /bin/bash jenkins
 
 
-La llave privada y publica, para clonar de `github <https://github.com>`_ con ssh, se debe guardar en:
+Para poder clonar de `github <https://github.com>`_ con ssh, la llave privada y publica se debe guardar en:
 
 .. code-block:: shell
 
@@ -83,44 +83,85 @@ y debe estar registrada en `github <https://github.com>`_:
 
 .. image:: sshandgpg.png
 
-para generar una nueva llave leer `Generating an SSH key <https://help.github.com/articles/generating-an-ssh-key/>`_.
+Si quieres generar una nueva llave lee `Generating an SSH key <https://help.github.com/articles/generating-an-ssh-key/>`_.
+
+En Jenkins damos de alta una credencial que usara nuestra llave privada:
+``Credentials - System - Global credentials - Add Credentials``
+
+.. image:: _static/jenkins_credential.png
+   :alt: Agregar credencial
+
+.. note::
+
+   Para verificar se puede hacer lo siguiente o hasta que demos de alta un proyecto
+
+   .. code-block:: shell
+
+      $ sudo su - -s /bin/bash jenkins
+      $ cd /var/lib/jenkins/workspace/
+      $ git ls-remote -h https://github.com/user/package.name.git HEAD
+
+Otros plug-in's
+===============
+
+Para instalar nuevos plug-in’s en el Panel de control vamos a ``Manage Jenkins - Manage Plugins`` y seleccionamos los necesarios. Para que tome los cambios hay que reiniciar el servidor.
+
+`Green Balls <https://wiki.jenkins-ci.org/display/JENKINS/Green+Balls>`_
+------------------------------------------------------------------------
+Changes Hudson to use green balls instead of blue for successful builds.
+
+`Workspace Cleanup <https://wiki.jenkins-ci.org/display/JENKINS/Workspace+Cleanup+Plugin>`_
+--------------------------------------------------------------------------------------------
+This plugin deletes the workspace before the build or when a build is finished and artifacts saved.
+Option for deleting workspace before build is in Build Environment section:
+
+`Cobertura Plugin <https://wiki.jenkins-ci.org/display/JENKINS/Cobertura+Plugin>`_
+----------------------------------------------------------------------------------
+This plugin allows you to capture code coverage report from Cobertura.
+
+
+`Warnings Plugin <https://wiki.jenkins-ci.org/display/JENKINS/Warnings+Plugin>`_
+--------------------------------------------------------------------------------
+This plugin generates the trend report for compiler warnings in the console log or in log files.
+
+
+`Violations <https://wiki.jenkins-ci.org/display/JENKINS/Violations>`_
+----------------------------------------------------------------------
+This plug-in generates reports static code violation detectors such as checkstyle, pmd, cpd, findbugs, codenarc, fxcop, stylecop and simian.
+
+`Static Code Analysis <https://wiki.jenkins-ci.org/display/JENKINS/Static+Code+Analysis+Plug-ins>`_
+---------------------------------------------------------------------------------------------------
+This plug-in provides utilities for the static code analysis plug-ins.
+
+
+    Monitoring (crash on Mac 1.4) (M. Aspeli)
+    Plot Plug-in (M. Aspeli)
+    Dashboard View (M. Aspeli)
+    ChuckNorris Plug-in (M. Aspeli)
+    SetEnv Plug-in (rtyler Hudson labs)
+
+
+Cache para Plone
+================
+
+Podemos crea un directorio para guardar los paquetes descargados:
 
 .. code-block:: shell
 
-    $ sudo su - -s /bin/bash jenkins
-    $ cd /var/lib/jenkins/workspace/
-    $ git ls-remote -h https://github.com/gil-cano/matem.sis.git HEAD
+   $ sudo su - -s /bin/bash jenkins
+   $ mkdir .buildout
+   $ cd .buildout/
+   $ mkdir downloads eggs extends
+   $ echo -e "[buildout]\neggs-directory = /var/lib/jenkins/.buildout/eggs\ndownload-cache = /var/lib/jenkins/.buildout/downloads\nextends-cache = /var/lib/jenkins/.buildout/extends\n" > default.cfg
 
-    $ git clone https://github.com/gil-cano/matem.sis.git
-    Username for 'https://github.com':
-    Password for 'https://gil-cano@github.com':
+El archivo :file:`default.cfg` debe contener:
 
+.. code-block:: cfg
 
-Now cd to the directory where the clone Jenkins created is and use `git config user.name` and `git config user.email` to set the values.
-
-
-.. code-block:: shell
-
-    $ cd /var/lib/jenkins
-    $ git config user.email "some@email.com"
-    $ git config user.name "jenkins"
-
-
-
-
-Si se opta por usar HTTPS,  podemos almacenar la llave en un cache tempral:
-
-.. code-block:: shell
-
-    $ git config --global credential.helper cache
-
-o por mas tiempo (el default es ~/.git-credentials)
-
-.. code-block:: shell
-
-    git config --global credential.helper 'store --file ~/.my-credentials'
-
-
+   [buildout]
+   eggs-directory = /var/lib/jenkins/.buildout/eggs
+   download-cache = /var/lib/jenkins/.buildout/downloads
+   extends-cache = /var/lib/jenkins/.buildout/extends
 
 
 
@@ -159,45 +200,6 @@ Now you need to create an user account for yourself.
 Remove the:
 
 * Place a check mark next to "Allow users to sign up"
-
-Plug-in's
-=========
-
-Para instalar nuevos plug-in’s en el Panel de control vamos a ‘Manage Jenkins - Manage Plugins’ y seleccionamos los necesarios. Para que tome los cambios hay que reiniciar el servidor.
-
-`Green Balls <https://wiki.jenkins-ci.org/display/JENKINS/Green+Balls>`_
-------------------------------------------------------------------------
-Changes Hudson to use green balls instead of blue for successful builds.
-
-`Workspace Cleanup <https://wiki.jenkins-ci.org/display/JENKINS/Workspace+Cleanup+Plugin>`_
---------------------------------------------------------------------------------------------
-This plugin deletes the workspace before the build or when a build is finished and artifacts saved.
-Option for deleting workspace before build is in Build Environment section:
-
-`Cobertura Plugin <https://wiki.jenkins-ci.org/display/JENKINS/Cobertura+Plugin>`_
-----------------------------------------------------------------------------------
-This plugin allows you to capture code coverage report from Cobertura.
-
-
-`Warnings Plugin <https://wiki.jenkins-ci.org/display/JENKINS/Warnings+Plugin>`_
---------------------------------------------------------------------------------
-This plugin generates the trend report for compiler warnings in the console log or in log files.
-
-
-`Violations <https://wiki.jenkins-ci.org/display/JENKINS/Violations>`_
-----------------------------------------------------------------------
-This plug-in generates reports static code violation detectors such as checkstyle, pmd, cpd, findbugs, codenarc, fxcop, stylecop and simian.
-
-`Static Code Analysis <https://wiki.jenkins-ci.org/display/JENKINS/Static+Code+Analysis+Plug-ins>`_
----------------------------------------------------------------------------------------------------
-This plug-in provides utilities for the static code analysis plug-ins.
-
-
-    Monitoring (crash on Mac 1.4) (M. Aspeli)
-    Plot Plug-in (M. Aspeli)
-    Dashboard View (M. Aspeli)
-    ChuckNorris Plug-in (M. Aspeli)
-    SetEnv Plug-in (rtyler Hudson labs)
 
 
 Node
@@ -272,20 +274,6 @@ El archivo de nginx `/etc/nginx/sites-enabled/jenkins` debe ser algo similar a:
 Reiniciamos NginX::
 
     $ sudo service nginx reload
-
-Plone
-=====
-
-Podemos crea un directorio para guardar los paquetes descargados:
-
-
-.. code-block:: shell
-
-    $ sudo su - -s /bin/bash jenkins
-    $ mkdir .buildout
-    $ cd .buildout/
-    $ mkdir downloads eggs extends
-    $ echo -e "[buildout]\neggs-directory = /var/lib/jenkins/.buildout/eggs\ndownload-cache = /var/lib/jenkins/.buildout/downloads\nextends-cache = /var/lib/jenkins/.buildout/extends\n" > default.cfg
 
 
 Desinstalar Jenknins
