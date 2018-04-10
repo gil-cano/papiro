@@ -1,3 +1,4 @@
+=====
 Nginx
 =====
 
@@ -6,7 +7,7 @@ high performance web server nginx [engine x] is an HTTP and reverse proxy server
 as well as a mail proxy server.
 
 Instalación
------------
+===========
 
 Para instalar `nginx <http://nginx.org/>`_ 1.8.0-1~jessie en Debian GNU/Linux 8.2 (jessie)
 
@@ -99,3 +100,37 @@ Plone
 Sublime Text 3
 --------------
 `<https://github.com/brandonwamboldt/sublime-nginx>`_
+
+
+
+Github webHooks
+===============
+
+
+.. code-block:: nginx
+
+   server {
+     listen 80;
+     server_name example.org;
+     access_log  /var/log/nginx/example.log;
+
+    location /rog-one {
+        root /var/www;
+    }
+
+     location /rog-update {
+         proxy_pass http://127.0.0.1:4000;
+
+         proxy_set_header Host $host;
+         proxy_set_header X-Real-IP $remote_addr;
+         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+     }
+   }
+
+
+
+$ cd /var/www/
+$ sudo mkdir [site_dir]
+$ sudo chown -R www-data:www-data /var/www/[site_dir]
+$ sudo su - -s /bin/bash www-data
+sudo -u www-data /python2.7_webpy/bin/gunicorn -b 127.0.0.1:4000 yourapp:wsgiapp
