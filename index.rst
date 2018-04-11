@@ -83,4 +83,5 @@ Development tools and Administrations tools
     firefox
     chrome
     squid
+    bibtex
     about
