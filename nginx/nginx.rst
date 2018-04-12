@@ -106,6 +106,7 @@ Sublime Text 3
 Github webHooks
 ===============
 
+Agregamos la siguiente configuración en nginx
 
 .. code-block:: nginx
 
@@ -128,9 +129,45 @@ Github webHooks
    }
 
 
+preparamos una instancia de python 2.7 con lo sigiente
 
-$ cd /var/www/
-$ sudo mkdir [site_dir]
-$ sudo chown -R www-data:www-data /var/www/[site_dir]
-$ sudo su - -s /bin/bash www-data
-sudo -u www-data /python2.7_webpy/bin/gunicorn -b 127.0.0.1:4000 yourapp:wsgiapp
+.. code-block:: shell
+
+   $ /python2.7_webpy/bin/pip install web.py flup GitPython gunicorn
+
+
+.. code-block:: shell
+
+   $ cd /var/www/
+   $ sudo mkdir [site_dir]
+   $ sudo chown -R www-data:www-data /var/www/[site_dir]
+   $ sudo su - -s /bin/bash www-data
+   $ git clone https://github.com/poryect.git [site_dir]/
+   $ cd [site_dir]
+   $ touch yourapp.py
+
+
+.. code-block:: python
+
+    #! /usr/bin/env /python2.7_webpy/bin/python
+    import git
+    import web
+
+    urls = ("/.*", "update")
+    app = web.application(urls, globals())
+    wsgiapp = app.wsgifunc()
+
+    class update:
+        def POST(self):
+            g = git.cmd.Git('/var/www/[site_dir]')
+            g.pull()
+            rval = g.ls_files()
+            return rval
+
+    if __name__ == "__main__":
+        app.run()
+
+
+.. code-block:: shell
+
+   $ sudo -u www-data /python2.7_webpy/bin/gunicorn -b 127.0.0.1:4000 yourapp:wsgiapp
