@@ -129,16 +129,9 @@ This plugin generates the trend report for compiler warnings in the console log 
 ----------------------------------------------------------------------
 This plug-in generates reports static code violation detectors such as checkstyle, pmd, cpd, findbugs, codenarc, fxcop, stylecop and simian.
 
-`Static Code Analysis <https://wiki.jenkins-ci.org/display/JENKINS/Static+Code+Analysis+Plug-ins>`_
----------------------------------------------------------------------------------------------------
+`Static Analysis Utilities <https://plugins.jenkins.io/analysis-core>`_
+-----------------------------------------------------------------------
 This plug-in provides utilities for the static code analysis plug-ins.
-
-
-    Monitoring (crash on Mac 1.4) (M. Aspeli)
-    Plot Plug-in (M. Aspeli)
-    Dashboard View (M. Aspeli)
-    ChuckNorris Plug-in (M. Aspeli)
-    SetEnv Plug-in (rtyler Hudson labs)
 
 
 Cache para Plone
@@ -162,6 +155,10 @@ El archivo :file:`default.cfg` debe contener:
    eggs-directory = /var/lib/jenkins/.buildout/eggs
    download-cache = /var/lib/jenkins/.buildout/downloads
    extends-cache = /var/lib/jenkins/.buildout/extends
+
+Crear un proyecto
+=================
+
 
 
 
