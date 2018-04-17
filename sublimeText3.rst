@@ -560,6 +560,11 @@ Instalamos Skim para abrir los pdfs.
 
    $ brew install imagemagick
 
+Para ortografia instalamos el paquete `Dictionaries <https://github.com/titoBouzout/Dictionaries>`_
+Lo colocamos en el folder de paquetes (Preferences > Browse Packages)
+
+Para seleccionar el idioma (View > Dictionaries > English (British))
+Verificar que la ortografia este correcta (F6 / View > Spell Check)
 
 Comparar archivos
 -----------------
