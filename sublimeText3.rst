@@ -553,7 +553,13 @@ Latex
 -----
 `LaTeXTools <https://github.com/SublimeText/LaTeXTools>`_
 
-Si instalamos Skim podemos generar automaticamente el pdf.
+Instalamos MacTeX
+Instalamos Skim para abrir los pdfs.
+
+.. code-block:: shell
+
+   $ brew install imagemagick
+
 
 Comparar archivos
 -----------------
