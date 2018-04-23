@@ -65,7 +65,7 @@ Configurar el plugin de `Git <https://plugins.jenkins.io/git>`_
 ===============================================================
 
 You may need to tell git who the user Jenkins is running as.
-To do this on a Linux/Unix system switch to that user which is probably `jenkins`.
+To do this on a Linux/Unix system switch to that user which is probably *jenkins*.
 Do this by using either of the following, which work even if the user is not supposed to have shell access:
 
 .. code-block:: shell
@@ -159,7 +159,23 @@ El archivo :file:`default.cfg` debe contener:
 Crear un proyecto
 =================
 
+En la interfaz de jenkins seleccionamos ``New Item``, ingresamos el nombre del proyecto y seleccionamos ``freestyle project``
 
+.. image:: _static/project01.png
+   :alt: Nuevo projecto
+   :width: 49%
+
+.. image:: _static/project02.png
+   :alt: Nuevo projecto
+
+.. image:: _static/project03.png
+   :alt: Nuevo projecto
+
+.. image:: _static/project04.png
+   :alt: Nuevo projecto
+
+.. image:: _static/github_webhook.png
+   :alt: Github integrations
 
 
 Standard Security Setup
