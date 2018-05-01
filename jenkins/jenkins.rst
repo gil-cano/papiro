@@ -178,6 +178,14 @@ En la interfaz de jenkins seleccionamos ``New Item``, ingresamos el nombre del p
    :alt: Github integrations
 
 
+.. code-block:: shell
+
+   /opt/local/bin/virtualenv-2.7 .
+   bin/pip install -r requirements.txt
+   bin/buildout -c jenkins.cfg
+   bin/code-analysis
+
+
 Standard Security Setup
 =======================
 
