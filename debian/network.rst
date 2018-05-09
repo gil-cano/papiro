@@ -56,11 +56,13 @@ o netcat [nc]:
     unix  3      [ ]         STREAM     CONNECTED     22756
     unix  2      [ ]         DGRAM                    22311
 
-Verificar si el puerto ersta en uso
+Verificar si el puerto esta en uso
 
 .. code-block:: bash
 
     $ lsof -i
+    ...
+    Dropbox   20723  username   62u  IPv4 0xb0d9e70c6df58efd      0t0  TCP mi.site.com:53242->162.125.34.129:https (ESTABLISHED)
 
 rpcbind
 -------
