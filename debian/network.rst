@@ -56,6 +56,12 @@ o netcat [nc]:
     unix  3      [ ]         STREAM     CONNECTED     22756
     unix  2      [ ]         DGRAM                    22311
 
+Verificar si el puerto ersta en uso
+
+.. code-block:: bash
+
+    $ lsof -i
+
 rpcbind
 -------
 .. code-block:: bash
