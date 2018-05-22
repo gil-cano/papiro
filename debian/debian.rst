@@ -178,6 +178,7 @@ Latex
 .. code-block:: bash
 
     $ sudo apt-get install texlive
+    $ sudo apt-get install texlive-latex-extra
 
 Random Passwords via Command Line
 ---------------------------------
