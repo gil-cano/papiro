@@ -179,7 +179,7 @@ Latex
 
     $ sudo apt-get install texlive
 
-For 500 Lines or Less PDF
+For `500 Lines or Less <https://github.com/aosabook/500lines>`_ PDF
 
 .. code-block:: bash
 
