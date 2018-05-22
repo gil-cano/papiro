@@ -178,7 +178,14 @@ Latex
 .. code-block:: bash
 
     $ sudo apt-get install texlive
+
+For 500 Lines or Less PDF
+
+.. code-block:: bash
+
     $ sudo apt-get install texlive-latex-extra
+    $ sudo apt-get install texlive-fonts-extra
+
 
 Random Passwords via Command Line
 ---------------------------------
