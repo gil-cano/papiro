@@ -18,13 +18,11 @@ To learn how to update and manage this documentation and its tools, read `??? <h
 Building The Documentation
 --------------------------
 
-Clone
-
 .. code:: bash
 
     $ git clone https://github.com/gil-cano/papiro.git
     $ cd papiro
-    $ virtualenv-3.5 .
+    $ virtualenv-3.6 .
     $ source bin/activate
     (papiro)$ pip install -r requirements.txt
     (papiro)$ make html
@@ -33,7 +31,16 @@ At the end of a successful build, you will see the location of the
 resulting HTML pages.
 
 
+Link Testing
+------------
+
+.. code:: bash
+
+    (papiro)$ make linkcheck
+
+
+
 License
 -------
 
-Copyright © 2011-2017 Gildardo Bautista.
+Copyright © 2011-2018 Gildardo Bautista.
