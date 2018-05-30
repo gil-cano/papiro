@@ -42,6 +42,7 @@ Plone
     plone/catalog
     plone/vocabularies
     plone/diazo
+    plone/plone5.1.3.1fix
     plone/translations
     plone/testing
     plone/mail
