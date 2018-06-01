@@ -180,7 +180,7 @@ En la interfaz de jenkins seleccionamos ``New Item``, ingresamos el nombre del p
 
 .. code-block:: shell
 
-   /opt/local/bin/virtualenv-2.7 .
+   /opt/local/bin/virtualenv-2.7 --no-setuptools .
    bin/pip install -r requirements.txt
    bin/buildout -c jenkins.cfg
    bin/code-analysis
