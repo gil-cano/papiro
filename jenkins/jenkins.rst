@@ -129,6 +129,8 @@ This plugin generates the trend report for compiler warnings in the console log 
 ----------------------------------------------------------------------
 This plug-in generates reports static code violation detectors such as checkstyle, pmd, cpd, findbugs, codenarc, fxcop, stylecop and simian.
 
+This plugin is no longer maintained, you may want to use the `Warnings <https://wiki.jenkins-ci.org/display/JENKINS/Warnings+Plugin>`_ Plugin.
+
 `Static Analysis Utilities <https://plugins.jenkins.io/analysis-core>`_
 -----------------------------------------------------------------------
 This plug-in provides utilities for the static code analysis plug-ins.
