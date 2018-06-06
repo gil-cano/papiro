@@ -374,3 +374,5 @@ References
 `Warnings Plugin <https://wiki.jenkins-ci.org/display/JENKINS/Warnings+Plugin>`_
 
 `Git Tools - Credential Storage <https://git-scm.com/book/en/v2/Git-Tools-Credential-Storage>`_
+
+`buildout.jenkins Documentation <https://media.readthedocs.org/pdf/buildoutjenkins/latest/buildoutjenkins.pdf>`_
