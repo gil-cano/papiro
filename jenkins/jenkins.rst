@@ -115,21 +115,13 @@ Changes Hudson to use green balls instead of blue for successful builds.
 This plugin deletes the workspace before the build or when a build is finished and artifacts saved.
 Option for deleting workspace before build is in Build Environment section:
 
-`Cobertura Plugin <https://wiki.jenkins-ci.org/display/JENKINS/Cobertura+Plugin>`_
-----------------------------------------------------------------------------------
+`Cobertura <https://wiki.jenkins-ci.org/display/JENKINS/Cobertura+Plugin>`_
+---------------------------------------------------------------------------
 This plugin allows you to capture code coverage report from Cobertura.
 
-
-`Warnings Plugin <https://wiki.jenkins-ci.org/display/JENKINS/Warnings+Plugin>`_
---------------------------------------------------------------------------------
+`Warnings <https://wiki.jenkins-ci.org/display/JENKINS/Warnings+Plugin>`_
+-------------------------------------------------------------------------
 This plugin generates the trend report for compiler warnings in the console log or in log files.
-
-
-`Violations <https://wiki.jenkins-ci.org/display/JENKINS/Violations>`_
-----------------------------------------------------------------------
-This plug-in generates reports static code violation detectors such as checkstyle, pmd, cpd, findbugs, codenarc, fxcop, stylecop and simian.
-
-This plugin is no longer maintained, you may want to use the `Warnings <https://wiki.jenkins-ci.org/display/JENKINS/Warnings+Plugin>`_ Plugin.
 
 `Static Analysis Utilities <https://plugins.jenkins.io/analysis-core>`_
 -----------------------------------------------------------------------
