@@ -199,6 +199,42 @@ PEP8
    :alt: PEP8
 
 
+ZPTLint
+-------
+
+.. error::
+
+   This is not working
+
+Configuramos un compilador de advertencias, en la configuración del sistema.
+
+
+Expresion regular
+
+.. code-block:: shell
+
+   ^.*in:s(S*)s*(?:<classs’)?(S*)(?:’>)?:s(.*)s*,.*lines*([0-9]*).*$
+
+
+Mapping Script:
+
+.. code-block:: shell
+
+   import hudson.plugins.warnings.parser.Warning
+   import hudson.plugins.analysis.util.model.Priority
+
+   String fileName = matcher.group(1)
+   String category = matcher.group(2)
+   String lineNumber = matcher.group(4)
+   String message = matcher.group(3)
+
+   return new Warning(fileName, Integer.parseInt(lineNumber), category, "ZPTLint Parser", message, Priority.HIGH);
+
+.. code-block:: shell
+
+   **/parts/code-analysis/zptlint.log
+
+
 Standard Security Setup
 =======================
 
