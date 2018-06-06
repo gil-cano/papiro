@@ -81,14 +81,14 @@ Para poder clonar de `github <https://github.com>`_ con ssh, la llave privada y 
 
 y debe estar registrada en `github <https://github.com>`_:
 
-.. image:: sshandgpg.png
+.. image:: _static/github_sshgpg.png
 
 Si quieres generar una nueva llave lee `Generating an SSH key <https://help.github.com/articles/generating-an-ssh-key/>`_.
 
 En Jenkins damos de alta una credencial que usara nuestra llave privada:
 ``Credentials - System - Global credentials - Add Credentials``
 
-.. image:: _static/jenkins_credential.png
+.. image:: _static/jenkins-credentials.png
    :alt: Agregar credencial
 
 .. note::
@@ -155,21 +155,24 @@ Crear un proyecto
 
 En la interfaz de jenkins seleccionamos ``New Item``, ingresamos el nombre del proyecto y seleccionamos ``freestyle project``
 
-.. image:: _static/project01.png
+.. image:: _static/jenkins-project01.png
    :alt: Nuevo projecto
    :width: 49%
 
-.. image:: _static/project02.png
-   :alt: Nuevo projecto
+.. image:: _static/jenkins-project02.png
+   :alt: General
 
-.. image:: _static/project03.png
-   :alt: Nuevo projecto
+.. image:: _static/jenkins-project03.png
+   :alt: Source Code Management
 
-.. image:: _static/project04.png
-   :alt: Nuevo projecto
+.. image:: _static/jenkins-project04.png
+   :alt: Build Triggers
 
 .. image:: _static/github_webhook.png
-   :alt: Github integrations
+   :alt: Github Webhooks
+
+.. image:: _static/jenkins-project05.png
+   :alt: Build
 
 
 .. code-block:: shell
@@ -178,6 +181,22 @@ En la interfaz de jenkins seleccionamos ``New Item``, ingresamos el nombre del p
    bin/pip install -r requirements.txt
    bin/buildout -c jenkins.cfg
    bin/code-analysis
+
+Jenkins Code Analysis
+=====================
+
+En ``Post-build Actions`` seleccionamos ``Scan for compiler warnings``.
+
+PEP8
+----
+
+.. code-block:: shell
+
+   **/parts/code-analysis/flake8.log
+
+
+.. image:: _static/jenkins-analysis01.png
+   :alt: PEP8
 
 
 Standard Security Setup
