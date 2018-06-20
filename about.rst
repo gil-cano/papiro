@@ -192,6 +192,33 @@ JavaScript
       $el.text(value);
       $('body').append($el);
 
+Json
+----
+
+.. code-block:: rst
+
+   .. code-block:: json
+
+      {
+        "font_face": "Source Code Pro",
+        "font_size": 15,
+        "ignored_packages":
+        [
+            "Vintage",
+        ],
+        "rulers":
+        [
+            72,
+            79,
+            100,
+        ],
+        "tab_size": 4,
+        "translate_tabs_to_spaces": true,
+        "use_tab_stops": true,
+      }
+
+
+
 Imagenes
 --------
 

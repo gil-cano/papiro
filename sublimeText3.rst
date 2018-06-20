@@ -25,7 +25,7 @@ Debemos asegurarnos que el directorio ``/usr/local/bin`` se encuntra en nuestro 
 Configuración de Usuario
 ------------------------
 
-El archivo de configuración de usurio se abre desde el menú Sublime Text -> Preferences -> Settings.
+El archivo de configuración de usurio se abre desde el menú ``Sublime Text -> Preferences -> Settings``.
 
 .. code-block:: json
 
