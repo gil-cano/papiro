@@ -105,6 +105,18 @@ Por hacer
    This is a TODO item
 
 
+Ver también
+
+.. code-block:: rst
+
+   .. seealso::
+
+      This!
+
+.. seealso::
+
+   This!
+   
 Resaltado de sintaxis
 =====================
 

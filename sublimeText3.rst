@@ -8,17 +8,18 @@ Línea de comandos en Mac OS X
 
 Para poder usarlo hacemos un enlace simbólico:
 
-.. code-block:: console
+.. code-block:: shell
 
    $ ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
 
-Debemos asegurarnos que el directorio ``/usr/local/bin`` se encuntra en nuestro ``$PATH``, de no ser así podemos agregarlo en el archivo ``.bash_profile``
+Debemos asegurarnos que el directorio ``/usr/local/bin`` se encuntra en nuestro ``$PATH``, de no ser así podemos agregarlo en el archivo :file:`.bash_profile`
 
-.. code-block:: console
+.. code-block:: shell
 
    export PATH=/usr/local/bin/:$PATH
 
 .. seealso::
+
     `OS X Command Line - Sublime Text 3 Documentation <http://www.sublimetext.com/docs/3/osx_command_line.html>`_
 
 Configuración de Usuario
@@ -117,6 +118,59 @@ Por default el archivo de un proyecto es ``<project name>.sublime-project``
 Para crear un proyecto ``Project -> save Project as``
 
 Para editarlo ``Project -> Edit Project``
+
+Ejemplo de plone.recipe.sublimetext:
+
+.. code-block:: json
+
+    {
+        "SublimeLinter":{
+            "linters":{
+                "pylint":{
+                    "disable":false,
+                    "paths":[
+                        "/Users/gil/.buildout/eggs/ZODB3-3.11.0-py2.7.egg",
+                        "/Users/gil/.buildout/eggs/Products.CMFCore-2.2.12-py2.7.egg",
+                        "/Users/gil/.buildout/eggs/Plone-5.1.2-py2.7.egg",
+                        "/Users/gil/.buildout/eggs/Acquisition-4.4.2-py2.7-macosx-10.4-x86_64.egg"
+                    ]
+                }
+            }
+        },
+        "folders":[
+            {
+                "folder_exclude_patterns":[
+                    "bin",
+                    "develop-eggs",
+                    "eggs",
+                    "include",
+                    "lib",
+                    "local",
+                    "parts",
+                    "var",
+                    ".sass-cache",
+                    ".yolk"
+                ],
+                "follow_symlinks":"true",
+                "path":"."
+            },
+            {
+                "follow_symlinks":"true",
+                "path":"parts/omelette"
+            }
+        ],
+        "settings":{
+            "python_interpreter":"/Users/gil/projects/plone/sites/sublime-buildout/bin/python2.7",
+            "python_package_paths":[
+                "/Users/gil/.buildout/eggs/Zope2-2.13.27-py2.7.egg",
+                "/Users/gil/.buildout/eggs/ZODB3-3.11.0-py2.7.egg",
+                "/Users/gil/.buildout/eggs/Plone-5.1.2-py2.7.egg",
+                "/Users/gil/.buildout/eggs/Acquisition-4.4.2-py2.7-macosx-10.4-x86_64.egg"
+            ],
+            "sublimelinter":true
+        }
+    }
+
 
 Para solo usar el autocomplete de jedi editamos ``Sublime Text -> Preferences -> Packages Settings -> Jedi -> Settings - User``
 
@@ -610,3 +664,5 @@ Bibliografía
 * `Sublime Text for Front End Developers <https://css-tricks.com/sublime-text-front-end-developers/>`_
 
 * `My Sublime Text 3 setup <https://fredrikaverpil.github.io/2016/05/20/my-sublime-3-setup/>`_
+
+* `Sublime 3 xml_pp (xmltwig) based xml auto formatter <https://gist.github.com/jensens/4fc631616f5ef9ac4c6b>`_
