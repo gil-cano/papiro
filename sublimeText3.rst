@@ -50,9 +50,9 @@ El archivo de configuración de usurio se abre desde el menú ``Sublime Text -> 
 
 Sublime Text mostrará un margen en las columnas:
 
-    -  72 docstrings
-    -  79 longitud optima de linea de codigo
-    - 100 longitud maxima permitida
+    *  72 docstrings
+    *  79 longitud optima de linea de codigo
+    * 100 longitud maxima permitida
 
 En este caso estamos usando el tipo de letra `Source Code Pro <https://github.com/adobe-fonts/source-code-pro>`_
 
@@ -61,7 +61,7 @@ Control de paquetes
 
 Para la administración de paquetes se recomienda usar `Package Control <https://sublime.wbond.net/installation>`_. La instalación es atravez de la consola de Sublime Text (``ctrl + ```). En la consola ejecutamos lo siguiente (es mejor tomarlo de la pagina original):
 
-.. code-block:: console
+.. code-block:: shell
 
     import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)
 
@@ -81,6 +81,11 @@ Autocompletar código python
 ---------------------------
 
 `SublimeJedi <https://github.com/srusskih/SublimeJEDI>`_
+
+
+    * Abrimos la paleta de comandos (``⇧ + ⌘ + P``)
+    * Escribimos ``package control install`` y seleccionamos el comando ``Package Control: Install Package``
+    * Escribimos ``Jedi`` y seleccionamos ``Jedi - Python autocompletion``
 
 .. seealso::
 
