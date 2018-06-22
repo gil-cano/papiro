@@ -657,6 +657,14 @@ Acordeón
     ctrl G      ir a linea
     ==========  =========================================================
 
+
+.. code-block:: shell
+
+
+    >>> sublime.windows()[0].project_data()
+    >>> sublime.windows()[0].extract_variables()
+
+
 Bibliografía
 ------------
 
