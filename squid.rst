@@ -4,6 +4,11 @@ Squid3
 
 .. code-block:: shell
 
+   $ apt-get install apache2-utils
+   $ apt-get install squid3
+
+.. code-block:: shell
+
    /etc/squid3/squid.conf
 
 
@@ -40,3 +45,9 @@ Squid3
    # Only allow cachemgr access from localhost
    http_access allow localhost manager
    http_access deny manager
+
+
+.. code-block:: shell
+
+    $ sudo htpasswd -c /etc/squid3/squid_passwords username_you_like
+    $ sudo service squid3 restart
