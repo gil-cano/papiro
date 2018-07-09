@@ -1,3 +1,4 @@
+======
 Debian
 ======
 
@@ -15,7 +16,6 @@ Mostrar la versión del kernel
 
 
 Actualizar
-----------
 
 .. code-block:: bash
 
@@ -118,7 +118,7 @@ fail2ban
     $ cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
 
 Plone
------
+=====
 
 .. code-block:: shell
 
@@ -139,27 +139,30 @@ Python
 
 
 `buildout.python <https://github.com/collective/buildout.python>`_
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+------------------------------------------------------------------
 
 Trying to install PIL for python2.4
 
-.. code-block:: bash
+.. code-block:: shell
 
 
     fatal error: freetype/fterrors.h: No such file or directory
 
 The version of freetype is 2, I guess it's the problem.
 
-.. code-block:: bash
+.. code-block:: shell
 
     $ cd /usr/include
     $ ln -s freetype2 freetype
 
 
 
-Install python from source in /usr/local/bin
+Python from source 
+------------------
 
-.. code-block:: bash
+Se instala por default en  `/usr/local/bin`
+
+.. code-block:: shell
 
     $ tar xfvz Python-2.7.13.tgz
     $ cd Python-2.7.13
@@ -175,16 +178,32 @@ Install python from source in /usr/local/bin
 Latex
 -----
 
-.. code-block:: bash
+.. code-block:: shell
 
     $ sudo apt-get install texlive
 
 For `500 Lines or Less <https://github.com/aosabook/500lines>`_ PDF
 
-.. code-block:: bash
+.. code-block:: shell
 
     $ sudo apt-get install texlive-latex-extra
     $ sudo apt-get install texlive-fonts-extra
+
+
+.. note::
+
+    En Mac OS X con MacTeX 2018 y Pandoc 2.2.1, actualizamos en :file:`build.py`
+
+
+    .. code-block:: python
+
+        def _pandoc_cmd(chapter_markdown):
+            pandoc_path = 'pandoc'
+            # tex/md because that's where the preprocessed markdowns end up
+            temp = '{pandoc} -V chaptertoken={chaptertoken} -t latex --top-level-division=chapter -f markdown+mmd_title_block+tex_math_dollars+smart --template=tex/chaptertemplate.tex --no-highlight -o tex/{basename}.tex.1 tex/{md}'
+            basename = getbasename(chapter_markdown)
+            result = temp.format(pandoc=pandoc_path, basename=basename, md=chapter_markdown, chaptertoken='s:' + basename)
+            return result
 
 
 Random Passwords via Command Line
