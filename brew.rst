@@ -10,7 +10,7 @@ Instalación
 -----------
 
 
-instalar paquete:
+instalar paquete::
 
    $ brew install <formula>
 
