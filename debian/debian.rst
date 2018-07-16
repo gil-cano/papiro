@@ -155,6 +155,9 @@ The version of freetype is 2, I guess it's the problem.
     $ cd /usr/include
     $ ln -s freetype2 freetype
 
+.. note::
+
+    En Mac OS X necesitamos un ambiente virtual con :file:`zc.buildout-1.4.4` y :file:`setuptools-1.4.2`
 
 
 Python from source 
