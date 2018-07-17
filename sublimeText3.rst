@@ -36,15 +36,24 @@ El archivo de configuración de usurio se abre desde el menú ``Sublime Text -> 
         [
             "Vintage",
         ],
-        "rulers":
-        [
-            72,
-            79,
-            100,
-        ],
         "tab_size": 4,
         "translate_tabs_to_spaces": true,
         "use_tab_stops": true,
+    }
+
+
+Para configuración de archivos python ``Sublime Text -> Preferences -> Settings - Syntax Specific``.
+Salvamos el archivo como :file:`Python.sublime-settings`
+
+.. code-block:: json
+
+    {
+        "font_size": 13,
+        "draw_white_space": "selection",
+        "rulers": [79],
+        "tab_size": 4,
+        "translate_tabs_to_spaces": true,
+        "use_tab_stops": true
     }
 
 
@@ -203,52 +212,18 @@ Editamos el archivo de configuración de SublimeLinter ``Sublime Text -> Prefere
 .. code-block:: json
 
     {
-
-    }
-
-Salvamos y reiniciamos SublimeText. El archivo de configuración tendra la siguiente configuración:
-
-.. code-block:: json
-
-    {
-        "user": {
-            "debug": false,
-            "delay": 0.25,
-            "error_color": "D02000",
-            "gutter_theme": "Packages/SublimeLinter/gutter-themes/Default/Default.gutter-theme",
-            "gutter_theme_excludes": [],
-            "lint_mode": "background",
-            "linters": {},
-            "mark_style": "outline",
-            "no_column_highlights_line": false,
-            "passive_warnings": false,
-            "paths": {
-                "linux": [],
-                "osx": [],
-                "windows": []
-            },
-            "python_paths": {
-                "linux": [],
-                "osx": [],
-                "windows": []
-            },
-            "rc_search_limit": 3,
-            "shell_timeout": 10,
-            "show_errors_on_save": false,
-            "show_marks_in_minimap": true,
-            "syntax_map": {
-                "html (django)": "html",
-                "html (rails)": "html",
-                "html 5": "html",
-                "javascript (babel)": "javascript",
-                "magicpython": "python",
-                "php": "html",
-                "python django": "python",
-                "pythonimproved": "python"
-            },
-            "warning_color": "DDB700",
-            "wrap_find": true
-        }
+        "debug": false,
+        "delay": 0.25,
+        "gutter_theme": "Default",
+        "lint_mode": "background",
+        "linters": {},
+        "no_column_highlights_line": false,
+        "paths": {
+            "linux": [],
+            "osx": [],
+            "windows": []
+        },
+        "show_marks_in_minimap": true,
     }
 
 
@@ -263,12 +238,12 @@ Primero creamos un ambiente virtual y lo activamos
 .. code-block:: console
 
     $ cd /Users/myuser/buildout.python
-    $ virtualenv-3.5 python-3-sublenv
-    New python executable in python-3-sublenv/bin/python3.5
-    Also creating executable in python-3-sublenv/bin/python
+    $ virtualenv-2.7 python-2.7-sublenv
+    New python executable in python-2.7-sublenv/bin/python2.7
+    Also creating executable in python-2.7-sublenv/bin/python
     Installing setuptools, pip...done.
-    $ source python-3-sublenv/bin/activate
-    (python-3-sublenv)$
+    $ source python-2.7-sublenv/bin/activate
+    (python-2.7-sublenv)$
 
 Instalamos los paquetes necesarios (`flake8 <https://pypi.python.org/pypi/flake8>`_)
 
@@ -296,50 +271,39 @@ Si queremos usar un archivo requirements.txt debe contener los siguiente
 
 .. code-block:: text
 
-    flake8==3.3.0
+    configparser==3.5.0
+    enum34==1.1.6
+    flake8==3.5.0
     flake8-blind-except==0.1.1
     flake8-coding==1.3.0
-    flake8-debugger==1.4.0
-    isort==4.2.15
+    flake8-debugger==3.1.0
+    flake8-deprecated==1.3
     mccabe==0.6.1
     pycodestyle==2.3.1
-    pyflakes==1.5.0
+    pyflakes==1.6.0
 
 
-Agregamos la siguiente:
+Agregamos lo siguiente:
 
 .. code-block:: json
 
     {
-        "user": {
-            "linters": {
-                 "flake8": {
-                    "@disable": false,
-                    "args": [],
-                    "builtins": "",
-                    "excludes": [],
-                    "ignore": "E501,D100,T000",
-                    "jobs": "1",
-                    "max-complexity": 10,
-                    "max-line-length": null,
-                    "select": "",
-                    "show-code": true
-                }
-            },
-            "paths": {
-                "linux": [],
-                "osx": [
-                    "~/buildout.python/python-3-sublenv/bin"
-                ],
-                "windows": []
-            },
-            "python_paths": {
-                "linux": [],
-                "osx": [
-                    "~/buildout.python/python-3-sublenv/bin"
-                ],
-                "windows": []
-            },
+        "linters": {
+            "flake8": {
+                "disable": false,
+                "args": "--ignore E501,D100,T000",
+                "excludes": [],
+                "max-complexity": 10,
+                "max-line-length": null,
+                "select": "",
+                "show-code": true,
+                "python": 2.7,
+            }
+        },
+        "paths": {
+            "linux": [],
+            "osx": ["~/buildout.python/python-2.7-sublenv/bin"],
+            "windows": []
         }
     }
 
@@ -376,27 +340,25 @@ Agregamos la siguiente configuración en ``Sublime Text -> Preferences -> Packag
 .. code-block:: json
 
     {
-        "user": {
-            "linters": {
-                "csslint": {
-                    "@disable": false,
-                    "args": [],
-                    "errors": "",
-                    "excludes": [],
-                    "ignore": "",
-                    "warnings": ""
-                },
-                "jshint": {
-                    "@disable": false,
-                    "args": [],
-                    "excludes": []
-                },
+        "linters": {
+            "csslint": {
+                "disable": false,
+                "args": [],
+                "errors": "",
+                "excludes": [],
+                "ignore": "",
+                "warnings": ""
             },
-            "paths": {
-                "osx": [
-                    "/usr/local/bin"
-                ],
+            "jshint": {
+                "disable": false,
+                "args": [],
+                "excludes": []
             },
+        },
+        "paths": {
+            "osx": [
+                "/usr/local/bin"
+            ],
         }
     }
 
@@ -404,6 +366,37 @@ sublimelinter-json
 ~~~~~~~~~~~~~~~~~~
 
 En sublimetext instalamos `sublimelinter-json <https://github.com/SublimeLinter/SublimeLinter-json>`_
+
+.. code-block:: json
+
+    {
+        "linters": {
+            "json": {
+                "strict": false
+            }
+        }
+    }
+
+
+SublimeLinter--contrib-yamllint
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: console
+
+    $ pip install yamllint
+
+
+En sublimetext instalamos `sublimelinter-contrib-yamllint <https://github.com/thomasmeeus/SublimeLinter-contrib-yamllint>`_
+
+.. code-block:: json
+
+    {
+        "linters": {
+            "pyyaml": {
+            }
+        }
+    }
+
 
 
 Iluminación de archivos buildout.cfg
@@ -459,7 +452,7 @@ ST3 snippet para insertar un breakpoint
 
 Para poder poner un break point con solo escribir pdb y completar con tab,
 debemos poner la siguiente configuración en:
-``~/Library/Application Support/Sublime Text 3/Packages/User/pdb.sublime-snippet``.
+:file:`~/Library/Application Support/Sublime Text 3/Packages/User/pdb.sublime-snippet`.
 o en ``Tools -> Developer -> New Snippet ...``
 
 .. code-block:: xml
@@ -488,27 +481,16 @@ Mejoras a la barra lateral
 
 Theme
 -----
-
-`Material Theme <http://equinusocio.github.io/material-theme/>`_
-
-`Material Theme - Appbar <https://github.com/equinusocio/material-theme-appbar>`_
+`Flatland <https://github.com/thinkpixellab/flatland>`_
 
 Abrimios el archivo de preferencias globales de Sublime Text 3 ``Sublime Text -> Preferences -> Settings - User``
 
 .. code-block:: json
 
     {
-        "theme": "Material-Theme-Darker.sublime-theme",
-        "color_scheme": "Packages/Material Theme/schemes/Material-Theme-Darker.tmTheme",
-        "always_show_minimap_viewport"  : true,
-        "bold_folder_labels"            : true,
-        "material_theme_bold_tab"       : true,
-        "material_theme_compact_sidebar": true,
-        "material_theme_small_statusbar": true,
-        "material_theme_small_tab"      : true,
-        "overlay_scroll_bars"           : "enabled",
+        "theme": "Flatland Dark.sublime-theme",
+        "color_scheme": "Packages/Theme - Flatland/Flatland Monokai.tmTheme",
     }
-
 
 `Soda Theme <http://buymeasoda.github.io/soda-theme/>`_
 
@@ -521,13 +503,14 @@ Abrimios el archivo de preferencias globales de Sublime Text 3 ``Sublime Text ->
         "theme": "Soda Dark 3.sublime-theme",
     }
 
-
-
 * Descargar `colour-schemes.zip <http://buymeasoda.github.com/soda-theme/extras/colour-schemes.zip>`_.
 * Descomprimir y mover los archivos **tmttheme** en el folder ``Pakages/User``.
 * Abilitar el esquema de colores via:
 
 ``Sublime Text -> Preferences -> Color Scheme -> User -> Monokai Soda``
+
+
+`Material Theme <http://equinusocio.github.io/material-theme/>`_
 
 
 Color Scheme (opcional)
@@ -613,6 +596,7 @@ Latex
 `LaTeXTools <https://github.com/SublimeText/LaTeXTools>`_
 
 Instalamos MacTeX
+
 Instalamos Skim para abrir los pdfs.
 
 .. code-block:: shell
@@ -620,10 +604,10 @@ Instalamos Skim para abrir los pdfs.
    $ brew install imagemagick
 
 Para ortografia instalamos el paquete `Dictionaries <https://github.com/titoBouzout/Dictionaries>`_
-Lo colocamos en el folder de paquetes (Preferences > Browse Packages)
+Lo colocamos en el folder de paquetes ``Sublime Text -> Preferences > Browse Packages``
 
-Para seleccionar el idioma (View > Dictionaries > English (British))
-Verificar que la ortografia este correcta (F6 / View > Spell Check)
+Para seleccionar el idioma ``View -> Dictionary -> Dictionaries -> English (American)``
+Verificar que la ortografia este correcta (View > Spell Check / F6)
 
 Comparar archivos
 -----------------
@@ -669,6 +653,8 @@ Bibliografía
 ------------
 
 * `Reverting to a freshly installed state - Sublime Text 3 Documentation <http://www.sublimetext.com/docs/3/revert.html>`_
+
+* `Setting Up Sublime Text 3 for Full Stack Python Development <https://realpython.com/setting-up-sublime-text-3-for-full-stack-python-development/#markdown-preview>`_
 
 * `Turning Sublime Text Into a Lightweight Python IDE <http://cewing.github.io/training.codefellows/assignments/day01/sublime_as_ide.html>`_
 
