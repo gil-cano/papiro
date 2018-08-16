@@ -1,6 +1,29 @@
 Network
 =======
 
+Mostrar que IP estas usando
+
+.. code-block:: bash
+
+    $ ip a
+
+    1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default
+        link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+        inet 127.0.0.1/8 scope host lo
+           valid_lft forever preferred_lft forever
+        inet6 ::1/128 scope host
+           valid_lft forever preferred_lft forever
+    2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+        inet 192.168.10.82/24 brd 192.168.10.255 scope global eth0
+
+Mostrar el nombre
+
+.. code-block:: bash
+
+    $ hostname
+    $ hostname -f
+
+
 Escanear los puestos
 --------------------
 
@@ -11,7 +34,7 @@ Para escanear los puestos en un servidor podemos usar nmap:
     $ nmap 192.168.1.254
 
     Starting Nmap 6.47 ( http://nmap.org ) at 2016-08-19 00:21 EDT
-    Nmap scan report for info.matem.unam.mx (192.168.1.254)
+    Nmap scan report for myhost.my.domain (192.168.1.254)
     Host is up (0.00052s latency).
     Not shown: 994 closed ports
     PORT     STATE SERVICE
@@ -42,7 +65,7 @@ o netcat [nc]:
 
     $ netstat -an | grep 22
     tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN
-    tcp        0      0 132.248.17.62:22        132.248.17.41:62844     ESTABLISHED
+    tcp        0      0 192.168.1.254:22        192.168.1.41:62844     ESTABLISHED
     tcp6       0      0 :::22                   :::*                    LISTEN
     unix  2      [ ]         DGRAM                    13195    /run/user/122/systemd/notify
     unix  2      [ ACC ]     STREAM     LISTENING     13197    /run/user/122/systemd/private

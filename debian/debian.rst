@@ -91,6 +91,28 @@ Para gregar un trabajo como root
 Seguridad SSH
 -------------
 
+Instalacion y estado de ssh
+
+.. code-block:: bash
+
+    $ sudo apt-get install openssh-server
+    $ sudo service ssh status
+    ● ssh.service - OpenBSD Secure Shell server
+       Loaded: loaded (/lib/systemd/system/ssh.service; enabled)
+       Active: active (running) since Mon 2018-07-23 10:22:44 EDT; 3 weeks 3 days ago
+     Main PID: 909 (sshd)
+       CGroup: /system.slice/ssh.service
+               └─909 /usr/sbin/sshd -D
+
+Para detener, remover del inicio, inicar atumaticamente e iniciar el servicio
+
+.. code-block:: bash
+
+    $ sudo systemctl stop ssh
+    $ sudo systemctl disable ssh
+    $ sudo systemctl enable ssh
+    $ sudo systemctl start ssh
+
 El archivo de configuración es:
 
 .. code-block:: bash
@@ -104,18 +126,60 @@ El archivo de configuración es:
     # password authentication is disabled for root
     PermitRootLogin without-password
 
+consultar información del kernel sobre sokets.
+
+.. code-block:: bash
+
+    $ ss -plnt
+    State       Recv-Q Send-Q   Local Address:Port     Peer Address:Port
+    LISTEN      0      128                  *:80                  *:*
+    LISTEN      0      128                  *:22                  *:*
+    LISTEN      0      128          127.0.0.1:631                 *:*
+    LISTEN      0      20           127.0.0.1:25                  *:*
+
+Ver historia de connecciones ssh al servidor
+
+.. code-block:: bash
+
+    $ sudo zgrep sshd /var/log/auth.log* | grep rhost
+    $ sudo zgrep sshd /var/log/auth.log* | grep Accepted
+
 fail2ban
 --------
 
 .. code-block:: bash
 
-    sudo apt-get update
-    sudo apt-get install fail2ban
+    $ sudo apt-get update
+    $ sudo apt-get install fail2ban
 
+.. code-block:: bash
+
+    $ sudo service fail2ban status
+    ● fail2ban.service - LSB: Start/stop fail2ban
+       Loaded: loaded (/etc/init.d/fail2ban)
+       Active: active (running) since Mon 2018-07-23 10:22:54 EDT; 3 weeks 3 days ago
+       CGroup: /system.slice/fail2ban.service
+               └─1113 /usr/bin/python /usr/bin/fail2ban-server -b -s /var/run/fail2ban/fail2ban.sock -p /var/run/fail2ban/fail2ban.pid
+    $ sudo fail2ban-client status
+    Status
+    |- Number of jail:  1
+    `- Jail list:       ssh
+    $ sudo fail2ban-client status ssh
+    Status for the jail: ssh
+    |- filter
+    |  |- File list:    /var/log/auth.log
+    |  |- Currently failed: 0
+    |  `- Total failed: 16780
+    `- action
+       |- Currently banned: 0
+       |  `- IP list:
+       `- Total banned: 162
 
 .. code-block:: bash
 
     $ cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
+
+
 
 Plone
 =====
