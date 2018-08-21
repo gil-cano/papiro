@@ -88,6 +88,15 @@ Para gregar un trabajo como root
     # END
 
 
+Listar o borrar los trabajos crontab
+
+.. code-block:: bash
+
+    $ crontab -l
+    $ sudo crontab -u plone -l
+    $ sudo crontab -r
+
+
 Seguridad SSH
 -------------
 
@@ -224,7 +233,7 @@ The version of freetype is 2, I guess it's the problem.
     En Mac OS X necesitamos un ambiente virtual con :file:`zc.buildout-1.4.4` y :file:`setuptools-1.4.2`
 
 
-Python from source 
+Python from source
 ------------------
 
 Se instala por default en  `/usr/local/bin`
