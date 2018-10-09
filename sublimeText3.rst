@@ -609,6 +609,15 @@ Lo colocamos en el folder de paquetes ``Sublime Text -> Preferences > Browse Pac
 Para seleccionar el idioma ``View -> Dictionary -> Dictionaries -> English (American)``
 Verificar que la ortografia este correcta (View > Spell Check / F6)
 
+
+.. note::
+
+    =========  =========================================================
+    ⌘ b         Compila latex
+    ⇧ ⌘ b      Selecciona que usar Latex/PdfLatex/XeLatex
+    ⌘ l + ⌫    Borra archivos temporales
+    =========  =========================================================
+
 Comparar archivos
 -----------------
 
