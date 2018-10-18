@@ -191,7 +191,9 @@ Para solo usar el autocomplete de jedi editamos ``Sublime Text -> Preferences ->
 .. code-block:: json
 
     {
-        "sublime_completions_visibility": "jedi"
+        "python_interpreter": " $home/buildout.python/python-2.7/bin/python",
+        "sublime_completions_visibility": "jedi",
+        "auto_complete_function_params": "required"
     }
 
 .. note::
