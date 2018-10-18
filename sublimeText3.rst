@@ -199,6 +199,7 @@ Para solo usar el autocomplete de jedi editamos ``Sublime Text -> Preferences ->
     ========  =========================================================
     ctrl ⇧ G  Encuentra la definición de una función, variable o clase
     ⌥ ⇧ F     Encuentra donde se usa el metodo, varibale o clase
+    ctrl ⌥ D  Muestra la documentación como tooltip
     ========  =========================================================
 
 
@@ -640,6 +641,7 @@ Acordeón
     ⇧ ⌘ P       paleta de comandos
     ctrl ⇧ G    encuentra la definición de una función, variable o clase
     ⌥ ⇧ F       encuentra donde se usa el metodo, varibale o clase
+    ctrl ⌥ D    Muestra la documentación como tooltip
     ctrl ⌘ j     Da formato a un archivo json
     ctrl ⌘ m     Minimiza archivo json (remueve espacios extras y saltos de linea)
     ctrl ⇧ ⌘ j   Consola de comandos de jq
