@@ -39,6 +39,7 @@ Plone
 .. toctree::
     :maxdepth: 2
 
+    plone/debugging
     plone/catalog
     plone/vocabularies
     plone/diazo
