@@ -97,6 +97,12 @@ Para ``pdftotext``
 
    $ brew install wv
 
+``gdbm`` para usar el profiler de Zope (Control_Panel/DebugInfo)
+
+.. code-block:: shell
+
+   $ brew install gdbm
+
 .. code-block:: shell
 
    $ brew install wget pandoc gnupg
@@ -114,6 +120,7 @@ Para ``pdftotext``
    For compilers to find this software you may need to set:
        LDFLAGS:  -L/usr/local/opt/qt/lib
        CPPFLAGS: -I/usr/local/opt/qt/include
+
 
 Bibliografía
 ------------
