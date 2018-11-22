@@ -95,17 +95,31 @@ Para ``pdftotext``
 
    $ brew install poppler
 
-   ==> Pouring gettext-0.19.8.1.el_capitan.bottle.tar.gz
+   ==> Pouring gettext-0.19.8.1.mojave.bottle.tar.gz
+   ==> Caveats
+   gettext is keg-only, which means it was not symlinked into /usr/local,
+   because macOS provides the BSD gettext library & some software gets confused if both are in the library path.
 
-   For compilers to find this software you may need to set:
-       LDFLAGS:  -L/usr/local/opt/gettext/lib
-       CPPFLAGS: -I/usr/local/opt/gettext/include
+   If you need to have gettext first in your PATH run:
+     echo 'export PATH="/usr/local/opt/gettext/bin:$PATH"' >> ~/.bash_profile
 
-   ==> Pouring libffi-3.2.1.el_capitan.bottle.tar.gz
+   For compilers to find gettext you may need to set:
+     export LDFLAGS="-L/usr/local/opt/gettext/lib"
+     export CPPFLAGS="-I/usr/local/opt/gettext/include"
 
-   For compilers to find this software you may need to set:
-       LDFLAGS:  -L/usr/local/opt/libffi/lib
+   ==> Pouring libffi-3.2.1.mojave.bottle.tar.gz
 
+   For compilers to find libffi you may need to set:
+       export LDFLAGS="-L/usr/local/opt/libffi/lib"
+       
+   ==> Pouring nss-3.40.mojave.bottle.tar.gz
+
+   If you need to have nss first in your PATH run:
+     echo 'export PATH="/usr/local/opt/nss/bin:$PATH"' >> ~/.bash_profile
+
+   For compilers to find nss you may need to set:
+     export LDFLAGS="-L/usr/local/opt/nss/lib"
+     export CPPFLAGS="-I/usr/local/opt/nss/include"
 
 ``wv`` permite el acceso a archivos de tipo Microsoft Word
 
