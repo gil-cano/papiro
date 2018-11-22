@@ -44,22 +44,25 @@ En macOS necesitasmos instalar algunas dependencias con Homebrew:
 
 .. code-block:: shell
 
-   $ brew install openssl
+   $ brew install openssl@1.1
+   ==> Pouring openssl@1.1-1.1.1.mojave.bottle.tar.gz
    ==> Caveats
-   A CA file has been bootstrapped using certificates from the SystemRoots
-   keychain. To add additional certificates (e.g. the certificates added in
-   the System keychain), place .pem files in
-     /usr/local/etc/openssl/certs
+   A CA file has been bootstrapped using certificates from the system
+   keychain. To add additional certificates, place .pem files in
+     /usr/local/etc/openssl@1.1/certs
 
    and run
-     /usr/local/opt/openssl/bin/c_rehash
+     /usr/local/opt/openssl@1.1/bin/c_rehash
 
-   If you need to have this software first in your PATH run:
-     echo 'export PATH="/usr/local/opt/openssl/bin:$PATH"' >> ~/.zshrc
+   openssl@1.1 is keg-only, which means it was not symlinked into /usr/local,
+   because this is an alternate version of another formula.
 
-   For compilers to find openssl you may need to set:
-     export LDFLAGS="-L/usr/local/opt/openssl/lib"
-     export CPPFLAGS="-I/usr/local/opt/openssl/include"
+   If you need to have openssl@1.1 first in your PATH run:
+     echo 'export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"' >> ~/.zshrc
+
+   For compilers to find openssl@1.1 you may need to set:
+     export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib"
+     export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include"
 
 Antes de compilar python debemos instalar ``gdbm`` para tener disponible ese modulo.
 
