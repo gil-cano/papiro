@@ -72,6 +72,13 @@ Antes de compilar python debemos instalar ``gdbm`` para tener disponible ese mod
 
    $ brew install gdbm
 
+``xz`` para tener liblzma
+
+.. code-block:: shell
+
+   $ brew install xz
+
+
 
 .. code-block:: shell
 
