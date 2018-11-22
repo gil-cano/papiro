@@ -45,14 +45,21 @@ En macOS necesitasmos instalar algunas dependencias con Homebrew:
 .. code-block:: shell
 
    $ brew install openssl
+   ==> Caveats
+   A CA file has been bootstrapped using certificates from the SystemRoots
+   keychain. To add additional certificates (e.g. the certificates added in
+   the System keychain), place .pem files in
+     /usr/local/etc/openssl/certs
+
+   and run
+     /usr/local/opt/openssl/bin/c_rehash
 
    If you need to have this software first in your PATH run:
      echo 'export PATH="/usr/local/opt/openssl/bin:$PATH"' >> ~/.zshrc
 
-   For compilers to find this software you may need to set:
-       LDFLAGS:  -L/usr/local/opt/openssl/lib
-       CPPFLAGS: -I/usr/local/opt/openssl/include
-
+   For compilers to find openssl you may need to set:
+     export LDFLAGS="-L/usr/local/opt/openssl/lib"
+     export CPPFLAGS="-I/usr/local/opt/openssl/include"
 
 Antes de compilar python debemos instalar ``gdbm`` para tener disponible ese modulo.
 
