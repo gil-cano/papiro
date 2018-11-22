@@ -54,6 +54,15 @@ En macOS necesitasmos instalar algunas dependencias con Homebrew:
        CPPFLAGS: -I/usr/local/opt/openssl/include
 
 
+Antes de compilar python debemos instalar ``gdbm`` para tener disponible ese modulo.
+
+``gdbm`` es necesario para usar el profiler de Zope (Control_Panel/DebugInfo)
+
+.. code-block:: shell
+
+   $ brew install gdbm
+
+
 .. code-block:: shell
 
    $ brew install zlib readline jpeg libpng libyaml
@@ -96,12 +105,6 @@ Para ``pdftotext``
 .. code-block:: shell
 
    $ brew install wv
-
-``gdbm`` para usar el profiler de Zope (Control_Panel/DebugInfo)
-
-.. code-block:: shell
-
-   $ brew install gdbm
 
 .. code-block:: shell
 
