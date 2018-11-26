@@ -131,6 +131,13 @@ Para ``pdftotext``
      export LDFLAGS="-L/usr/local/opt/nss/lib"
      export CPPFLAGS="-I/usr/local/opt/nss/include"
 
+Para agregar gettext al path modificamos el archivo .zshrc
+
+.. code-block:: bash
+
+    export PATH=/usr/local/opt/gettext/bin:$PATH
+
+
 ``wv`` permite el acceso a archivos de tipo Microsoft Word
 
 .. code-block:: shell
