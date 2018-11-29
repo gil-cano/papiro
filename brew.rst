@@ -148,6 +148,13 @@ Para agregar gettext al path modificamos el archivo .zshrc
 
    $ brew install wget pandoc gnupg
 
+Latex y skim ver Sublimetext3
+-----------------------------
+
+.. code-block:: shell
+
+   $ brew install imagemagick
+
 .. code-block:: shell
 
    $ brew info cgal
