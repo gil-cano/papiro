@@ -6,7 +6,7 @@ Linea de comandos en OS X
 
 Sublime Text 2 incluye el comando, *subl*, para abrir archivos desde una terminal.
 
-.. code-block:: bash
+.. code-block:: shell
 
    $ ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/local/bin/subl
 

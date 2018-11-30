@@ -5,12 +5,12 @@ En MacOS instalamos Postgres.app
 
 Para usar la linea de comandos, agregamos al path
 
-.. code-block:: bash
+.. code-block:: shell
 
     $ echo /Applications/Postgres.app/Contents/Versions/latest/bin | sudo tee /etc/paths.d/postgresapp
 
 
-.. code-block:: bash
+.. code-block:: shell
 
     $ psql -p5432
     user=# \q
@@ -19,31 +19,31 @@ Para usar la linea de comandos, agregamos al path
 
 Listar todas las bases de datos
 
-.. code-block:: bash
+.. code-block:: shell
 
     postgres=# \list
 
 Listar todas las tablas en la base datos
 
-.. code-block:: bash
+.. code-block:: shell
 
     postgres=# \dt
 
 Cambiar la base de datos
 
-.. code-block:: bash
+.. code-block:: shell
 
     postgres=# \connect otherdb
 
 Listar todos los usuarios
 
-.. code-block:: bash
+.. code-block:: shell
 
     postgres=# \du
 
 Crear un usuario similar a tu nombre de usuario.
 
-.. code-block:: bash
+.. code-block:: shell
 
     $ sudo su - postgres -c "createuser -s $USER"
 
@@ -52,7 +52,7 @@ Because the role login is the same as your unix login unix sockets can be use wi
 
 You can see at any time which database is currently selected using
 
-.. code-block:: bash
+.. code-block:: shell
 
     mysql> SELECT DATABASE();
     mysql> CREATE DATABASE databasename;
@@ -67,7 +67,7 @@ You can see at any time which database is currently selected using
 Python
 ------
 
-.. code-block:: bash
+.. code-block:: shell
 
 
 

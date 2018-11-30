@@ -53,7 +53,7 @@ Finally, you may remove the VirtualBox (deleting its image) with the command::
 Versions
 --------
 
-.. code-block:: bash
+.. code-block:: shell
 
     $ vboxmanage --version
     $ vagrant -v

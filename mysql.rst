@@ -1,11 +1,11 @@
 MySQL
 =====
 
-.. code-block:: bash
+.. code-block:: shell
 
     $ sudo apt-get install mysql-server
 
-.. code-block:: bash
+.. code-block:: shell
 
     $ mysql -u user -p
     mysql> CREATE DATABASE databasename;
@@ -18,7 +18,7 @@ MySQL
     $ mysql -u user -p databasename < dump_file.sql
 
 
-.. code-block:: bash
+.. code-block:: shell
 
     $ mysql -u user -p
     mysql> USE databasename;
@@ -26,12 +26,12 @@ MySQL
 
 You can see at any time which database is currently selected using
 
-.. code-block:: bash
+.. code-block:: shell
 
     mysql> SELECT DATABASE();
 
 
-.. code-block:: bash
+.. code-block:: shell
 
     mysql> SHOW TABLES;
     mysql> DESCRIBE table;
@@ -41,7 +41,7 @@ You can see at any time which database is currently selected using
 Python
 ------
 
-.. code-block:: bash
+.. code-block:: shell
 
     (venv)$ pip install mysql-connector==2.1.4
 

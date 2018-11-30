@@ -1,6 +1,6 @@
 HAProxy
 =======
 
-.. code-block:: bash
+.. code-block:: shell
 
     /etc/haproxy/haproxy.cfg

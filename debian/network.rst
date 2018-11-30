@@ -3,7 +3,7 @@ Network
 
 Mostrar que IP estas usando
 
-.. code-block:: bash
+.. code-block:: shell
 
     $ ip a
 
@@ -18,7 +18,7 @@ Mostrar que IP estas usando
 
 Mostrar el nombre
 
-.. code-block:: bash
+.. code-block:: shell
 
     $ hostname
     $ hostname -f
@@ -29,7 +29,7 @@ Escanear los puestos
 
 Para escanear los puestos en un servidor podemos usar nmap:
 
-.. code-block:: bash
+.. code-block:: shell
 
     $ nmap 192.168.1.254
 
@@ -49,7 +49,7 @@ Para escanear los puestos en un servidor podemos usar nmap:
 
 o netcat [nc]:
 
-.. code-block:: bash
+.. code-block:: shell
 
     $ nc -zv 127.0.0.1 111
     localhost [127.0.0.1] 111 (sunrpc) : Connection refused
@@ -58,7 +58,7 @@ o netcat [nc]:
     localhost [127.0.0.1] 22 (ssh) open
 
 
-.. code-block:: bash
+.. code-block:: shell
 
     $ netstat -an | grep 111
     unix  3      [ ]         STREAM     CONNECTED     11143
@@ -81,7 +81,7 @@ o netcat [nc]:
 
 Verificar si el puerto esta en uso
 
-.. code-block:: bash
+.. code-block:: shell
 
     $ lsof -i
     ...
@@ -89,7 +89,7 @@ Verificar si el puerto esta en uso
 
 rpcbind
 -------
-.. code-block:: bash
+.. code-block:: shell
 
     $ sudo service rpcbind stop
     $ sudo systemctl disable rpcbind.service
@@ -99,7 +99,7 @@ Uninstall rpcbind
 
 To remove just rpcbind package itself from Debian 8 (Jessie) execute on terminal:
 
-.. code-block:: bash
+.. code-block:: shell
 
     $ apt-get -s remove rpcbind
     $ sudo apt-get remove rpcbind
@@ -110,7 +110,7 @@ Uninstall rpcbind and it's dependent packages
 To remove the rpcbind package and any other dependant package which are no longer needed from Debian Jessie.
 
 
-.. code-block:: bash
+.. code-block:: shell
 
     $ sudo apt-get remove --auto-remove rpcbind
 
@@ -119,13 +119,13 @@ Purging rpcbind
 
 If you also want to delete configuration and/or data files of rpcbind from Debian Jessie then this will work:
 
-.. code-block:: bash
+.. code-block:: shell
 
     $ sudo apt-get purge rpcbind
 
 To delete configuration and/or data files of rpcbind and it's dependencies from Debian Jessie then execute:
 
-.. code-block:: bash
+.. code-block:: shell
 
     $ apt-get -s purge --auto-remove rpcbind
     $ sudo apt-get purge --auto-remove rpcbind
@@ -134,7 +134,7 @@ To delete configuration and/or data files of rpcbind and it's dependencies from 
 Find hostname from an IP Address
 --------------------------------
 
-.. code-block:: bash
+.. code-block:: shell
 
     $ nslookup ip
 
@@ -150,11 +150,11 @@ Then, you can reactivate eth0 with the "sudo ifup eth0" command.
 
 Para agregar una direccion ip al server
 
-.. code-block:: bash
+.. code-block:: shell
 
     $ nano -w /etc/network/interfaces
 
-.. code-block:: bash
+.. code-block:: shell
 
     auto eth0:0
     allow-hotplug eth0:0
@@ -162,25 +162,25 @@ Para agregar una direccion ip al server
         address 192.168.1.23
         netmask 255.255.255.0
 
-.. code-block:: bash
+.. code-block:: shell
 
     $ sudo ifup eth0:0
 
 De manera alternativa
 
-.. code-block:: bash
+.. code-block:: shell
 
     $ sudo service networking restart
 
 DNS se define en:
 
-.. code-block:: bash
+.. code-block:: shell
 
     $ nano -w /etc/resolv.conf
 
 Nombre en:
 
-.. code-block:: bash
+.. code-block:: shell
 
     $ nano -w /etc/hostname
 
@@ -189,13 +189,13 @@ Network adapter
 
 Linux
 
-.. code-block:: bash
+.. code-block:: shell
 
     $ sudo ethtool eth0
 
 Mac
 
-.. code-block:: bash
+.. code-block:: shell
 
     $ ifconfig en0 
 

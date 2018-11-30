@@ -1,7 +1,7 @@
 Docker
 ======
 
-.. code-block:: bash
+.. code-block:: shell
 
     $ docker ps
     $ docker images
@@ -14,6 +14,6 @@ Dockerfile::
 
 Hacer una imagen apartir del Dockerfile
 
-.. code-block:: bash
+.. code-block:: shell
 
     $ docker build -t docker-whale .

@@ -11,7 +11,7 @@ Instalación
 
 Para instalar `nginx <http://nginx.org/>`_ 1.8.0-1~jessie en Debian GNU/Linux 8.2 (jessie)
 
-.. code-block:: bash
+.. code-block:: shell
 
     $ wget http://nginx.org/keys/nginx_signing.key
     $ apt-key add nginx_signing.key
@@ -22,7 +22,7 @@ Para instalar `nginx <http://nginx.org/>`_ 1.8.0-1~jessie en Debian GNU/Linux 8.
 
 Verificamos que se instalo bien
 
-.. code-block:: bash
+.. code-block:: shell
 
     $ nginx -V
     nginx version: nginx/1.8.0
@@ -39,19 +39,19 @@ Iniciar / Detener / Recargar configuración
 Para detener los processos de nginx hasta que terminen de responder las peticiones actuales.
 (Debe ser ejecutado por el mismo usuario que inicio nginx)
 
-.. code-block:: bash
+.. code-block:: shell
 
     $ nginx -s quit
 
 Para recargar la configuración
 
-.. code-block:: bash
+.. code-block:: shell
 
     $ nginx -s reload
 
 Para obtener la lista de los processos que se están ejecutando
 
-.. code-block:: bash
+.. code-block:: shell
 
     $ ps -ax | grep nginx
 
@@ -63,7 +63,7 @@ El archivo de configuración se llama *nginx.conf* y encuentra en */etc/nginx/ng
 
 Para verificar que el archivo de configuración es valido, ejecutamos
 
-.. code-block:: bash
+.. code-block:: shell
 
     $ nginx -t
 

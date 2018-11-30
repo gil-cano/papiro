@@ -133,7 +133,7 @@ Para ``pdftotext``
 
 Para agregar gettext al path modificamos el archivo .zshrc
 
-.. code-block:: bash
+.. code-block:: shell
 
     export PATH=/usr/local/opt/gettext/bin:$PATH
 

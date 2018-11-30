@@ -4,7 +4,7 @@ Mail
 Postfix
 -------
 
-.. code-block:: bash
+.. code-block:: shell
 
     $ sudo apt-get install mailutils
     $ sudo apt-get install postfix
@@ -16,7 +16,7 @@ El archivo de configuracion es::
 
 Cambiamos el valor de la variable `inet_interfaces`
 
-.. code-block:: bash
+.. code-block:: shell
 
     mailbox_size_limit = 0
     recipient_delimiter = +
@@ -24,34 +24,34 @@ Cambiamos el valor de la variable `inet_interfaces`
 
 Another directive you'll need to modify is mydestination, which is used to specify the list of domains that are delivered via the local_transport mail delivery transport.
 
-.. code-block:: bash
+.. code-block:: shell
 
     mydestination = $myhostname, localhost.$mydomain, localhost
     mydestination = ceiba.matem.unam.mx, localhost.matem.unam.mx, , localhost
 
 Reiniciamos el servicio.
 
-.. code-block:: bash
+.. code-block:: shell
 
     $ sudo service postfix restart
 
 Para enviar un correo de prueba:
 
-.. code-block:: bash
+.. code-block:: shell
 
     $ echo "This is the body of the email" | mail -s "This is the subject line" your@email.address
 
 
 para revisar la cola de corre:
 
-.. code-block:: bash
+.. code-block:: shell
 
     $ mailq
 
 
 para eliminar todo el correo de la cola:
 
-.. code-block:: bash
+.. code-block:: shell
 
     $ sudo postsuper -d ALL
 

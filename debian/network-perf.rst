@@ -14,7 +14,7 @@ En el cliente::
     iperf -c 192.168.0.1
 
 
-.. code-block:: bash
+.. code-block:: shell
 
     vagrant$ iperf -c 192.168.0.1
     ------------------------------------------------------------
@@ -35,7 +35,7 @@ En el cliente::
     [  4]  0.0-11.6 sec  5.25 MBytes  3.80 Mbits/sec
 
 
-.. code-block:: bash
+.. code-block:: shell
 
     $ iperf -c 192.168.0.2
     ------------------------------------------------------------
@@ -56,7 +56,7 @@ En el cliente::
     [  4]  0.0-12.8 sec  4.88 MBytes  3.19 Mbits/
 
 
-.. code-block:: bash
+.. code-block:: shell
 
     jacaranda$ iperf -c 192.168.0.3
     ------------------------------------------------------------
@@ -80,7 +80,7 @@ En el cliente::
 Verificar la velocidad de la NIC (Network interface controller)
 ----------------------------------------------------------------
 
-.. code-block:: bash
+.. code-block:: shell
 
     $ sudo ethtool eth0
 
