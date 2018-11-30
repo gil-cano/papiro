@@ -6,64 +6,82 @@ iTerm2
 Instalación
 -----------
 
-Descarga la applicación y arrastrala al folder ``Applications``.
+Descarga la aplicación y arrastrala a la carpeta :file:`Applications`
 
-Plone
------
+======  =========================================================
+⌘ D     divide la terminal verticalmente
+⌘ ⇧ D   dividir la terminal horizontalmente
+⌘ ⌥ UP  cambia de terminal
+⌘ /      resalta la posición del cursos
+======  =========================================================
+
+Python, Plone
+-------------
 
 Cuando iniciamos una instancia de Plone marca el error
 
-.. code-block:: bash
+.. code-block:: shell
 
-    unknown locale: UTF-8
+    ValueError: unknown locale: UTF-8
 
-para solucionar eso hay que agregar al .bash_profile o en el .zshrc
+Hay dos maneras de solucionar esto:
 
-.. code-block:: bash
+- agregar al archivo :file:`.bash_profile` o en el archivo :file:`.zshrc`
+
+.. code-block:: shell
 
     # iTerm2 fix
     export LC_ALL=en_US.UTF-8
     export LANG=en_US.UTF-8
 
-.. note::
-
-    ======  =========================================================
-    ⌘ D     divide la terminal verticalmente
-    ⌘ ⇧ D   dividir la terminal horizontalmente
-    ⌘ ⌥ UP  Cambia de terminal
-    ⌘ /      resalta la posición del cursos
-    ======  =========================================================
+O en Preferencias -> Profiles -> Terminal  solicitar que no se asigne la variable de localización de manera automática (ver imagen) 
 
 
-PATH
-----
+.. image:: _static/item2_locale.png
+   :alt: iTerm2 (Locale)
+   :width: 80%
 
-Para agregar gettext al path modificamos el archivo .zshrc
 
-.. code-block:: bash
+Módificaciones al PATH
+----------------------
+
+gettetx
+~~~~~~~
+
+Para agregar :file:`gettext` al path modificamos el archivo :file:`.zshrc`
+
+.. code-block:: shell
 
     export PATH=/usr/local/opt/gettext/bin:$PATH
 
+latex
+~~~~~
+
+.. code-block:: shell
+
+    export PATH=$PATH:/Library/TeX/texbin/
 
 oh-my-zsh
 =========
 
 Cambiamos a Zsh como shell default
 
-.. code-block:: bash
+.. code-block:: shell
 
     $ echo $SHELL
     $ chsh -s $(which zsh)
     $ echo $SHELL
 
-Instalamos oh-my-zsh
+Instalamos `Oh My ZSH! <https://ohmyz.sh/>`_
 
-$ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+.. code-block:: shell
+
+    $ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 
 editamos el .zshrc para escoger el tema
 
-.. code-block:: bash
+.. code-block:: shell
 
     ZSH_THEME="agnoster"
 
@@ -81,7 +99,9 @@ Step-by-step installation
 Bibliografía
 ------------
 
+* `What is ZSH, and Why Should You Use It Instead of Bash? <https://www.howtogeek.com/362409/what-is-zsh-and-why-should-you-use-it-instead-of-bash/>`_
 * `Oh-My-ZSH <http://ohmyz.sh/>`_
 * `Become A Command-Line Power User With Oh-My-ZSH And Z <https://www.smashingmagazine.com/2015/07/become-command-line-power-user-oh-my-zsh-z/>`_
 * `Cobalt2 for iTerm2 and ZSH <https://github.com/wesbos/Cobalt2-iterm>`_
-
+* `How to Customize your Terminal with ZSH <https://hackernoon.com/how-to-trick-out-terminal-287c0e93fce0>`_
+* `Jazz Up Your ZSH Terminal In Seven Steps <https://medium.freecodecamp.org/jazz-up-your-zsh-terminal-in-seven-steps-a-visual-guide-e81a8fd59a38>`_
