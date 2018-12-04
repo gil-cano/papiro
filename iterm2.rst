@@ -1,3 +1,5 @@
+.. _iterm2:
+
 iTerm2
 ======
 
@@ -34,7 +36,7 @@ Hay dos maneras de solucionar esto:
     export LC_ALL=en_US.UTF-8
     export LANG=en_US.UTF-8
 
-O en Preferencias -> Profiles -> Terminal  solicitar que no se asigne la variable de localización de manera automática (ver imagen) 
+O en :menuselection:`Preferencias --> Perfil --> Terminal`  solicitar que no se asigne la variable de localización de manera automática (ver imagen) 
 
 
 .. image:: _static/item2_locale.png
@@ -42,13 +44,28 @@ O en Preferencias -> Profiles -> Terminal  solicitar que no se asigne la variabl
    :width: 80%
 
 
+Ventanas y Pestañas
+-------------------
+
+En `iTerm2 <http://www.iterm2.com/>`_ podemos configurar en que directorio se abriran las nuevas ventanas o pestañas. 
+
+
+.. image:: _static/working_directory.png
+   :alt: iTerm2 (Locale)
+   :width: 80%
+
+
+.. image:: _static/working_directory_tabs_windows.png
+   :alt: iTerm2 (Locale)
+   :width: 80%
+
 Módificaciones al PATH
 ----------------------
 
 gettetx
 ~~~~~~~
 
-Para agregar :file:`gettext` al path modificamos el archivo :file:`.zshrc`
+Para agregar :command:`gettext` al path modificamos el archivo :file:`.zshrc`
 
 .. code-block:: shell
 
@@ -61,16 +78,27 @@ latex
 
     export PATH=$PATH:/Library/TeX/texbin/
 
-oh-my-zsh
-=========
 
-Cambiamos a Zsh como shell default
+Zsh
+===
+
+Cambiamos a `Zsh <https://www.zsh.org>`_ como shell default
 
 .. code-block:: shell
 
     $ echo $SHELL
     $ chsh -s $(which zsh)
+
+Salir de sesión y volver a entrar.
+
+.. code-block:: shell
+
     $ echo $SHELL
+
+Si queremos usar una version mas reciente de `Zsh <https://www.zsh.org>`_ podemos instalarla con :ref:`brew`
+
+oh-my-zsh
+=========
 
 Instalamos `Oh My ZSH! <https://ohmyz.sh/>`_
 

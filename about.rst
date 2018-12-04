@@ -1,3 +1,5 @@
+.. _about:
+
 ===================================
 Lineaminetos generales de escritura
 ===================================
@@ -12,25 +14,45 @@ Está basada en los lineamientos de la documentación del CMS `Plone <https://do
 
 
 Enlaces
-=======
+-------
 
 .. code-block:: rst
 
    `Example <https://example.com>`_
 
-*Italicas*
+`Example <https://example.com>`_
+
+Italicas
+--------
 
 .. code-block:: rst
 
    This *word* is italics.
 
-**Negritas**
+This *word* is italics.
+
+
+Negritas
+--------
 
 .. code-block:: rst
 
    This **word** is in bold text.
 
-Resaltado de codigo en linea
+
+This **word** is in bold text.
+
+Comandos
+--------
+
+.. code-block:: rst
+
+   :command:`gettext`
+
+:command:`gettext`
+
+Código en linea
+---------------
 
 .. code-block:: rst
 
@@ -39,6 +61,7 @@ Resaltado de codigo en linea
 This is :func:`aFunction`, this is the :mod:`some.module` that contains the :class:`some.module.MyClass`
 
 Resaltar nombres de archivos o cadenas
+--------------------------------------
 
 .. code-block:: rst
 
@@ -47,15 +70,61 @@ Resaltar nombres de archivos o cadenas
 
 :file:`index.rst` note la extension ``.rst``
 
-
-Lista
+Rutas en menus
+--------------
 
 .. code-block:: rst
 
-   * First bullet
-   * Second bullet with `a link <http://opensourcehacker.com>`_
+   :menuselection:`Preferencias --> Perfil --> Terminal`
+
+:menuselection:`Preferencias --> Perfil --> Terminal`
+
+Lista
+-----
+
+.. code-block:: rst
+
+   * primer elemento
+   * segundo elemento
+   * tercer elemento
+
+* primer elemento
+* segundo elemento
+* tercer elemento
+
+
+Etiquetas de página
+-------------------
+
+.. code-block:: rst
+
+   .. _about:
+
+.. code-block:: rst
+
+   :ref:`about`
+
+
+:ref:`about`
+
+
+Tablas en lista
+---------------
+
+.. list-table::
+   :widths: 20 80
+   :header-rows: 1
+
+   * - Shapes
+     - Description
+   * - Square
+     - Four sides of equal length, 90 degree angles
+   * - Rectangle
+     - Four sides, 90 degree angles
+
 
 Advertencia
+-----------
 
 .. code-block:: rst
 
@@ -68,6 +137,7 @@ Advertencia
    This is a warning box
 
 Error
+-----
 
 .. code-block:: rst
 
@@ -232,3 +302,5 @@ Bibliografía
 
 * `Plone Documentation Styleguide <https://docs.plone.org/about/contributing/documentation_styleguide.html>`_
 * `General Writing Guidelines <https://docs.plone.org/about/contributing/rst-styleguide.html>`_
+* `Sphinx Syntax reStructuredText <http://udig.refractions.net/files/docs/latest/user/docguide/sphinxSyntax.html>`_
+
