@@ -21,6 +21,9 @@ Listar paquetes::
 
    $ brew list
 
+Detalles del paquete::
+
+   $ brew list zsh
 
 Actualizar lista de paquetes disponibles::
 

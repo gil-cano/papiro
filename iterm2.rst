@@ -12,7 +12,7 @@ Descarga la aplicación y arrastrala a la carpeta :file:`Applications`
 
 ======  =========================================================
 ⌘ D     divide la terminal verticalmente
-⌘ ⇧ D   dividir la terminal horizontalmente
+⌘ ⇧ D   divide la terminal horizontalmente
 ⌘ ⌥ UP  cambia de terminal
 ⌘ /      resalta la posición del cursos
 ======  =========================================================
@@ -76,7 +76,7 @@ latex
 
 .. code-block:: shell
 
-    export PATH=$PATH:/Library/TeX/texbin/
+   export PATH=$PATH:/Library/TeX/texbin/
 
 
 Zsh
@@ -86,16 +86,32 @@ Cambiamos a `Zsh <https://www.zsh.org>`_ como shell default
 
 .. code-block:: shell
 
-    $ echo $SHELL
-    $ chsh -s $(which zsh)
+   $ echo $SHELL
+   $ chsh -s $(which zsh)
 
 Salir de sesión y volver a entrar.
 
 .. code-block:: shell
 
-    $ echo $SHELL
+   $ echo $SHELL
 
 Si queremos usar una version mas reciente de `Zsh <https://www.zsh.org>`_ podemos instalarla con :ref:`brew`
+
+
+.. code-block:: shell
+
+   $ brew install zsh
+
+Usamos la versión Zsh de Homebrew
+
+.. code-block:: shell
+
+   $ chsh -s /usrl/local/bin/zsh
+
+
+.. warning::
+
+   En macOS Mojave no cambia y manda el siguiente mensaje: ``chsh: /usr/local/bin/zsh: non-standard shell``
 
 oh-my-zsh
 =========
@@ -129,7 +145,11 @@ Bibliografía
 
 * `What is ZSH, and Why Should You Use It Instead of Bash? <https://www.howtogeek.com/362409/what-is-zsh-and-why-should-you-use-it-instead-of-bash/>`_
 * `Oh-My-ZSH <http://ohmyz.sh/>`_
+* `You’re Missing Out on a Better Mac Terminal Experience <https://medium.com/@caulfieldOwen/youre-missing-out-on-a-better-mac-terminal-experience-d73647abf6d7>`_
+* `Use Homebrew zsh Instead of the OS X Default <https://rick.cogley.info/post/use-homebrew-zsh-instead-of-the-osx-default/>`_
+* `zsh <https://sourabhbajaj.com/mac-setup/iTerm/zsh.html>`_
 * `Become A Command-Line Power User With Oh-My-ZSH And Z <https://www.smashingmagazine.com/2015/07/become-command-line-power-user-oh-my-zsh-z/>`_
 * `Cobalt2 for iTerm2 and ZSH <https://github.com/wesbos/Cobalt2-iterm>`_
 * `How to Customize your Terminal with ZSH <https://hackernoon.com/how-to-trick-out-terminal-287c0e93fce0>`_
 * `Jazz Up Your ZSH Terminal In Seven Steps <https://medium.freecodecamp.org/jazz-up-your-zsh-terminal-in-seven-steps-a-visual-guide-e81a8fd59a38>`_
+* `Faster and enjoyable ZSH (maybe) <https://htr3n.github.io/2018/07/faster-zsh/>`_
