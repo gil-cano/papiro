@@ -18,6 +18,17 @@ To learn how to update and manage this documentation and its tools, read `??? <h
 Building The Documentation
 --------------------------
 
+Con pipenv
+
+.. code:: bash
+
+    $ git clone https://github.com/gil-cano/papiro.git
+    $ cd papiro
+    $ pipenv install
+    $ pipenv run make html
+
+con pip y virtualenv
+
 .. code:: bash
 
     $ git clone https://github.com/gil-cano/papiro.git
@@ -26,6 +37,8 @@ Building The Documentation
     $ source bin/activate
     (papiro)$ pip install -r requirements.txt
     (papiro)$ make html
+
+
 
 At the end of a successful build, you will see the location of the
 resulting HTML pages.
@@ -36,8 +49,7 @@ Link Testing
 
 .. code:: bash
 
-    (papiro)$ make linkcheck
-
+    $ pipenv run make linkcheck
 
 
 License
