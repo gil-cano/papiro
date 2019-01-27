@@ -661,6 +661,12 @@ Acordeón
     >>> sublime.windows()[0].project_data()
     >>> sublime.windows()[0].extract_variables()
 
+Otros
+------
+`RESTer <https://github.com/pjdietz/rester-sublime-http-client>`_ - HTTP client for Sublime Text
+`restview <https://documentation-plone5.readthedocs.io/en/latest/about/helper_tools.html>`_
+
+`<https://medium.com/@john.m.smalley/update-sublime-text-3-to-python-3-on-mac-ce57989bdbf3>`_
 
 Bibliografía
 ------------
