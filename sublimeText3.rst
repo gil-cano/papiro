@@ -661,12 +661,32 @@ Acordeón
     >>> sublime.windows()[0].project_data()
     >>> sublime.windows()[0].extract_variables()
 
+
+pipenvRun
+---------
+
+Creamos un "Build system"
+
+.. code-block:: json
+
+   {
+       "encoding": "UTF-8",
+       "working_dir": "$file_path",
+       "cmd": ["pipenv" ,"run" ,"python3" ,"$file_name"],
+       "selector": "source.python",
+       "env": {"LANG": "en_US.UTF-8"}
+   }
+
+
 Otros
 ------
 `RESTer <https://github.com/pjdietz/rester-sublime-http-client>`_ - HTTP client for Sublime Text
+
 `restview <https://documentation-plone5.readthedocs.io/en/latest/about/helper_tools.html>`_
 
 `<https://medium.com/@john.m.smalley/update-sublime-text-3-to-python-3-on-mac-ce57989bdbf3>`_
+
+`<http://www.rmworking.com/blog/2018/02/11/sublime-text3-pipenv/>`_
 
 Bibliografía
 ------------
