@@ -688,6 +688,7 @@ Otros
 
 `<http://www.rmworking.com/blog/2018/02/11/sublime-text3-pipenv/>`_
 
+
 Bibliografía
 ------------
 
@@ -704,3 +705,5 @@ Bibliografía
 * `My Sublime Text 3 setup <https://fredrikaverpil.github.io/2016/05/20/my-sublime-3-setup/>`_
 
 * `Sublime 3 xml_pp (xmltwig) based xml auto formatter <https://gist.github.com/jensens/4fc631616f5ef9ac4c6b>`_
+
+* `<https://www.shopify.com/partners/blog/sublime-text-plugins-2018>`_
