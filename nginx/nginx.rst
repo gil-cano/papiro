@@ -171,3 +171,17 @@ preparamos una instancia de python 2.7 con lo sigiente
 .. code-block:: shell
 
    $ sudo -u www-data /python2.7_webpy/bin/gunicorn -b 127.0.0.1:4000 yourapp:wsgiapp
+
+
+.httpasswd
+----------
+
+.. code-block:: shell
+
+   $ sudo htpasswd -c /etc/nginx/.htpasswd sammy
+   $ sudo htpasswd /etc/nginx/.htpasswd another_user
+
+References
+----------
+
+* `JHow To Set Up Password Authentication with Nginx on Ubuntu 14.04 <https://www.digitalocean.com/community/tutorials/how-to-set-up-password-authentication-with-nginx-on-ubuntu-14-04>`_
