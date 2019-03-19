@@ -195,8 +195,8 @@ Plone
 
 .. code-block:: shell
 
-   $ sudo apt-get install build-essential libssl-dev libxml2-dev libxslt1-dev libbz2-dev libjpeg62-dev
-   $ sudo apt-get install libreadline-dev wv poppler-utils
+   $ sudo apt-get install build-essential libssl-dev libxml2-dev libxslt1-dev libbz2-dev zlib1g-dev libjpeg-dev libpng12-dev
+   $ sudo apt-get install libreadline-dev libyaml-dev liblzma-dev wv poppler-utils
    $ sudo apt-get install git
 
 Para usar el profiler de Zope (Control_Panel/DebugInfo) 
