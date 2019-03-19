@@ -199,6 +199,13 @@ Plone
    $ sudo apt-get install libreadline-dev wv poppler-utils
    $ sudo apt-get install git
 
+Para usar el profiler de Zope (Control_Panel/DebugInfo) 
+
+.. code-block:: shell
+
+   $ sudo apt-get install libgdbm-dev
+
+
 Python
 ------
 
