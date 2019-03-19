@@ -243,11 +243,18 @@ The version of freetype is 2, I guess it's the problem.
 Python from source
 ------------------
 
-Si instlas  Python 3
+Si instalamos Python 3
 
 .. code-block:: shell
 
     $ sudo apt-get install libffi-dev
+
+Algunos dependencias que podrian interesarnos:
+
+.. code-block:: shell
+
+    $ sudo apt-get install libsqlite3-dev tk-dev libncursesw5-dev
+
 
 Se instala por default en  `/usr/local/bin`
 
