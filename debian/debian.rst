@@ -255,6 +255,26 @@ Algunos dependencias que podrian interesarnos:
 
     $ sudo apt-get install libsqlite3-dev tk-dev libncursesw5-dev
 
+Python 3 requiere de ssl 
+
+.. code-block:: shell
+
+   Could not build the ssl module!
+   Python requires an OpenSSL 1.0.2 or 1.1 compatible libssl with X509_VERIFY_PARAM_set1_host().
+   LibreSSL 2.6.4 and earlier do not provide the necessary APIs, https://github.com/libressl-portable/portable/issues/381
+
+Debemos actualizar en el archivo :file:`/etc/apt/sources.list`
+
+.. code-block:: shell
+
+   deb http://ftp.debian.org/debian jessie-backports main
+
+despues instalar con:
+
+.. code-block:: shell
+
+   sudo apt install -t jessie-backports openssl=1.0.2l-1~bpo8+1
+
 
 Se instala por default en  `/usr/local/bin`
 
@@ -269,6 +289,8 @@ Se instala por default en  `/usr/local/bin`
     $ sudo /usr/local/bin/python2.7 -m ensurepip
     $ sudo pip uninstall setuptools
     $ sudo pip install virtualenv
+
+Python 3 permite optimizar al momento de configurar usando :file:`--enable-optimizations` para esto se necesita GCC 8?
 
 
 Latex
