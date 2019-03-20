@@ -9,23 +9,23 @@ as well as a mail proxy server.
 Instalación
 ===========
 
-Para instalar `nginx <http://nginx.org/>`_ 1.8.0-1~jessie en Debian GNU/Linux 8.2 (jessie)
+Para instalar `nginx <http://nginx.org/>`_ 1.14.2 en Debian GNU/Linux 8.11 (jessie)
 
 .. code-block:: shell
 
     $ wget http://nginx.org/keys/nginx_signing.key
-    $ apt-key add nginx_signing.key
-    $ echo "deb http://nginx.org/packages/debian/ jessie nginx" >> /etc/apt/sources.list
-    $ echo "deb-src http://nginx.org/packages/debian/ jessie nginx" >> /etc/apt/sources.list
-    $ apt-get update
-    $ apt-get install nginx
+    $ sudo apt-key add nginx_signing.key
+    $ sudo bash -c 'echo "deb http://nginx.org/packages/debian/ jessie nginx" >> /etc/apt/sources.list.d/nginx.list'
+    $ sudo bash -c 'echo "deb-src http://nginx.org/packages/debian/ jessie nginx" >> /etc/apt/sources.list.d/nginx.list'
+    $ sudo apt-get update
+    $ sudo apt-get install nginx
 
 Verificamos que se instalo bien
 
 .. code-block:: shell
 
     $ nginx -V
-    nginx version: nginx/1.8.0
+    nginx version: nginx/1.14.2
     built by gcc 4.9.2 (Debian 4.9.2-10)
     built with OpenSSL 1.0.1k 8 Jan 2015
     TLS SNI support enabled
