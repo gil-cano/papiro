@@ -80,6 +80,7 @@ Development tools and Administrations tools
     sublimeText2
     nginx/nginx
     jenkins/jenkins
+    varnishcache
     webpagetest
     munin
     brew
