@@ -123,11 +123,30 @@ Instalamos `Oh My ZSH! <https://ohmyz.sh/>`_
     $ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 
-editamos el .zshrc para escoger el tema
+Actualizar
+----------
+
+Para actuzalizar a la ultima versión.
+
+.. code-block:: shell
+
+   $ upgrade_oh_my_zsh
+
+
+Temas
+-----
+
+Editamos el archivo :file:`.zshrc` para definir el tema
 
 .. code-block:: shell
 
     ZSH_THEME="agnoster"
+
+
+Spaceship
+~~~~~~~~~
+
+`Spaceship ZSH <https://github.com/denysdovhan/spaceship-prompt>`_
 
 
 Step-by-step installation
@@ -144,7 +163,6 @@ Bibliografía
 ------------
 
 * `What is ZSH, and Why Should You Use It Instead of Bash? <https://www.howtogeek.com/362409/what-is-zsh-and-why-should-you-use-it-instead-of-bash/>`_
-* `Oh-My-ZSH <http://ohmyz.sh/>`_
 * `You’re Missing Out on a Better Mac Terminal Experience <https://medium.com/@caulfieldOwen/youre-missing-out-on-a-better-mac-terminal-experience-d73647abf6d7>`_
 * `Use Homebrew zsh Instead of the OS X Default <https://rick.cogley.info/post/use-homebrew-zsh-instead-of-the-osx-default/>`_
 * `zsh <https://sourabhbajaj.com/mac-setup/iTerm/zsh.html>`_
@@ -153,3 +171,5 @@ Bibliografía
 * `How to Customize your Terminal with ZSH <https://hackernoon.com/how-to-trick-out-terminal-287c0e93fce0>`_
 * `Jazz Up Your ZSH Terminal In Seven Steps <https://medium.freecodecamp.org/jazz-up-your-zsh-terminal-in-seven-steps-a-visual-guide-e81a8fd59a38>`_
 * `Faster and enjoyable ZSH (maybe) <https://htr3n.github.io/2018/07/faster-zsh/>`_
+* `My Terminal Setup: iTerm + Zsh <https://zen-of-programming.com/terminal-setup/>`_
+* `Fira Code: monospaced font with programming ligatures <https://github.com/tonsky/FiraCode>`_
