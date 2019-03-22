@@ -1,3 +1,5 @@
+.. _sublimetext:
+
 Sublime Text 3
 ==============
 

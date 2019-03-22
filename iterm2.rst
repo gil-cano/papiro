@@ -113,6 +113,40 @@ Usamos la versión Zsh de Homebrew
 
    En macOS Mojave no cambia y manda el siguiente mensaje: ``chsh: /usr/local/bin/zsh: non-standard shell``
 
+Fonts
+=====
+
+Source Code Pro
+---------------
+
+Intalamos la fuente `Source Code Pro <https://github.com/adobe-fonts/source-code-pro>`_ que es usada por algunos temas que se instalarán más adelante. Esta fuente tambien se usa en :ref:`sublimetext`
+
+Despues de descargar el archivo seguimos las instrucciones generales en MacOS `How to install and remove fonts on your Mac <https://support.apple.com/en-us/HT201749>`_
+
+Descomprimimos el archivo que descargamos y en el directorio :file:`OTF` y damos doble click a la fuente que queremos instalar.
+
+
+.. image:: _static/sourcecodepro.png
+   :alt: Source Code Pro Font
+   :width: 80%
+
+
+Powerline fonts
+---------------
+
+`Powerline fonts <ttps://github.com/powerline/fonts>`_
+
+Descargamos las fuentes y en el directorio :file:`SourceCodePro` damos doble click a la fuente que queremos instalar.
+
+
+En la iTerm2 :menuselection:`Preferences --> Profiles --> Text` seleccionamos la fuente normal y la fuente para caractres non-ascii.
+
+
+.. image:: _static/iterm2font.png
+   :alt: Font for iTerm2
+   :width: 80%
+
+
 oh-my-zsh
 =========
 
@@ -147,6 +181,52 @@ Spaceship
 ~~~~~~~~~
 
 `Spaceship ZSH <https://github.com/denysdovhan/spaceship-prompt>`_
+
+copiamos el reposistorio:
+
+.. code-block:: shell
+
+   $ git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
+
+
+Hacemos una liga simbolica :file:`spaceship.zsh-theme` al directorio de temas personalizados de `oh-my-zsh <https://ohmyz.sh/>`_
+
+.. code-block:: shell
+
+   $ ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+
+
+En el archivo :file:`.zshrc` selccionamos el tema
+
+.. code-block:: shell
+
+   ZSH_THEME="spaceship"
+
+
+Powerlevel9k
+~~~~~~~~~~~~
+
+`powerlevel9k <https://github.com/bhilburn/powerlevel9k>`_
+
+
+copiamos el reposistorio:
+
+.. code-block:: shell
+
+   $ git clone https://github.com/bhilburn/powerlevel9k.git "$ZSH_CUSTOM/themes/powerlevel9k"
+
+Hacemos una liga simbolica :file:`spaceship.zsh-theme` al directorio de temas personalizados de `oh-my-zsh <https://ohmyz.sh/>`_
+
+.. code-block:: shell
+
+   $ ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+
+
+En el archivo :file:`.zshrc` selccionamos el tema
+
+.. code-block:: shell
+
+   ZSH_THEME="spaceship"
 
 
 Step-by-step installation
