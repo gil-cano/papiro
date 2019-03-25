@@ -80,7 +80,7 @@ latex
 
 
 Zsh
-===
+---
 
 Cambiamos a `Zsh <https://www.zsh.org>`_ como shell default
 
@@ -113,11 +113,11 @@ Usamos la versión Zsh de Homebrew
 
    En macOS Mojave no cambia y manda el siguiente mensaje: ``chsh: /usr/local/bin/zsh: non-standard shell``
 
-Fonts
-=====
+Fuentes
+-------
 
 Source Code Pro
----------------
+~~~~~~~~~~~~~~~
 
 Intalamos la fuente `Source Code Pro <https://github.com/adobe-fonts/source-code-pro>`_ que es usada por algunos temas que se instalarán más adelante. Esta fuente tambien se usa en :ref:`sublimetext`
 
@@ -130,11 +130,10 @@ Descomprimimos el archivo que descargamos y en el directorio :file:`OTF` y damos
    :alt: Source Code Pro Font
    :width: 80%
 
+Nerd Fonts
+~~~~~~~~~~
 
-Powerline fonts
----------------
-
-`Powerline fonts <ttps://github.com/powerline/fonts>`_
+`Nerd Fonts <http://nerdfonts.com>`_
 
 Descargamos las fuentes y en el directorio :file:`SourceCodePro` damos doble click a la fuente que queremos instalar.
 
@@ -148,7 +147,7 @@ En la iTerm2 :menuselection:`Preferences --> Profiles --> Text` seleccionamos la
 
 
 oh-my-zsh
-=========
+---------
 
 Instalamos `Oh My ZSH! <https://ohmyz.sh/>`_
 
@@ -156,9 +155,6 @@ Instalamos `Oh My ZSH! <https://ohmyz.sh/>`_
 
     $ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-
-Actualizar
-----------
 
 Para actuzalizar a la ultima versión.
 
@@ -206,6 +202,10 @@ En el archivo :file:`.zshrc` selccionamos el tema
 Powerlevel9k
 ~~~~~~~~~~~~
 
+.. warning::
+
+   This may be removed
+
 `powerlevel9k <https://github.com/bhilburn/powerlevel9k>`_
 
 
@@ -219,14 +219,14 @@ Hacemos una liga simbolica :file:`spaceship.zsh-theme` al directorio de temas pe
 
 .. code-block:: shell
 
-   $ ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+   $ ln -s "$ZSH_CUSTOM/themes/powerlevel9k/powerlevel9k.zsh-theme" "$ZSH_CUSTOM/themes/powerlevel9k.zsh-theme"
 
 
 En el archivo :file:`.zshrc` selccionamos el tema
 
 .. code-block:: shell
 
-   ZSH_THEME="spaceship"
+   ZSH_THEME="powerlevel9k"
 
 
 Step-by-step installation
@@ -238,12 +238,29 @@ Step-by-step installation
 * Under the Text tab change the font for each type (Regular and Non-ASCII) to 'Inconsolata for Powerline'. (Refer to the powerline-fonts repo for help on font installation.)
 * Refresh ZSH by typing source ~/.zshrc on the command line.
 
+git
+~~~
+it's what gives you tab completion for git
+
+python
+~~~~~~
+
+zsh-syntax-highlighting
+~~~~~~~~~~~~~~~~~~~~~~~
+adds realtime syntax highlighting to commands while typed in the terminal
+
+zsh-nvm
+~~~~~~~
+zsh plugin for Node Version Manager
+
 
 Bibliografía
 ------------
 
 * `What is ZSH, and Why Should You Use It Instead of Bash? <https://www.howtogeek.com/362409/what-is-zsh-and-why-should-you-use-it-instead-of-bash/>`_
 * `You’re Missing Out on a Better Mac Terminal Experience <https://medium.com/@caulfieldOwen/youre-missing-out-on-a-better-mac-terminal-experience-d73647abf6d7>`_
+* `My Terminal Setup: iTerm + Zsh <https://zen-of-programming.com/terminal-setup/>`_
+
 * `Use Homebrew zsh Instead of the OS X Default <https://rick.cogley.info/post/use-homebrew-zsh-instead-of-the-osx-default/>`_
 * `zsh <https://sourabhbajaj.com/mac-setup/iTerm/zsh.html>`_
 * `Become A Command-Line Power User With Oh-My-ZSH And Z <https://www.smashingmagazine.com/2015/07/become-command-line-power-user-oh-my-zsh-z/>`_
@@ -251,5 +268,4 @@ Bibliografía
 * `How to Customize your Terminal with ZSH <https://hackernoon.com/how-to-trick-out-terminal-287c0e93fce0>`_
 * `Jazz Up Your ZSH Terminal In Seven Steps <https://medium.freecodecamp.org/jazz-up-your-zsh-terminal-in-seven-steps-a-visual-guide-e81a8fd59a38>`_
 * `Faster and enjoyable ZSH (maybe) <https://htr3n.github.io/2018/07/faster-zsh/>`_
-* `My Terminal Setup: iTerm + Zsh <https://zen-of-programming.com/terminal-setup/>`_
 * `Fira Code: monospaced font with programming ligatures <https://github.com/tonsky/FiraCode>`_
