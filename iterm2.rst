@@ -38,11 +38,11 @@ Tipo de letra
 Source Code Pro
 ~~~~~~~~~~~~~~~
 
-Intalamos el tipo de letra `Source Code Pro <https://github.com/adobe-fonts/source-code-pro>`_ que es usada por algunos temas que se instalarán más adelante. Este tipo de letra tambien se usa en :ref:`sublimetext`
+`Source Code Pro <https://github.com/adobe-fonts/source-code-pro>`_ es un tipo de letra para programadores. Este tipo de letra tambien se usa en :ref:`sublimetext`
 
-Despues de descargar el archivo seguimos las instrucciones generales para instalar tipos de letras en MacOS `How to install and remove fonts on your Mac <https://support.apple.com/en-us/HT201749>`_
+Descargamos el archivo y seguimos las instrucciones generales para instalar tipos de letras en MacOS `How to install and remove fonts on your Mac <https://support.apple.com/en-us/HT201749>`_
 
-Descomprimimos el archivo que descargamos y en el directorio :file:`OTF` damos doble click a la fuente que queremos instalar.
+Descomprimimos el archivo que descargamos y en la carpeta :file:`OTF` damos doble click a la fuente que queremos instalar.
 
 .. image:: _static/sourcecodepro.png
    :alt: Source Code Pro Font
@@ -53,14 +53,25 @@ Nerd Fonts
 
 `Nerd Fonts <http://nerdfonts.com>`_
 
-Descargamos el tipo de letra `SourceCodePro` y en el directorio :file:`SourceCodePro` damos doble click al archivo que queremos instalar.
+Descargamos el tipo de letra `SourceCodePro` y en la carpeta :file:`SourceCodePro` damos doble click al archivo que queremos instalar.
 
 
-En la iTerm2 :menuselection:`Preferences --> Profiles --> Text` seleccionamos el tipo de letra.
+En iTerm2 :menuselection:`Preferences --> Profiles --> Text` seleccionamos el tipo de letra.
 
 .. image:: _static/iterm2font.png
    :alt: Font for iTerm2
    :width: 80%
+
+
+Salto de palabras
+-----------------
+
+En iterm2 selccionamos :menuselection:`Preferences --> Profiles --> Keys --> load preset --> Natural Text Editing`.
+
+=== =================================================
+⌘ → envia el cursos al inicio de la siguiente palabra
+⌘   envia el cursos al inicio de la palabra anterior
+=== =================================================
 
 
 Python, Plone
@@ -243,7 +254,7 @@ En el archivo :file:`.zshrc` selccionamos el tema
 
    ZSH_THEME="cobalt2"
 
-En la terminal iTerm2 :menuselection:`Preferences --> Profiles --> Colors` importa el archivo :file:`cobalt2.itermcolors` mediante el menu :file:`Load Presets`
+En la terminal iTerm2 :menuselection:`Preferences --> Profiles --> Colors` importa el archivo :file:`cobalt2.itermcolors` mediante el menu :file:`Color Presets`
 
 En la terminal iTerm2 :menuselection:`Preferences --> Profiles --> Text` cambiamos la fuente para cada tipo (Regular y Non-ASCII) a `Sauce Code Pro Nerd Font Complete`
 
@@ -293,7 +304,9 @@ Bibliografía
 
 * `What is ZSH, and Why Should You Use It Instead of Bash? <https://www.howtogeek.com/362409/what-is-zsh-and-why-should-you-use-it-instead-of-bash/>`_
 * `You’re Missing Out on a Better Mac Terminal Experience <https://medium.com/@caulfieldOwen/youre-missing-out-on-a-better-mac-terminal-experience-d73647abf6d7>`_
+* `MacOS Terminal and Shell Setup with configuration files <https://vict0rs.ch/2018/01/30/mac-terminal-shell-power-user>`_
 * `My Terminal Setup: iTerm + Zsh <https://zen-of-programming.com/terminal-setup/>`_
 * `zsh <https://sourabhbajaj.com/mac-setup/iTerm/zsh.html>`_
 * `Become A Command-Line Power User With Oh-My-ZSH And Z <https://www.smashingmagazine.com/2015/07/become-command-line-power-user-oh-my-zsh-z/>`_
 * `Faster and enjoyable ZSH (maybe) <https://htr3n.github.io/2018/07/faster-zsh/>`_
+
