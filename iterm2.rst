@@ -17,6 +17,52 @@ Descarga la aplicación y arrastrala a la carpeta :file:`Applications`
 ⌘ /      resalta la posición del cursos
 ======  =========================================================
 
+
+Ventanas y Pestañas
+-------------------
+
+En `iTerm2 <http://www.iterm2.com/>`_ podemos configurar en que directorio se abriran las nuevas ventanas o pestañas. 
+
+.. image:: _static/working_directory.png
+   :alt: iTerm2 (Locale)
+   :width: 80%
+
+.. image:: _static/working_directory_tabs_windows.png
+   :alt: iTerm2 (Locale)
+   :width: 80%
+
+
+Tipo de letra
+-------------
+
+Source Code Pro
+~~~~~~~~~~~~~~~
+
+Intalamos el tipo de letra `Source Code Pro <https://github.com/adobe-fonts/source-code-pro>`_ que es usada por algunos temas que se instalarán más adelante. Este tipo de letra tambien se usa en :ref:`sublimetext`
+
+Despues de descargar el archivo seguimos las instrucciones generales para instalar tipos de letras en MacOS `How to install and remove fonts on your Mac <https://support.apple.com/en-us/HT201749>`_
+
+Descomprimimos el archivo que descargamos y en el directorio :file:`OTF` damos doble click a la fuente que queremos instalar.
+
+.. image:: _static/sourcecodepro.png
+   :alt: Source Code Pro Font
+   :width: 80%
+
+Nerd Fonts
+~~~~~~~~~~
+
+`Nerd Fonts <http://nerdfonts.com>`_
+
+Descargamos el tipo de letra `SourceCodePro` y en el directorio :file:`SourceCodePro` damos doble click al archivo que queremos instalar.
+
+
+En la iTerm2 :menuselection:`Preferences --> Profiles --> Text` seleccionamos el tipo de letra.
+
+.. image:: _static/iterm2font.png
+   :alt: Font for iTerm2
+   :width: 80%
+
+
 Python, Plone
 -------------
 
@@ -44,28 +90,13 @@ O en :menuselection:`Preferencias --> Perfil --> Terminal`  solicitar que no se 
    :width: 80%
 
 
-Ventanas y Pestañas
--------------------
-
-En `iTerm2 <http://www.iterm2.com/>`_ podemos configurar en que directorio se abriran las nuevas ventanas o pestañas. 
-
-
-.. image:: _static/working_directory.png
-   :alt: iTerm2 (Locale)
-   :width: 80%
-
-
-.. image:: _static/working_directory_tabs_windows.png
-   :alt: iTerm2 (Locale)
-   :width: 80%
-
 Módificaciones al PATH
 ----------------------
 
 gettetx
 ~~~~~~~
 
-Para agregar :command:`gettext` al path modificamos el archivo :file:`.zshrc`
+Para agregar :command:`gettext` al path modificamos el archivo :file:`.bash_profile` o el archivo :file:`.zshrc` 
 
 .. code-block:: shell
 
@@ -113,37 +144,6 @@ Usamos la versión Zsh de Homebrew
 
    En macOS Mojave no cambia y manda el siguiente mensaje: ``chsh: /usr/local/bin/zsh: non-standard shell``
 
-Fuentes
--------
-
-Source Code Pro
-~~~~~~~~~~~~~~~
-
-Intalamos la fuente `Source Code Pro <https://github.com/adobe-fonts/source-code-pro>`_ que es usada por algunos temas que se instalarán más adelante. Esta fuente tambien se usa en :ref:`sublimetext`
-
-Despues de descargar el archivo seguimos las instrucciones generales en MacOS `How to install and remove fonts on your Mac <https://support.apple.com/en-us/HT201749>`_
-
-Descomprimimos el archivo que descargamos y en el directorio :file:`OTF` y damos doble click a la fuente que queremos instalar.
-
-
-.. image:: _static/sourcecodepro.png
-   :alt: Source Code Pro Font
-   :width: 80%
-
-Nerd Fonts
-~~~~~~~~~~
-
-`Nerd Fonts <http://nerdfonts.com>`_
-
-Descargamos las fuentes y en el directorio :file:`SourceCodePro` damos doble click a la fuente que queremos instalar.
-
-
-En la iTerm2 :menuselection:`Preferences --> Profiles --> Text` seleccionamos la fuente normal y la fuente para caractres non-ascii.
-
-
-.. image:: _static/iterm2font.png
-   :alt: Font for iTerm2
-   :width: 80%
 
 
 oh-my-zsh
