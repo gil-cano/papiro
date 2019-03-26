@@ -228,31 +228,65 @@ En el archivo :file:`.zshrc` selccionamos el tema
 
    ZSH_THEME="powerlevel9k"
 
+cobalt2
+~~~~~~~
 
-Step-by-step installation
+`Cobalt2 <https://github.com/wesbos/Cobalt2-iterm>`_
 
-* Drop the cobalt2.zsh-theme file in to the ~/.oh-my-zsh/themes/ directory.
-* Open up your ZSH preferences at ~/.zshrc and change the theme variable to ZSH_THEME="cobalt2".
-* In iTerm2 access the Preferences pane on the Profiles tab.
-* Under the Colors tab import the cobalt2.itermcolors file via the Load Presets drop-down.
-* Under the Text tab change the font for each type (Regular and Non-ASCII) to 'Inconsolata for Powerline'. (Refer to the powerline-fonts repo for help on font installation.)
-* Refresh ZSH by typing source ~/.zshrc on the command line.
+.. code-block:: shell
+
+   $ cp cobalt2.zsh-theme "$ZSH_CUSTOM/themes/cobalt2.zsh-theme"
+
+En el archivo :file:`.zshrc` selccionamos el tema
+
+.. code-block:: shell
+
+   ZSH_THEME="cobalt2"
+
+En la terminal iTerm2 :menuselection:`Preferences --> Profiles --> Colors` importa el archivo :file:`cobalt2.itermcolors` mediante el menu :file:`Load Presets`
+
+En la terminal iTerm2 :menuselection:`Preferences --> Profiles --> Text` cambiamos la fuente para cada tipo (Regular y Non-ASCII) a `Sauce Code Pro Nerd Font Complete`
+
+.. code-block:: shell
+
+   $ source ~/.zshrc
+
+
+Plugins
+-------
 
 git
 ~~~
-it's what gives you tab completion for git
 
-python
-~~~~~~
+Completa con tab los comandos de git
 
 zsh-syntax-highlighting
 ~~~~~~~~~~~~~~~~~~~~~~~
-adds realtime syntax highlighting to commands while typed in the terminal
 
-zsh-nvm
-~~~~~~~
-zsh plugin for Node Version Manager
+.. code-block:: shell
 
+   git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$ZSH_CUSTOM/plugins/zsh-syntax-highlighting"
+
+.. code-block:: shell
+
+   plugins = (
+      git
+      zsh-syntax-highlighting
+   )
+
+zsh-autosuggestions
+~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: shell
+
+   git clone https://github.com/zsh-users/zsh-autosuggestions "$ZSH_CUSTOM/plugins/zsh-autosuggestions"
+
+.. code-block:: shell
+
+   plugins = (
+      git
+      zsh-autosuggestions
+   )
 
 Bibliografía
 ------------
@@ -260,12 +294,6 @@ Bibliografía
 * `What is ZSH, and Why Should You Use It Instead of Bash? <https://www.howtogeek.com/362409/what-is-zsh-and-why-should-you-use-it-instead-of-bash/>`_
 * `You’re Missing Out on a Better Mac Terminal Experience <https://medium.com/@caulfieldOwen/youre-missing-out-on-a-better-mac-terminal-experience-d73647abf6d7>`_
 * `My Terminal Setup: iTerm + Zsh <https://zen-of-programming.com/terminal-setup/>`_
-
-* `Use Homebrew zsh Instead of the OS X Default <https://rick.cogley.info/post/use-homebrew-zsh-instead-of-the-osx-default/>`_
 * `zsh <https://sourabhbajaj.com/mac-setup/iTerm/zsh.html>`_
 * `Become A Command-Line Power User With Oh-My-ZSH And Z <https://www.smashingmagazine.com/2015/07/become-command-line-power-user-oh-my-zsh-z/>`_
-* `Cobalt2 for iTerm2 and ZSH <https://github.com/wesbos/Cobalt2-iterm>`_
-* `How to Customize your Terminal with ZSH <https://hackernoon.com/how-to-trick-out-terminal-287c0e93fce0>`_
-* `Jazz Up Your ZSH Terminal In Seven Steps <https://medium.freecodecamp.org/jazz-up-your-zsh-terminal-in-seven-steps-a-visual-guide-e81a8fd59a38>`_
 * `Faster and enjoyable ZSH (maybe) <https://htr3n.github.io/2018/07/faster-zsh/>`_
-* `Fira Code: monospaced font with programming ligatures <https://github.com/tonsky/FiraCode>`_
