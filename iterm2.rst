@@ -184,8 +184,8 @@ Editamos el archivo :file:`.zshrc` para definir el tema
     ZSH_THEME="agnoster"
 
 
-Spaceship
-~~~~~~~~~
+Spaceship-prompt
+~~~~~~~~~~~~~~~~
 
 `Spaceship ZSH <https://github.com/denysdovhan/spaceship-prompt>`_
 
@@ -208,6 +208,44 @@ En el archivo :file:`.zshrc` selccionamos el tema
 .. code-block:: shell
 
    ZSH_THEME="spaceship"
+
+.. warning::
+
+   La rama 4.0 agrego soporte para python
+
+
+Configuración del prompt en el archivo :file:`.zshrc`
+
+.. code-block:: shell
+
+   SPACESHIP_PROMPT_ORDER=(
+       user
+       dir
+       # host
+       git
+       # package
+       python
+       # docker
+       venv
+       line_sep
+       char
+   )
+
+   SPACESHIP_PROMPT_FIRST_PREFIX_SHOW="true"
+   SPACESHIP_CHAR_PREFIX="\uf79f"
+   SPACESHIP_CHAR_SUFFIX=" "
+   SPACESHIP_CHAR_COLOR_SUCCESS="yellow"
+   SPACESHIP_DIR_COLOR="green"
+   SPACESHIP_GIT_BRANCH_PREFIX="\uf7a3"
+   SPACESHIP_GIT_BRANCH_COLOR="magenta"
+   SPACESHIP_VENV_COLOR="yellow"
+   SPACESHIP_VENV_PREFIX="\u "
+
+   # spaceship-prompt v.4.0
+   SPACESHIP_PYTHON_SHOW="true"
+   SPACESHIP_PYTHON_SYMBOL="\ue235 "
+   SPACESHIP_PYTHON_COLOR="yellow"
+
 
 
 Powerlevel9k
