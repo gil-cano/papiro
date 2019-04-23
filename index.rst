@@ -15,13 +15,6 @@ The intention of this package is to be a guide to further development.
     This package is still under heavy development.
 
 
-CSS
-======
-
-.. toctree::
-    :maxdepth: 2
-
-    css/resilient
 
 Python
 ======
@@ -97,3 +90,11 @@ Development tools and Administrations tools
     squid
     bibtex
     about
+
+CSS
+======
+
+.. toctree::
+    :maxdepth: 2
+
+    css/resilient

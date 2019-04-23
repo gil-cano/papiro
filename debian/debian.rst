@@ -332,14 +332,38 @@ Random Passwords via Command Line
     $ openssl rand -base64 6
 
 
+emacs
+-----
+
+.. code-block:: shell
+
+    $ sudo apt-get install emacs-nox
+
+Comandos
+--------
+
+Para mostrar los permisos en una ruta usamos:
+
+.. code-block:: shell
+
+    $ namei -om /path/to/check
+
+
 Referencias
 -----------
 
-`HowTo: Add Jobs To cron Under Linux or UNIX? <https://www.cyberciti.biz/faq/how-do-i-add-jobs-to-cron-under-linux-or-unix-oses/>`_
+* `HowTo: Add Jobs To cron Under Linux or UNIX? <https://www.cyberciti.biz/faq/how-do-i-add-jobs-to-cron-under-linux-or-unix-oses/>`_
 
-`How To Protect SSH with fail2ban on Debian 7 <https://www.digitalocean.com/community/tutorials/how-to-protect-ssh-with-fail2ban-on-debian-7>`_
+* `How To Protect SSH with fail2ban on Debian 7 <https://www.digitalocean.com/community/tutorials/how-to-protect-ssh-with-fail2ban-on-debian-7>`_
 
-`Installing Plone for the Training <https://training.plone.org/5/plone_training_config/instructions.html>`_
+* `Installing Plone for the Training <https://training.plone.org/5/plone_training_config/instructions.html>`_
 
-`How To Use ps, kill, and nice to Manage Processes in Linux <https://www.digitalocean.com/community/tutorials/how-to-use-ps-kill-and-nice-to-manage-processes-in-linux>`_
+* `How To Use ps, kill, and nice to Manage Processes in Linux <https://www.digitalocean.com/community/tutorials/how-to-use-ps-kill-and-nice-to-manage-processes-in-linux>`_
 
+* `Use Fail2ban to Secure Your Server <https://www.linode.com/docs/security/using-fail2ban-for-security/>`_
+
+* `Fail2ban Archlinux <https://wiki.archlinux.org/index.php/fail2ban>`_
+
+* `Fail2ban configuration additions for Plone <https://community.plone.org/t/fail2ban-configuration-additions-for-plone/2716>`_
+
+* `Best options for mitigating against denial of service attacks  <https://community.plone.org/t/best-options-for-mitigating-against-denial-of-service-attacks/4076>`_

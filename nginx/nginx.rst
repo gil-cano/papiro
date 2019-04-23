@@ -185,3 +185,11 @@ References
 ----------
 
 * `JHow To Set Up Password Authentication with Nginx on Ubuntu 14.04 <https://www.digitalocean.com/community/tutorials/how-to-set-up-password-authentication-with-nginx-on-ubuntu-14-04>`_
+
+* `fail2ban <https://easyengine.io/tutorials/nginx/fail2ban>`_
+
+* `Pitfalls and Common Mistakes <https://www.nginx.com/resources/wiki/start/topics/tutorials/config_pitfalls/>`_
+
+* `Understanding Nginx Server and Location Block Selection Algorithms <https://www.digitalocean.com/community/tutorials/understanding-nginx-server-and-location-block-selection-algorithms>`_
+
+* `Configuring NGINX Plus as a Web Server <https://docs.nginx.com/nginx/admin-guide/web-server/web-server/>`_
