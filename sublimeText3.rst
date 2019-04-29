@@ -32,6 +32,8 @@ El archivo de configuración de usurio se abre desde el menú :menuselection:`Su
 .. code-block:: json
 
     {
+        "font_face": "Source Code Pro",
+        "font_size": 15,
         "ignored_packages":
         [
             "Vintage",
@@ -45,13 +47,18 @@ Para configuración de archivos python abrimos un archivo :file:`.py` y desde es
 .. code-block:: json
 
     {
-        "font_face": "Source Code Pro",
-        "font_size": 15,
+        // editor options
+        "draw_white_space": "selection",
+        // tabs and whitespace
         "rulers": [79],
         "tab_size": 4,
         "translate_tabs_to_spaces": true,
-        "use_tab_stops": true,   
-        "draw_white_space": "selection",
+        "use_tab_stops": true,
+        "auto_indent": true,
+        "smart_indent": true,
+        "trim_automatic_white_space": true,
+        "word_wrap": true,
+        // "wrap_width": 80,
     }
 
 Salvamos el archivo como :file:`Python.sublime-settings`
