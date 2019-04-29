@@ -27,37 +27,34 @@ Debemos asegurarnos que el directorio ``/usr/local/bin`` se encuntra en nuestro 
 Configuración de Usuario
 ------------------------
 
-El archivo de configuración de usurio se abre desde el menú ``Sublime Text -> Preferences -> Settings``.
+El archivo de configuración de usurio se abre desde el menú :menuselection:`Sublime Text --> Preferences --> Settings`.
+
+.. code-block:: json
+
+    {
+        "ignored_packages":
+        [
+            "Vintage",
+        ],
+        "tab_size": 4,
+    }
+
+
+Para configuración de archivos python abrimos un archivo :file:`.py` y desde esa ventana :menuselection:`Sublime Text --> Preferences --> Settings - Syntax Specific`.
 
 .. code-block:: json
 
     {
         "font_face": "Source Code Pro",
         "font_size": 15,
-        "ignored_packages":
-        [
-            "Vintage",
-        ],
-        "tab_size": 4,
-        "translate_tabs_to_spaces": true,
-        "use_tab_stops": true,
-    }
-
-
-Para configuración de archivos python ``Sublime Text -> Preferences -> Settings - Syntax Specific``.
-Salvamos el archivo como :file:`Python.sublime-settings`
-
-.. code-block:: json
-
-    {
-        "font_size": 13,
-        "draw_white_space": "selection",
         "rulers": [79],
         "tab_size": 4,
         "translate_tabs_to_spaces": true,
-        "use_tab_stops": true
+        "use_tab_stops": true,   
+        "draw_white_space": "selection",
     }
 
+Salvamos el archivo como :file:`Python.sublime-settings`
 
 Sublime Text mostrará un margen en las columnas:
 
@@ -77,6 +74,9 @@ Para la administración de paquetes se recomienda usar `Package Control <https:/
     import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)
 
 Este comando descarga el paquete ``Control.sublime-package``.
+
+También se puede instalar con: :menuselection:`Tools --> Install Package Control`
+
 
 Para instalar nuevos plugins abrimos la paleta de comandos con ``⇧ + ⌘ + P``, escribimos *install* y buscamos el comando ``Package Control: Install Package``.
 
@@ -452,13 +452,13 @@ GitGutter
 indicando si la linea ha sido insertada, modificada o borrada.
 
 
-ST3 snippet para insertar un breakpoint
------------------------------------------
+Code Snippets
+-------------
 
-Para poder poner un break point con solo escribir pdb y completar con tab,
-debemos poner la siguiente configuración en:
+Para agregar un fragmento de código lo hacemos en :menuselection:`Tools --> Developer --> New Snippet ...` o en
 :file:`~/Library/Application Support/Sublime Text 3/Packages/User/pdb.sublime-snippet`.
-o en ``Tools -> Developer -> New Snippet ...``
+
+Ejemplo
 
 .. code-block:: xml
 
@@ -469,6 +469,7 @@ o en ``Tools -> Developer -> New Snippet ...``
         <description>pdb debug tool</description>
     </snippet>
 
+El ejemplo anterior agrega un break point con solo escribir pdb + <tab>
 
 Debug de Sesión
 ---------------

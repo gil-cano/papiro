@@ -303,4 +303,5 @@ Bibliografía
 * `Plone Documentation Styleguide <https://docs.plone.org/about/contributing/documentation_styleguide.html>`_
 * `General Writing Guidelines <https://docs.plone.org/about/contributing/rst-styleguide.html>`_
 * `Sphinx Syntax reStructuredText <http://udig.refractions.net/files/docs/latest/user/docguide/sphinxSyntax.html>`_
-
+* `Sphinx/Rest Memo <https://rest-sphinx-memo.readthedocs.io/en/latest/ReST.html>`_
+* `Programming Notes <https://aert-notes-dev.readthedocs.io/en/latest/content/rest/#structural-elements>`_
