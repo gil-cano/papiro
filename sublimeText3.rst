@@ -32,24 +32,33 @@ El archivo de configuración de usurio se abre desde el menú :menuselection:`Su
 .. code-block:: json
 
     {
+        "color_scheme": "Monokai.sublime-color-scheme",
         "font_face": "Source Code Pro",
         "font_size": 15,
-        "ignored_packages":
-        [
-            "Vintage",
-        ],
-        "tab_size": 4,
-    }
 
+        "theme": "Default.sublime-theme",
+        "bold_folder_labels": true,
+        "git_diff_target": "index",
+        "mini_diff": "auto",
+        "show_encoding": true,
+
+        "auto_complete_commit_on_tab": true,
+        "ensure_newline_at_eof_on_save": true,
+        "highlight_modified_tabs": true,
+        "ignored_packages": ["Vintage"],
+        "indent_to_bracket": true,
+        "scroll_past_end": false,    
+        "tab_size": 4,
+        "translate_tabs_to_spaces": true,
+    }
 
 Para configuración de archivos python abrimos un archivo :file:`.py` y desde esa ventana :menuselection:`Sublime Text --> Preferences --> Settings - Syntax Specific`.
 
 .. code-block:: json
 
     {
-        // editor options
         "draw_white_space": "selection",
-        // tabs and whitespace
+
         "rulers": [79],
         "tab_size": 4,
         "translate_tabs_to_spaces": true,
@@ -58,7 +67,6 @@ Para configuración de archivos python abrimos un archivo :file:`.py` y desde es
         "smart_indent": true,
         "trim_automatic_white_space": true,
         "word_wrap": true,
-        // "wrap_width": 80,
     }
 
 Salvamos el archivo como :file:`Python.sublime-settings`
@@ -71,28 +79,74 @@ Sublime Text mostrará un margen en las columnas:
 
 En este caso estamos usando el tipo de letra `Source Code Pro <https://github.com/adobe-fonts/source-code-pro>`_
 
+
+Code Snippets
+-------------
+
+Para agregar un fragmento de código lo hacemos en :menuselection:`Tools --> Developer --> New Snippet ...` o en
+:file:`~/Library/Application Support/Sublime Text 3/Packages/User/pdb.sublime-snippet`.
+
+Ejemplo
+
+.. code-block:: xml
+
+    <snippet>
+        <content><![CDATA[import pdb; pdb.set_trace()]]></content>
+        <tabTrigger>pdb</tabTrigger>
+        <scope>source.python</scope>
+        <description>pdb debug tool</description>
+    </snippet>
+
+El ejemplo anterior agrega un break point con solo escribir ``pdb + <tab>``
+
+
+Iluminación de archivos zcml
+----------------------------
+
+Abrimos un archivo :file:`.zcml` y seleccionamos :menuselection:`View --> Syntax --> Open all with current extension as... --> XML`
+
+
 Control de paquetes
 -------------------
 
-Para la administración de paquetes se recomienda usar `Package Control <https://sublime.wbond.net/installation>`_. La instalación es atravez de la consola de Sublime Text (``ctrl + ```). En la consola ejecutamos lo siguiente (es mejor tomarlo de la pagina original):
+Instalamos `Package Control <https://sublime.wbond.net/installation>`_ con:
 
-.. code-block:: shell
+:menuselection:`Tools --> Install Package Control...`
 
-    import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)
+.. warning::
 
-Este comando descarga el paquete ``Control.sublime-package``.
+    Antes la instalación era atravez de la consola de Sublime Text (``ctrl + ```). En la consola ejecutabamos el texto tomado de la pagina.
 
-También se puede instalar con: :menuselection:`Tools --> Install Package Control`
-
-
-Para instalar nuevos plugins abrimos la paleta de comandos con ``⇧ + ⌘ + P``, escribimos *install* y buscamos el comando ``Package Control: Install Package``.
+Para instalar nuevos plugins abrimos la paleta de comandos con ``⌘ + ⇧ + P``, escribimos *install* y buscamos el comando ``Package Control: Install Package``.
 
 .. note::
 
     ========  =============================================
     ctrl `    muestra la consola
-    ⇧ ⌘ P     paleta de comandos
+    ⌘ ⇧ P     paleta de comandos
     ========  =============================================
+
+
+Incremental Diff
+----------------
+
+Sublime introdujo `Incremental Diff <https://www.sublimetext.com/docs/3/incremental_diff.html>`_ que implementa varias  funciones para identificar cambios en los archivos editados.
+
+.. note::
+
+    ========  =============================================
+    ctrl .    brinca al siguiente cambio
+    ctrl ,    brinca al cambio anterior
+    ========  =============================================
+
+
+.. note::
+
+    `GitGutter <https://github.com/jisaacks/GitGutter>`_ muestra un icono en el area de ``gutter``
+    indicando si la linea ha sido insertada, modificada o borrada.
+
+
+
 
 
 Autocompletar código python
@@ -101,7 +155,7 @@ Autocompletar código python
 `SublimeJedi <https://github.com/srusskih/SublimeJEDI>`_
 
 
-    * Abrimos la paleta de comandos (``⇧ + ⌘ + P``)
+    * Abrimos la paleta de comandos (``⌘ + ⇧ + P``)
     * Escribimos ``package control install`` y seleccionamos el comando ``Package Control: Install Package``
     * Escribimos ``Jedi`` y seleccionamos ``Jedi - Python autocompletion``
 
@@ -415,14 +469,10 @@ Iluminación de archivos buildout.cfg
 ------------------------------------
 
 Usamos los paquetes de TextMate modificados por Martin Aspeli.
-Copiamos el directorio `Buildout <https://github.com/optilude/SublimeTextMisc/tree/master/Packages>`_  en ``Sublime Text -> Preferences -> Browse Pakages ...``
+Copiamos el directorio `Buildout <https://github.com/optilude/SublimeTextMisc/tree/master/Packages>`_  en :menuselection:`Sublime Text --> Preferences --> Browse Pakages ...`
 
-Abrimos un archivo ``buildout.cfg`` y seleccionamos ``View -> Syntax -> Open all with current extension as... -> Buildout config``
+Abrimos un archivo :file:`buildout.cfg` y seleccionamos :menuselection:`View --> Syntax --> Open all with current extension as... --> Buildout config`
 
-Iluminación de archivos zcml
-----------------------------
-
-Abrimos un archivo ``.zcml`` y seleccionamos ``View -> Syntax -> Open all with current extension as... -> XML``
 
 Manejo de espacios
 ------------------
@@ -452,32 +502,6 @@ EditorConfig
 `EditorConfig <https://github.com/sindresorhus/editorconfig-sublime>`_ ayuda a mantener estilos de codigo consistentes entre distintos editores.
 
 
-GitGutter
----------
-
-`GitGutter <https://github.com/jisaacks/GitGutter>`_ muestra un icono en el area de "gutter"
-indicando si la linea ha sido insertada, modificada o borrada.
-
-
-Code Snippets
--------------
-
-Para agregar un fragmento de código lo hacemos en :menuselection:`Tools --> Developer --> New Snippet ...` o en
-:file:`~/Library/Application Support/Sublime Text 3/Packages/User/pdb.sublime-snippet`.
-
-Ejemplo
-
-.. code-block:: xml
-
-    <snippet>
-        <content><![CDATA[import pdb; pdb.set_trace()]]></content>
-        <tabTrigger>pdb</tabTrigger>
-        <scope>source.python</scope>
-        <description>pdb debug tool</description>
-    </snippet>
-
-El ejemplo anterior agrega un break point con solo escribir pdb + <tab>
-
 Debug de Sesión
 ---------------
 `PDBSublimeTextSupport <https://pypi.python.org/pypi/PdbSublimeTextSupport>`_
@@ -494,9 +518,16 @@ Mejoras a la barra lateral
 
 Theme
 -----
+
 `Flatland <https://github.com/thinkpixellab/flatland>`_
 
-Abrimios el archivo de preferencias globales de Sublime Text 3 ``Sublime Text -> Preferences -> Settings - User``
+Lo instalamos usando Package Control:
+ 
+* Abrimos la paleta de comandos (``⌘ + ⇧ + P``) y  seleccionammos ``Package Control: Install Package``.
+* Buscamos la opción ``Theme - Flatland``
+
+
+Abrimios el archivo de preferencias globales de Sublime Text 3: :menuselection:`Sublime Text --> Preferences --> Settings - User`
 
 .. code-block:: json
 
@@ -507,7 +538,7 @@ Abrimios el archivo de preferencias globales de Sublime Text 3 ``Sublime Text ->
 
 `Soda Theme <http://buymeasoda.github.io/soda-theme/>`_
 
-Abrimios el archivo de preferencias globales de Sublime Text 3 ``Sublime Text -> Preferences -> Settings - User``
+Abrimos el archivo de preferencias globales de Sublime Text 3: :menuselection:`Sublime Text --> Preferences --> Settings - User`
 
 .. code-block:: json
 
@@ -520,7 +551,7 @@ Abrimios el archivo de preferencias globales de Sublime Text 3 ``Sublime Text ->
 * Descomprimir y mover los archivos **tmttheme** en el folder ``Pakages/User``.
 * Abilitar el esquema de colores via:
 
-``Sublime Text -> Preferences -> Color Scheme -> User -> Monokai Soda``
+:menuselection:`Sublime Text --> Preferences --> Color Scheme --> User --> Monokai Soda`
 
 
 `Material Theme <http://equinusocio.github.io/material-theme/>`_
@@ -531,7 +562,7 @@ Color Scheme (opcional)
 
 `Monokai Extended <https://github.com/jonschlinkert/sublime-monokai-extended>`_
 
-*Preferences -> Color Scheme -> Monokai Extended -> Monokai Extended*
+:menuselection:`Sublime Text --> Preferences --> Color Scheme --> User --> Monokai Extended`
 
 CSS
 ----
