@@ -6,7 +6,7 @@ Sublime Text 3
 Línea de comandos en Mac OS X
 -----------------------------
 
-`Sublime Text 3 <https://www.sublimetext.com/3>`_ incluye el comando, ``subl``, para trabajar con archivos desde una terminal.
+`Sublime Text 3 <https://www.sublimetext.com/3>`_ incluye el comando :command:`subl`, para abrir archivos desde una terminal.
 
 Para poder usarlo hacemos un enlace simbólico:
 
@@ -66,7 +66,7 @@ Para configuración de archivos python abrimos un archivo :file:`.py` y desde es
         "auto_indent": true,
         "smart_indent": true,
         "trim_automatic_white_space": true,
-        "word_wrap": true,
+        "word_wrap": false
     }
 
 Salvamos el archivo como :file:`Python.sublime-settings`
@@ -127,26 +127,41 @@ Para instalar nuevos plugins abrimos la paleta de comandos con ``⌘ + ⇧ + P``
     ========  =============================================
 
 
-Incremental Diff
-----------------
 
-Sublime introdujo `Incremental Diff <https://www.sublimetext.com/docs/3/incremental_diff.html>`_ que implementa varias  funciones para identificar cambios en los archivos editados.
+GitGutter
+---------
 
-.. note::
+`GitGutter <https://github.com/jisaacks/GitGutter>`_ muestra información, en el area de ``gutter``, sobre archivos que estan bajo control de versiones con :command:`git`.
+
+* Iconos en el area de ``gutter`` indicando modificaciónes y lineas nuevas o borradas
+* Una ventana emergente con información de las lineas modificadas.
+* Información en la barra de estado
+
+.. seealso::
+
+   Sublime 3.2 introdujo `Incremental Diff <https://www.sublimetext.com/docs/3/incremental_diff.html>`_ que implementa varias  funciones para identificar cambios en los archivos editados.
 
     ========  =============================================
     ctrl .    brinca al siguiente cambio
     ctrl ,    brinca al cambio anterior
     ========  =============================================
 
+Para desactivar Incremental Diff y usar GitGutter en :menuselection:`Sublime Text --> Preferences --> Settings` agregamos lo siguiente:
 
-.. note::
+.. code-block:: json
 
-    `GitGutter <https://github.com/jisaacks/GitGutter>`_ muestra un icono en el area de ``gutter``
-    indicando si la linea ha sido insertada, modificada o borrada.
+    {
+        "mini_diff": false,
+        "show_git_status": true
+    }
 
+La configuracíon de GitGutter se realiza en :menuselection:`Sublime Text --> Preferences --> Package Settings --> GitGutter --> Settings`
 
+.. code-block:: json
 
+    {
+        "git_binary": "/usr/local/bin/git",
+    }
 
 
 Autocompletar código python

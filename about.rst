@@ -150,6 +150,7 @@ Error
    This is an error box
 
 Nota
+----
 
 .. code-block:: rst
 
@@ -163,6 +164,7 @@ Nota
 
 
 Por hacer
+---------
 
 .. code-block:: rst
 
@@ -176,6 +178,7 @@ Por hacer
 
 
 Ver también
+-----------
 
 .. code-block:: rst
 
