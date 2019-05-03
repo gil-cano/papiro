@@ -57,17 +57,21 @@ Para configuración de archivos python abrimos un archivo :file:`.py` y desde es
 .. code-block:: json
 
     {
+        "font_face": "SauceCodePro Nerd Font",
+        "font_size": 14,
+
         "draw_white_space": "selection",
 
+        "auto_indent": true,
         "rulers": [79],
+        "smart_indent": true,    
         "tab_size": 4,
         "translate_tabs_to_spaces": true,
-        "use_tab_stops": true,
-        "auto_indent": true,
-        "smart_indent": true,
         "trim_automatic_white_space": true,
+        "use_tab_stops": true,
         "word_wrap": false
     }
+
 
 Salvamos el archivo como :file:`Python.sublime-settings`
 
@@ -106,6 +110,15 @@ Iluminación de archivos zcml
 Abrimos un archivo :file:`.zcml` y seleccionamos :menuselection:`View --> Syntax --> Open all with current extension as... --> XML`
 
 
+Iluminación de archivos buildout.cfg
+------------------------------------
+
+Usamos los paquetes de TextMate modificados por Martin Aspeli.
+Copiamos el directorio `Buildout <https://github.com/optilude/SublimeTextMisc/tree/master/Packages>`_  en :menuselection:`Sublime Text --> Preferences --> Browse Pakages ...`
+
+Abrimos un archivo :file:`buildout.cfg` y seleccionamos :menuselection:`View --> Syntax --> Open all with current extension as... --> Buildout config`
+
+
 Control de paquetes
 -------------------
 
@@ -125,7 +138,6 @@ Para instalar nuevos plugins abrimos la paleta de comandos con ``⌘ + ⇧ + P``
     ctrl `    muestra la consola
     ⌘ ⇧ P     paleta de comandos
     ========  =============================================
-
 
 
 GitGutter
@@ -164,6 +176,7 @@ La configuracíon de GitGutter se realiza en :menuselection:`Sublime Text --> Pr
     }
 
 
+
 Autocompletar código python
 ---------------------------
 
@@ -177,6 +190,29 @@ Autocompletar código python
 .. seealso::
 
     `Anaconda <http://damnwidget.github.io/anaconda/#>`_
+
+Creamos un ambiente virtual para los paquetes que usamos en sublime
+
+.. code-block:: shell
+
+    $ cd /Users/myuser/buildout.python
+    $ virtualenv- python-3.7-sublenv
+    New python executable in python-3.7-sublenv/bin/python3.7
+    Also creating executable in python-3.7-sublenv/bin/python
+    Installing setuptools, pip, wheel...done.
+    $ source python-3.7-sublenv/bin/activate
+    (python-3.7-sublenv)$ pip install jedi
+
+Para solo usar el autocomplete de jedi editamos :menuselection:``Sublime Text --> Preferences --> Packages Settings --> Jedi --> Settings - User``
+
+.. code-block:: json
+
+    {
+        "python_interpreter": " $home/buildout.python/python-3.7-sublenv/bin/python",
+        "sublime_completions_visibility": "jedi",
+        "auto_complete_function_params": "required"
+    }
+
 
 Usamos la siguiente configuración para definir el interprete de python que usaremos en nuestro proyecto.
 
@@ -263,16 +299,6 @@ Ejemplo de plone.recipe.sublimetext:
         }
     }
 
-
-Para solo usar el autocomplete de jedi editamos ``Sublime Text -> Preferences -> Packages Settings -> Jedi -> Settings - User``
-
-.. code-block:: json
-
-    {
-        "python_interpreter": " $home/buildout.python/python-2.7/bin/python",
-        "sublime_completions_visibility": "jedi",
-        "auto_complete_function_params": "required"
-    }
 
 .. note::
 
@@ -477,16 +503,6 @@ En sublimetext instalamos `sublimelinter-contrib-yamllint <https://github.com/th
             }
         }
     }
-
-
-
-Iluminación de archivos buildout.cfg
-------------------------------------
-
-Usamos los paquetes de TextMate modificados por Martin Aspeli.
-Copiamos el directorio `Buildout <https://github.com/optilude/SublimeTextMisc/tree/master/Packages>`_  en :menuselection:`Sublime Text --> Preferences --> Browse Pakages ...`
-
-Abrimos un archivo :file:`buildout.cfg` y seleccionamos :menuselection:`View --> Syntax --> Open all with current extension as... --> Buildout config`
 
 
 Manejo de espacios
@@ -752,9 +768,9 @@ Bibliografía
 
 * `Setting Up Sublime Text 3 for Full Stack Python Development <https://realpython.com/setting-up-sublime-text-3-for-full-stack-python-development/#markdown-preview>`_
 
-* `Turning Sublime Text Into a Lightweight Python IDE <http://cewing.github.io/training.codefellows/assignments/day01/sublime_as_ide.html>`_
+* `How to set up Sublime Text 3 for Python development <http://premgkumar.com/2019/03/16/sublimetext-for-python>`_
 
-* `Sublime Text 3 for Python JavaScript and web developers <http://opensourcehacker.com/2014/03/10/sublime-text-3-for-python-javascript-and-web-developers>`_
+* `Turning Sublime Text Into a Lightweight Python IDE <http://cewing.github.io/training.codefellows/assignments/day01/sublime_as_ide.html>`_
 
 * `Sublime Text for Front End Developers <https://css-tricks.com/sublime-text-front-end-developers/>`_
 
