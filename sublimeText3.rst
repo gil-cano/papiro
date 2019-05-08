@@ -34,7 +34,7 @@ El archivo de configuración de usurio se abre desde el menú :menuselection:`Su
     {
         "color_scheme": "Monokai.sublime-color-scheme",
         "font_face": "Source Code Pro",
-        "font_size": 15,
+        "font_size": 13,
 
         "theme": "Default.sublime-theme",
         "bold_folder_labels": true,
@@ -47,7 +47,7 @@ El archivo de configuración de usurio se abre desde el menú :menuselection:`Su
         "highlight_modified_tabs": true,
         "ignored_packages": ["Vintage"],
         "indent_to_bracket": true,
-        "scroll_past_end": false,    
+        "scroll_past_end": false,
         "tab_size": 4,
         "translate_tabs_to_spaces": true,
     }
@@ -64,7 +64,7 @@ Para configuración de archivos python abrimos un archivo :file:`.py` y desde es
 
         "auto_indent": true,
         "rulers": [79],
-        "smart_indent": true,    
+        "smart_indent": true,
         "tab_size": 4,
         "translate_tabs_to_spaces": true,
         "trim_automatic_white_space": true,
