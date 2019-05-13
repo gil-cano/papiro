@@ -58,7 +58,7 @@ Para configuración de archivos python abrimos un archivo :file:`.py` y desde es
 
     {
         "font_face": "SauceCodePro Nerd Font",
-        "font_size": 14,
+        "font_size": 13,
 
         "draw_white_space": "selection",
 
@@ -191,6 +191,15 @@ Autocompletar código python
 
     `Anaconda <http://damnwidget.github.io/anaconda/#>`_
 
+
+.. code-block:: pycon
+
+    >>> sys.path
+    ['/Applications/Sublime Text.app/Contents/MacOS', 
+    '/Applications/Sublime Text.app/Contents/MacOS/python3.3.zip', 
+    '/Users/gil/Library/Application Support/Sublime Text 3/Lib/python3.3', 
+    '/Users/gil/Library/Application Support/Sublime Text 3/Packages']
+
 Creamos un ambiente virtual para los paquetes que usamos en sublime
 
 .. code-block:: shell
@@ -203,12 +212,12 @@ Creamos un ambiente virtual para los paquetes que usamos en sublime
     $ source python-3.7-sublenv/bin/activate
     (python-3.7-sublenv)$ pip install jedi
 
-Para solo usar el autocomplete de jedi editamos :menuselection:``Sublime Text --> Preferences --> Packages Settings --> Jedi --> Settings - User``
+Para solo usar el autocomplete de jedi editamos :menuselection:`Sublime Text --> Preferences --> Packages Settings --> Jedi --> Settings - User`
 
 .. code-block:: json
 
     {
-        "python_interpreter": " $home/buildout.python/python-3.7-sublenv/bin/python",
+        "python_virtualenv": "/Users/myuser/buildout.python/python-3.7-sublenv",
         "sublime_completions_visibility": "jedi",
         "auto_complete_function_params": "required"
     }
@@ -222,7 +231,12 @@ Usamos la siguiente configuración para definir el interprete de python que usar
         "folders":
         [
             {
-                "path": "src-git"
+                "path": ".",
+                "folder_exclude_patterns": [
+                    "src-git",
+                    "Extensions",
+                    "parts",
+                ],
             },
             {
                 "path": "src-git",
@@ -231,6 +245,11 @@ Usamos la siguiente configuración para definir el interprete de python que usar
             {
                 "path": "Extensions",
                 "folder_exclude_patterns": ["mathscinet*"],
+                "file_exclude_patterns": ["*.xlsx", "*.json"],
+            },
+            {
+                "path": "parts/omelette",
+                "folder_exclude_patterns": ["math*", "UNAM*"],
                 "file_exclude_patterns": ["*.xlsx", "*.json"],
             }
         ],
@@ -243,9 +262,9 @@ Usamos la siguiente configuración para definir el interprete de python que usar
 
 Por default el archivo de un proyecto es ``<project name>.sublime-project``
 
-Para crear un proyecto ``Project -> save Project as``
+Para crear un proyecto :menuselection:`Project --> save Project as`
 
-Para editarlo ``Project -> Edit Project``
+Para editarlo :menuselection:`Project --> Edit Project`
 
 Ejemplo de plone.recipe.sublimetext:
 
@@ -257,10 +276,10 @@ Ejemplo de plone.recipe.sublimetext:
                 "pylint":{
                     "disable":false,
                     "paths":[
-                        "/Users/gil/.buildout/eggs/ZODB3-3.11.0-py2.7.egg",
-                        "/Users/gil/.buildout/eggs/Products.CMFCore-2.2.12-py2.7.egg",
-                        "/Users/gil/.buildout/eggs/Plone-5.1.2-py2.7.egg",
-                        "/Users/gil/.buildout/eggs/Acquisition-4.4.2-py2.7-macosx-10.4-x86_64.egg"
+                        "/Users/myuser/.buildout/eggs/ZODB3-3.11.0-py2.7.egg",
+                        "/Users/myuser/.buildout/eggs/Products.CMFCore-2.2.12-py2.7.egg",
+                        "/Users/myuser/.buildout/eggs/Plone-5.1.2-py2.7.egg",
+                        "/Users/myuser/.buildout/eggs/Acquisition-4.4.2-py2.7-macosx-10.4-x86_64.egg"
                     ]
                 }
             }
@@ -288,12 +307,12 @@ Ejemplo de plone.recipe.sublimetext:
             }
         ],
         "settings":{
-            "python_interpreter":"/Users/gil/projects/plone/sites/sublime-buildout/bin/python2.7",
+            "python_interpreter":"/Users/myuser/projects/plone/sites/sublime-buildout/bin/python2.7",
             "python_package_paths":[
-                "/Users/gil/.buildout/eggs/Zope2-2.13.27-py2.7.egg",
-                "/Users/gil/.buildout/eggs/ZODB3-3.11.0-py2.7.egg",
-                "/Users/gil/.buildout/eggs/Plone-5.1.2-py2.7.egg",
-                "/Users/gil/.buildout/eggs/Acquisition-4.4.2-py2.7-macosx-10.4-x86_64.egg"
+                "/Users/myuser/.buildout/eggs/Zope2-2.13.27-py2.7.egg",
+                "/Users/myuser/.buildout/eggs/ZODB3-3.11.0-py2.7.egg",
+                "/Users/myuser/.buildout/eggs/Plone-5.1.2-py2.7.egg",
+                "/Users/myuser/.buildout/eggs/Acquisition-4.4.2-py2.7-macosx-10.4-x86_64.egg"
             ],
             "sublimelinter":true
         }
@@ -314,7 +333,7 @@ SublimeLinter
 
 Instalamos `SublimeLinter <http://sublimelinter.readthedocs.org/en/latest/>`_ usando el Package Control.
 
-Editamos el archivo de configuración de SublimeLinter ``Sublime Text -> Preferences -> Package Settings -> SublimeLinter -> Settings``:
+Editamos el archivo de configuración de SublimeLinter :menuselection:`Sublime Text --> Preferences --> Package Settings --> SublimeLinter --> Settings`
 
 .. code-block:: json
 
@@ -344,19 +363,18 @@ Primero creamos un ambiente virtual y lo activamos
 
 .. code-block:: console
 
-    $ cd /Users/myuser/buildout.python
-    $ virtualenv-2.7 python-2.7-sublenv
-    New python executable in python-2.7-sublenv/bin/python2.7
-    Also creating executable in python-2.7-sublenv/bin/python
-    Installing setuptools, pip...done.
-    $ source python-2.7-sublenv/bin/activate
-    (python-2.7-sublenv)$
+    $ virtualenv- python-3.7-sublenv
+    New python executable in python-3.7-sublenv/bin/python3.7
+    Also creating executable in python-3.7-sublenv/bin/python
+    Installing setuptools, pip, wheel...done.
+    $ source python-3.7-sublenv/bin/activate
+    (python-3.7-sublenv)$ 
 
 Instalamos los paquetes necesarios (`flake8 <https://pypi.python.org/pypi/flake8>`_)
 
 .. code-block:: console
 
-    (python-3-sublenv)$ pip install flake8
+    (python-3.7-sublenv)$ pip install flake8
     Downloading/unpacking flake8
     [...]
     Downloading/unpacking pyflakes>=0.7.3 (from flake8)
@@ -404,12 +422,12 @@ Agregamos lo siguiente:
                 "max-line-length": null,
                 "select": "",
                 "show-code": true,
-                "python": 2.7,
+                "python": 3.7,
             }
         },
         "paths": {
             "linux": [],
-            "osx": ["~/buildout.python/python-2.7-sublenv/bin"],
+            "osx": ["~/buildout.python/python-3.7-sublenv/bin"],
             "windows": []
         }
     }
@@ -779,3 +797,5 @@ Bibliografía
 * `Sublime 3 xml_pp (xmltwig) based xml auto formatter <https://gist.github.com/jensens/4fc631616f5ef9ac4c6b>`_
 
 * `<https://www.shopify.com/partners/blog/sublime-text-plugins-2018>`_
+
+* `Sublime Text Umofficial Documentation <http://docs.sublimetext.info/en/latest/basic_concepts.html?highlight=python>`_
