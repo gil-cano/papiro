@@ -319,7 +319,10 @@ zsh-syntax-highlighting
 .. code-block:: shell
 
    plugins = (
+      colored-man-pages
       git
+      pipenv
+      python
       zsh-syntax-highlighting
    )
 
@@ -335,6 +338,21 @@ zsh-autosuggestions
    plugins = (
       git
       zsh-autosuggestions
+   )
+
+
+zsh-history-substring-search
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: shell
+
+   git clone https://github.com/zsh-users/zsh-history-substring-search.git "$ZSH_CUSTOM/plugins/zsh-history-substring-search"
+
+.. code-block:: shell
+
+   plugins = (
+      git
+      history-substring-search
    )
 
 Bibliografía
