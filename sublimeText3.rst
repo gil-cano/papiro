@@ -42,7 +42,7 @@ El archivo de configuración de usurio se abre desde el menú :menuselection:`Su
         "mini_diff": "auto",
         "show_encoding": true,
 
-        "auto_complete_commit_on_tab": true,
+        "auto_complete_commit_on_tab": false,
         "ensure_newline_at_eof_on_save": true,
         "highlight_modified_tabs": true,
         "ignored_packages": ["Vintage"],
@@ -57,21 +57,23 @@ Para configuración de archivos python abrimos un archivo :file:`.py` y desde es
 .. code-block:: json
 
     {
-        "font_face": "SauceCodePro Nerd Font",
+        // "font_face": "Fira Code Medium",
+        // "font_options": ["subpixel_antialias"],
+        // "font_face": "SauceCodePro Nerd Font",
+        "font_face": "Source Code Pro",
         "font_size": 13,
-
-        "draw_white_space": "selection",
-
-        "auto_indent": true,
         "rulers": [79],
-        "smart_indent": true,
         "tab_size": 4,
         "translate_tabs_to_spaces": true,
-        "trim_automatic_white_space": true,
         "use_tab_stops": true,
-        "word_wrap": false
-    }
 
+        "auto_indent": true,
+        "smart_indent": true,
+        "trim_automatic_white_space": true,
+        "word_wrap": false,
+
+        "draw_white_space": "selection"
+    }
 
 Salvamos el archivo como :file:`Python.sublime-settings`
 
@@ -389,23 +391,39 @@ Instalamos los paquetes necesarios (`flake8 <https://pypi.python.org/pypi/flake8
     Cleaning up...
     (python-3-sublenv)$ pip install flake8-blind-except
     (python-3-sublenv)$ pip install flake8-coding
-    (python-3-sublenv)$ pip install flake8-debugger
-    (python-3-sublenv)$ pip install flake8-docstrings
+    (python-3-sublenv)$ pip install flake8-commas
+    // (python-3-sublenv)$ pip install flake8-debugger
+    (python-3-sublenv)$ pip install flake8-deprecated
+    (python-3-sublenv)$ pip install flake8-isort
+    (python-3-sublenv)$ pip install flake8-pep3101
+    (python-3-sublenv)$ pip install flake8-plone-api
+    // (python-3-sublenv)$ pip install flake8-print
+    (python-3-sublenv)$ pip install flake8-quotes
+    (python-3-sublenv)$ pip install flake8-string-format
+    (python-3-sublenv)$ pip install flake8-todo
 
 Si queremos usar un archivo requirements.txt debe contener los siguiente
 
 .. code-block:: text
 
-    configparser==3.5.0
-    enum34==1.1.6
-    flake8==3.5.0
+    entrypoints==0.3
+    flake8==3.7.7
     flake8-blind-except==0.1.1
-    flake8-coding==1.3.0
-    flake8-debugger==3.1.0
+    flake8-coding==1.3.1
+    flake8-commas==2.0.0
     flake8-deprecated==1.3
+    flake8-isort==2.7.0
+    flake8-pep3101==1.2.1
+    flake8-plone-api==1.4
+    flake8-plone-hasattr==0.2.post0
+    flake8-quotes==2.0.1
+    flake8-string-format==0.2.3
+    flake8-todo==0.7
+    isort==4.3.20
     mccabe==0.6.1
-    pycodestyle==2.3.1
-    pyflakes==1.6.0
+    pycodestyle==2.5.0
+    pyflakes==2.1.1
+    testfixtures==6.8.2
 
 
 Agregamos lo siguiente:
@@ -416,7 +434,7 @@ Agregamos lo siguiente:
         "linters": {
             "flake8": {
                 "disable": false,
-                "args": "--ignore E501,D100,T000",
+                "args": "--ignore E501,D100",
                 "excludes": [],
                 "max-complexity": 10,
                 "max-line-length": null,
