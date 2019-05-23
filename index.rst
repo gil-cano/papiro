@@ -41,6 +41,7 @@ Plone
     plone/testing
     plone/mail
     plone/Strings
+    plone/Soluciones
 
 Plone add-ons
 =============
