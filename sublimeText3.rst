@@ -548,7 +548,7 @@ Para eliminart espacios en blanco al final de una linea o en lineas vacias usamo
 
 La siguiente configuración nos permite eliminar los espacios en blanco al momento se salvar un archivo, pero solo en lineas de codigo que hemos modificado.
 
-El archivo a modificar es ``Preferences -> Package Settings -> Trailing Spaces -> Settings User``
+El archivo a modificar es :menuselection:`Preferences --> Package Settings --> Trailing Spaces --> Settings User`
 
 .. code-block:: json
 
