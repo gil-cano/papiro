@@ -197,9 +197,9 @@ Autocompletar código python
 .. code-block:: pycon
 
     >>> sys.path
-    ['/Applications/Sublime Text.app/Contents/MacOS', 
-    '/Applications/Sublime Text.app/Contents/MacOS/python3.3.zip', 
-    '/Users/gil/Library/Application Support/Sublime Text 3/Lib/python3.3', 
+    ['/Applications/Sublime Text.app/Contents/MacOS',
+    '/Applications/Sublime Text.app/Contents/MacOS/python3.3.zip',
+    '/Users/gil/Library/Application Support/Sublime Text 3/Lib/python3.3',
     '/Users/gil/Library/Application Support/Sublime Text 3/Packages']
 
 Creamos un ambiente virtual para los paquetes que usamos en sublime
@@ -370,7 +370,7 @@ Primero creamos un ambiente virtual y lo activamos
     Also creating executable in python-3.7-sublenv/bin/python
     Installing setuptools, pip, wheel...done.
     $ source python-3.7-sublenv/bin/activate
-    (python-3.7-sublenv)$ 
+    (python-3.7-sublenv)$
 
 Instalamos los paquetes necesarios (`flake8 <https://pypi.python.org/pypi/flake8>`_)
 
@@ -526,7 +526,7 @@ SublimeLinter--contrib-yamllint
 
 .. code-block:: console
 
-    $ pip install yamllint
+    (python-3-sublenv)$ pip install yamllint
 
 
 En sublimetext instalamos `sublimelinter-contrib-yamllint <https://github.com/thomasmeeus/SublimeLinter-contrib-yamllint>`_
@@ -589,7 +589,7 @@ Theme
 `Flatland <https://github.com/thinkpixellab/flatland>`_
 
 Lo instalamos usando Package Control:
- 
+
 * Abrimos la paleta de comandos (``⌘ + ⇧ + P``) y  seleccionammos ``Package Control: Install Package``.
 * Buscamos la opción ``Theme - Flatland``
 
