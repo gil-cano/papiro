@@ -659,7 +659,7 @@ Json
 
 `Pretty JSON <https://github.com/dzhibas/SublimePrettyJson>`_ da formato y minimiza archivos json.
 
-Abrimios el archivo ``Sublime Text -> Preferences -> Key Bindings - User`` y agregamos
+Abrimios el archivo :menuselection:`Sublime Text --> Preferences --> Key Bindings` y agregamos
 
 .. code-block:: json
 
@@ -715,10 +715,11 @@ Instalamos Skim para abrir los pdfs.
    $ brew install imagemagick
 
 Para ortografia instalamos el paquete `Dictionaries <https://github.com/titoBouzout/Dictionaries>`_
-Lo colocamos en el folder de paquetes ``Sublime Text -> Preferences > Browse Packages``
+Lo colocamos en el folder de paquetes :menuselection:`Sublime Text --> Preferences --> Browse Packages`
 
-Para seleccionar el idioma ``View -> Dictionary -> Dictionaries -> English (American)``
-Verificar que la ortografia este correcta (View > Spell Check / F6)
+Para seleccionar el idioma :menuselection:`View --> Dictionary --> Dictionaries --> English (American)`
+
+Verificar que la ortografia este correcta (:menuselection:`View --> Spell Check` / F6)
 
 
 .. note::
