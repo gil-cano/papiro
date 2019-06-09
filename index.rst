@@ -42,6 +42,7 @@ Plone
     plone/mail
     plone/Strings
     plone/Soluciones
+    plone/codefragments
 
 Plone add-ons
 =============
