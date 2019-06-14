@@ -728,6 +728,7 @@ Verificar que la ortografia este correcta (:menuselection:`View --> Spell Check`
     ⌘ b         Compila latex
     ⇧ ⌘ b      Selecciona que usar Latex/PdfLatex/XeLatex
     ⌘ l + ⌫    Borra archivos temporales
+    ⇧ ⌘ clic   Lleva de skim a sublimetext
     =========  =========================================================
 
 Comparar archivos
