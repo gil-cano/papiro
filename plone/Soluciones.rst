@@ -1,11 +1,14 @@
-Solucion a algunos errores
-==========================
+Solución de algunos errores
+===========================
 
-ConfigurationError: ('Unknown directive', u'http://namespaces.plone.org/plone', u'service')
+.. code-block:: rst
 
-.. note::
+    ConfigurationError: ('Unknown directive', u'http://namespaces.plone.org/plone', u'service')
 
-    To use the plone:service directive you must include the meta.zcml.
+To use the :command:`plone:service` directive you must include the :file:`meta.zcml`.
 
-    You must do <include package="plone.rest" file="meta.zcml"/> before you can use the plone:service directive.
-    So: add the line <include package="plone.rest" file="meta.zcml"/> before the usage of plone:service.
+You must do :code:`<include package="plone.rest" file="meta.zcml"/>` before you can use the :command:`plone:service` directive.
+
+So: add the line :code:`<include package="plone.rest" file="meta.zcml"/>` before the usage of :command:`plone:service`.
+
+* `How to resolve ConfigurationError error 'Unknown directive' in Plone? <https://stackoverflow.com/questions/23533465/how-to-resolve-configurationerror-error-unknown-directive-in-plone>`_

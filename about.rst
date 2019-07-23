@@ -60,6 +60,15 @@ Código en linea
 
 This is :func:`aFunction`, this is the :mod:`some.module` that contains the :class:`some.module.MyClass`
 
+
+.. code-block:: rst
+
+   Some inline code :code:`<include package="plone.rest" file="meta.zcml"/>`
+
+Some inline code :code:`<include package="plone.rest" file="meta.zcml"/>`
+
+
+
 Resaltar nombres de archivos o cadenas
 --------------------------------------
 
@@ -121,7 +130,6 @@ Tablas en lista
      - Four sides of equal length, 90 degree angles
    * - Rectangle
      - Four sides, 90 degree angles
-
 
 Advertencia
 -----------
@@ -189,7 +197,8 @@ Ver también
 .. seealso::
 
    This!
-   
+
+
 Resaltado de sintaxis
 =====================
 
