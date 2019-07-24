@@ -93,10 +93,11 @@ Development tools and Administrations tools
     bibtex
     about
 
-CSS
-======
+Web Development
+===============
 
 .. toctree::
     :maxdepth: 2
 
+    html5
     css/resilient
