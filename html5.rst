@@ -1,7 +1,6 @@
 Diseño web
 ==========
 
-
 Atributo global lang
 --------------------
 
@@ -9,8 +8,17 @@ Atributo global lang
 
     <html lang="es">
 
-* `Usando la etiqueta meta viewport para controlar la composición en los navegadores móviles <https://developer.mozilla.org/es/docs/Web/HTML/Atributos_Globales/lang>`_
+* El atributo `lang <https://developer.mozilla.org/es/docs/Web/HTML/Atributos_Globales/lang>`_ define el lenguaje en que están escritos los eklementos.
 
+
+Elemento <base>
+---------------
+
+.. code-block:: html
+
+    <base>
+
+* `\<base\> <https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base>`_ especifica la URL base a usar para todas las URLs en el documento.
 
 Etiqueta meta viewport
 ----------------------
@@ -19,7 +27,7 @@ Etiqueta meta viewport
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-* `Usando la etiqueta meta viewport para controlar la composición en los navegadores móviles <https://developer.mozilla.org/es/docs/M%C3%B3vil/Viewport_meta_tag>`_
+* Se usa la etiqueta `meta viewport <https://developer.mozilla.org/es/docs/M%C3%B3vil/Viewport_meta_tag>`_ para controlar la composición en los navegadores móviles.
 
 
 Etiqueta meta description
@@ -29,7 +37,7 @@ Etiqueta meta description
 
     <meta name="description" content="This is an example of a meta description. This will often show up in search results.">
 
-* `Meta Description <https://moz.com/learn/seo/meta-description>`_
+* `meta description <https://moz.com/learn/seo/meta-description>`_
 
 
 
