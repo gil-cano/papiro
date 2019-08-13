@@ -32,6 +32,21 @@ En un template podemos usar varias expresiones predefinidas.
 `Vistas y metodos <https://docs.plone.org/4/en/old-reference-manuals/plone_3_theming/page/otherinfo.html#available-views-and-methods>`_ disponibles en templates.
 
 
+Interfaces dinamicas
+--------------------
+
+Se declara la interfaz en zcml.
+Se define la interfaz en un .py
+En el ZMI se posiciona en el objeto y en el tab de Interfaces se seleccíona la nueva.
+
+.. code-block:: xml
+
+    <interface interface="mfabrik.app.interfaces.promotion.IPromotionsPage" />
+
+* `Dynamic marker interfaces <https://docs.plone.org/develop/addons/components/interfaces.html#dynamic-marker-interfaces>`_
+
+
+
 * `Expressions <https://docs.plone.org/develop/plone/functionality/expressions.html>`_
 * `Static resources <https://docs.plone.org/external/plone.app.dexterity/docs/advanced/static-resources.html>`_
 * `CSS <https://docs.plone.org/adapt-and-extend/theming/templates_css/css.html>`_
