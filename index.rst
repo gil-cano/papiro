@@ -43,6 +43,7 @@ Plone
     plone/Strings
     plone/Soluciones
     plone/codefragments
+    plone/performance
 
 Plone add-ons
 =============
