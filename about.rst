@@ -120,6 +120,20 @@ Etiquetas de página
 Tablas en lista
 ---------------
 
+.. code-block:: rst
+
+   .. list-table::
+      :widths: 20 80
+      :header-rows: 1
+
+      * - Shapes
+        - Description
+      * - Square
+        - Four sides of equal length, 90 degree angles
+      * - Rectangle
+        - Four sides, 90 degree angles
+
+
 .. list-table::
    :widths: 20 80
    :header-rows: 1
@@ -130,6 +144,28 @@ Tablas en lista
      - Four sides of equal length, 90 degree angles
    * - Rectangle
      - Four sides, 90 degree angles
+
+.. code-block:: rst
+
+   .. csv-table:: Frozen Delights!
+      :header: "Treat", "Quantity", "Description"
+      :widths: 15, 10, 30
+
+      "Albatross", 2.99, "On a stick!"
+      "Crunchy Frog", 1.49, "If we took the bones out, it wouldn't be
+      crunchy, now would it?"
+      "Gannet Ripple", 1.99, "On a stick!"
+
+
+.. csv-table:: Frozen Delights!
+   :header: "Treat", "Quantity", "Description"
+   :widths: 15, 10, 30
+
+   "Albatross", 2.99, "On a stick!"
+   "Crunchy Frog", 1.49, "If we took the bones out, it wouldn't be
+   crunchy, now would it?"
+   "Gannet Ripple", 1.99, "On a stick!"
+
 
 Advertencia
 -----------
@@ -211,6 +247,7 @@ Terminal UNIX
 
       bin/plonectl fg
 
+
 Python
 ------
 
@@ -221,6 +258,7 @@ Python
       if "foo" == "bar":
           # This is Python code
           pass
+
 
 Python interactivo
 ------------------
@@ -239,6 +277,16 @@ Python interactivo
       Traceback (most recent call last):
       File "<stdin>", line 1, in <module>
       ZeroDivisionError: integer division or modulo by zero
+
+
+Python desde un archivo
+-----------------------
+
+.. code-block:: rst
+
+   .. literalinclude:: ../../code/factorial.py
+      :lines: 12-28
+      :emphasize-lines: 10
 
 XML
 ---
@@ -300,6 +348,19 @@ Json
       }
 
 
+HTML crudo
+----------
+
+.. code-block:: rst
+
+   .. raw:: html
+
+   <H1>HOLA</H1>
+
+.. raw:: html
+
+   <H1>HOLA</H1>
+
 
 Imagenes
 --------
@@ -308,6 +369,22 @@ Imagenes
 
    .. image:: ../_static/plone_donut.png
       :alt: Picture of Plone Donut
+
+Latex
+-----
+
+.. code-block:: rst
+
+   $$n! = n \\cdot (n - 1) \\cdot (n - 2) \\cdots 3 \\cdot 2 \\cdot 1$$
+
+O en linea:
+
+.. code-block:: rst
+
+   Por ejemplo  :math:`6! = 6 \cdot 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1 = 720`
+
+Por ejemplo  :math:`6! = 6 \cdot 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1 = 720`
+
 
 Bibliografía
 ============

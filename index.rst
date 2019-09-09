@@ -92,7 +92,6 @@ Development tools and Administrations tools
     chrome
     squid
     bibtex
-    about
 
 Web Development
 ===============
@@ -102,3 +101,11 @@ Web Development
 
     html5
     css/resilient
+
+Convevniones
+============
+
+.. toctree::
+    :maxdepth: 2
+
+    about
