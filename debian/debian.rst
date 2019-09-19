@@ -50,6 +50,14 @@ Procesos muertos
     $ ps -ef | grep defunct
 
 
+Mensajes de inicio
+------------------
+
+.. code-block:: shell
+
+    $ sudo journalctl
+
+
 Cron
 ----
 
@@ -159,35 +167,76 @@ fail2ban
 .. code-block:: shell
 
     $ sudo apt-get update
-    $ sudo apt-get install fail2ban
+    $ sudo apt-get install fail2ban=0.10.2-2~bpo9+1
 
 .. code-block:: shell
 
     $ sudo service fail2ban status
-    ● fail2ban.service - LSB: Start/stop fail2ban
-       Loaded: loaded (/etc/init.d/fail2ban)
-       Active: active (running) since Mon 2018-07-23 10:22:54 EDT; 3 weeks 3 days ago
+    ● fail2ban.service - Fail2Ban Service
+       Loaded: loaded (/lib/systemd/system/fail2ban.service; enabled; vendor preset: enabled)
+       Active: active (running) since Wed 2019-09-18 19:00:53 CDT; 16h ago
+         Docs: man:fail2ban(1)
+      Process: 874 ExecStartPre=/bin/mkdir -p /var/run/fail2ban (code=exited, status=0/SUCCESS)
+     Main PID: 884 (fail2ban-server)
+        Tasks: 3 (limit: 4915)
        CGroup: /system.slice/fail2ban.service
-               └─1113 /usr/bin/python /usr/bin/fail2ban-server -b -s /var/run/fail2ban/fail2ban.sock -p /var/run/fail2ban/fail2ban.pid
+               └─884 /usr/bin/python3 /usr/bin/fail2ban-server -xf start
+
+.. code-block:: shell
+
     $ sudo fail2ban-client status
     Status
     |- Number of jail:  1
-    `- Jail list:       ssh
-    $ sudo fail2ban-client status ssh
-    Status for the jail: ssh
-    |- filter
-    |  |- File list:    /var/log/auth.log
+    `- Jail list:       sshd
+
+
+.. code-block:: shell
+
+    $ sudo fail2ban-client status sshd
+    Status for the jail: sshd
+    |- Filter
     |  |- Currently failed: 0
-    |  `- Total failed: 16780
-    `- action
-       |- Currently banned: 0
-       |  `- IP list:
-       `- Total banned: 162
+    |  |- Total failed: 637
+    |  `- File list:  /var/log/auth.log
+    `- Actions
+       |- Currently banned: 239
+       |- Total banned: 294
+       `- Banned IP list: 117.218.63.25
+
 
 .. code-block:: shell
 
     $ cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
 
+En debian hay dos archivos de configuracion :file:`/etc/fail2ban/jail.conf` y  :file:`/etc/fail2ban/jail.d/defaults-debian.conf`
+
+Nuestra configuración la guardamos en un tercer archivo para que no se pierdan los cambios en actualizaciones.
+
+
+.. code-block:: shell
+
+    $ cp /etc/fail2ban/jail.d/defaults-debian.conf /etc/fail2ban/jail.d/defaults-debian.local
+
+
+.. code-block:: ini
+
+    [DEFAULT]
+    ignoreip = 127.0.0.1/8 117.248.63.17 117.248.63.25
+    destemail = myemail@gmail.com
+
+    # Email address of the sender
+    sender = fail2ban@sender.com
+
+    # Name of the sender for mta actions
+    sendername = Fail2Ban
+
+    action = %(action_mw)s
+
+    [sshd]
+    enabled = true
+    bantime  = 86400
+    findtime = 600
+    maxretry = 3
 
 
 Plone
