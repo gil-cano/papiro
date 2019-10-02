@@ -1,12 +1,15 @@
 .. _brew:
 
-====
-Brew
-====
+========
+Homebrew
+========
 
 .. topic:: Description
 
    This text will go to Plone's pages description field.
+
+`Homebrew <https://brew.sh>`_
+
 
 Instalación
 -----------
@@ -50,7 +53,7 @@ En macOS necesitasmos instalar algunas dependencias con Homebrew:
 .. code-block:: shell
 
    $ brew install openssl@1.1
-   ==> Pouring openssl@1.1-1.1.1.mojave.bottle.tar.gz
+   ==> Pouring openssl@1.1-1.1.1d.mojave.bottle.tar.gz
    ==> Caveats
    A CA file has been bootstrapped using certificates from the system
    keychain. To add additional certificates, place .pem files in
@@ -90,19 +93,21 @@ Antes de compilar python debemos instalar ``gdbm`` para tener disponible ese mod
    $ brew install zlib readline jpeg libpng libyaml
 
 
-   ==> Pouring zlib-1.2.11.el_capitan.bottle.tar.gz
+   ==> Pouring zlib-1.2.11.mojave.bottle.tar.gz
 
    For compilers to find this software you may need to set:
-       LDFLAGS:  -L/usr/local/opt/zlib/lib
-       CPPFLAGS: -I/usr/local/opt/zlib/include
+       export LDFLAGS="-L/usr/local/opt/zlib/lib"
+       export CPPFLAGS="-I/usr/local/opt/zlib/include"
 
-
-   ==> Pouring readline-7.0.3_1.el_capitan.bottle.tar.gz
+   ==> Pouring readline-8.0.1.mojave.bottle.tar.gz
 
    For compilers to find this software you may need to set:
-       LDFLAGS:  -L/usr/local/opt/readline/lib
-       CPPFLAGS: -I/usr/local/opt/readline/include
+       export LDFLAGS="-L/usr/local/opt/readline/lib"
+       export CPPFLAGS="-I/usr/local/opt/readline/include"
 
+.. code-block:: shell
+
+   $ brew install gettext little-cms2
 
 Para ``pdftotext``
 
@@ -110,7 +115,7 @@ Para ``pdftotext``
 
    $ brew install poppler
 
-   ==> Pouring gettext-0.19.8.1.mojave.bottle.tar.gz
+   ==> Pouring gettext-0.20.1.mojave.bottle.tar.gz
    ==> Caveats
    gettext is keg-only, which means it was not symlinked into /usr/local,
    because macOS provides the BSD gettext library & some software gets confused if both are in the library path.
