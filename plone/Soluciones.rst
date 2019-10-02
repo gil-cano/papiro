@@ -12,3 +12,14 @@ You must do :code:`<include package="plone.rest" file="meta.zcml"/>` before you 
 So: add the line :code:`<include package="plone.rest" file="meta.zcml"/>` before the usage of :command:`plone:service`.
 
 * `How to resolve ConfigurationError error 'Unknown directive' in Plone? <https://stackoverflow.com/questions/23533465/how-to-resolve-configurationerror-error-unknown-directive-in-plone>`_
+
+
+MIME types
+----------
+
+.. code-block:: python
+
+   >>> import mimetypes as pymimetypes
+   >>> len(pymimetypes.types_map)
+   569
+   >>> pymimetypes.types_map.keys()
