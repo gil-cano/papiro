@@ -154,6 +154,57 @@ Para agregar gettext al path modificamos el archivo .zshrc
 
    $ brew install wv
 
+
+Instalamos Command Line Tools
+
+.. code-block:: shell
+
+    $ sudo xcode-select -s /Library/Developer/CommandLineTools
+
+
+.. code-block:: shell
+
+   [buildout]
+   extends = 
+      buildout.cfg
+      src/pdbsublimetext.cfg
+
+   parts =
+       ${buildout:base-parts}
+   #    ${buildout:readline-parts}
+   #    ${buildout:zlib-parts}
+   #    ${buildout:python24-parts}
+       ${buildout:python27-parts}
+       ${buildout:python37-parts}
+       ${buildout:python38-parts}
+       ${buildout:links-parts}
+       python-2.7-pdbsublimetext
+
+   [python-2.4-build:default]
+   environment =
+       LDFLAGS=-L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/readline/lib
+       CPPFLAGS=-I/usr/local/opt/openssl@1.1/include -I/usr/local/opt/zlib/include -I/usr/local/opt/readline/include
+
+   [python-2.7-build:default]
+   environment =
+       LDFLAGS=-L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/readline/lib
+       CPPFLAGS=-I/usr/local/opt/openssl@1.1/include -I/usr/local/opt/zlib/include -I/usr/local/opt/readline/include
+
+   [python-3.7-build:default]
+   environment =
+       LDFLAGS=-L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/readline/lib
+       CPPFLAGS=-I/usr/local/opt/openssl@1.1/include -I/usr/local/opt/zlib/include -I/usr/local/opt/readline/include
+
+   [python-3.8-build:default]
+   environment =
+       LDFLAGS=-L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/readline/lib
+       CPPFLAGS=-I/usr/local/opt/openssl@1.1/include -I/usr/local/opt/zlib/include -I/usr/local/opt/readline/include
+
+   [install-links]
+   prefix = /usr/local
+
+
+
 .. code-block:: shell
 
    $ brew install wget pandoc gnupg
