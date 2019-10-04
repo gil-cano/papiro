@@ -72,6 +72,19 @@ En macOS necesitasmos instalar algunas dependencias con Homebrew:
      export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib"
      export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include"
 
+Para Python 2.4
+
+.. code-block:: shell
+
+   $ brew install openssl
+   If you need to have openssl first in your PATH run:
+     echo 'export PATH="/usr/local/opt/openssl/bin:$PATH"' >> ~/.bash_profile
+
+   For compilers to find openssl you may need to set:
+     export LDFLAGS="-L/usr/local/opt/openssl/lib"
+     export CPPFLAGS="-I/usr/local/opt/openssl/include"
+
+
 Antes de compilar python debemos instalar ``gdbm`` para tener disponible ese modulo.
 
 ``gdbm`` es necesario para usar el profiler de Zope (Control_Panel/DebugInfo)
@@ -182,9 +195,9 @@ Instalamos Command Line Tools
 
    [python-2.4-build:default]
    environment =
-       LDFLAGS=-L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/readline/lib
-       CPPFLAGS=-I/usr/local/opt/openssl@1.1/include -I/usr/local/opt/zlib/include -I/usr/local/opt/readline/include
-
+       LDFLAGS=-L/usr/local/opt/openssl/lib
+       CPPFLAGS=-I/usr/local/opt/openssl/include
+    
    [python-2.7-build:default]
    environment =
        LDFLAGS=-L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/readline/lib
