@@ -48,6 +48,8 @@ información de formula::
 Compilar `buildout.python <https://github.com/collective/buildout.python>`_ y Plone
 -----------------------------------------------------------------------------------
 
+Necesitamos instalar Command_Line_Tools (para compilar python2.4 la version 10.14_for_Xcode_10.3) 
+
 En macOS necesitasmos instalar algunas dependencias con Homebrew:
 
 .. code-block:: shell
