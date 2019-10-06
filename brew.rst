@@ -174,8 +174,16 @@ Instalamos Command Line Tools
 
 .. code-block:: shell
 
-    $ sudo xcode-select -s /Library/Developer/CommandLineTools
+    #$ sudo xcode-select -s /Library/Developer/CommandLineTools
 
+
+Para python 2.4 necesitas zlib en /usr/include
+
+.. code-block:: shell
+
+    $ sudo installer -pkg /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg -target /
+
+El archivo local.cfg queda como sigue:
 
 .. code-block:: shell
 
@@ -186,29 +194,24 @@ Instalamos Command Line Tools
 
    parts =
        ${buildout:base-parts}
-   #    ${buildout:readline-parts}
-   #    ${buildout:zlib-parts}
-   #    ${buildout:python24-parts}
+       ${buildout:readline-parts}
+       ${buildout:zlib-parts}
+       ${buildout:python24-parts}
        ${buildout:python27-parts}
        ${buildout:python37-parts}
        ${buildout:python38-parts}
        ${buildout:links-parts}
        python-2.7-pdbsublimetext
 
-   [python-2.4-build:default]
-   environment =
-       LDFLAGS=-L/usr/local/opt/openssl/lib
-       CPPFLAGS=-I/usr/local/opt/openssl/include
-    
    [python-2.7-build:default]
    environment =
-       LDFLAGS=-L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/readline/lib
-       CPPFLAGS=-I/usr/local/opt/openssl@1.1/include -I/usr/local/opt/zlib/include -I/usr/local/opt/readline/include
+       LDFLAGS=-L/usr/local/opt/zlib/lib -L/usr/local/opt/readline/lib
+       CPPFLAGS=-I/usr/local/opt/zlib/include -I/usr/local/opt/readline/include
 
    [python-3.7-build:default]
    environment =
-       LDFLAGS=-L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/readline/lib
-       CPPFLAGS=-I/usr/local/opt/openssl@1.1/include -I/usr/local/opt/zlib/include -I/usr/local/opt/readline/include
+       LDFLAGS=-L/usr/local/opt/zlib/lib -L/usr/local/opt/readline/lib
+       CPPFLAGS=-I/usr/local/opt/zlib/include -I/usr/local/opt/readline/include
 
    [python-3.8-build:default]
    environment =
@@ -217,8 +220,6 @@ Instalamos Command Line Tools
 
    [install-links]
    prefix = /usr/local
-
-
 
 .. code-block:: shell
 
