@@ -172,16 +172,18 @@ Para agregar gettext al path modificamos el archivo .zshrc
 
 Instalamos Command Line Tools
 
-.. code-block:: shell
-
-    #$ sudo xcode-select -s /Library/Developer/CommandLineTools
-
-
 Para python 2.4 necesitas zlib en /usr/include
 
 .. code-block:: shell
 
     $ sudo installer -pkg /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg -target /
+
+.. code-block:: shell
+
+    $ git clone https://github.com/collective/buildout.python.git
+    $ cd buildout.python
+    $ python bootstrap.py
+    $ ./bin/buildout -c local.cfg
 
 El archivo local.cfg queda como sigue:
 
