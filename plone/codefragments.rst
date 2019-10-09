@@ -41,7 +41,7 @@ Se declara la interfaz en zcml.
 
     <interface interface="mfabrik.app.interfaces.promotion.IPromotionsPage" />
 
-Se define la interfaz en un .py
+Se define la interfaz en un :file:`.py`
 
 En el ZMI se posiciona en el objeto y en el tab de Interfaces se seleccíona la nueva.
 
@@ -51,6 +51,8 @@ En el ZMI se posiciona en el objeto y en el tab de Interfaces se seleccíona la 
 Obtener el path del archivo
 ---------------------------
 
+:file:`__file__` hace referecia al archivo
+
 .. code-block:: python
 
     # Augment known mime-types.
@@ -58,11 +60,27 @@ Obtener el path del archivo
     add_files([os.path.join(here, 'mime.types')])
 
 
+Buscar Missing values
+---------------------
 
-.. code-block:: xml
+.. code-block:: python
 
-    <interface interface="mfabrik.app.interfaces.promotion.IPromotionsPage" />
+    from BTrees.IIBTree import difference
+    from BTrees.IIBTree import IISet
+    from plone import api
 
+    catalog = api.portal.get_tool(name='portal_catalog')
+    date_index = catalog._catalog.getIndex('fecha_termino')
+    date_referenced = IISet(date_index.referencedObjects())
+    other_index = catalog._catalog.getIndex('sponsor')
+    other_referenced = IISet(other_index.referencedObjects())
+    missing = difference(other_referenced, date_referenced)
+    paths = [catalog.getpath(cat_record) for cat_record in missing]
+
+* `How can I look for objects with missing value or None as key? <https://stackoverflow.com/questions/11216472/how-can-i-look-for-objects-with-missing-value-or-none-as-key>`_
+
+
+----
 
 * `Expressions <https://docs.plone.org/develop/plone/functionality/expressions.html>`_
 * `Static resources <https://docs.plone.org/external/plone.app.dexterity/docs/advanced/static-resources.html>`_
