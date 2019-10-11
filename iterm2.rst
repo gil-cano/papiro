@@ -56,6 +56,14 @@ Nerd Fonts
 Descargamos el tipo de letra `SourceCodePro` y en la carpeta :file:`SourceCodePro` damos doble click al archivo que queremos instalar.
 
 
+Tambien se pueden instalar con brew
+.. code-block:: shell
+
+   $ brew tap homebrew/cask-fonts
+   $ brew cask install font-sourcecodepro-nerd-font-mono
+   $ brew cask list
+   $ brew cask unistall font-sourcecodepro-nerd-font
+
 En iTerm2 :menuselection:`Preferences --> Profiles --> Text` seleccionamos el tipo de letra.
 
 .. image:: _static/iterm2font.png
