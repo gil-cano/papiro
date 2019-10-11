@@ -57,6 +57,7 @@ Descargamos el tipo de letra `SourceCodePro` y en la carpeta :file:`SourceCodePr
 
 
 Tambien se pueden instalar con brew
+
 .. code-block:: shell
 
    $ brew tap homebrew/cask-fonts
