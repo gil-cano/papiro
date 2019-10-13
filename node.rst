@@ -68,7 +68,7 @@ grunt-cli
 Manejo de paquetes
 ------------------
 
-Para crear un archivo package.json ejecutamos:
+Para crear un nuevo paquete necesitamos un archivo :file:`package.json` ejecutamos:
 
 
 .. code-block:: console
@@ -76,29 +76,27 @@ Para crear un archivo package.json ejecutamos:
     $ npm init
     This utility will walk you through creating a package.json file.
     ...
-    name: (voronoi)
+    package name: (myapp)
     version: (1.0.0)
-    description: voronoi diagram
+    description:
     entry point: (index.js)
     test command:
     git repository:
-    keywords: voronoi
-    license: (ISC) MIT
-    About to write to /Users/gil/projects/javascript/voronoi/package.json:
+    keywords:
+    author:
+    license: (ISC)
+    About to write to /Users/gil/projects/javascript/myapp/package.json:
 
     {
-      "name": "voronoi",
+      "name": "myapp",
       "version": "1.0.0",
-      "description": "voronoi diagram",
+      "description": "",
       "main": "index.js",
       "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
       },
-      "keywords": [
-        "voronoi"
-      ],
-      "author": "gilo <gil.cano@gmail.com>",
-      "license": "MIT"
+      "author": "",
+      "license": "ISC"
     }
 
 
