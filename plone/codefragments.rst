@@ -59,6 +59,9 @@ Obtener el path del archivo
     here = os.path.dirname(os.path.abspath(__file__))
     add_files([os.path.join(here, 'mime.types')])
 
+.. code-block:: python
+
+    client_path = os.path.abspath(os.curdir)
 
 Buscar Missing values
 ---------------------
