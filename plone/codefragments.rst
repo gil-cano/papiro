@@ -83,6 +83,26 @@ Buscar Missing values
 * `How can I look for objects with missing value or None as key? <https://stackoverflow.com/questions/11216472/how-can-i-look-for-objects-with-missing-value-or-none-as-key>`_
 
 
+Operaciónes con fechas
+----------------------
+
+
+.. code-block:: python
+
+    from datetime import datetime
+    from datetime import timedelta
+
+    timeout = 60 * 60 * 12
+
+    token['time'] = time.time()
+
+    def _valid_token(token):
+        expdate = datetime.utcfromtimestamp(token['time']) + timedelta(seconds=timeout)
+        return datetime.utcnow() < expdate
+
+
+
+
 ----
 
 * `Expressions <https://docs.plone.org/develop/plone/functionality/expressions.html>`_
