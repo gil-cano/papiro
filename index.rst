@@ -71,27 +71,27 @@ Development tools and Administrations tools
 .. toctree::
     :maxdepth: 2
 
+    bibtex
+    chrome
+    docker
+    firefox
+    gpg
+    haproxy
+    brew
     iterm2
+    jenkins/jenkins
+    munin
+    mysql
+    node
+    nginx/nginx
+    postgres
+    squid
     sublimeText3
     sublimeText2
-    nginx/nginx
-    jenkins/jenkins
     varnishcache
     webpagetest
-    munin
-    brew
-    haproxy
     vagrant
-    node
-    gpg
-    docker
-    mysql
-    postgres
-    style-guide
-    firefox
-    chrome
-    squid
-    bibtex
+
 
 Web Development
 ===============
@@ -101,6 +101,8 @@ Web Development
 
     html5
     css/resilient
+    style-guide
+
 
 Convevniones
 ============
