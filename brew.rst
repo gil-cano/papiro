@@ -185,6 +185,13 @@ Para python 2.4 necesitas zlib en /usr/include
     $ python bootstrap.py
     $ ./bin/buildout -c local.cfg
 
+Si hay probelmas con bootstrap.py cambiar linea 74 por  
+
+.. code-block:: python
+    
+    exec urllib2.urlopen('http://132.248.17.205/listas/ez_setup.py'
+
+
 El archivo local.cfg queda como sigue:
 
 .. code-block:: shell
