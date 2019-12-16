@@ -62,6 +62,8 @@ Tambien se pueden instalar con brew
 
    $ brew tap homebrew/cask-fonts
    $ brew cask install font-sourcecodepro-nerd-font-mono
+   $ brew cask install font-meslo-nerd-font-mono
+   $ brew cask install font-meslo-for-powerline
    $ brew cask list
    $ brew cask unistall font-sourcecodepro-nerd-font
 
