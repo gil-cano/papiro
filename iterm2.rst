@@ -77,7 +77,7 @@ Para probar algunos caracteres en la terminal:
 
 .. code-block:: shell
 
-   $ echo "\ue0b0 \u00b1 \ue0a0 \u27a6 \u2718 \u26a1 \u2699". The result should look like this:
+   $ echo "\ue0b0 \u00b1 \ue0a0 \u27a6 \u2718 \u26a1 \u2699"
 
 
 
