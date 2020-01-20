@@ -91,6 +91,7 @@ Development tools and Administrations tools
     varnishcache
     webpagetest
     vagrant
+    vscode
 
 
 Web Development
