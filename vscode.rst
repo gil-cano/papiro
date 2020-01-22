@@ -13,4 +13,4 @@ Referencias
 
 `Visual Studio Code on macOS <https://code.visualstudio.com/docs/setup/mac>`_
 
-`Plone <http://www.martinaspeli.net/articles/sublime-text-2-for-zope-and-plone>`_
+`reStructuredText Extension for Visual Studio Code <https://docs.restructuredtext.net>`_
