@@ -101,7 +101,22 @@ Operaciónes con fechas
         return datetime.utcnow() < expdate
 
 
+Creación de Objetos con plone.api
+---------------------------------
 
+Si pasamos más argumentos que el Titulo, debemos notificar que el elemeto cambio.
+
+.. code-block:: python
+
+    from zope.event import notify
+    from zope.lifecycleevent import ObjectModifiedEvent
+
+    obj = api.content.create(
+        type='matem.sis.studentrecord',
+        title=b.id,
+        name=person.firstName,
+        lastname=person.lastName)
+    notify(ObjectModifiedEvent(obj))
 
 ----
 
