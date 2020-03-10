@@ -1,17 +1,33 @@
 Visual studio Code
 ==================
 
-Iniciando desde la linea de comandos
-------------------------------------
 
-* Launch VS Code.
-* Open the Command Palette (F1) and type 'shell command' to find the Shell Command: Install 'code' command in PATH command.
-* Restart the terminal for the new $PATH value to take effect. You'll be able to type 'code .' in any folder to start editing files in that folder.
+Línea de comandos en macOS
+--------------------------
+
+`Visual Studio Code <https://code.visualstudio.com/>`_ incluye el comando :command:`code`, para abrir archivos desde una terminal.
+
+
+ * Inicia VS Code.
+ * Abrimos la paleta de comandos con ``F1`` o ``⌘ + ⇧ + P`` y escribimos *shell command* para encontrar el comando *Shell Command: Install 'code' command in PATH*
+ * Reiniciamos la terminal para que el nuevo $PATH tome efecto.
+
+
+.. note::
+
+    ========  =============================================
+    F1        paleta de comandos
+    ⌘ ⇧ P     paleta de comandos
+    ========  =============================================
 
 
 
 Python en Visual Studio Code
 ----------------------------
+
+reStructuredText Extension for Visual Studio Code
+-------------------------------------------------
+
 
 
 
