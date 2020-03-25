@@ -48,6 +48,8 @@ información de formula::
 Compilar `buildout.python <https://github.com/collective/buildout.python>`_ y Plone
 -----------------------------------------------------------------------------------
 
+MacOS Mojave (10.14.6)
+
 Necesitamos instalar Command_Line_Tools (para compilar python2.4 la version 10.14_for_Xcode_10.3) 
 
 En macOS necesitasmos instalar algunas dependencias con Homebrew:
@@ -182,7 +184,7 @@ Para python 2.4 necesitas zlib en /usr/include
 
     $ git clone https://github.com/collective/buildout.python.git
     $ cd buildout.python
-    $ python bootstrap.py
+    $ /usr/bin/python bootstrap.py
     $ ./bin/buildout -c local.cfg
 
 Si hay probelmas con bootstrap.py cambiar linea 74 por  
@@ -196,39 +198,71 @@ El archivo local.cfg queda como sigue:
 
 .. code-block:: shell
 
-   [buildout]
-   extends = 
+    [buildout]
+    index = https://pypi.org/simple/
+    extends =
       buildout.cfg
       src/pdbsublimetext.cfg
 
-   parts =
-       ${buildout:base-parts}
-       ${buildout:readline-parts}
-       ${buildout:zlib-parts}
-       ${buildout:python24-parts}
-       ${buildout:python27-parts}
-       ${buildout:python37-parts}
-       ${buildout:python38-parts}
-       ${buildout:links-parts}
-       python-2.7-pdbsublimetext
+    parts =
+        ${buildout:base-parts}
+        ${buildout:readline-parts}
+        ${buildout:zlib-parts}
+        ${buildout:python24-parts}
+        ${buildout:python27-parts}
+        ${buildout:python37-parts}
+        ${buildout:python38-parts}
+        ${buildout:links-parts}
+    #    python-2.7-pdbsublimetext
 
-   [python-2.7-build:default]
-   environment =
-       LDFLAGS=-L/usr/local/opt/zlib/lib -L/usr/local/opt/readline/lib
-       CPPFLAGS=-I/usr/local/opt/zlib/include -I/usr/local/opt/readline/include
 
-   [python-3.7-build:default]
-   environment =
-       LDFLAGS=-L/usr/local/opt/zlib/lib -L/usr/local/opt/readline/lib
-       CPPFLAGS=-I/usr/local/opt/zlib/include -I/usr/local/opt/readline/include
+    [python-2.7-build:default]
+    environment =
+        LDFLAGS=-L/usr/local/opt/zlib/lib -L/usr/local/opt/readline/lib
+        CPPFLAGS=-I/usr/local/opt/zlib/include -I/usr/local/opt/readline/include
 
-   [python-3.8-build:default]
-   environment =
-       LDFLAGS=-L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/readline/lib
-       CPPFLAGS=-I/usr/local/opt/openssl@1.1/include -I/usr/local/opt/zlib/include -I/usr/local/opt/readline/include
+    [python-3.7-build:default]
+    environment =
+        LDFLAGS=-L/usr/local/opt/zlib/lib -L/usr/local/opt/readline/lib
+        CPPFLAGS=-I/usr/local/opt/zlib/include -I/usr/local/opt/readline/include
 
-   [install-links]
-   prefix = /usr/local
+    [python-3.8-build:default]
+    environment =
+        LDFLAGS=-L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/readline/lib
+        CPPFLAGS=-I/usr/local/opt/openssl@1.1/include -I/usr/local/opt/zlib/include -I/usr/local/opt/readline/include
+
+    [install-links]
+    prefix = /Users/gil/local
+
+
+Para Python 2.4 modificamos el archivo src/python24.cfg
+
+.. code-block:: shell
+
+    [python-2.4]
+    recipe = plone.recipe.command
+    location = ${buildout:directory}/python-2.4
+    executable = ${python-2.4-build:executable}
+    easy_install = ${opt:location}/bin/easy_install-2.4
+    command =
+        ${:executable} ${buildout:python-buildout-root}/ez_setup-1.x.py
+        ${:easy_install} pip==1.1
+        ${python-2.4-virtualenv:output} --system-site-packages ${:location}
+        ${:location}/bin/pip install --pypi-url=https://pypi.python.org/simple docutils==0.15.2
+        ${:location}/bin/pip install --pypi-url=https://pypi.python.org/simple collective.dist
+    update-command = ${:command}
+    stop-on-error = yes
+
+Plone 2.1.4
+~~~~~~~~~~~
+
+.. code-block:: shell
+
+    cd plone2.1.4
+    /Users/user/buildout.python3.8/bin/virtualenv-2.4 .
+    bin/pip install -r requirements.txt --pypi-url=https://pypi.python.org/simple
+    bin/pip install --pypi-url=https://pypi.python.org/simple zc.buildout==1.4.2
+
 
 .. code-block:: shell
 
