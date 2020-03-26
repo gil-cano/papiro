@@ -178,6 +178,28 @@ La configuracíon de GitGutter se realiza en :menuselection:`Sublime Text --> Pr
     }
 
 
+Resaltar bloques
+----------------
+
+`BracketHighlighter <https://github.com/facelessuser/BracketHighlighter>`_ muestra alcance de bloques.
+
+
+Diferencias
+-----------
+
+`FileDiffs <https://github.com/colinta/SublimeFileDiffs>`_ muestra diferencias entre el archivo actual y otro.
+
+INI files
+---------
+
+`INI <https://github.com/clintberry/sublime-text-2-ini>`_ Colorea archivos INI.
+
+Mejoras a la barra lateral
+--------------------------
+`SideBarEnhancements <https://github.com/titoBouzout/SideBarEnhancements>`_
+
+`SyncedSideBar <https://github.com/TheSpyder/SyncedSideBar>`_
+
 
 Autocompletar código python
 ---------------------------
@@ -557,11 +579,6 @@ El archivo a modificar es :menuselection:`Preferences --> Package Settings --> T
         "trailing_spaces_trim_on_save": true,
     }
 
-Resaltar bloques
-----------------
-
-`BracketHighlighter <https://github.com/facelessuser/BracketHighlighter>`_ muestra alcance de bloques.
-
 
 EditorConfig
 ------------
@@ -576,11 +593,6 @@ Debug de Sesión
 .. code-block:: console
 
     (projectenv)$ pip install PDBSublimeTextSupport
-
-
-Mejoras a la barra lateral
---------------------------
-`SideBarEnhancements <https://github.com/titoBouzout/SideBarEnhancements>`_
 
 
 Theme
