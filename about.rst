@@ -167,6 +167,14 @@ Tablas en lista
    "Gannet Ripple", 1.99, "On a stick!"
 
 
+
+Admonitions
+-----------
+"attention", "caution", "danger", "error", "hint", "important", "note", "tip", "warning", "admonition"
+
+`Admonitions <https://docutils.sourceforge.io/docs/ref/rst/directives.html#admonitions>`_
+
+
 Advertencia
 -----------
 
