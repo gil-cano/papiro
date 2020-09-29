@@ -180,6 +180,10 @@ Para python 2.4 necesitas zlib en /usr/include
 
     $ sudo installer -pkg /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg -target /
 
+.. warning:
+  
+  Para catlina y zlib problem ver https://akrabat.com/installing-pillow-on-macos-10-15-calatalina/
+
 .. code-block:: shell
 
     $ git clone https://github.com/collective/buildout.python.git
