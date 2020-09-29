@@ -183,6 +183,10 @@ Para python 2.4 necesitas zlib en /usr/include
 .. warning:
   
   Para catlina y zlib problem ver https://akrabat.com/installing-pillow-on-macos-10-15-calatalina/
+  
+.. code-block:: shell
+
+   export CPATH=`xcrun --show-sdk-path`/usr/include
 
 .. code-block:: shell
 
