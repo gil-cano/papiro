@@ -1,6 +1,54 @@
 Node.js
 =======
 
+Primero instalamos un manejador de versiones de node (`node version manager <https://github.com/nvm-sh/nvm>`_).
+
+.. code-block:: shell
+
+    $ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh | bash
+    => Downloading nvm from git to '/Users/gil/.nvm'
+    => Cloning into '/Users/gil/.nvm'...
+    => Appending nvm source string to /Users/gil/.zshrc
+    => Appending bash_completion source string to /Users/gil/.zshrc
+    => Close and reopen your terminal to start using nvm or run the following to use it now:
+
+    export NVM_DIR="$HOME/.nvm"
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
+Instlamos la ultima version de node
+
+.. code-block:: shell
+
+    $ nvm install node
+
+la versión de soprte a largo plazo - long term support (LTS)
+
+.. code-block:: shell
+
+    $ nvm install --lts
+
+o una versión en particular
+
+.. code-block:: shell
+
+    $ nvm install 12.18.4
+
+
+Instalamos el manejador de paquetes  `yarn <https://yarnpkg.com/>`_
+
+.. code-block:: shell
+
+    $ curl -o- -L https://yarnpkg.com/install.sh | bash
+    > Extracting to ~/.yarn...
+    > Adding to $PATH...
+    > We've added the following to your /Users/gil/.zshrc
+    > If this isn't the profile of your current shell then please add the following to your correct profile:
+
+    export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+
 Instalación
 -----------
 
@@ -120,8 +168,9 @@ Si tenemos un archivo package.json y queremos instalar sus dependencias ejecutam
 
     $ npm install
 
-
+`How to install Node.js <https://nodejs.dev/learn/how-to-install-nodejs>`_
 
 `Creating Node.js modules <https://docs.npmjs.com/getting-started/creating-node-modules>`_
 
 `Setting up a Node development environment <https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment>`_
+

@@ -1,5 +1,3 @@
-.. _iterm2:
-
 iTerm2
 ======
 
@@ -10,18 +8,19 @@ Instalación
 
 Descarga la aplicación y arrastrala a la carpeta :file:`Applications`
 
-======  =========================================================
+======  =====================================
+⌘ ⏎     pantalla completa
 ⌘ D     divide la terminal verticalmente
 ⌘ ⇧ D   divide la terminal horizontalmente
 ⌘ ⌥ UP  cambia de terminal
 ⌘ /      resalta la posición del cursos
-======  =========================================================
+======  =====================================
 
 
 Ventanas y Pestañas
 -------------------
 
-En `iTerm2 <http://www.iterm2.com/>`_ podemos configurar en que directorio se abriran las nuevas ventanas o pestañas. 
+En `iTerm2 <http://www.iterm2.com/>`_ podemos configurar en que directorio se abriran las nuevas ventanas o pestañas.
 
 .. image:: _static/working_directory.png
    :alt: iTerm2 (Locale)
@@ -111,7 +110,7 @@ Hay dos maneras de solucionar esto:
     export LC_ALL=en_US.UTF-8
     export LANG=en_US.UTF-8
 
-O en :menuselection:`Preferencias --> Perfil --> Terminal`  solicitar que no se asigne la variable de localización de manera automática (ver imagen) 
+O en :menuselection:`Preferencias --> Perfil --> Terminal`  solicitar que no se asigne la variable de localización de manera automática (ver imagen)
 
 
 .. image:: _static/item2_locale.png
@@ -125,7 +124,7 @@ Módificaciones al PATH
 gettetx
 ~~~~~~~
 
-Para agregar :command:`gettext` al path modificamos el archivo :file:`.bash_profile` o el archivo :file:`.zshrc` 
+Para agregar :command:`gettext` al path modificamos el archivo :file:`.bash_profile` o el archivo :file:`.zshrc`
 
 .. code-block:: shell
 

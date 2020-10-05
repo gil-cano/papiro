@@ -105,7 +105,7 @@ Web Development
     style-guide
 
 
-Convevniones
+Convenciones
 ============
 
 .. toctree::
