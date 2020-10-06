@@ -48,6 +48,7 @@ Instalamos el manejador de paquetes  `yarn <https://yarnpkg.com/>`_
 
     export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
+ver `React <https://training.plone.org/5/react/bootstrap.html>`_
 
 Instalación
 -----------
