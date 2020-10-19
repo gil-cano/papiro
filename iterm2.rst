@@ -188,7 +188,7 @@ Para actuzalizar a la ultima versión.
 
 .. code-block:: shell
 
-   $ upgrade_oh_my_zsh
+   $ omz update
 
 
 Temas
