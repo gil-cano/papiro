@@ -108,7 +108,7 @@ Si pasamos más argumentos que el Titulo, debemos notificar que el elemeto cambi
 
 .. code-block:: python
 
-    from zope.event import notify
+    from zope import event
     from zope.lifecycleevent import ObjectModifiedEvent
 
     obj = api.content.create(
@@ -116,10 +116,40 @@ Si pasamos más argumentos que el Titulo, debemos notificar que el elemeto cambi
         title=b.id,
         name=person.firstName,
         lastname=person.lastName)
-    notify(ObjectModifiedEvent(obj))
+    event.notify(ObjectModifiedEvent(obj))
+
+
+.. code-block:: python
+
+    obj.reindexObject()
+
+
+Revisar:
+
+.. code-block:: python
+
+    from zope import event
+    from zope.lifecycleevent import ObjectCreatedEvent
+    obj = plone.api.content.disable_roles_acquisition(obj=content)
+    event.notify(ObjectModifiedEvent(obj))
+
+
+Si se cambian los roles locales.
+
+.. code-block:: python
+
+    plone.api.user.grant_roles(
+        username=cvfolder.Login(), roles=[u'Reader'], obj=enviados)
+    enviados.reindexObjectSecurity()
+
+
+
+
+
 
 ----
 
 * `Expressions <https://docs.plone.org/develop/plone/functionality/expressions.html>`_
 * `Static resources <https://docs.plone.org/external/plone.app.dexterity/docs/advanced/static-resources.html>`_
 * `CSS <https://docs.plone.org/adapt-and-extend/theming/templates_css/css.html>`_
+* `Events <https://docs.plone.org/develop/addons/components/events.html>`_
