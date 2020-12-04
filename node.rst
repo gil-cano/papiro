@@ -5,7 +5,7 @@ Primero instalamos un manejador de versiones de node (`node version manager <htt
 
 .. code-block:: shell
 
-    $ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh | bash
+$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
     => Downloading nvm from git to '/Users/gil/.nvm'
     => Cloning into '/Users/gil/.nvm'...
     => Appending nvm source string to /Users/gil/.zshrc
@@ -16,6 +16,11 @@ Primero instalamos un manejador de versiones de node (`node version manager <htt
     [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
     [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+probamos
+
+.. code-block:: shell
+
+    $ nvm version
 
 Instlamos la ultima version de node
 
@@ -33,7 +38,14 @@ o una versión en particular
 
 .. code-block:: shell
 
-    $ nvm install 12.18.4
+    $ nvm install 14.15.1
+    $ nvm use 14.15.1
+
+probar:
+
+.. code-block:: shell
+
+    $ node -v
 
 
 Instalamos el manejador de paquetes  `yarn <https://yarnpkg.com/>`_
@@ -48,10 +60,31 @@ Instalamos el manejador de paquetes  `yarn <https://yarnpkg.com/>`_
 
     export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
+
+probar:
+
+.. code-block:: shell
+
+    $ yarn -v
+
+ver `Installing Volto <https://docs.voltocms.com/getting-started/install>`_
+
 ver `React <https://training.plone.org/5/react/bootstrap.html>`_
 
-Instalación
------------
+Volto
+-----
+
+.. code-block:: shell
+
+    $ npm install -g yo
+    $ npm install -g @plone/generator-volto
+    $ yo @plone/volto volto-project-myprojectname
+    $ cd volto-project-myprojectname
+    $ yarn start
+
+
+Instalación (deprecated)
+------------------------
 
 Instalamos `node.js <http://nodejs.org/>`_ (v10.16.3)
 
