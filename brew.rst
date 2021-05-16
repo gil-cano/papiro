@@ -48,7 +48,7 @@ información de formula::
 Compilar `buildout.python <https://github.com/collective/buildout.python>`_ y Plone
 -----------------------------------------------------------------------------------
 
-MacOS Mojave (10.14.6)
+MacOS Catalina (10.15.7)
 
 Necesitamos instalar Command_Line_Tools (para compilar python2.4 la version 10.14_for_Xcode_10.3) 
 
@@ -76,17 +76,20 @@ En macOS necesitasmos instalar algunas dependencias con Homebrew:
      export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib"
      export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include"
 
-Para Python 2.4
+Python 2.4  solo soporta hasta la versión 1.0.x de OpenSSL, pero homebrew removio la formula 1.0
 
 .. code-block:: shell
 
-   $ brew install openssl
-   If you need to have openssl first in your PATH run:
-     echo 'export PATH="/usr/local/opt/openssl/bin:$PATH"' >> ~/.bash_profile
+   $ brew install mjpieters/tap/openssl@1.0
+   If you need to have openssl@1.0 first in your PATH, run:
+     echo 'export PATH="/usr/local/opt/openssl@1.0/bin:$PATH"' >> ~/.zshrc
 
-   For compilers to find openssl you may need to set:
-     export LDFLAGS="-L/usr/local/opt/openssl/lib"
-     export CPPFLAGS="-I/usr/local/opt/openssl/include"
+   For compilers to find openssl@1.0 you may need to set:
+     export LDFLAGS="-L/usr/local/opt/openssl@1.0/lib"
+     export CPPFLAGS="-I/usr/local/opt/openssl@1.0/include"
+
+   For pkg-config to find openssl@1.0 you may need to set:
+     export PKG_CONFIG_PATH="/usr/local/opt/openssl@1.0/lib/pkgconfig"
 
 
 Antes de compilar python debemos instalar ``gdbm`` para tener disponible ese modulo.

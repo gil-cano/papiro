@@ -17,8 +17,11 @@ Línea de comandos en macOS
 
     ========  =============================================
     F1        paleta de comandos
-    ⌘ ⇧ P     paleta de comandos
+    ⇧ ⌘ P     paleta de comandos
     ========  =============================================
+
+.. image:: _static/vscode/vsc_shell.png
+   :alt: shell command
 
 `Visual Studio Code on macOS <https://code.visualstudio.com/docs/setup/mac>`_
 
@@ -38,13 +41,39 @@ Configuración
     pipenv install -python=python3.8
     code product
 
+
+.. image:: _static/vscode/vsc_interpreter.png
+   :alt: shell command
+
+
 .. warning::
 
     Abrimos un archivo :file:`.py`. La extensión de Python muestra un botón en la barra de estado donde podemos seleccinar el ambiente de Python a usar. Las preferencias son salvadas en el archivo :file:`.vscode/settings.json`.
 
 
-Testing
+Debug
+~~~~~
 
+Selecciona la linea en el gutter y presiona ``F5``
+
+
+.. image:: _static/vscode/vsc_debug.png
+   :alt: shell command
+
+La ejecusíon se detiene en la linea selecionada y aparece la barra de debug
+
+.. image:: _static/vscode/vsc_debugtoolbar.png
+   :alt: shell command
+
+
+La consola de debug
+
+.. image:: _static/vscode/vsc_debugconsole.png
+   :alt: shell command
+
+
+Testing
+~~~~~~~
 `pytest <https://code.visualstudio.com/docs/python/testing#_enable-a-test-framework>`_
 
 .. code-block:: shell
