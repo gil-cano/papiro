@@ -1,11 +1,32 @@
 Node.js
 =======
 
+
+Uninstall
+---------
+
+Borramos nvm de manera manual.:
+
+.. code-block:: shell
+
+    $ rm -rf "$NVM_DIR"
+
+Editamos ~/.bashrc y borramos las lineas:
+
+.. code-block:: shell
+
+    export NVM_DIR="$HOME/.nvm"
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+    [[ -r $NVM_DIR/bash_completion ]] && \. $NVM_DIR/bash_completion
+
+Instalación
+-----------
+
 Primero instalamos un manejador de versiones de node (`node version manager <https://github.com/nvm-sh/nvm>`_).
 
 .. code-block:: shell
 
-$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
+    $ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
     => Downloading nvm from git to '/Users/gil/.nvm'
     => Cloning into '/Users/gil/.nvm'...
     => Appending nvm source string to /Users/gil/.zshrc
@@ -16,23 +37,31 @@ $ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bas
     [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
     [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-probamos
+
+Para ver que version de nvm:
 
 .. code-block:: shell
 
-    $ nvm version
+    $ nvm --version
 
-Instlamos la ultima version de node
+Listar las versiones de node
 
 .. code-block:: shell
 
-    $ nvm install node
+    $ nvm ls
 
-la versión de soprte a largo plazo - long term support (LTS)
+Instalamos la ultima versión de soprte a largo plazo - long term support (LTS)
 
 .. code-block:: shell
 
     $ nvm install --lts
+
+
+o podemos Instalamos la ultima version de node
+
+.. code-block:: shell
+
+    $ nvm install node
 
 o una versión en particular
 
@@ -46,6 +75,10 @@ probar:
 .. code-block:: shell
 
     $ node -v
+
+.. code-block:: shell
+
+    $ nvm version
 
 
 Instalamos el manejador de paquetes  `yarn <https://yarnpkg.com/>`_
@@ -81,6 +114,28 @@ Volto
     $ yo @plone/volto volto-project-myprojectname
     $ cd volto-project-myprojectname
     $ yarn start
+
+
+
+Yeoman
+------
+
+.. code-block:: shell
+
+    $ npm install -g yo
+    $ npm install -g generator-webapp
+    $ mkdir mytodo && cd mytodo
+    $ yo webapp
+    $ npm start
+    $ npm run serve:test
+    $ npm run build
+
+
+Ir a la página del generador
+
+.. code-block:: shell
+
+    $ npm home generator-webapp
 
 
 Instalación (deprecated)
