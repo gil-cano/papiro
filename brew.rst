@@ -52,6 +52,12 @@ MacOS Catalina (10.15.7)
 
 Necesitamos instalar Command_Line_Tools (para compilar python2.4 la version 10.14_for_Xcode_10.3) 
 
+.. code-block:: shell
+
+   $ xcode-select -p
+   /Library/Developer/CommandLineTools
+
+
 En macOS necesitasmos instalar algunas dependencias con Homebrew:
 
 .. code-block:: shell
@@ -75,6 +81,9 @@ En macOS necesitasmos instalar algunas dependencias con Homebrew:
    For compilers to find openssl@1.1 you may need to set:
      export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib"
      export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include"
+
+   For pkg-config to find openssl@1.1 you may need to set:
+     export PKG_CONFIG_PATH="/usr/local/opt/openssl@1.1/lib/pkgconfig"
 
 Python 2.4  solo soporta hasta la versión 1.0.x de OpenSSL, pero homebrew removio la formula 1.0
 
@@ -105,8 +114,6 @@ Antes de compilar python debemos instalar ``gdbm`` para tener disponible ese mod
 .. code-block:: shell
 
    $ brew install xz
-
-
 
 .. code-block:: shell
 
@@ -177,55 +184,111 @@ Para agregar gettext al path modificamos el archivo .zshrc
 
 Instalamos Command Line Tools
 
-Para python 2.4 necesitas zlib en /usr/include
+Para compilar
 
 .. code-block:: shell
 
-    $ sudo installer -pkg /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg -target /
-
-.. warning:
-  
-  Para catlina y zlib problem ver https://akrabat.com/installing-pillow-on-macos-10-15-calatalina/
-  
-.. code-block:: shell
-
-   export CPATH=`xcrun --show-sdk-path`/usr/include
-
-.. code-block:: shell
-
-    $ git clone https://github.com/collective/buildout.python.git
-    $ cd buildout.python
-    $ /usr/bin/python bootstrap.py
-    $ ./bin/buildout -c local.cfg
-
-Si hay probelmas con bootstrap.py cambiar linea 74 por  
-
-.. code-block:: python
-    
-    exec urllib2.urlopen('http://132.248.17.205/listas/ez_setup.py'
+   $ git clone https://github.com/collective/buildout.python.git
+   $ cd buildout.python
+   $ /usr/bin/python bootstrap.py
+   $ ./bin/buildout -c local.cfg
 
 
 El archivo local.cfg queda como sigue:
 
 .. code-block:: shell
 
+    # This is here just for backward compatibility
     [buildout]
-    index = https://pypi.org/simple/
     extends =
-      buildout.cfg
-      src/pdbsublimetext.cfg
+        src/base.cfg
+        src/readline.cfg
+        src/zlib.cfg
+        src/openssl10.cfg
+        src/python24.cfg
+        src/python27.cfg
+        src/python37.cfg
+        src/python38.cfg
+        src/python39.cfg
+        src/links.cfg
 
     parts =
         ${buildout:base-parts}
         ${buildout:readline-parts}
         ${buildout:zlib-parts}
+        ${buildout:openssl10-parts}
         ${buildout:python24-parts}
         ${buildout:python27-parts}
         ${buildout:python37-parts}
         ${buildout:python38-parts}
+        ${buildout:python39-parts}
         ${buildout:links-parts}
-    #    python-2.7-pdbsublimetext
 
+    python-buildout-root = ${buildout:directory}/src
+
+    # we want our own eggs directory and nothing shared from a
+    # ~/.buildout/default.cfg to prevent any errors and interference
+    eggs-directory = eggs
+
+    [install-links]
+    prefix = /Users/gil/local
+
+
+Para Python 2.4 modificamos el archivo src/python24.cfg, en la parte python-2.4 comentamos la linea que instala docutils
+    
+    .. code-block:: shell
+    
+        [python-2.4]
+        recipe = plone.recipe.command
+        location = ${buildout:directory}/python-2.4
+        executable = ${python-2.4-build:executable}
+        easy_install = ${opt:location}/bin/easy_install-2.4
+        command =
+            ${:executable} ${buildout:python-buildout-root}/scripts/ez_setup-1.x.py
+            ${:easy_install} pip==1.1
+            ${python-2.4-virtualenv:output} --system-site-packages ${:location}
+            # ${:location}/bin/pip install --pypi-url=https://pypi.python.org/simple 'docutils<0.15dev' collective.dist
+        
+        update-command = ${:command}
+        stop-on-error = yes
+
+Instalamos docutils y collective.dist manualmente
+    
+    .. code-block:: shell
+        
+            $ python-2.4/bin/pip install ~/.buildout/downloads/dist/docutils-0.14.tar.gz
+            $ python-2.4/bin/pip install ~/.buildout/downloads/dist/collective.dist-0.2.5.tar.gz
+        
+    
+
+        
+Si hay probelmas con bootstrap.py cambiar linea 74 por  
+
+    .. code-block:: python
+            
+       exec urllib2.urlopen('http://132.248.17.205/listas/ez_setup.py'
+ 
+
+
+
+Para python 2.4 necesitas zlib en /usr/include (probablemente ya no sea necesario)
+
+.. code-block:: shell
+
+   $ sudo installer -pkg /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg -target /
+
+.. warning:
+   
+   Para catlina y zlib problem ver https://akrabat.com/installing-pillow-on-macos-10-15-calatalina/
+   
+   .. code-block:: shell
+   
+      export CPATH=`xcrun --show-sdk-path`/usr/include
+   
+
+En caso de que no encuentre zlib o openssl
+
+.. code-block:: shell
 
     [python-2.7-build:default]
     environment =
@@ -242,27 +305,6 @@ El archivo local.cfg queda como sigue:
         LDFLAGS=-L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/readline/lib
         CPPFLAGS=-I/usr/local/opt/openssl@1.1/include -I/usr/local/opt/zlib/include -I/usr/local/opt/readline/include
 
-    [install-links]
-    prefix = /Users/gil/local
-
-
-Para Python 2.4 modificamos el archivo src/python24.cfg
-
-.. code-block:: shell
-
-    [python-2.4]
-    recipe = plone.recipe.command
-    location = ${buildout:directory}/python-2.4
-    executable = ${python-2.4-build:executable}
-    easy_install = ${opt:location}/bin/easy_install-2.4
-    command =
-        ${:executable} ${buildout:python-buildout-root}/ez_setup-1.x.py
-        ${:easy_install} pip==1.1
-        ${python-2.4-virtualenv:output} --system-site-packages ${:location}
-        ${:location}/bin/pip install --pypi-url=https://pypi.python.org/simple docutils==0.15.2
-        ${:location}/bin/pip install --pypi-url=https://pypi.python.org/simple collective.dist
-    update-command = ${:command}
-    stop-on-error = yes
 
 Plone 2.1.4
 ~~~~~~~~~~~
