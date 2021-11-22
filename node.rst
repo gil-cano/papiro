@@ -5,13 +5,13 @@ Node.js
 Uninstall
 ---------
 
-Borramos nvm de manera manual.:
+Borramos nvm de manera manual, ejecutamos lo siguiente:
 
 .. code-block:: shell
 
     $ rm -rf "$NVM_DIR"
 
-Editamos ~/.bashrc y borramos las lineas:
+Editamos ~/.zshrc y borramos las lineas:
 
 .. code-block:: shell
 
@@ -22,15 +22,18 @@ Editamos ~/.bashrc y borramos las lineas:
 Instalación
 -----------
 
+nvm
+~~~
+
 Primero instalamos un manejador de versiones de node (`node version manager <https://github.com/nvm-sh/nvm>`_).
 
 .. code-block:: shell
 
-    $ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
-    => Downloading nvm from git to '/Users/gil/.nvm'
-    => Cloning into '/Users/gil/.nvm'...
-    => Appending nvm source string to /Users/gil/.zshrc
-    => Appending bash_completion source string to /Users/gil/.zshrc
+    $ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+    => Downloading nvm from git to '/Users/name/.nvm'
+    => Cloning into '/Users/name/.nvm'...
+    => Appending nvm source string to /Users/name/.zshrc
+    => Appending bash_completion source string to /Users/name/.zshrc
     => Close and reopen your terminal to start using nvm or run the following to use it now:
 
     export NVM_DIR="$HOME/.nvm"
@@ -43,12 +46,19 @@ Para ver que version de nvm:
 .. code-block:: shell
 
     $ nvm --version
+    0.39.0
+
+    $ nvm version
+    none
 
 Listar las versiones de node
 
 .. code-block:: shell
 
     $ nvm ls
+
+node
+~~~~
 
 Instalamos la ultima versión de soprte a largo plazo - long term support (LTS)
 
@@ -67,31 +77,33 @@ o una versión en particular
 
 .. code-block:: shell
 
-    $ nvm install 14.15.1
-    $ nvm use 14.15.1
+    $ nvm install 14.8.1
+    $ nvm use 14.18.1
 
 probar:
 
 .. code-block:: shell
 
     $ node -v
+    v16.13.0
 
 .. code-block:: shell
 
     $ nvm version
+    v16.13.0
 
+
+Yarn
+~~~~
 
 Instalamos el manejador de paquetes  `yarn <https://yarnpkg.com/>`_
 
 .. code-block:: shell
 
-    $ curl -o- -L https://yarnpkg.com/install.sh | bash
-    > Extracting to ~/.yarn...
-    > Adding to $PATH...
-    > We've added the following to your /Users/gil/.zshrc
-    > If this isn't the profile of your current shell then please add the following to your correct profile:
+    $ npm install --global yarn
 
-    export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+    /Users/name/.nvm/versions/node/v14.18.1/bin/yarn -> /Users/name/.nvm/versions/node/v14.18.1/lib/node_modules/yarn/bin/yarn.js
+    /Users/name/.nvm/versions/node/v14.18.1/bin/yarnpkg -> /Users/name/.nvm/versions/node/v14.18.1/lib/node_modules/yarn/bin/yarn.js
 
 
 probar:
@@ -99,21 +111,46 @@ probar:
 .. code-block:: shell
 
     $ yarn -v
+    1.22.17
 
-ver `Installing Volto <https://docs.voltocms.com/getting-started/install>`_
-
-ver `React <https://training.plone.org/5/react/bootstrap.html>`_
-
-Volto
------
+Yeoman
+~~~~~~
 
 .. code-block:: shell
 
     $ npm install -g yo
+
+
+.. code-block:: shell
+
+    $ yo --version
+    4.3.0
+
+Volto generator
+~~~~~~~~~~~~~~~
+
+.. code-block:: shell
+
     $ npm install -g @plone/generator-volto
-    $ yo @plone/volto volto-project-myprojectname
+    + @plone/generator-volto@4.4.0
+
+
+Volto
+~~~~~
+
+.. code-block:: shell
+
+    $ yo @plone/volto
+    Getting latest Volto version
+    Using latest released Volto version: 13.15.1
+
     $ cd volto-project-myprojectname
     $ yarn start
+
+
+ver `Volto developer documentation <https://docs.voltocms.com/getting-started/install/>`_
+
+ver `Mastering Plone 6 Developmnet <https://training.plone.org/5/mastering-plone/installation.html#installing-plone-frontend>`_
 
 
 
