@@ -117,6 +117,11 @@ Antes de compilar python debemos instalar ``gdbm`` para tener disponible ese mod
 
 .. code-block:: shell
 
+   $ brew install git
+   $ brew link --overwrite git
+
+.. code-block:: shell
+
    $ brew install zlib readline jpeg libpng libyaml
 
 
@@ -168,7 +173,7 @@ Para ``pdftotext``
      export LDFLAGS="-L/usr/local/opt/nss/lib"
      export CPPFLAGS="-I/usr/local/opt/nss/include"
 
-Para agregar gettext al path modificamos el archivo .zshrc
+Para agregar gettext al path modificamos el archivo ``.zshrc``
 
 .. code-block:: shell
 
@@ -343,7 +348,17 @@ Latex y skim ver Sublimetext3
        CPPFLAGS: -I/usr/local/opt/qt/include
 
 
+Desinstalar HomeBrew
+--------------------
+
+.. code-block:: shell
+
+    $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh)"
+
+Asegurate de eliminar  ``/usr/local/Homebrew/``
+
 Bibliografía
 ------------
 
 * `Homebrew FAQ <https://docs.brew.sh/FAQ.html>`_
+* `Homebrew (un)installer <https://github.com/homebrew/install#uninstall-homebrew>`_
