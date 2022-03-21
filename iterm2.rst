@@ -59,12 +59,13 @@ Tambien se pueden instalar con brew
 
 .. code-block:: shell
 
+   $ brew tap homebrew/cask
    $ brew tap homebrew/cask-fonts
-   $ brew cask install font-sourcecodepro-nerd-font-mono
-   $ brew cask install font-meslo-nerd-font-mono
-   $ brew cask install font-meslo-for-powerline
-   $ brew cask list
-   $ brew cask unistall font-sourcecodepro-nerd-font
+   $ brew install font-sourcecodepro-nerd-font-mono
+   $ brew install font-meslo-nerd-font-mono
+   $ brew install font-meslo-for-powerline
+   $ brew list --casks
+   $ brew uninstall --casks font-meslo-nerd-font-mono
 
 En iTerm2 :menuselection:`Preferences --> Profiles --> Text` seleccionamos el tipo de letra.
 
