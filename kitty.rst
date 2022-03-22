@@ -1,12 +1,11 @@
-$ kitty list-fonts 
+.. code-block:: shell
 
-
-
-brew tap homebrew/cask-fonts
-brew search nerd-font
-brew install font-fira-code-nerd-font
-brew install font-jetbrains-mono-nerd-font
-brew install font-monoid-nerd-font
-brew install font-sauce-code-pro-nerd-font
-brew uninstall --casks font-dejavu-sans-mono-nerd-font
-$ brew list --casks
+    $ kitty list-fonts 
+    $ brew tap homebrew/cask-fonts
+    $ brew search nerd-font
+    $ brew install font-fira-code  
+    $ brew install font-jetbrains-mono
+    $ brew install font-monoid-nerd-font
+    $ brew install font-sauce-code-pro-nerd-font
+    $ brew uninstall --casks font-dejavu-sans-mono-nerd-font
+    $ brew list --casks
