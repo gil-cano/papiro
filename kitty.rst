@@ -24,3 +24,23 @@
     kitty +kitten icat hellow.gif
     kitty +kitten diff correos202112.csv correos202203.csv
     
+
+https://ohmyposh.dev
+
+.. code-block:: shell
+
+    brew tap jandedobbeleer/oh-my-posh
+    brew install oh-my-posh
+
+
+Add the following to ~/.zshrc:
+
+.. code-block:: shell
+
+    eval "$(oh-my-posh prompt init zsh)"
+
+
+.. code-block:: shell
+
+    source ~/.zshrc
+
