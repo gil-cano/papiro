@@ -17,3 +17,10 @@
     
     font_family        JetBrains Mono
     font_size 14.0
+
+
+.. code-block:: shell
+
+    kitty +kitten icat hellow.gif
+    kitty +kitten diff correos202112.csv correos202203.csv
+    
