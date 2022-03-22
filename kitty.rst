@@ -9,3 +9,11 @@
     $ brew install font-sauce-code-pro-nerd-font
     $ brew uninstall --casks font-dejavu-sans-mono-nerd-font
     $ brew list --casks
+
+
+.. code-block:: shell
+
+    .config/kitty/kitty.conf
+    
+    font_family        JetBrains Mono
+    font_size 14.0
