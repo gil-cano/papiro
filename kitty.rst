@@ -23,6 +23,7 @@
 
     kitty +kitten icat hellow.gif
     kitty +kitten diff correos202112.csv correos202203.csv
+    kitty +kitten themes
     
 
 https://ohmyposh.dev
