@@ -1,3 +1,6 @@
+
+https://sw.kovidgoyal.net/kitty/
+
 .. code-block:: shell
 
     $ kitty list-fonts 
