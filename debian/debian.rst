@@ -397,6 +397,28 @@ Para mostrar los permisos en una ruta usamos:
 
     $ namei -om /path/to/check
 
+Revisar el tiempo de ejecución con ps
+-------------------------------------
+
+identificar el ID del proceso
+
+.. code-block:: shell
+
+    $ pidof mdp
+    1388
+
+encontrar el tiempo de ejecución de un proceso
+
+.. code-block:: shell
+
+    $ ps -p 1388 -o  etime
+
+para todos los procesos
+
+.. code-block:: shell
+
+    $ ps -eo pid,lstart,etime,args
+
 
 Referencias
 -----------
