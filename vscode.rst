@@ -25,9 +25,24 @@ Línea de comandos en macOS
 
 `Visual Studio Code on macOS <https://code.visualstudio.com/docs/setup/mac>`_
 
+
+GitHub's VS Code themes
+-----------------------
+
+Instala la extension `GitHub Theme <https://github.com/primer/github-vscode-theme>`_
+
+Seleccióna el tema.
+
+.. image:: _static/vscode/github-themes.png
+   :alt: set color theme
+
+
 Python en Visual Studio Code
 ----------------------------
 
+Instala la extnsión `Python <https://marketplace.visualstudio.com/items?itemName=ms-python.python>`_
+
+Por default instalara un paquede de extensiones: Pylance y Jupyter (E. Pack 2 Jupyter Keymap, Jupyter Notebook Renderers)
 
 `Python in Visual Studio Code <https://code.visualstudio.com/docs/languages/python>`_
 
@@ -134,4 +149,16 @@ Linters
     cd notas
     pipenv install doc8
     pipenv install rstcheck
+
+
+Uninstall
+---------
+
+Primero borramos los folders de configuración del usuario:
+
+En MacOS borramos $HOME/Library/Application Support/Code y ~/.vscode.
+
+Despues movemos la app a la basura.
+
+`Uninstall Visual Studio Code <https://code.visualstudio.com/docs/setup/uninstall>`_
 
