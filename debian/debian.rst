@@ -420,6 +420,14 @@ para todos los procesos
     $ ps -eo pid,lstart,etime,args
 
 
+Montar dispositivo
+------------------
+
+.. code-block:: shell
+
+    $ sudo mount /dev/sdb5 /mnt/
+
+
 Referencias
 -----------
 
