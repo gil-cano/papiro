@@ -19,24 +19,23 @@ Instalar una versión
 
 .. code-block:: shell
 
-    $ pyenv install 3.9.13
+    $ pyenv install  3.10.6
     python-build: use openssl@1.1 from homebrew
     python-build: use readline from homebrew
-    Downloading Python-3.9.13.tar.xz...
-    -> https://www.python.org/ftp/python/3.9.13/Python-3.9.13.tar.xz
-    Installing Python-3.9.13...
+    Downloading Python-3.10.6.tar.xz...
+    -> https://www.python.org/ftp/python/3.10.6/Python-3.10.6.tar.xz
+    Installing Python-3.10.6...
     python-build: use tcl-tk from homebrew
     python-build: use readline from homebrew
     python-build: use zlib from xcode sdk
-    Installed Python-3.9.13 to /Users/gil/.pyenv/versions/3.9.13
+    Installed Python-3.10.6 to /Users/gil/.pyenv/versions/3.10.6
 
-Si queremos que use zlib de homebrew hayq ue poner algo como esto:
+Si queremos que use zlib de homebrew hay que poner algo como esto:
 
 .. code-block:: shell
 
     export LDFLAGS="-L/usr/local/opt/zlib/lib"
     export CPPFLAGS="-I/usr/local/opt/zlib/include"
-
 
 Agregamos a nuestro .zshrc
 
@@ -47,7 +46,6 @@ Agregamos a nuestro .zshrc
       eval "$(pyenv init -)"
       eval "$(pyenv virtualenv-init -)"
     fi
-
 
 
 Para ver que version es la default
