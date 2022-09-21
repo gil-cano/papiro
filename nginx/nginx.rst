@@ -181,6 +181,14 @@ preparamos una instancia de python 2.7 con lo sigiente
    $ sudo htpasswd -c /etc/nginx/.htpasswd sammy
    $ sudo htpasswd /etc/nginx/.htpasswd another_user
 
+
+html path
+----------
+
+.. code-block:: shell
+
+   $ cd /usr/share/nginx/html
+
 References
 ----------
 
