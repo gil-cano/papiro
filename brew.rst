@@ -35,6 +35,9 @@ Instalación
 ==> The Xcode Command Line Tools will be installed.
 
 
+   ==> Installing Command Line Tools for Xcode-13.4
+   ==> /usr/bin/sudo /usr/sbin/softwareupdate -i Command\ Line\ Tools\ for\ Xcode-13.4
+   Software Update Tool
 
 
 instalar paquete::
