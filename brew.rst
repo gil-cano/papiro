@@ -14,6 +14,28 @@ Homebrew
 Instalación
 -----------
 
+.. code-block:: shell
+   
+   ==> The following new directories will be created:
+   /usr/local/bin
+/usr/local/etc
+/usr/local/include
+/usr/local/lib
+/usr/local/sbin
+/usr/local/share
+/usr/local/var
+/usr/local/opt
+/usr/local/share/zsh
+/usr/local/share/zsh/site-functions
+/usr/local/var/homebrew
+/usr/local/var/homebrew/linked
+/usr/local/Cellar
+/usr/local/Caskroom
+/usr/local/Frameworks
+==> The Xcode Command Line Tools will be installed.
+
+
+
 
 instalar paquete::
 
