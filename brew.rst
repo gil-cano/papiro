@@ -69,6 +69,15 @@ actualizar formula::
 información de formula::
 
    $ brew info <formula>
+   
+   
+Paquetes para desarrollo en Plone   
+---------------------------------
+
+.. code-block:: shell
+
+   $ brew install git
+   
 
 Compilar `buildout.python <https://github.com/collective/buildout.python>`_ y Plone
 -----------------------------------------------------------------------------------
@@ -140,10 +149,7 @@ Antes de compilar python debemos instalar ``gdbm`` para tener disponible ese mod
 
    $ brew install xz
 
-.. code-block:: shell
 
-   $ brew install git
-   $ brew link --overwrite git
 
 .. code-block:: shell
 
