@@ -133,6 +133,34 @@ xz es una biblioteca de compresssion de datos en particular nos interesa liblzma
 brew install xz
 ```
 
+## openssh@1.1
+
+```sh
+brew install openssl@1.1
+```
+
+```sh
+==> Caveats
+==> openssl@1.1
+A CA file has been bootstrapped using certificates from the system
+keychain. To add additional certificates, place .pem files in
+  /usr/local/etc/openssl@1.1/certs
+
+and run
+  /usr/local/opt/openssl@1.1/bin/c_rehash
+
+openssl@1.1 is keg-only, which means it was not symlinked into /usr/local,
+because macOS provides LibreSSL.
+
+If you need to have openssl@1.1 first in your PATH, run:
+  echo 'export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"' >> ~/.zshrc
+
+For compilers to find openssl@1.1 you may need to set:
+  export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib"
+  export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include"
+
+```
+
 ## yaml
 parser de YAML
 
