@@ -319,7 +319,8 @@ git clone plone-project
 cd  plone-project
 pyenv virtualenv 2.7.18 plone4.3
 pyenv local plone4.3
-
+pip install -r requirements.txt 
+buildout
 ```
 
 # VSCode
