@@ -311,6 +311,10 @@ brew install wv
 ## clone
 
 ```sh
+gh repo clone useer-name/plone-project
+```
+
+```sh
 git clone plone-project
 cd  plone-project
 pyenv virtualenv 2.7.18 plone4.3
