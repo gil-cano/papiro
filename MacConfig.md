@@ -227,6 +227,7 @@ For compilers to find bzip2 you may need to set:
 
 ```sh
 brew install jpeg libpng libtiff little-cms2 webp zlib
+brew install libxcb
 ```
 
 ```sh
