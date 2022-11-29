@@ -46,9 +46,8 @@ Se instala con brew
    $ brew tap homebrew/cask-fonts
    $ brew install font-source-code-pro
    $ brew install font-jetbrains-mono-nerd-font
-   $ brew install font-monoid-nerd-font
    $ brew list
-   $ brew uninstall font-monoid-nerd-font
+   $ brew uninstall font-jetbrains-mono-nerd-font
 
 En iTerm2 :menuselection:`Preferences --> Profiles --> Text` seleccionamos el tipo de letra.
 
