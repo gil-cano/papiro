@@ -59,7 +59,6 @@ Tambien se pueden instalar con brew
 
 .. code-block:: shell
 
-   $ brew tap homebrew/cask
    $ brew tap homebrew/cask-fonts
    $ brew install font-sourcecodepro-nerd-font-mono
    $ brew install font-meslo-nerd-font-mono
