@@ -39,32 +39,16 @@ Source Code Pro
 
 `Source Code Pro <https://github.com/adobe-fonts/source-code-pro>`_ es un tipo de letra para programadores. Este tipo de letra tambien se usa en :ref:`sublimetext`
 
-Descargamos el archivo y seguimos las instrucciones generales para instalar tipos de letras en MacOS `How to install and remove fonts on your Mac <https://support.apple.com/en-us/HT201749>`_
-
-Descomprimimos el archivo que descargamos y en la carpeta :file:`OTF` damos doble click a la fuente que queremos instalar.
-
-.. image:: _static/sourcecodepro.png
-   :alt: Source Code Pro Font
-   :width: 80%
-
-Nerd Fonts
-~~~~~~~~~~
-
-`Nerd Fonts <http://nerdfonts.com>`_
-
-Descargamos el tipo de letra `SourceCodePro` y en la carpeta :file:`SourceCodePro` damos doble click al archivo que queremos instalar.
-
-
-Tambien se pueden instalar con brew
+Se instala con brew
 
 .. code-block:: shell
 
    $ brew tap homebrew/cask-fonts
    $ brew install font-source-code-pro
    $ brew install font-jetbrains-mono
-   $ brew install font-meslo-for-powerline
+   $ brew install font-monoid-nerd-font
    $ brew list
-   $ brew uninstall --casks font-meslo-nerd-font-mono
+   $ brew uninstall font-monoid-nerd-font
 
 En iTerm2 :menuselection:`Preferences --> Profiles --> Text` seleccionamos el tipo de letra.
 
@@ -78,6 +62,10 @@ Para probar algunos caracteres en la terminal:
 
    $ echo "\ue0b0 \u00b1 \ue0a0 \u27a6 \u2718 \u26a1 \u2699"
 
+Nerd Fonts
+~~~~~~~~~~
+
+`Nerd Fonts <http://nerdfonts.com>`_
 
 
 Salto de palabras
