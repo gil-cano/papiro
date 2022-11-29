@@ -60,10 +60,10 @@ Tambien se pueden instalar con brew
 .. code-block:: shell
 
    $ brew tap homebrew/cask-fonts
-   $ brew install font-sourcecodepro-nerd-font-mono
-   $ brew install font-meslo-nerd-font-mono
+   $ brew install font-source-code-pro
+   $ brew install font-jetbrains-mono
    $ brew install font-meslo-for-powerline
-   $ brew list --casks
+   $ brew list
    $ brew uninstall --casks font-meslo-nerd-font-mono
 
 En iTerm2 :menuselection:`Preferences --> Profiles --> Text` seleccionamos el tipo de letra.
