@@ -325,6 +325,12 @@ pip install -r requirements.txt
 buildout
 ```
 
+# Tools
+
+```sh
+brew install bat
+```
+
 # VSCode
 
 Para agregar el comando code al PATH, abrimos vscode y escribimos *shell command* para encontrar el comando *Shell Command: Install 'code' command in PATH*
