@@ -286,6 +286,7 @@ pyenv versions
 ```sh
 brew install pipx
 pipx install httpie
+pipx list
 ```
 
 # Plone
