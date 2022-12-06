@@ -282,6 +282,11 @@ pyenv install 3.10.7
 pyenv global 3.10.7 2.7.18
 pyenv versions
 ```
+## pipx
+```sh
+brew install pipx
+pipx install httpie
+```
 
 # Plone
 Creamos en el home un directorio .buildout
