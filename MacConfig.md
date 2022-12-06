@@ -277,9 +277,9 @@ fi
 
 ```sh
 pyenv install 2.7.18
-pyenv install 3.7.14
-pyenv install 3.10.7
-pyenv global 3.10.7 2.7.18
+pyenv install 3.7.15
+pyenv install 3.11.0
+pyenv global 3.11.0 2.7.18
 pyenv versions
 ```
 ## pipx
