@@ -277,9 +277,9 @@ fi
 
 ```sh
 pyenv install 2.7.18
-pyenv install 3.7.15
-pyenv install 3.11.0
-pyenv global 3.11.0 2.7.18
+pyenv install 3.7.16
+pyenv install 3.11.1
+pyenv global 3.11.1 2.7.18
 pyenv versions
 ```
 ## pipx
@@ -289,6 +289,7 @@ pipx install httpie
 pipx list
 pipx install pls
 pipx ensurepath
+pipx reinstall-all
 ```
 
 # Plone
