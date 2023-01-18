@@ -281,7 +281,13 @@ pyenv install 3.7.16
 pyenv install 3.11.1
 pyenv global 3.11.1 2.7.18
 pyenv versions
+
+pyenv virtualenv 3.10.6 proj1-env
+pyenv local proj1-env
+pyenv virtualenv-delete proj1-env
+pyenv uninstall 3.11.1
 ```
+
 ## pipx
 ```sh
 brew install pipx
