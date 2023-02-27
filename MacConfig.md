@@ -285,8 +285,14 @@ To enable auto-activation add to your profile:
 agregamos eso a nuestro .zshrc
 
 ```sh
+# pyenv configuration for Zsh
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+# to enable auto-activation of virtualenvs 
 if which pyenv-virtualenv-init > /dev/null; then 
-  eval "$(pyenv virtualenv-init -)"; 
+  eval "$(pyenv virtualenv-init -)";
 fi
 ```
 
