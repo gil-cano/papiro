@@ -325,7 +325,7 @@ export PATH="$PATH:/Users/gil/.local/bin"
 alias ls='pls --multi-cols'
 ```
 
-# Plone
+# Plone 4
 Creamos en el home un directorio .buildout
 
 ```sh
@@ -367,10 +367,19 @@ pip install -r requirements.txt
 buildout
 ```
 
+
+# Plone 6
+
+```sh
+pipx install cookiecutter
+```
+
+
 # Tools
 
 ```sh
-brew install bat
+pipx install bat
+pipx install bpytop
 ```
 
 # VSCode
