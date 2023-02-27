@@ -312,6 +312,12 @@ pipx install pls
 pipx ensurepath
 pipx reinstall-all
 ```
+```sh
+# Created by `pipx` on 2022-12-06 15:32:16
+export PATH="$PATH:/Users/gil/.local/bin"
+
+alias ls='pls --multi-cols'
+```
 
 # Plone
 Creamos en el home un directorio .buildout
