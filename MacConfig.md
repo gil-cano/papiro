@@ -377,10 +377,18 @@ pipx install cookiecutter
 
 # Tools
 
+A cat(1) clone with wings.
+
 ```sh
-pipx install bat
+brew install bat
+```
+
+Linux/OSX/FreeBSD resource monitor 
+
+```sh
 pipx install bpytop
 ```
+
 
 # VSCode
 
