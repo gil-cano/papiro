@@ -313,8 +313,9 @@ pyenv uninstall 3.11.1
 ```sh
 brew install pipx
 pipx install httpie
-pipx list
 pipx install pls
+pipx install bpytop
+pipx list
 pipx ensurepath
 pipx reinstall-all
 ```
@@ -372,6 +373,8 @@ buildout
 
 ```sh
 pipx install cookiecutter
+pipx install plonecli
+pipx inject plonecli bobtemplates.plone
 ```
 
 
