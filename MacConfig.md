@@ -290,7 +290,7 @@ export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
-# to enable auto-activation of virtualenvs 
+# Enable auto-activation of virtualenvs 
 if which pyenv-virtualenv-init > /dev/null; then 
   eval "$(pyenv virtualenv-init -)";
 fi
@@ -298,15 +298,15 @@ fi
 
 ```sh
 pyenv install 2.7.18
-pyenv install 3.7.16
+pyenv install 3.9.16
 pyenv install 3.11.1
 pyenv global 3.11.1 2.7.18
 pyenv versions
 
-pyenv virtualenv 3.10.6 proj1-env
+pyenv virtualenv 3.9.16 proj1-env
 pyenv local proj1-env
 pyenv virtualenv-delete proj1-env
-pyenv uninstall 3.11.1
+pyenv uninstall 3.9.16
 ```
 
 ## pipx
