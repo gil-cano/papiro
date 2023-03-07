@@ -325,7 +325,7 @@ export PATH="$PATH:/Users/gil/.local/bin"
 alias ls='pls --multi-cols'
 ```
 
-# Plone 4
+# Buildout
 Creamos en el home un directorio .buildout
 
 ```sh
@@ -352,7 +352,7 @@ wv permite el acceso a archivos de tipo Microsoft Word
 ```sh
 brew install wv
 ```
-## clone
+## Plone 4, 5
 
 ```sh
 gh repo clone useer-name/plone-project
@@ -369,6 +369,13 @@ buildout
 
 
 # Plone 6
+
+```sh
+mkdir my_project
+cd my_project
+pyenv virtualenv 3.10.10 plone6.0
+```
+
 
 ```sh
 pipx install cookiecutter
