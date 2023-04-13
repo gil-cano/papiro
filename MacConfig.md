@@ -52,7 +52,7 @@ Agregar en el ~/.zshrc
 brew install git
 ```
 
-# Configurando Git por primera vez
+## Configurando Git por primera vez
 https://git-scm.com/book/es/v2/Inicio---Sobre-el-Control-de-Versiones-Configurando-Git-por-primera-vez
 
 https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup
@@ -94,6 +94,82 @@ Si quieres comprobar tu configuración, puedes usar el comando git config --list
 git config --list 
 ```
 
+# GitHub
+
+## Revisar las llaves SSH existentes
+
+Lista los archivos en tu directorio .ssh
+
+```sh
+ls -la ~/.ssh
+```
+
+## Genera una nueva llave SSH
+
+Genereamos la nueva llave.
+
+```sh
+$ ssh-keygen -t ed25519 -C "your_email@example.com"
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/Users/you/.ssh/id_ed25519):
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /Users/you/.ssh/id_ed25519
+Your public key has been saved in /Users/you/.ssh/id_ed25519.pub
+```
+
+Inicia el ssh-agente en segundo plano
+
+```sh
+$ eval "$(ssh-agent -s)"
+Agent pid 10815
+```
+
+Modificamos el archivo ~/.ssh/config para cargar las llaves de manera automatica al ssh-agent y almancenar las frases de contraseñas en el llavero.
+
+Si no exte el archivo lo creamos
+
+```sh
+$ touch ~/.ssh/config
+```
+
+Modificamos el archivo con las siguientes lineas:
+
+```sh
+Host github.com
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/id_ed25519
+```
+
+Agregamos nuestra llave privada al ssh-agent y guardamos la frases de contraseñas en el llavero.
+
+```sh
+$ ssh-add --apple-use-keychain ~/.ssh/id_ed25519
+Enter passphrase for /Users/you/.ssh/id_ed25519:
+Identity added: /Users/you/.ssh/id_ed25519 (your_email@example.com)
+```
+
+Agregamos la llave publica a GitHub 
+
+Copiamos la llave publica
+
+```sh
+pbcopy < ~/.ssh/id_ed25519.pub
+```
+
+agregamos una llave nueva en https://github.com/settings/keys y pegamos la llave publica.
+
+Probamos la conección y verificamos que la huella coincida con alguna de las [huellas de github](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/githubs-ssh-key-fingerprints)
+
+```sh
+ssh -T git@github.com
+The authenticity of host 'github.com (IP)' can't be established.
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+```
+
 ## GitHub CLI
 ```sh
 brew install gh
@@ -120,6 +196,8 @@ gh auth status
 ```
 
 https://cli.github.com/manual/
+
+
 
 # Python
 Antes de installar python debemos instalar varios modulos si queremos tenerlos disponibles.
@@ -415,3 +493,4 @@ Reiniciamos la terminal para que el nuevo PATH tome efecto.
 
 # Referencias
 [The Arctic Ice Studio Markdown Code Style.](https://arcticicestudio.github.io/styleguide-markdown/)
+[Connect with SSH.](https://docs.github.com/en/authentication/connecting-to-github-with-ssh)
