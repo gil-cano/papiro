@@ -489,8 +489,15 @@ Reiniciamos la terminal para que el nuevo PATH tome efecto.
 
 ## Extenciones
 
-* Github Theme
+* [Github Theme](https://marketplace.visualstudio.com/items?itemName=GitHub.github-vscode-theme) 
+* [MyST-Markdown](https://marketplace.visualstudio.com/items?itemName=ExecutableBookProject.myst-highlight)
+* [Rainbow CSV](https://marketplace.visualstudio.com/items?itemName=mechatroner.rainbow-csv)
+* [ZCML language configuration](https://marketplace.visualstudio.com/items?itemName=erral.erral-zcmlLanguageConfiguration)
+requiere zpretty
+  ```shell
+  pipx install zpretty
+  ```
 
 # Referencias
-[The Arctic Ice Studio Markdown Code Style.](https://arcticicestudio.github.io/styleguide-markdown/)
-[Connect with SSH.](https://docs.github.com/en/authentication/connecting-to-github-with-ssh)
+* [The Arctic Ice Studio Markdown Code Style.](https://arcticicestudio.github.io/styleguide-markdown/)
+* [Connect with SSH.](https://docs.github.com/en/authentication/connecting-to-github-with-ssh)
