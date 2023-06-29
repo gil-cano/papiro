@@ -392,7 +392,6 @@ pyenv uninstall 3.9.16
 brew install pipx
 pipx install httpie
 pipx install pls
-pipx install bpytop
 pipx list
 pipx ensurepath
 pipx reinstall-all
