@@ -71,6 +71,11 @@ No analytics data has been sent yet (nor will any be during this install run).
     https://docs.brew.sh
 ```
 
+```shell
+(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/gil/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
+```
+
 # Make
 
 ```sh
