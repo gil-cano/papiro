@@ -6,39 +6,69 @@
 
 <img src="python3-cldt.png" alt="The command line developer tools" width="600">
 
-
-Instalar [brew](https://brew.sh/)
 # Instalación de brew
 
-ver https://brew.sh/
+brew es un manejador de paquetes.
+cask applicaciones graficas
 
-```sh
+> [!WARNING]  
+> [brew](https://brew.sh/) instalara `the command line developer tools`.
+
+
+```shell
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ==> Checking for `sudo` access (which may request your password)...
 Password:
 ==> This script will install:
-/usr/local/bin/brew
-/usr/local/share/doc/homebrew
-/usr/local/share/man/man1/brew.1
-/usr/local/share/zsh/site-functions/_brew
-/usr/local/etc/bash_completion.d/brew
-/usr/local/Homebrew
+/opt/homebrew/bin/brew
+/opt/homebrew/share/doc/homebrew
+/opt/homebrew/share/man/man1/brew.1
+/opt/homebrew/share/zsh/site-functions/_brew
+/opt/homebrew/etc/bash_completion.d/brew
+/opt/homebrew
 ==> The following new directories will be created:
-/usr/local/bin
-/usr/local/etc
-/usr/local/include
-/usr/local/lib
-/usr/local/sbin
-/usr/local/share
-/usr/local/var
-/usr/local/opt
-/usr/local/share/zsh
-/usr/local/share/zsh/site-functions
-/usr/local/var/homebrew
-/usr/local/var/homebrew/linked
-/usr/local/Cellar
-/usr/local/Caskroom
-/usr/local/Frameworks
+/opt/homebrew/bin
+/opt/homebrew/etc
+/opt/homebrew/include
+/opt/homebrew/lib
+/opt/homebrew/sbin
+/opt/homebrew/share
+/opt/homebrew/var
+/opt/homebrew/opt
+/opt/homebrew/share/zsh
+/opt/homebrew/share/zsh/site-functions
+/opt/homebrew/var/homebrew
+/opt/homebrew/var/homebrew/linked
+/opt/homebrew/Cellar
+/opt/homebrew/Caskroom
+/opt/homebrew/Frameworks
+==> The Xcode Command Line Tools will be installed.
+Press RETURN/ENTER to continue or any other key to abort:
+...
+==> Installing Command Line Tools for Xcode-14.3
+==> /usr/bin/sudo /usr/sbin/softwareupdate -i Command\ Line\ Tools\ for\ Xcode-14.3
+Software Update Tool
+...
+Warning: /opt/homebrew/bin is not in your PATH.
+  Instructions on how to configure your shell for Homebrew
+  can be found in the 'Next steps' section below.
+==> Installation successful!
+
+==> Homebrew has enabled anonymous aggregate formulae and cask analytics.
+Read the analytics documentation (and how to opt-out) here:
+  https://docs.brew.sh/Analytics
+No analytics data has been sent yet (nor will any be during this install run).
+
+==> Homebrew is run entirely by unpaid volunteers. Please consider donating:
+  https://github.com/Homebrew/brew#donations
+
+==> Next steps:
+- Run these two commands in your terminal to add Homebrew to your PATH:
+    (echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/gil/.zprofile
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+- Run brew help to get started
+- Further documentation:
+    https://docs.brew.sh
 ```
 
 # Make
