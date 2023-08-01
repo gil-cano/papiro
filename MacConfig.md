@@ -4,6 +4,8 @@
 > macOS Ventura elimino `python`.
 > Sí lo necesitas debes ejecutar `python3` que instalara `the command line developer tools`.
 
+<img src="python3-cldt.png" alt="The command line developer tools" width="600">
+
 
 Instalar [brew](https://brew.sh/)
 # Instalación de brew
