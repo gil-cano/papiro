@@ -258,15 +258,44 @@ https://cli.github.com/manual/
 
 
 # Python
+
 Antes de installar python debemos instalar varios modulos si queremos tenerlos disponibles.
 
-En brew las dependencias de python son: gdbm ✔, mpdecimal ✘, openssl@1.1 ✘, readline ✔, sqlite ✔, xz ✔
+```shell
+brew info python
+==> python@3.11: stable 3.11.4 (bottled)
+Interpreted, interactive, object-oriented programming language
+==> Dependencies
+Build: pkg-config ✘
+Required: mpdecimal ✘, openssl@3 ✘, sqlite ✘, xz ✘
+==> Caveats
+tkinter is no longer included with this formula, but it is available separately:
+  brew install python-tk@3.11
 
-## gdbm
-gdbm es necesario para usar el profiler de Zope (Control_Panel/DebugInfo)
+gdbm (`dbm.gnu`) is no longer included in this formula, but it is available separately:
+  brew install python-gdbm@3.11
+```
+
+> [!NOTE]  
+> Monterrey: gdbm ✔, mpdecimal ✘, openssl@1.1 ✘, readline ✔, sqlite ✔, xz ✔
+
+```shell
+# Install python build deps
+brew install mpdecimal openssl readline sqlite xz
+```
+
+## openssh
 
 ```sh
-brew install gdbm
+brew install openssl
+==> Caveats
+==> openssl@3
+A CA file has been bootstrapped using certificates from the system
+keychain. To add additional certificates, place .pem files in
+  /opt/homebrew/etc/openssl@3/certs
+
+and run
+  /opt/homebrew/opt/openssl@3/bin/c_rehash
 ```
 
 ## readline
@@ -274,34 +303,32 @@ readline es una biblioteca para edición de linea de comandos
 
 ```sh
 brew install readline
-```
-```sh
 ==> Caveats
-readline is keg-only, which means it was not symlinked into /usr/local,
+==> readline
+readline is keg-only, which means it was not symlinked into /opt/homebrew,
 because macOS provides BSD libedit.
 
 For compilers to find readline you may need to set:
-  export LDFLAGS="-L/usr/local/opt/readline/lib"
-  export CPPFLAGS="-I/usr/local/opt/readline/include"
+  export LDFLAGS="-L/opt/homebrew/opt/readline/lib"
+  export CPPFLAGS="-I/opt/homebrew/opt/readline/include"
 ```
 
 ## sqlite
 Interface para SQLite
-```sh
+```shell
 brew install sqlite
-```
-```sh
 ==> Caveats
-sqlite is keg-only, which means it was not symlinked into /usr/local,
+==> sqlite
+sqlite is keg-only, which means it was not symlinked into /opt/homebrew,
 because macOS already provides this software and installing another version in
 parallel can cause all kinds of trouble.
 
 If you need to have sqlite first in your PATH, run:
-  echo 'export PATH="/usr/local/opt/sqlite/bin:$PATH"' >> ~/.zshrc
+  echo 'export PATH="/opt/homebrew/opt/sqlite/bin:$PATH"' >> ~/.zshrc
 
 For compilers to find sqlite you may need to set:
-  export LDFLAGS="-L/usr/local/opt/sqlite/lib"
-  export CPPFLAGS="-I/usr/local/opt/sqlite/include"
+  export LDFLAGS="-L/opt/homebrew/opt/sqlite/lib"
+  export CPPFLAGS="-I/opt/homebrew/opt/sqlite/include"
 ```
 
 ## xz
@@ -309,6 +336,13 @@ xz es una biblioteca de compresssion de datos en particular nos interesa liblzma
 
 ```sh
 brew install xz
+```
+
+## gdbm
+gdbm es necesario para usar el profiler de Zope (Control_Panel/DebugInfo)
+
+```sh
+brew install gdbm
 ```
 
 ## openssh@1.1
