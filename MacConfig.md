@@ -319,15 +319,21 @@ For compilers to find sqlite you may need to set:
 ## xz
 xz es una biblioteca de compresssion de datos en particular nos interesa liblzma.
 
-```sh
+```shell
 brew install xz
 ```
 
 ## gdbm
 gdbm es necesario para usar el profiler de Zope (Control_Panel/DebugInfo)
 
-```sh
+```shell
 brew install gdbm
+```
+
+## tcl-tk
+
+```shell
+brew install tcl-tk
 ```
 
 ## openssh@1.1
