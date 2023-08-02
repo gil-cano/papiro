@@ -269,7 +269,7 @@ gdbm (`dbm.gnu`) is no longer included in this formula, but it is available sepa
 brew install mpdecimal openssl readline sqlite xz
 ```
 
-## openssh
+## openssl
 
 ```sh
 brew install openssl
