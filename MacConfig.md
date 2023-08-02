@@ -447,8 +447,9 @@ Required: autoconf ✘, openssl@3 ✔, pkg-config ✘, readline ✔
 brew install pyenv
 brew install pyenv-virtualenv
 ```
-```sh
+```shell
 ==> Caveats
+==> pyenv-virtualenv
 To enable auto-activation add to your profile:
   if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 ```
