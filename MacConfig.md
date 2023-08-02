@@ -367,8 +367,8 @@ For compilers to find openssl@1.1 you may need to set:
 ## yaml
 parser de YAML
 
-```sh
-brew info libyaml
+```shell
+brew install libyaml
 ```
 
 ## bzip2
@@ -401,39 +401,49 @@ For compilers to find bzip2 you may need to set:
 * zlib provee acceso a PNGs comprimidos
 * libxcb provee soporte para X11
 
-```sh
+```shell
 brew install jpeg libpng libtiff little-cms2 webp zlib
 brew install libxcb
 brew install libx11
 ```
 
-```sh
+```shell
 ==> Caveats
 ==> jpeg
-jpeg is keg-only, which means it was not symlinked into /usr/local,
+jpeg is keg-only, which means it was not symlinked into /opt/homebrew,
 because it conflicts with `jpeg-turbo`.
 
 If you need to have jpeg first in your PATH, run:
-  echo 'export PATH="/usr/local/opt/jpeg/bin:$PATH"' >> ~/.zshrc
+  echo 'export PATH="/opt/homebrew/opt/jpeg/bin:$PATH"' >> ~/.zshrc
 
 For compilers to find jpeg you may need to set:
-  export LDFLAGS="-L/usr/local/opt/jpeg/lib"
-  export CPPFLAGS="-I/usr/local/opt/jpeg/include"
-
+  export LDFLAGS="-L/opt/homebrew/opt/jpeg/lib"
+  export CPPFLAGS="-I/opt/homebrew/opt/jpeg/include"
 ==> zlib
-zlib is keg-only, which means it was not symlinked into /usr/local,
+zlib is keg-only, which means it was not symlinked into /opt/homebrew,
 because macOS already provides this software and installing another version in
 parallel can cause all kinds of trouble.
 
 For compilers to find zlib you may need to set:
-  export LDFLAGS="-L/usr/local/opt/zlib/lib"
-  export CPPFLAGS="-I/usr/local/opt/zlib/include"
+  export LDFLAGS="-L/opt/homebrew/opt/zlib/lib"
+  export CPPFLAGS="-I/opt/homebrew/opt/zlib/include"
 ```
-## pyenv
-==> Dependencies
-Required: autoconf ✘, openssl@1.1 ✘, pkg-config ✘, readline ✔
 
-```sh
+## pyenv
+
+```shell
+brew info pyenv
+==> pyenv: stable 2.3.23 (bottled), HEAD
+Python version management
+https://github.com/pyenv/pyenv
+Not installed
+From: https://github.com/Homebrew/homebrew-core/blob/HEAD/Formula/pyenv.rb
+License: MIT
+==> Dependencies
+Required: autoconf ✘, openssl@3 ✔, pkg-config ✘, readline ✔
+```
+
+```shell
 brew install pyenv
 brew install pyenv-virtualenv
 ```
