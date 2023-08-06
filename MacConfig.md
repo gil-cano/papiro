@@ -336,6 +336,32 @@ brew install gdbm
 brew install tcl-tk
 ```
 
+## yaml
+parser de YAML
+
+```shell
+brew install libyaml
+```
+
+## bzip2
+
+```sh
+brew install bzip2
+```
+```sh
+==> Caveats
+bzip2 is keg-only, which means it was not symlinked into /opt/homebrew,
+because macOS already provides this software and installing another version in
+parallel can cause all kinds of trouble.
+
+If you need to have bzip2 first in your PATH, run:
+  echo 'export PATH="/opt/homebrew/opt/bzip2/bin:$PATH"' >> ~/.zshrc
+
+For compilers to find bzip2 you may need to set:
+  export LDFLAGS="-L/opt/homebrew/opt/bzip2/lib"
+  export CPPFLAGS="-I/opt/homebrew/opt/bzip2/include"
+```
+
 ## openssh@1.1
 
 ```sh
@@ -362,32 +388,6 @@ For compilers to find openssl@1.1 you may need to set:
   export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib"
   export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include"
 
-```
-
-## yaml
-parser de YAML
-
-```shell
-brew install libyaml
-```
-
-## bzip2
-
-```sh
-brew install bzip2
-```
-```sh
-==> Caveats
-bzip2 is keg-only, which means it was not symlinked into /usr/local,
-because macOS already provides this software and installing another version in
-parallel can cause all kinds of trouble.
-
-If you need to have bzip2 first in your PATH, run:
-  echo 'export PATH="/usr/local/opt/bzip2/bin:$PATH"' >> ~/.zshrc
-
-For compilers to find bzip2 you may need to set:
-  export LDFLAGS="-L/usr/local/opt/bzip2/lib"
-  export CPPFLAGS="-I/usr/local/opt/bzip2/include"
 ```
 
 ## Pillow
