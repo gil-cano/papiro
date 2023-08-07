@@ -388,14 +388,14 @@ For compilers to find openssl@1.1 you may need to set:
 
 * **jpeg** biblioteca para manejo de imagenes JPEG
 * **freetype** provee servicios de fuentes
-* libpng biblioteca para manejo de imagenes PNG
-* libtiff provee funcionalidad de compresión TIFF
-* little-cms2 provee manejo de color
-* openjpeg biblioteca para manejo de imagenes JPEG-2000
-* tcl-tk soporte para imagenes tkinter
-* webp formato de compresssion sin perdidad para imagenes web
-* zlib provee acceso a PNGs comprimidos
-* libxcb provee soporte para X11
+* **libpng** biblioteca para manejo de imagenes PNG
+* **libtiff** provee funcionalidad de compresión TIFF
+* **little-cms2** provee manejo de color
+* **openjpeg** biblioteca para manejo de imagenes JPEG-2000
+* **tcl-tk** soporte para imagenes tkinter
+* **webp** formato de compresssion sin perdidad para imagenes web
+* **zlib** provee acceso a PNGs comprimidos
+* **libxcb** provee soporte para X11
 
 ```shell
 brew install jpeg freetype libpng libtiff little-cms2 openjpeg webp tcl-tk zlib
