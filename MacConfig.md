@@ -453,6 +453,15 @@ To enable auto-activation add to your profile:
   if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 ```
 
+agregamos eso a nuestro .zprofile
+
+```shell
+# Enable auto-activation of virtualenvs 
+if which pyenv-virtualenv-init > /dev/null; then 
+  eval "$(pyenv virtualenv-init -)";
+fi
+```
+
 agregamos eso a nuestro .zshrc
 
 ```sh
@@ -460,11 +469,6 @@ agregamos eso a nuestro .zshrc
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
-
-# Enable auto-activation of virtualenvs 
-if which pyenv-virtualenv-init > /dev/null; then 
-  eval "$(pyenv virtualenv-init -)";
-fi
 ```
 
 ```sh
