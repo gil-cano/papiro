@@ -572,6 +572,19 @@ Linux/OSX/FreeBSD resource monitor
 pipx install bpytop
 ```
 
+Pgcli es una interfaz en la linea de comandos para `Postgresql`
+```shell
+pipx install pgcli
+```
+
+## libpq
+
+API en C para postgres
+
+```sql
+brew install libpq
+# brew install libpq --build-from-source
+```
 
 # VSCode
 
