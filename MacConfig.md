@@ -386,8 +386,8 @@ For compilers to find openssl@1.1 you may need to set:
 
 ## Pillow
 
-* jpeg biblioteca para manejo de imagenes JPEG
-* freetype provee servicios de fuentes
+* **jpeg** biblioteca para manejo de imagenes JPEG
+* **freetype** provee servicios de fuentes
 * libpng biblioteca para manejo de imagenes PNG
 * libtiff provee funcionalidad de compresión TIFF
 * little-cms2 provee manejo de color
