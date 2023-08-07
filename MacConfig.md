@@ -330,12 +330,6 @@ gdbm es necesario para usar el profiler de Zope (Control_Panel/DebugInfo)
 brew install gdbm
 ```
 
-## tcl-tk
-
-```shell
-brew install tcl-tk
-```
-
 ## yaml
 parser de YAML
 
@@ -393,16 +387,18 @@ For compilers to find openssl@1.1 you may need to set:
 ## Pillow
 
 * jpeg biblioteca para manejo de imagenes JPEG
+* freetype provee servicios de fuentes
 * libpng biblioteca para manejo de imagenes PNG
 * libtiff provee funcionalidad de compresión TIFF
 * little-cms2 provee manejo de color
-* openjpeg biblioteca para manejo de imagenes JPEG-2000 
+* openjpeg biblioteca para manejo de imagenes JPEG-2000
+* tcl-tk soporte para imagenes tkinter
 * webp formato de compresssion sin perdidad para imagenes web
 * zlib provee acceso a PNGs comprimidos
 * libxcb provee soporte para X11
 
 ```shell
-brew install jpeg libpng libtiff little-cms2 webp zlib
+brew install jpeg freetype libpng libtiff little-cms2 openjpeg webp tcl-tk zlib
 brew install libxcb
 brew install libx11
 ```
@@ -419,6 +415,9 @@ If you need to have jpeg first in your PATH, run:
 For compilers to find jpeg you may need to set:
   export LDFLAGS="-L/opt/homebrew/opt/jpeg/lib"
   export CPPFLAGS="-I/opt/homebrew/opt/jpeg/include"
+
+For pkg-config to find jpeg you may need to set:
+  export PKG_CONFIG_PATH="/opt/homebrew/opt/jpeg/lib/pkgconfig"
 ==> zlib
 zlib is keg-only, which means it was not symlinked into /opt/homebrew,
 because macOS already provides this software and installing another version in
