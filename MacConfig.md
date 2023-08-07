@@ -356,7 +356,7 @@ For compilers to find bzip2 you may need to set:
   export CPPFLAGS="-I/opt/homebrew/opt/bzip2/include"
 ```
 
-## openssh@1.1
+## openssh@1.1 para python 2.7.18
 
 ```sh
 brew install openssl@1.1
@@ -364,24 +364,25 @@ brew install openssl@1.1
 
 ```sh
 ==> Caveats
-==> openssl@1.1
 A CA file has been bootstrapped using certificates from the system
 keychain. To add additional certificates, place .pem files in
-  /usr/local/etc/openssl@1.1/certs
+  /opt/homebrew/etc/openssl@1.1/certs
 
 and run
-  /usr/local/opt/openssl@1.1/bin/c_rehash
+  /opt/homebrew/opt/openssl@1.1/bin/c_rehash
 
-openssl@1.1 is keg-only, which means it was not symlinked into /usr/local,
-because macOS provides LibreSSL.
+openssl@1.1 is keg-only, which means it was not symlinked into /opt/homebrew,
+because this is an alternate version of another formula.
 
 If you need to have openssl@1.1 first in your PATH, run:
-  echo 'export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"' >> ~/.zshrc
+  echo 'export PATH="/opt/homebrew/opt/openssl@1.1/bin:$PATH"' >> ~/.zshrc
 
 For compilers to find openssl@1.1 you may need to set:
-  export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib"
-  export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include"
+  export LDFLAGS="-L/opt/homebrew/opt/openssl@1.1/lib"
+  export CPPFLAGS="-I/opt/homebrew/opt/openssl@1.1/include"
 
+For pkg-config to find openssl@1.1 you may need to set:
+  export PKG_CONFIG_PATH="/opt/homebrew/opt/openssl@1.1/lib/pkgconfig"
 ```
 
 ## Pillow
@@ -453,15 +454,6 @@ To enable auto-activation add to your profile:
   if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 ```
 
-agregamos eso a nuestro .zprofile
-
-```shell
-# Enable auto-activation of virtualenvs 
-if which pyenv-virtualenv-init > /dev/null; then 
-  eval "$(pyenv virtualenv-init -)";
-fi
-```
-
 agregamos eso a nuestro .zshrc
 
 ```sh
@@ -469,13 +461,18 @@ agregamos eso a nuestro .zshrc
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+
+# Enable auto-activation of virtualenvs 
+if which pyenv-virtualenv-init > /dev/null; then 
+  eval "$(pyenv virtualenv-init -)";
+fi
 ```
 
 ```sh
 pyenv install 2.7.18
-pyenv install 3.9.16
-pyenv install 3.11.1
-pyenv global 3.11.1 2.7.18
+pyenv install 3.9.17
+pyenv install 3.11.4
+pyenv global 3.11.4 2.7.18
 pyenv versions
 
 pyenv virtualenv 3.9.16 proj1-env
