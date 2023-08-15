@@ -46,7 +46,7 @@ Se instala con brew
    $ brew tap homebrew/cask-fonts
    $ brew search nerd-font
    $ brew install font-source-code-pro
-   $ brew install font-fira-code-nerd-font
+   $ brew install --cask font-fira-code-nerd-font
    $ brew install font-jetbrains-mono-nerd-font
    $ brew list
    $ brew uninstall font-jetbrains-mono-nerd-font
@@ -76,8 +76,16 @@ oh-my-posh
 
    brew install oh-my-posh
 
+Add the following to ~/.zshrc:
+
+.. code-block:: shell
+
+    eval "$(oh-my-posh prompt init zsh)"
 
 
+.. code-block:: shell
+
+    source ~/.zshrc
 
 Salto de palabras
 -----------------
