@@ -337,6 +337,14 @@ parser de YAML
 brew install libyaml
 ```
 
+## poppler
+
+nos da las herramientas **pdftotext** y **pdftohtml**
+
+```sh
+brew install poppler
+```
+
 ## bzip2
 
 ```sh
