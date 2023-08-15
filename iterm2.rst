@@ -44,10 +44,13 @@ Se instala con brew
 .. code-block:: shell
 
    $ brew tap homebrew/cask-fonts
+   $ brew search nerd-font
    $ brew install font-source-code-pro
+   $ brew install font-fira-code-nerd-font
    $ brew install font-jetbrains-mono-nerd-font
    $ brew list
    $ brew uninstall font-jetbrains-mono-nerd-font
+   $ brew list --casks
 
 En iTerm2 :menuselection:`Preferences --> Profiles --> Text` seleccionamos el tipo de letra.
 
@@ -65,6 +68,15 @@ Nerd Fonts
 ~~~~~~~~~~
 
 `Nerd Fonts <http://nerdfonts.com>`_
+
+oh-my-posh
+----------
+
+.. code-block:: shell
+
+   brew install oh-my-posh
+
+
 
 
 Salto de palabras
