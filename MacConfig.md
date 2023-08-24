@@ -603,6 +603,14 @@ Para agregar el comando code al PATH, abrimos vscode y escribimos *shell command
 ⌘ + ⇧ + P  # paleta de comandos
 ```
 
+# latex
+
+https://sourabhbajaj.com/mac-setup/LaTeX/
+
+```sh
+ brew install --cask mactex
+```
+
 Reiniciamos la terminal para que el nuevo PATH tome efecto.
 
 ## Extenciones
