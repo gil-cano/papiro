@@ -6,6 +6,10 @@
 
 <img src="python3-cldt.png" alt="The command line developer tools" width="600">
 
+> [!NOTE]
+> [Si tienes problemas con CLT](https://mac.install.guide/commandlinetools/3.html)
+
+
 # Instalación de brew
 
 brew es un manejador de paquetes.
