@@ -55,7 +55,7 @@ pyenv install --list
 volvemos a instalar las versiones de python que teniamos (de preferencia las más actuales).
 
 ```shell
-pyenv uninstall 2.7.18
+pyenv install 2.7.18
 ```
 
 creamos las instancias virtaules que teniamos
