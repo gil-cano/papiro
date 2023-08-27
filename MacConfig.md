@@ -439,6 +439,9 @@ parallel can cause all kinds of trouble.
 For compilers to find zlib you may need to set:
   export LDFLAGS="-L/opt/homebrew/opt/zlib/lib"
   export CPPFLAGS="-I/opt/homebrew/opt/zlib/include"
+
+For pkg-config to find zlib you may need to set:
+  export PKG_CONFIG_PATH="/opt/homebrew/opt/zlib/lib/pkgconfig"
 ```
 
 ## pyenv
