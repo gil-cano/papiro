@@ -341,14 +341,6 @@ parser de YAML
 brew install libyaml
 ```
 
-## poppler
-
-nos da las herramientas **pdftotext** y **pdftohtml**
-
-```sh
-brew install poppler
-```
-
 ## bzip2
 
 ```sh
@@ -539,6 +531,16 @@ wv permite el acceso a archivos de tipo Microsoft Word
 ```sh
 brew install wv
 ```
+
+## poppler
+
+nos da las herramientas **pdftotext** y **pdftohtml**
+
+```sh
+brew install poppler
+```
+
+
 ## Plone 4, 5
 
 ```sh
