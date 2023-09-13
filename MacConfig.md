@@ -491,7 +491,6 @@ pyenv uninstall 3.9.16
 ## pipx
 ```sh
 brew install pipx
-pipx install httpie
 pipx install pls
 pipx list
 pipx ensurepath
@@ -570,6 +569,9 @@ pyenv virtualenv 3.10.10 plone6.0
 pipx install cookiecutter
 pipx install plonecli
 pipx inject plonecli bobtemplates.plone
+pipx list --include-injected
+pipx install tox
+pipx install isort
 ```
 
 ```sh
@@ -584,6 +586,11 @@ A cat(1) clone with wings.
 brew install bat
 ```
 
+
+```shell
+pipx install httpie
+```
+
 Linux/OSX/FreeBSD resource monitor 
 
 ```sh
@@ -594,6 +601,7 @@ Pgcli es una interfaz en la linea de comandos para `Postgresql`
 ```shell
 pipx install pgcli
 ```
+
 
 ## libpq
 
