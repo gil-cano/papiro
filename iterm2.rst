@@ -109,7 +109,7 @@ Cuando iniciamos una instancia de Plone marca el error
 
 Hay dos maneras de solucionar esto:
 
-- agregar al archivo :file:`.bash_profile` o en el archivo :file:`.zshrc`
+- agregar al archivo :file:`.bash_profile` o en el archivo :file:`.zprofile`
 
 .. code-block:: shell
 
