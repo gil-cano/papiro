@@ -43,14 +43,14 @@ Se instala con brew
 
 .. code-block:: shell
 
-   $ brew tap homebrew/cask-fonts
-   $ brew search nerd-font
-   $ brew install font-source-code-pro
-   $ brew install --cask font-fira-code-nerd-font
-   $ brew install font-jetbrains-mono-nerd-font
-   $ brew list
-   $ brew uninstall font-jetbrains-mono-nerd-font
-   $ brew list --casks
+   brew tap homebrew/cask-fonts
+   brew search nerd-font
+   brew install font-source-code-pro
+   brew install --cask font-fira-code-nerd-font
+   brew install font-jetbrains-mono-nerd-font
+   brew list
+   brew uninstall font-jetbrains-mono-nerd-font
+   brew list --casks
 
 En iTerm2 :menuselection:`Preferences --> Profiles --> Text` seleccionamos el tipo de letra.
 
@@ -62,7 +62,7 @@ Para probar algunos caracteres en la terminal:
 
 .. code-block:: shell
 
-   $ echo "\ue0b0 \u00b1 \ue0a0 \u27a6 \u2718 \u26a1 \u2699"
+   echo "\ue0b0 \u00b1 \ue0a0 \u27a6 \u2718 \u26a1 \u2699"
 
 Nerd Fonts
 ~~~~~~~~~~
