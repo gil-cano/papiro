@@ -427,6 +427,51 @@ Montar dispositivo
 
     $ sudo mount /dev/sdb5 /mnt/
 
+Hora
+-----
+
+Lee el reloj del hardware y lo muestra
+
+.. code-block:: shell
+
+    sudo hwclock -r
+
+Para mostrar la hora del sistema con detalles de la zona horaria
+
+.. code-block:: shell
+
+    timedatectl
+
+lista las zonas  horaria
+
+.. code-block:: shell
+
+    timedatectl list-timezones 
+
+Pone la zona horaria
+
+.. code-block:: shell
+
+    sudo timedatectl set-timezone "America/Mexico_City" 
+
+o puede ser con el archivo localtime
+
+.. code-block:: shell
+
+    sudo ln -s /usr/share/zoneinfo/America/Mexico_City /etc/localtime 
+
+Pone la hora
+
+.. code-block:: shell
+
+    sudo date +%T -s "15:05:00"
+
+o con timedatectl
+
+.. code-block:: shell
+
+    timedatectl set-time '15:05:43'
+
 
 Referencias
 -----------
@@ -446,3 +491,5 @@ Referencias
 * `Fail2ban configuration additions for Plone <https://community.plone.org/t/fail2ban-configuration-additions-for-plone/2716>`_
 
 * `Best options for mitigating against denial of service attacks  <https://community.plone.org/t/best-options-for-mitigating-against-denial-of-service-attacks/4076>`_
+
+* `Linux Set Date and Time From a Command Prompt <https://www.cyberciti.biz/faq/howto-set-date-time-from-linux-command-prompt/>`_
