@@ -503,6 +503,12 @@ export PATH="$PATH:/Users/gil/.local/bin"
 alias ls='pls --multi-cols'
 ```
 
+```sh
+# pipx configuration with pyenv
+export PIPX_DEFAULT_PYTHON="$HOME/.pyenv/versions/3.11.5/bin/python"
+```
+
+
 # Buildout
 Creamos en el home un directorio .buildout
 
@@ -570,11 +576,9 @@ pipx install cookiecutter
 pipx install plonecli
 pipx inject plonecli bobtemplates.plone
 pipx list --include-injected
-pipx install tox
+brew install black
 pipx install isort
-```
-
-```sh
+pipx install tox
 pipx install zpretty
 ```
 
