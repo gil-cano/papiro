@@ -576,11 +576,15 @@ pipx install cookiecutter
 pipx install plonecli
 pipx inject plonecli bobtemplates.plone
 pipx list --include-injected
-brew install black
 pipx install isort
 pipx install tox
 pipx install zpretty
 ```
+
+```sh
+brew install black
+```
+
 
 # Tools
 
