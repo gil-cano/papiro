@@ -47,6 +47,7 @@ Se instala con brew
    brew search nerd-font
    brew install font-source-code-pro
    brew install --cask font-fira-code-nerd-font
+   brew install --cask font-intel-one-mono
    brew install font-jetbrains-mono-nerd-font
    brew list
    brew uninstall font-jetbrains-mono-nerd-font
