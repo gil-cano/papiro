@@ -473,6 +473,23 @@ o con timedatectl
     timedatectl set-time '15:05:43'
 
 
+alias
+-----
+
+Se omdifca el archivo /etc/aliases
+
+.. code-block:: shell
+
+    root: correo@de.root.mx
+
+Actualizamos la base de datos de alias.
+
+.. code-block:: shell
+
+    cd /etc
+    sudo newaliases
+
+
 Referencias
 -----------
 

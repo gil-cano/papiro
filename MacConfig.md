@@ -639,6 +639,11 @@ https://sourabhbajaj.com/mac-setup/LaTeX/
  brew install --cask mactex
 ```
 
+# klogg
+
+```sh
+brew install --cask klogg
+```
 
 ## Extenciones
 
