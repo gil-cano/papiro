@@ -18,6 +18,16 @@ To learn how to update and manage this documentation and its tools, read `??? <h
 Building The Documentation
 --------------------------
 
+Con pyenv
+
+.. code:: bash
+    
+    git clone https://github.com/gil-cano/papiro.git
+    cd papiro
+    pyenv virtualenv 3.12.2 sphinx
+    pyenv local sphinx
+
+
 Con pipenv
 
 .. code:: bash

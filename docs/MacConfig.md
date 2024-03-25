@@ -4,7 +4,7 @@
 > macOS Ventura elimino `python`.
 > Sí lo necesitas debes ejecutar `python3` que instalara `the command line developer tools`.
 
-<img src="python3-cldt.png" alt="The command line developer tools" width="600">
+<img src="_static/python3-cldt.png" alt="The command line developer tools" width="600">
 
 > [!NOTE]
 > [Si tienes problemas con CLT](https://mac.install.guide/commandlinetools/3.html)

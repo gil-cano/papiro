@@ -1,0 +1,21 @@
+-c constraints.txt
+
+sphinx
+myst-parser        # Functionality for parsing CommonMark and MyST Markdown files into Sphinx.
+sphinx-design      # Provide Sphinx directives for UI components that are used throughout the Jupyter Book docs.
+sphinx-book-theme  # A Sphinx theme that defines the look and feel of Jupyter Book, and its general layout.
+
+# trainig / jupyter-book
+linkify-it-py
+sphinx-copybutton
+sphinx-togglebutton
+
+sphinxcontrib-mermaid  # allow us to generate Mermaid diagrams with MyST
+
+# # training
+# lesscpy
+# sphinx-autobuild
+# sphinx-sitemap
+# sphinxcontrib-spelling
+# sphinxext-opengraph
+# vale==2.30.0
