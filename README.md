@@ -1,43 +1,35 @@
-Papiro
-=======
+# Papiro
 
 This repository is a work in progress
 
 .. contents:: :local:
 
-Introduction
-------------
+## Introduction
 
 This package provides the source for documentation of some tools used for Plone development.
 
-To read the documentation (formatted) in your web browser, please head to `??? <http://localhost>`_.
 
-To learn how to update and manage this documentation and its tools, read `??? <http://localhost>`_.
+## Building The Documentation
 
+# pyenv
 
-Building The Documentation
---------------------------
+```shell
+git clone https://github.com/gil-cano/papiro.git
+cd papiro
+pyenv virtualenv 3.12.2 sphinx
+pyenv local sphinx
+```
 
-Con pyenv
+# pipenv
 
 .. code:: bash
-    
+
     git clone https://github.com/gil-cano/papiro.git
-    cd papiro
-    pyenv virtualenv 3.12.2 sphinx
-    pyenv local sphinx
-
-
-Con pipenv
-
-.. code:: bash
-
-    $ git clone https://github.com/gil-cano/papiro.git
     $ cd papiro
     $ pipenv install
     $ pipenv run make html
 
-con pip y virtualenv
+# pip and virtualenv
 
 .. code:: bash
 

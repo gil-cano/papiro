@@ -4,6 +4,7 @@
 project = 'papiro'
 copyright = '2024, Gildardo Bautista'
 author = 'Gildardo Bautista García Cano'
+version = '2.1'
 release = '2.1'
 
 # -- General configuration ---------------------------------------------------

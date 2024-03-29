@@ -113,3 +113,4 @@ Convenciones
     :maxdepth: 2
 
     about
+    authors
