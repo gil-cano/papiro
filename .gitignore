@@ -1,13 +1,13 @@
-*~
-*.mo
-_build/
-build/
-bin/
-include/
-lib/
-local/
-.vagrant
-.doctrees
+# Dependencies
+/bin
+/include
+/lib
+/lib64
+
+# Generated files
 .DS_Store
-# Files
-pip-selfcheck.json
+.python-version
+_build
+
+# editor files
+.vscode
