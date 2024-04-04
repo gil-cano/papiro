@@ -14,4 +14,54 @@ Los lineaminetos estan basados en: [Plone Training Authors Guide](https://traini
 > Use `console` for output of a shell session. If you have a mix of a shell command and its output, then use `console`.
 
 
-`virtualenv`
+## Notas, Advertencias, etc.
+
+```{note}
+Highlights information that users should take into account, even when skimming.
+```
+
+```{tip}
+Optional information to help a user be more successful.
+```
+
+```{important}
+Crucial information necessary for users to succeed.
+```
+
+```{warning}
+Critical content demanding immediate user attention due to potential risks.
+```
+```{caution}
+Negative potential consequences of an action.
+```
+
+Github highlighting
+
+> [!NOTE]  
+> Highlights information that users should take into account, even when skimming.
+
+> [!TIP]
+> Optional information to help a user be more successful.
+
+> [!IMPORTANT]  
+> Crucial information necessary for users to succeed.
+
+> [!WARNING]  
+> Critical content demanding immediate user attention due to potential risks.
+
+> [!CAUTION]
+> Negative potential consequences of an action.
+
+
+## Imagenes
+
+```{figure} _static/features_site_structure.png
+:alt: The view of the newly created site structure.
+
+The view of the newly created site structure
+```
+
+## Etiquetas
+
+{guilabel}`Policy`
+

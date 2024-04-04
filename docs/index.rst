@@ -69,9 +69,10 @@ Development tools and Administrations tools
 ===========================================
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
 
     MacConfig
+    vscode
 ..     bibtex
 ..     chrome
 ..     docker
@@ -92,7 +93,6 @@ Development tools and Administrations tools
 ..     varnishcache
 ..     webpagetest
 ..     vagrant
-..     vscode
 
 
 .. Web Development
