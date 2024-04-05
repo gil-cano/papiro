@@ -65,3 +65,4 @@ The view of the newly created site structure
 
 {guilabel}`Policy`
 
+<kbd>W</kbd>

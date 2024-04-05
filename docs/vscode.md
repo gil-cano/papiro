@@ -1,27 +1,27 @@
 # Visual studio Code
 
-
 ## Línea de comandos en macOS
 
 [Visual Studio Code](https://code.visualstudio.com) incluye el comando `code`, para abrir archivos desde una terminal.
 
-
- * Inicia VS Code.
- * Abrimos la paleta de comandos con `F1` o {guilabel}`⌘ + ⇧ + P` y escribimos *shell command* para encontrar el comando *Shell Command: Install 'code' command in PATH*
- * Reiniciamos la terminal para que el nuevo $PATH tome efecto.
-
-
-```{note}
-| Teclas | Descripción        |
-| :---   | ---                |
-| F1     | paleta de comandos |
-| ⇧ ⌘ P  | paleta de comandos |
+* Inicia VS Code.
+* Abre la paleta de comandos con <kbd>F1</kbd> o (<kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>P</kbd>) y escribe 'shell command' para encontrar el comando:
+```console
+Shell Command: Install 'code' command in PATH
 ```
 
 ```{figure} _static/vscode/vsc_shell.png
-:alt: shell command
+:alt: Shell Command: Install 'code' command in PATH
 
-shell command
+Shell Command: Install 'code' command in PATH
+```
+ * Reinicia la terminal para que el nuevo `$PATH` tome efecto.
+
+```{note}
+| Teclas        | Descripción        |
+| :---          | ---                |
+| <kbd>F1</kbd> | paleta de comandos |
+| <kbd>⌘</kbd> <kbd>⇧</kbd> <kbd>P</kbd>  | paleta de comandos |
 ```
 
 [Visual Studio Code on macOS](https://code.visualstudio.com/docs/setup/mac)
@@ -35,15 +35,17 @@ Seleccióna el tema.
 
 ```{figure} _static/vscode/github-themes.png
 :alt: set color theme
+
+Color theme
 ```
 
 ## Python en Visual Studio Code
 
 Instala la extensión [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
 
-Por default instalara un paquede de extensiones: Pylance y Jupyter (E. Pack 2 Jupyter Keymap, Jupyter Notebook Renderers)
+Por default instalara un paquede de extensiones: Pylance, Python Debugger, Jupyter (E. Pack 2 Jupyter Keymap, Jupyter Notebook Renderers)
 
-`Python in Visual Studio Code <https://code.visualstudio.com/docs/languages/python>`_
+[Python in Visual Studio Code](https://code.visualstudio.com/docs/languages/python)
 
 ### Configuración
 
