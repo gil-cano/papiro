@@ -151,3 +151,19 @@ rm ~/.vscode
 movemos la app a la basura.
 
 [Uninstall Visual Studio Code](https://code.visualstudio.com/docs/setup/uninstall)
+
+
+## OLD
+
+* GitHub Theme
+* Jupyter
+* Jupyter Cell Tags
+* Jupyter Keymap
+* Jupyter Notebook Renderers
+* Jupyter Slide Show
+* LaTeX Workshop
+* Markdown Preview Mermaid Support
+* Pylance
+* Python
+* Python Debugger
+* Rainbow CSV
