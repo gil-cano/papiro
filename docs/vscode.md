@@ -142,13 +142,13 @@ pipenv install rstcheck
 
 ## Uninstall
 
-Borramos los folders de configuración del usuario:
+Borra los folders de configuración de usuario:
 
 ```shell
 rm $HOME/Library/Application Support/Code
 rm ~/.vscode
 ```
-movemos la app a la basura.
+mueve la app a la basura.
 
 [Uninstall Visual Studio Code](https://code.visualstudio.com/docs/setup/uninstall)
 
