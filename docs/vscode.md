@@ -211,3 +211,25 @@ pipenv install rstcheck
 ## OLD
 * Markdown Preview Mermaid Support
 * Rainbow CSV
+
+```console
+code --list-extensions
+bierner.markdown-mermaid
+erral.erral-zcmllanguageconfiguration
+executablebookproject.myst-highlight
+github.github-vscode-theme
+james-yu.latex-workshop
+mechatroner.rainbow-csv
+mrorz.language-gettext
+ms-python.debugpy
+ms-python.isort
+ms-python.python
+ms-python.vscode-pylance
+ms-toolsai.jupyter
+ms-toolsai.jupyter-keymap
+ms-toolsai.jupyter-renderers
+ms-toolsai.vscode-jupyter-cell-tags
+ms-toolsai.vscode-jupyter-slideshow
+ms-vscode.makefile-tools
+yy0931.vscode-sqlite3-editor
+```
