@@ -11,9 +11,9 @@ Shell Command: Install 'code' command in PATH
 ```
 
 ```{figure} _static/vscode/vsc_shell.png
-:alt: Shell Command: Install 'code' command in PATH
+:alt: Install 'code' command in PATH
 
-Shell Command: Install 'code' command in PATH
+Install 'code' command in PATH
 ```
  * Reinicia la terminal para que el nuevo `$PATH` tome efecto.
 
@@ -25,7 +25,6 @@ Shell Command: Install 'code' command in PATH
 ```
 
 [Visual Studio Code on macOS](https://code.visualstudio.com/docs/setup/mac)
-
 
 ## GitHub theme for VS Code
 
@@ -43,65 +42,134 @@ Color theme
 
 Instala la extensión [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
 
-Por default instalara un paquede de extensiones: Pylance, Python Debugger, Jupyter (E. Pack 2 Jupyter Keymap, Jupyter Notebook Renderers)
+Por default instala las extensiones: [Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance) y [Python Debugger](https://marketplace.visualstudio.com/items?itemName=ms-python.debugpy).
 
 [Python in Visual Studio Code](https://code.visualstudio.com/docs/languages/python)
 
 ### Configuración
 
 ```shell
+pyenv virtualenv 3.12.2 product
 mkdir product
 cd product
-pipenv install -python=python3.8
-code product
+pyenv local product
+code .
 ```
 
-.. image:: _static/vscode/vsc_interpreter.png
-   :alt: shell command
+```{figure} _static/vscode/vsc_interpreter.png
+:alt: shell command
 
+shell command
+```
 
 ```{warning}
-Abrimos un archivo :file:`.py`. La extensión de Python muestra un botón en la barra de estado donde podemos seleccinar el ambiente de Python a usar. Las preferencias son salvadas en el archivo :file:`.vscode/settings.json`.
+Abrimos un archivo `.py`. La extensión de Python muestra un botón en la barra de estado donde podemos seleccinar el ambiente de Python a usar. Las preferencias son salvadas en el archivo `.vscode/settings.json`.
 ```
 
 ### Debug
 
 Selecciona la linea en el gutter y presiona ``F5``
 
+```{figure} _static/vscode/vsc_debug.png
+:alt: debug
 
-.. image:: _static/vscode/vsc_debug.png
-   :alt: shell command
+debug
+```
 
 La ejecusíon se detiene en la linea selecionada y aparece la barra de debug
 
-.. image:: _static/vscode/vsc_debugtoolbar.png
-   :alt: shell command
+```{figure} _static/vscode/vsc_debugtoolbar.png
+:alt: debug
 
+debug
+```
 
 La consola de debug
 
-.. image:: _static/vscode/vsc_debugconsole.png
-   :alt: shell command
+```{figure} _static/vscode/vsc_debugconsole.png
+:alt: debug
 
+debug
+```
 
 ### Testing
-`pytest <https://code.visualstudio.com/docs/python/testing#_enable-a-test-framework>`_
+[pytest](https://code.visualstudio.com/docs/python/testing#_enable-a-test-framework)
 
 ```shell
 cd product
-pipenv install pytest
+pip install pytest
 ```
 
 Abilitamos las pruebas con el comando Python: Configure Tests
 
 Linters
 
-`flake8 <https://code.visualstudio.com/docs/python/linting#_enable-linters>`_
+[flake8](https://code.visualstudio.com/docs/python/linting#_enable-linters)
 
 ```shell
-    cd product
-    pipenv install flake8
+cd product
+pip install flake8
 ```
+
+## Jupyter
+
+Instala la extensión [Jupyter](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter)
+
+Por default instala las extensiones: 
+* [Jupyter Keymap](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter-keymap)
+* [Jupyter Notebook Renderers](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter-renderers)
+* [Jupyter Cell Tags](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.vscode-jupyter-cell-tags)
+* [Jupyter Slide Show](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.vscode-jupyter-slideshow)
+
+## Ruff
+
+Un linter y formateador de código python extremadamente rapido, escrito en Rust
+
+Instala la extension [Ruff](https://marketplace.visualstudio.com/items?itemName=charliermarsh.ruff)
+
+Ruff resalta errores según la regla de estilos usada, por ejemplo si importas una función que no usas.
+
+```{figure} _static/vscode/ruff-lint.png
+:alt: Install 'code' command in PATH
+
+Install 'code' command in PATH
+```
+
+"Quick Fix" no premite corregirlo de manera automática (<kbd>⌘</kbd> + <kbd>.</kbd>)
+
+```{figure} _static/vscode/ruff-quickfix.png
+:alt: Quick fix
+
+Quick fix
+```
+
+"Format Document"
+
+Abre la paleta de comandos (<kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>P</kbd>) y selecciona 'Format Document'.
+
+"Organize Imports"
+
+Abre la paleta de comandos (<kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>P</kbd>) y selecciona 'Organize Imports'.
+
+
+## Latex
+
+Instala la extensión [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)
+
+## Uninstall
+
+Borra los folders de configuración de usuario:
+
+```shell
+rm -rf $HOME/Library/Application Support/Code
+rm -rf ~/.vscode
+```
+mueve la app a la basura.
+
+[Uninstall Visual Studio Code](https://code.visualstudio.com/docs/setup/uninstall)
+
+
+
 
 ## reStructuredText
 
@@ -116,16 +184,15 @@ Instalamos la extension [reStructuredText](https://docs.restructuredtext.net)
 
 ### Configuración
 
-.. code-block:: shell
-
-    mkdir notas
-    cd notas
-    pipenv install -python=python3.8
-    pipenv install Sphinx
-    pipenv shell
-    (notas) sphinx-quickstart
-    (notas) code .
-
+```shell
+mkdir notas
+cd notas
+pipenv install -python=python3.8
+pipenv install Sphinx
+pipenv shell
+(notas) sphinx-quickstart
+(notas) code .
+```
 
 
 ```{warning}
@@ -140,30 +207,7 @@ pipenv install doc8
 pipenv install rstcheck
 ```
 
-## Uninstall
-
-Borra los folders de configuración de usuario:
-
-```shell
-rm $HOME/Library/Application Support/Code
-rm ~/.vscode
-```
-mueve la app a la basura.
-
-[Uninstall Visual Studio Code](https://code.visualstudio.com/docs/setup/uninstall)
-
 
 ## OLD
-
-* GitHub Theme
-* Jupyter
-* Jupyter Cell Tags
-* Jupyter Keymap
-* Jupyter Notebook Renderers
-* Jupyter Slide Show
-* LaTeX Workshop
 * Markdown Preview Mermaid Support
-* Pylance
-* Python
-* Python Debugger
 * Rainbow CSV
