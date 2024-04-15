@@ -46,7 +46,7 @@ Para ver que version de nvm:
 .. code-block:: shell
 
     $ nvm --version
-    0.39.0
+    0.39.7
 
     $ nvm version
     none
