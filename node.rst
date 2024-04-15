@@ -29,7 +29,7 @@ Primero instalamos un manejador de versiones de node (`node version manager <htt
 
 .. code-block:: shell
 
-    $ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+    $ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
     => Downloading nvm from git to '/Users/name/.nvm'
     => Cloning into '/Users/name/.nvm'...
     => Appending nvm source string to /Users/name/.zshrc
