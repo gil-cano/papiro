@@ -1,53 +1,67 @@
-Node.js
-=======
+# Node.js
 
+Node.js® is a free, open-source, cross-platform JavaScript runtime environment
 
-Uninstall
----------
+## Uninstall
 
 Borramos nvm de manera manual, ejecutamos lo siguiente:
 
-.. code-block:: shell
-
-    $ rm -rf "$NVM_DIR"
+```shell
+rm -rf "$NVM_DIR"
+```
 
 Editamos ~/.zshrc y borramos las lineas:
 
-.. code-block:: shell
 
-    export NVM_DIR="$HOME/.nvm"
-    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-    [[ -r $NVM_DIR/bash_completion ]] && \. $NVM_DIR/bash_completion
+```console
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+[[ -r $NVM_DIR/bash_completion ]] && \. $NVM_DIR/bash_completion
+```
 
-Instalación
------------
+## Instalación
 
-nvm
-~~~
+### nvm (Node Version Manager)
 
 Primero instalamos un manejador de versiones de node (`node version manager <https://github.com/nvm-sh/nvm>`_).
 
-.. code-block:: shell
+```console
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+=> Compressing and cleaning up git repository
 
-    $ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
-    => Downloading nvm from git to '/Users/name/.nvm'
-    => Cloning into '/Users/name/.nvm'...
-    => Appending nvm source string to /Users/name/.zshrc
-    => Appending bash_completion source string to /Users/name/.zshrc
-    => Close and reopen your terminal to start using nvm or run the following to use it now:
+=> Appending nvm source string to /Users/myuser/.zshrc
+=> Appending bash_completion source string to /Users/myuser/.zshrc
+=> Close and reopen your terminal to start using nvm or run the following to use it now:
 
-    export NVM_DIR="$HOME/.nvm"
-    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+```
 
+revisarla version de nvm:
 
-Para ver que version de nvm:
+```shell
+nvm -v
+```
 
-.. code-block:: shell
+listar versiones de note disponibles de manera remota
 
-    $ nvm --version
-    0.39.7
+```shell
+nvm ls-remote
+```
 
+listar versiones de node instaladas de manera local
+
+```shell
+nvm ls
+```
+
+Instalar una version especificad de node
+
+```shell
+nvm install 18.20.2
+```
+### node
     $ nvm version
     none
 

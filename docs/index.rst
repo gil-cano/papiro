@@ -72,6 +72,7 @@ Development tools and Administrations tools
     :maxdepth: 1
 
     MacConfig
+    node
     rust
     vscode
 ..     bibtex
