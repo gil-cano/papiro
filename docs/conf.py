@@ -28,6 +28,8 @@ extensions = [
     "sphinxcontrib.mermaid", # you will be able to add diagrams
 ]
 
+# pygments_style = "sphinx"
+
 # For more information see:
 # https://myst-parser.readthedocs.io/en/latest/syntax/optional.html
 myst_enable_extensions = [
@@ -57,11 +59,10 @@ html_theme = "sphinx_book_theme"
 
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
-# source_suffix = ['.rst', '.md']
-source_suffix = '.rst'
-# source_suffix = {
-#     '.md': 'markdown'
-# }
+source_suffix = {
+    ".md": "markdown",
+    ".rst": "restructuredtext",
+}
 
 # -- sphinx.ext.todo -----------------------
 todo_include_todos = True  # Uncomment to show todos.

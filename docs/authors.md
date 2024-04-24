@@ -31,6 +31,7 @@ Crucial information necessary for users to succeed.
 ```{warning}
 Critical content demanding immediate user attention due to potential risks.
 ```
+
 ```{caution}
 Negative potential consequences of an action.
 ```
@@ -63,6 +64,16 @@ The view of the newly created site structure
 
 ## Etiquetas
 
-{guilabel}`Policy`
+`plone-backend`
+
+{guilabel}`Create Plone Site`
+
+{term}`server-side rendering`
+
+We use `virtualenv` and {term}`mxdev`
 
 <kbd>W</kbd>
+
+```{seealso}
+https://training.plone.org/mastering-plone/what_is_plone.html
+```

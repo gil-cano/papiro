@@ -1,10 +1,10 @@
-# Node.js
+# NodeJS
 
 Node.js® is a free, open-source, cross-platform JavaScript runtime environment
 
 ## Uninstall
 
-Borramos nvm de manera manual, ejecutamos lo siguiente:
+Borramos {term}`nvm` de manera manual, ejecutamos lo siguiente:
 
 ```shell
 rm -rf "$NVM_DIR"
