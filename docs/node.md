@@ -21,12 +21,14 @@ export NVM_DIR="$HOME/.nvm"
 
 ## Instalación
 
-### nvm (Node Version Manager)
+### nvm
 
-Primero instalamos un manejador de versiones de node (`node version manager <https://github.com/nvm-sh/nvm>`_).
+Primero instalamos un manejador de versiones de node (`[node version manager](https://github.com/nvm-sh/nvm)`).
 
-```console
+```shell
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+```
+```console
 => Compressing and cleaning up git repository
 
 => Appending nvm source string to /Users/myuser/.zshrc
@@ -38,11 +40,13 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 ```
 
-revisarla version de nvm:
+revisar la version de nvm:
 
 ```shell
 nvm -v
 ```
+
+### node
 
 listar versiones de note disponibles de manera remota
 
@@ -61,38 +65,18 @@ Instalar una version especificad de node
 ```shell
 nvm install 18.20.2
 ```
-### node
-    $ nvm version
-    none
 
-Listar las versiones de node
+Instalamos la ultima versión de soporte a largo plazo - long term support (LTS)
 
-.. code-block:: shell
+```shell
+nvm install --lts
+```
 
-    $ nvm ls
+Cambiar version de node
 
-node
-~~~~
-
-Instalamos la ultima versión de soprte a largo plazo - long term support (LTS)
-
-.. code-block:: shell
-
-    $ nvm install --lts
-
-
-o podemos Instalamos la ultima version de node
-
-.. code-block:: shell
-
-    $ nvm install node
-
-o una versión en particular
-
-.. code-block:: shell
-
-    $ nvm install 14.8.1
-    $ nvm use 14.18.1
+```shell
+nvm use 18.20.2
+```
 
 probar:
 
