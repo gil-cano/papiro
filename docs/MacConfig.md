@@ -150,36 +150,41 @@ git config --global alias.ci commit
 ```shell
 # This is Git's per-user configuration file.
 [user]
-    name = Firstname Lastname
-    email = email@gmail.com
+  name = Firstname Lastname
+  email = email@gmail.com
 # misc settings
 [core]
-    # set your prefered editor
-    editor = nano
-    excludesfile = ~/.gitignore
+  # set your prefered editor
+  editor = nano
+  excludesfile = ~/.gitignore
 # pretty colors, yay!
 [color]
-    ui = auto
+  ui = auto
 # from Calvin Hendryx-Parker dotfile
 [color "branch"]
-    current = yellow reverse
-    local = yellow
-    remote = green
+  current = yellow reverse
+  local = yellow
+  remote = green
 [color "diff"]
-    whitespace = red reverse
-    meta = yellow
-    frag = magenta
-    old = red
-    new = green
+  whitespace = red reverse
+  meta = yellow
+  frag = magenta
+  old = red
+  new = green
 [color "status"]
-    added = yellow
-    changed = green
-    untracked = cyan
+  added = yellow
+  changed = green
+  untracked = cyan
 [alias]
 # Status helpers
-    st = status -sb
-    stu = status -s -uno
-    stl = status --long
+  st = status -sb
+  stu = status -s -uno
+  stl = status --long
+# Commit shortcuts and verbosity
+  ci = commit
+  co = checkout
+[github]
+  user = username
 ```
 
 ## Comprobando tu Configuración
@@ -196,7 +201,7 @@ git config --list
 
 Lista los archivos en tu directorio .ssh
 
-```sh
+```shell
 ls -la ~/.ssh
 ```
 
@@ -204,7 +209,7 @@ ls -la ~/.ssh
 
 Genereamos la nueva llave.
 
-```sh
+```shell
 $ ssh-keygen -t ed25519 -C "your_email@example.com"
 Generating public/private ed25519 key pair.
 Enter file in which to save the key (/Users/you/.ssh/id_ed25519):
@@ -216,7 +221,7 @@ Your public key has been saved in /Users/you/.ssh/id_ed25519.pub
 
 Inicia el ssh-agente en segundo plano
 
-```sh
+```shell
 $ eval "$(ssh-agent -s)"
 Agent pid 10815
 ```
@@ -225,13 +230,13 @@ Modificamos el archivo ~/.ssh/config para cargar las llaves de manera automatica
 
 Si no exte el archivo lo creamos
 
-```sh
+```shell
 $ touch ~/.ssh/config
 ```
 
 Modificamos el archivo con las siguientes lineas:
 
-```sh
+```shell
 Host github.com
   AddKeysToAgent yes
   UseKeychain yes
@@ -240,7 +245,7 @@ Host github.com
 
 Agregamos nuestra llave privada al ssh-agent y guardamos la frases de contraseñas en el llavero.
 
-```sh
+```shell
 $ ssh-add --apple-use-keychain ~/.ssh/id_ed25519
 Enter passphrase for /Users/you/.ssh/id_ed25519:
 Identity added: /Users/you/.ssh/id_ed25519 (your_email@example.com)
@@ -250,7 +255,7 @@ Agregamos la llave publica a GitHub
 
 Copiamos la llave publica
 
-```sh
+```shell
 pbcopy < ~/.ssh/id_ed25519.pub
 ```
 
@@ -258,7 +263,7 @@ agregamos una llave nueva en https://github.com/settings/keys y pegamos la llave
 
 Probamos la conección y verificamos que la huella coincida con alguna de las [huellas de github](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/githubs-ssh-key-fingerprints)
 
-```sh
+```shell
 ssh -T git@github.com
 The authenticity of host 'github.com (IP)' can't be established.
 ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
@@ -301,6 +306,8 @@ Antes de installar python debemos instalar varios modulos si queremos tenerlos d
 
 ```shell
 brew info python
+```
+```console
 ==> python@3.11: stable 3.11.4 (bottled)
 Interpreted, interactive, object-oriented programming language
 ==> Dependencies
@@ -324,7 +331,7 @@ brew install mpdecimal openssl readline sqlite xz
 
 ## openssl
 
-```sh
+```console
 brew install openssl
 ==> Caveats
 ==> openssl@3
@@ -339,7 +346,7 @@ and run
 ## readline
 readline es una biblioteca para edición de linea de comandos
 
-```sh
+```console
 brew install readline
 ==> Caveats
 ==> readline
@@ -353,7 +360,7 @@ For compilers to find readline you may need to set:
 
 ## sqlite
 Interface para SQLite
-```shell
+```console
 brew install sqlite
 ==> Caveats
 ==> sqlite
@@ -392,10 +399,10 @@ brew install libyaml
 
 ## bzip2
 
-```sh
+```shell
 brew install bzip2
 ```
-```sh
+```console
 ==> Caveats
 bzip2 is keg-only, which means it was not symlinked into /opt/homebrew,
 because macOS already provides this software and installing another version in
@@ -411,11 +418,11 @@ For compilers to find bzip2 you may need to set:
 
 ## openssh@1.1 para python 2.7.18
 
-```sh
+```shell
 brew install openssl@1.1
 ```
 
-```sh
+```console
 ==> Caveats
 A CA file has been bootstrapped using certificates from the system
 keychain. To add additional certificates, place .pem files in
@@ -453,11 +460,15 @@ For pkg-config to find openssl@1.1 you may need to set:
 
 ```shell
 brew install jpeg freetype libpng libtiff little-cms2 openjpeg webp tcl-tk zlib
+```
+```shell
 brew install libxcb
+```
+```shell
 brew install libx11
 ```
 
-```shell
+```console
 ==> Caveats
 ==> jpeg
 jpeg is keg-only, which means it was not symlinked into /opt/homebrew,
@@ -489,6 +500,8 @@ For pkg-config to find zlib you may need to set:
 
 ```shell
 brew info pyenv
+```
+```console
 ==> pyenv: stable 2.3.23 (bottled), HEAD
 Python version management
 https://github.com/pyenv/pyenv
@@ -501,6 +514,8 @@ Required: autoconf ✘, openssl@3 ✔, pkg-config ✘, readline ✔
 
 ```shell
 brew install pyenv
+```
+```shell
 brew install pyenv-virtualenv
 ```
 ```shell
