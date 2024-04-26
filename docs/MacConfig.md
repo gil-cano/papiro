@@ -145,28 +145,43 @@ git config --global alias.co checkout
 git config --global alias.ci commit
 ```
 
+`.gitconfig`
 
 ```shell
-core.excludesfile=~/.gitignore
-color.ui=auto
-color.branch.current=yellow reverse
-color.branch.local=yellow
-color.branch.remote=green
-color.diff.whitespace=red reverse
-color.diff.meta=yellow
-color.diff.frag=magenta
-color.diff.old=red
-color.diff.new=green
-color.status.added=yellow
-color.status.changed=green
-color.status.untracked=cyan
-alias.st=status -sb
-alias.stu=status -s -uno
-alias.stl=status --long
-alias.ci=commit
-alias.co=checkout
-github.user=username
+# This is Git's per-user configuration file.
+[user]
+    name = Firstname Lastname
+    email = email@gmail.com
+# misc settings
+[core]
+    # set your prefered editor
+    editor = nano
+    excludesfile = ~/.gitignore
+# pretty colors, yay!
+[color]
+    ui = auto
+# from Calvin Hendryx-Parker dotfile
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+[color "diff"]
+    whitespace = red reverse
+    meta = yellow
+    frag = magenta
+    old = red
+    new = green
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan
+[alias]
+# Status helpers
+    st = status -sb
+    stu = status -s -uno
+    stl = status --long
 ```
+
 ## Comprobando tu Configuración
 
 Si quieres comprobar tu configuración, puedes usar el comando git config --list para mostrar todas las propiedades que Git ha configurado:
