@@ -12,7 +12,7 @@
 
 # Instalación de brew
 
-brew es un manejador de paquetes.
+`brew` es un manejador de paquetes.
 cask applicaciones graficas
 
 > [!WARNING]  
@@ -21,6 +21,9 @@ cask applicaciones graficas
 
 ```shell
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+```console
 ==> Checking for `sudo` access (which may request your password)...
 Password:
 ==> This script will install:
@@ -81,8 +84,11 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 ```
 
 # Git
-```sh
+```shell
 brew install git
+```
+
+```console
 ==> Installing git
 ==> Pouring git--2.41.0_2.arm64_ventura.bottle.tar.gz
 ==> Caveats
@@ -96,7 +102,6 @@ zsh completions and functions have been installed to:
 ==> Running `brew cleanup git`...
 Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
 Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
-
 ```
 
 ## Configurando Git por primera vez
@@ -106,8 +111,11 @@ https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup
 
 Lo primero que deberás hacer cuando instales Git es establecer tu nombre de usuario y dirección de correo electrónico.
 
-```sh
+```shell
 git config --global user.name "John Doe"
+```
+
+```shell
 git config --global user.email "johndoe@example.com"
 ```
 
@@ -117,7 +125,7 @@ https://git-scm.com/book/es/v2/Personalizaci%C3%B3n-de-Git-Configuraci%C3%B3n-de
 https://git-scm.com/book/sv/v2/Customizing-Git-Git-Configuration
 
 puedes elegir el editor de texto por defecto que se utilizará cuando Git necesite que introduzcas un mensaje
-```sh
+```shell
 git config --global core.editor nano
 ```
 
@@ -127,17 +135,43 @@ https://git-scm.com/book/es/v2/Fundamentos-de-Git-Alias-de-Git
 https://git-scm.com/book/en/v2/Git-Basics-Git-Aliases
 
 Si no quieres teclear el nombre completo de cada comando de Git, puedes establecer fácilmente un alias
-```sh
+```shell
 git config --global alias.st status
+```
+```shell
 git config --global alias.co checkout
+```
+```shell
 git config --global alias.ci commit
 ```
 
+
+```shell
+core.excludesfile=~/.gitignore
+color.ui=auto
+color.branch.current=yellow reverse
+color.branch.local=yellow
+color.branch.remote=green
+color.diff.whitespace=red reverse
+color.diff.meta=yellow
+color.diff.frag=magenta
+color.diff.old=red
+color.diff.new=green
+color.status.added=yellow
+color.status.changed=green
+color.status.untracked=cyan
+alias.st=status -sb
+alias.stu=status -s -uno
+alias.stl=status --long
+alias.ci=commit
+alias.co=checkout
+github.user=username
+```
 ## Comprobando tu Configuración
 
 Si quieres comprobar tu configuración, puedes usar el comando git config --list para mostrar todas las propiedades que Git ha configurado:
 
-```sh
+```shell
 git config --list 
 ```
 
