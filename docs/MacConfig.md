@@ -542,8 +542,8 @@ fi
 ```sh
 pyenv install 2.7.18
 pyenv install 3.9.17
-pyenv install 3.11.4
-pyenv global 3.11.4 2.7.18
+pyenv install 3.11.9
+pyenv global 3.11.9 2.7.18
 pyenv versions
 
 pyenv virtualenv 3.9.16 proj1-env
