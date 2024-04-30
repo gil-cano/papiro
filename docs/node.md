@@ -10,6 +10,10 @@ Borramos {term}`nvm` de manera manual, ejecutamos lo siguiente:
 rm -rf "$NVM_DIR"
 ```
 
+```shell
+rm -rf .npm
+```
+
 Editamos ~/.zshrc y borramos las lineas:
 
 
@@ -40,15 +44,21 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 ```
 
+To verify that nvm has been installed, do:
+
+```shell
+command -v nvm
+```
+
 revisar la version de nvm:
 
 ```shell
-nvm -v
+nvm --version
 ```
 
-### node
+### Node.js
 
-listar versiones de note disponibles de manera remota
+listar versiones de node disponibles de manera remota
 
 ```shell
 nvm ls-remote
@@ -78,17 +88,19 @@ Cambiar version de node
 nvm use 18.20.2
 ```
 
-probar:
+verificar la version de node
 
-.. code-block:: shell
+```console
+node -v
+v18.20.2
+```
 
-    $ node -v
-    v16.13.0
+o
 
-.. code-block:: shell
-
-    $ nvm version
-    v16.13.0
+```console
+nvm version
+v18.20.2
+```
 
 
 Yarn
