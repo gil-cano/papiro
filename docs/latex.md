@@ -25,3 +25,25 @@ See [Choosing a LaTeX Compiler](https://es.overleaf.com/learn/latex/Choosing_a_L
 ## VSCode
 
 [LaTeX Workshop](https://github.com/James-Yu/LaTeX-Workshop/wiki)
+
+USer > setting.json
+
+```json
+   "latex-workshop.latex.tools": [
+
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-shell-escape",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "-outdir=%OUTDIR%",
+                "%DOC%"
+            ],
+            "env": {}
+        }
+   ]
+```
