@@ -47,3 +47,10 @@ USer > setting.json
         }
    ]
 ```
+
+\usepackage{minted}
+
+```shell
+pipx install pygmentize
+```
+
