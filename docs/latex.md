@@ -54,3 +54,19 @@ USer > setting.json
 pipx install pygments
 ```
 
+```shell
+"latex-workshop.latex.tools": [
+    {
+        "name": "pdflatex",
+        "command": "pdflatex",
+        "args": [
+            "-synctex=1",
+            "-interaction=nonstopmode",
+            "-file-line-error",
+            "%DOC%",
+            "--shell-escape"
+        ],
+        "env": {}
+    }
+]
+```
