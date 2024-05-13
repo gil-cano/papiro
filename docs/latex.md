@@ -1,12 +1,16 @@
 # $\LaTeX$
 
+https://sourabhbajaj.com/mac-setup/LaTeX/
+
+
 ```shell
-brew install mactex
+brew install --cask mactex
 ```
 
 ## compilers
 
 See [Choosing a LaTeX Compiler](https://es.overleaf.com/learn/latex/Choosing_a_LaTeX_Compiler)
+
 >    * LaTeX supports only .eps and .ps image formats for use with \includegraphics. If all the images in your project are .eps files, then this compiler setting is recommended.
 >    * pdfLaTeX supports .png, .jpg, .pdf image formats. It will convert .eps images to .pdf on-the-fly during compilation, which may prolong the compilation time required. (pdfLaTeX may not be able to handle pstricks well on Overleaf.)
 >    * XeLaTeX and LuaLaTeX both supports UTF-8 robustly out of the box, as well as Truetype and OpenType. They are therefore recommended if you need to typeset non-Latin scripts on Overleaf, in conjunction with the polyglossia pacakge. They also support all of the .png, .jpg, .pdf and .eps image formats.
@@ -22,7 +26,7 @@ See [Choosing a LaTeX Compiler](https://es.overleaf.com/learn/latex/Choosing_a_L
 > latexmk -pdf mydocument.tex
 
 
-## VSCode
+## $\LaTeX$ in VSCode
 
 [LaTeX Workshop](https://github.com/James-Yu/LaTeX-Workshop/wiki)
 
@@ -52,6 +56,4 @@ USer > setting.json
 
 ```shell
 pipx install pygments
-```
-
 ```

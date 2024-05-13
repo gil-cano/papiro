@@ -6,6 +6,7 @@
 
 * Inicia VS Code.
 * Abre la paleta de comandos con <kbd>F1</kbd> o (<kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>P</kbd>) y escribe 'shell command' para encontrar el comando:
+
 ```console
 Shell Command: Install 'code' command in PATH
 ```
@@ -155,6 +156,19 @@ Abre la paleta de comandos (<kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>P</kbd>) y se
 ## Latex
 
 Instala la extensión [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)
+
+
+## Extenciones
+
+* [Github Theme](https://marketplace.visualstudio.com/items?itemName=GitHub.github-vscode-theme) 
+* [MyST-Markdown](https://marketplace.visualstudio.com/items?itemName=ExecutableBookProject.myst-highlight)
+* [Rainbow CSV](https://marketplace.visualstudio.com/items?itemName=mechatroner.rainbow-csv)
+* [ZCML language configuration](https://marketplace.visualstudio.com/items?itemName=erral.erral-zcmlLanguageConfiguration)
+requiere zpretty
+
+```shell
+pipx install zpretty
+```
 
 ## Uninstall
 

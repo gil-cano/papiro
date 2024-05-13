@@ -1,6 +1,0 @@
-collective.elections
-====================
-
-Introducción
-------------
-

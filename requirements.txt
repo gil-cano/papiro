@@ -19,3 +19,22 @@ sphinxcontrib-mermaid  # allow us to generate Mermaid diagrams with MyST
 # sphinxcontrib-spelling
 # sphinxext-opengraph
 # vale==2.30.0
+
+# # documentation
+# docutils<0.17,>=0.15  # sphinx-book-theme 0.2.0 has requirement docutils<0.17,>=0.15
+# graphviz
+# lesscpy
+# pydata-sphinx-theme==0.8.1  # Build fails in 0.9.0. See https://github.com/plone/documentation/issues/1297
+# sphinx-autobuild
+# sphinx-book-theme==0.3.3  # Temporary pin until we can sort out HTML refactoring.
+# sphinx-notfound-page  # Documentation only
+# sphinx-reredirects
+# sphinx-sitemap
+# sphinxcontrib-applehelp==1.0.4  # https://github.com/plone/documentation/issues/1604
+# sphinxcontrib-devhelp==1.0.2  # https://github.com/plone/documentation/issues/1604
+# sphinxcontrib-htmlhelp==2.0.1  # https://github.com/plone/documentation/issues/1604
+# sphinxcontrib-qthelp==1.0.3  # https://github.com/plone/documentation/issues/1604
+# sphinxcontrib-serializinghtml==1.1.5  # https://github.com/plone/documentation/issues/1604
+# sphinxcontrib-video
+# sphinxext-opengraph
+# vale==2.30.0

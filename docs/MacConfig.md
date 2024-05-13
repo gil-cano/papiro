@@ -688,39 +688,17 @@ brew install libpq
 
 # VSCode
 
-Para agregar el comando code al PATH, abrimos vscode y escribimos *shell command* para encontrar el comando *Shell Command: Install 'code' command in PATH*
-
-```
-⌘ + ⇧ + P  # paleta de comandos
-```
-
-Reiniciamos la terminal para que el nuevo PATH tome efecto.
-
+Ver [Visual Studio Code](vscode)
 
 # latex
 
-https://sourabhbajaj.com/mac-setup/LaTeX/
-
-```sh
- brew install --cask mactex
-```
+Ver [$\LaTeX$](latex)
 
 # klogg
 
 ```sh
 brew install --cask klogg
 ```
-
-## Extenciones
-
-* [Github Theme](https://marketplace.visualstudio.com/items?itemName=GitHub.github-vscode-theme) 
-* [MyST-Markdown](https://marketplace.visualstudio.com/items?itemName=ExecutableBookProject.myst-highlight)
-* [Rainbow CSV](https://marketplace.visualstudio.com/items?itemName=mechatroner.rainbow-csv)
-* [ZCML language configuration](https://marketplace.visualstudio.com/items?itemName=erral.erral-zcmlLanguageConfiguration)
-requiere zpretty
-  ```shell
-  pipx install zpretty
-  ```
 
 # Referencias
 * [The Arctic Ice Studio Markdown Code Style.](https://arcticicestudio.github.io/styleguide-markdown/)
