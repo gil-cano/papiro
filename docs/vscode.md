@@ -170,6 +170,23 @@ requiere zpretty
 pipx install zpretty
 ```
 
+## Crea tus propios snippets
+Para crear o editar tus propios snippets, selecciona `Configure User Snippets` en `code > Setting...` y despues selecciona el lenguaje (python.json).
+
+```json
+{
+	"Add debugger": {
+		"prefix": "pdb",
+		"body": [
+			"import pdb; pdb.set_trace()",
+			"$0"
+		],
+		"description": "break into the debugger"
+	}
+}
+```
+
+
 ## Uninstall
 
 Borra los folders de configuración de usuario:
