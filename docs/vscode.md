@@ -186,6 +186,11 @@ Para crear o editar tus propios snippets, selecciona `Configure User Snippets` e
 }
 ```
 
+## Font
+
+```console
+'VictorMono Nerd Font'
+```
 
 ## Uninstall
 

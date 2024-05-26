@@ -9,7 +9,6 @@
 > [!NOTE]
 > [Si tienes problemas con CLT](https://mac.install.guide/commandlinetools/3.html)
 
-
 # Instalación de brew
 
 `brew` es un manejador de paquetes.
@@ -17,7 +16,6 @@ cask applicaciones graficas
 
 > [!WARNING]  
 > [brew](https://brew.sh/) instalara `the command line developer tools`.
-
 
 ```shell
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"

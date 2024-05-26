@@ -1,24 +1,21 @@
-iTerm2
-======
+# iTerm2
 
 `iTerm2 <http://www.iterm2.com/>`_ es un remplazo de la Terminal de Apple.
 
-Instalación
------------
+## Instalación
 
 Descarga la aplicación y arrastrala a la carpeta :file:`Applications`
 
-======  =====================================
-⌘ ⏎     pantalla completa
-⌘ D     divide la terminal verticalmente
-⌘ ⇧ D   divide la terminal horizontalmente
-⌘ ⌥ UP  cambia de terminal
-⌘ /      resalta la posición del cursos
-======  =====================================
+| Teclas  | Descripción       |
+| :---    | ---               |
+| ⌘ ⏎     | pantalla completa |
+| ⌘ D     | divide la terminal verticalmente |
+| ⌘ ⇧ D   | divide la terminal horizontalmente |
+| ⌘ ⌥ UP  |cambia de terminal |
+| ⌘ /     | resalta la posición del cursos |
 
 
-Ventanas y Pestañas
--------------------
+## Ventanas y Pestañas
 
 En `iTerm2 <http://www.iterm2.com/>`_ podemos configurar en que directorio se abriran las nuevas ventanas o pestañas.
 
@@ -31,27 +28,25 @@ En `iTerm2 <http://www.iterm2.com/>`_ podemos configurar en que directorio se ab
    :width: 80%
 
 
-Tipo de letra
--------------
+## Tipo de letra
 
-Source Code Pro
-~~~~~~~~~~~~~~~
+### Source Code Pro
 
 `Source Code Pro <https://github.com/adobe-fonts/source-code-pro>`_ es un tipo de letra para programadores. Este tipo de letra tambien se usa en :ref:`sublimetext`
 
 Se instala con brew
 
-.. code-block:: shell
-
-   brew tap homebrew/cask-fonts
-   brew search nerd-font
-   brew install font-source-code-pro
-   brew install --cask font-fira-code-nerd-font
-   brew install --cask font-intel-one-mono
-   brew install font-jetbrains-mono-nerd-font
-   brew list
-   brew uninstall font-jetbrains-mono-nerd-font
-   brew list --casks
+```shell
+brew tap homebrew/cask-fonts
+brew search nerd-font
+brew install font-source-code-pro
+brew install --cask font-fira-code-nerd-font
+brew install --cask font-intel-one-mono
+brew install font-jetbrains-mono-nerd-font
+brew list
+brew uninstall font-intel-one-mono
+brew list --casks
+```
 
 En iTerm2 :menuselection:`Preferences --> Profiles --> Text` seleccionamos el tipo de letra.
 
