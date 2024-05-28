@@ -551,6 +551,7 @@ pyenv uninstall 3.9.16
 ```
 
 [Troubleshooting / FAQ](https://github.com/pyenv/pyenv/wiki#suggested-build-environment)
+[ERROR: The Python zlib extension was not compiled](https://github.com/pyenv/pyenv/wiki/Common-build-problems#keg-only-homebrew-packages-are-forcibly-linked--added-to-path)
 
 ## pipx
 ```sh
