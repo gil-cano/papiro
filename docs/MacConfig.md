@@ -550,6 +550,8 @@ pyenv virtualenv-delete proj1-env
 pyenv uninstall 3.9.16
 ```
 
+[Troubleshooting / FAQ](https://github.com/pyenv/pyenv/wiki#suggested-build-environment)
+
 ## pipx
 ```sh
 brew install pipx
