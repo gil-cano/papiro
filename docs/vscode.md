@@ -296,3 +296,9 @@ ms-toolsai.vscode-jupyter-cell-tags
 ms-toolsai.vscode-jupyter-slideshow
 wesbos.theme-cobalt2
 ```
+
+# Files Excludes
+
+Settings
+
+**/*.pyc
