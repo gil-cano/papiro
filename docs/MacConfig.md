@@ -695,6 +695,12 @@ Ver [Visual Studio Code](vscode)
 
 Ver [$\LaTeX$](latex)
 
+# Zen
+
+```sh
+brew install --cask zen-browser
+```
+
 # klogg
 
 ```sh
