@@ -186,6 +186,15 @@ Para crear o editar tus propios snippets, selecciona `Configure User Snippets` e
 }
 ```
 
+## Excluye archivos de la navegación
+En `code > Setting... > Setting` buscar la sección `Files: excludes`. Agregar los patrones 
+
+```
+**/*.mo
+**/*.pyc
+**/*.pyo
+```
+
 ## Font
 
 ```console
