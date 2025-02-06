@@ -414,7 +414,7 @@ For compilers to find bzip2 you may need to set:
   export CPPFLAGS="-I/opt/homebrew/opt/bzip2/include"
 ```
 
-## openssh@1.1 para python 2.7.18
+## openssl@1.1 para python 2.7.18
 
 ```shell
 brew install openssl@1.1
@@ -687,8 +687,11 @@ brew install libpq
 # brew install libpq --build-from-source
 ```
 
-# VSCode
+# Visual Studio Code
 
+```shell
+brew install --cask visual-studio-code
+```
 Ver [Visual Studio Code](vscode)
 
 # latex
