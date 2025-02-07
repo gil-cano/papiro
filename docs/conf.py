@@ -2,10 +2,10 @@
 # build with: sphinx-build -nW --keep-going -b html . ./_build/html
 
 project = 'papiro'
-copyright = '2024, Gildardo Bautista'
+copyright = '2025, Gildardo Bautista'
 author = 'Gildardo Bautista García Cano'
-version = '2.1'
-release = '2.1'
+version = '2.2'
+release = '2.2'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -48,7 +48,7 @@ myst_fence_as_directive = ["mermaid"]
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_theme = "sphinx_book_theme"
+html_theme = "plone_sphinx_theme"
 # html_static_path = ['_static']
 # html_favicon = '_static/favicon.ico'
 
