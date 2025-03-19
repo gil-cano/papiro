@@ -84,19 +84,22 @@ nvm use 20.19.2
 
 verificar la version de node
 
-```console
+```shell
 node -v
+```
+
+```console
 v22.14.0
 ```
 
 o
-
-```console
+```shell
 nvm version
-v22.14.0
 ```
 
-
+```console
+v22.14.0
+```
 
 
 Yarn
@@ -119,66 +122,11 @@ probar:
     $ yarn -v
     1.22.17
 
-Yeoman
-~~~~~~
 
-.. code-block:: shell
+## Volto
 
-    $ npm install -g yo
-
-
-.. code-block:: shell
-
-    $ yo --version
-    4.3.0
-
-Volto generator
-~~~~~~~~~~~~~~~
-
-.. code-block:: shell
-
-    $ npm install -g @plone/generator-volto
-    + @plone/generator-volto@4.4.0
-
-
-Volto
-~~~~~
-
-.. code-block:: shell
-
-    $ yo @plone/volto
-    Getting latest Volto version
-    Using latest released Volto version: 13.15.1
-
-    $ cd volto-project-myprojectname
-    $ yarn start
-
-
-ver `Volto developer documentation <https://docs.voltocms.com/getting-started/install/>`_
 
 ver `Mastering Plone 6 Developmnet <https://training.plone.org/5/mastering-plone/installation.html#installing-plone-frontend>`_
-
-
-
-Yeoman
-------
-
-.. code-block:: shell
-
-    $ npm install -g yo
-    $ npm install -g generator-webapp
-    $ mkdir mytodo && cd mytodo
-    $ yo webapp
-    $ npm start
-    $ npm run serve:test
-    $ npm run build
-
-
-Ir a la página del generador
-
-.. code-block:: shell
-
-    $ npm home generator-webapp
 
 
 Instalación (deprecated)
@@ -286,9 +234,8 @@ Si tenemos un archivo package.json y queremos instalar sus dependencias ejecutam
 
     $ npm install
 
-`How to install Node.js <https://nodejs.dev/learn/how-to-install-nodejs>`_
-
 `Creating Node.js modules <https://docs.npmjs.com/getting-started/creating-node-modules>`_
 
 `Setting up a Node development environment <https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment>`_
 
+Version policy [Node.js](https://6.docs.plone.org/volto/contributing/version-policy.html#node-js)
