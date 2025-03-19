@@ -115,67 +115,11 @@ npm i -g corepack@latest && corepack enable
 pipx run cookieplone project
 ```
 
-ver `Mastering Plone 6 Developmnet <https://training.plone.org/5/mastering-plone/installation.html#installing-plone-frontend>`_
+ver [Mastering Plone 6 Developmnet](https://training.plone.org/5/mastering-plone/installation.html#installing-plone-frontend)
 
 
-## Instalación (deprecated)
+[Setting up a Node development environment](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment)
 
-## Manejo de paquetes
+[Node.js](https://6.docs.plone.org/volto/contributing/version-policy.html#node-js)
 
-Para crear un nuevo paquete necesitamos un archivo :file:`package.json` ejecutamos:
-
-
-.. code-block:: console
-
-    $ npm init
-    This utility will walk you through creating a package.json file.
-    ...
-    package name: (myapp)
-    version: (1.0.0)
-    description:
-    entry point: (index.js)
-    test command:
-    git repository:
-    keywords:
-    author:
-    license: (ISC)
-    About to write to /Users/gil/projects/javascript/myapp/package.json:
-
-    {
-      "name": "myapp",
-      "version": "1.0.0",
-      "description": "",
-      "main": "index.js",
-      "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-      },
-      "author": "",
-      "license": "ISC"
-    }
-
-
-    Is this ok? (yes)
-
-para instalar un paquete y agregarlo al archivo package.json ejecutamos:
-
-.. code-block:: console
-
-    $ npm install <pkg> --save
-
-para paquetes que solo se usaran para desarrollo se usara --save-dev
-
-.. code-block:: console
-
-    $ npm install <pkg> --save-dev
-
-Si tenemos un archivo package.json y queremos instalar sus dependencias ejecutamos:
-
-.. code-block:: console
-
-    $ npm install
-
-`Creating Node.js modules <https://docs.npmjs.com/getting-started/creating-node-modules>`_
-
-`Setting up a Node development environment <https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment>`_
-
-Version policy [Node.js](https://6.docs.plone.org/volto/contributing/version-policy.html#node-js)
+[Version policy] 
