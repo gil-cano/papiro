@@ -101,27 +101,13 @@ nvm version
 v22.14.0
 ```
 
+## corepack
 
-Yarn
-~~~~
+Habilitamos corepack para que Node.js instale `pnpm` como manejador de paquetes.
 
-Instalamos el manejador de paquetes  `yarn <https://yarnpkg.com/>`_
-
-.. code-block:: shell
-
-    $ npm install --global yarn
-
-    /Users/name/.nvm/versions/node/v14.18.1/bin/yarn -> /Users/name/.nvm/versions/node/v14.18.1/lib/node_modules/yarn/bin/yarn.js
-    /Users/name/.nvm/versions/node/v14.18.1/bin/yarnpkg -> /Users/name/.nvm/versions/node/v14.18.1/lib/node_modules/yarn/bin/yarn.js
-
-
-probar:
-
-.. code-block:: shell
-
-    $ yarn -v
-    1.22.17
-
+```shell
+npm i -g corepack@latest && corepack enable
+```
 
 ## Volto
 
