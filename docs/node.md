@@ -47,12 +47,6 @@ export NVM_DIR="$HOME/.nvm"
 To verify that nvm has been installed, do:
 
 ```shell
-command -v nvm
-```
-
-revisar la version de nvm:
-
-```shell
 nvm --version
 ```
 
@@ -73,7 +67,7 @@ nvm ls
 Instalar una version especificad de node
 
 ```shell
-nvm install 18.20.2
+nvm install 20.19.0
 ```
 
 Instalamos la ultima versión de soporte a largo plazo - long term support (LTS)
@@ -85,7 +79,7 @@ nvm install --lts
 Cambiar version de node
 
 ```shell
-nvm use 18.20.2
+nvm use 20.19.2
 ```
 
 verificar la version de node
