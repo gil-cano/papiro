@@ -86,15 +86,17 @@ verificar la version de node
 
 ```console
 node -v
-v18.20.2
+v22.14.0
 ```
 
 o
 
 ```console
 nvm version
-v18.20.2
+v22.14.0
 ```
+
+
 
 
 Yarn
@@ -181,20 +183,6 @@ Ir a la página del generador
 
 Instalación (deprecated)
 ------------------------
-
-Instalamos `node.js <http://nodejs.org/>`_ (v10.16.3)
-
-.. code-block:: console
-
-    Node was installed at
-
-       /usr/local/bin/node
-
-    npm was installed at
-
-       /usr/local/bin/npm
-
-    Make sure that /usr/local/bin is in your $PATH.
 
 npm
 ---
