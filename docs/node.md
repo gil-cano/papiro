@@ -67,7 +67,7 @@ nvm ls
 Instalar una version especificad de node
 
 ```shell
-nvm install 20.19.0
+nvm install 22.15.0
 ```
 
 Instalamos la ultima versión de soporte a largo plazo - long term support (LTS)
