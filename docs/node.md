@@ -76,20 +76,20 @@ Instalamos la ultima versión de soporte a largo plazo - long term support (LTS)
 nvm install --lts
 ```
 
-Cambiar version de node
+Cambiar versión de node
 
 ```shell
-nvm use 20.19.2
+nvm use 22.15.0
 ```
 
-verificar la version de node
+verificar la versión de node
 
 ```shell
 node -v
 ```
 
 ```console
-v22.14.0
+v22.15.0
 ```
 
 o
@@ -98,7 +98,23 @@ nvm version
 ```
 
 ```console
-v22.14.0
+v22.15.0
+```
+
+verificar la versión de npm
+
+```shell
+npm -v
+```
+
+```console
+10.9.2
+```
+
+actualizar la versión de npm
+
+```shell
+npm install -g npm
 ```
 
 ## corepack
