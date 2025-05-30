@@ -170,6 +170,9 @@ requiere zpretty
 pipx install zpretty
 ```
 
+## trim trailing whitespace
+You can configure Visual Studio Code to automatically trim trailing whitespace on save: Press Ctrl + , to open the settings screen. In the search bar, type Files: Trim Trailing Whitespace
+
 ## Crea tus propios snippets
 Para crear o editar tus propios snippets, selecciona `Configure User Snippets` en `code > Setting...` y despues selecciona el lenguaje (python.json).
 
