@@ -29,17 +29,16 @@ Mostrar versiones disponibles de un paquete
 
     $ apt-cache policy haproxy
     haproxy:
-      Installed: 1.5.14-1~bpo8+1
-      Candidate: 1.6.5-1~bpo8+1
-      Version table:
-         1.6.5-1~bpo8+1 0
-            100 http://http.debian.net/debian/ jessie-backports/main amd64 Packages
-     *** 1.5.14-1~bpo8+1 0
-            100 /var/lib/dpkg/status
-         1.5.8-3+deb8u2 0
-            500 http://mmc.geofisica.unam.mx/debian/ jessie/main amd64 Packages
-         1.5.8-3+deb8u1 0
-            500 http://security.debian.org/ jessie/updates/main amd64 Packages
+     Installed: 1.8.23-1~bpo9+1
+     Candidate: 1.8.23-1~bpo9+1
+     Version table:
+    *** 1.8.23-1~bpo9+1 100
+           100 http://haproxy.debian.net stretch-backports-1.8/main amd64 Packages
+           100 /var/lib/dpkg/status
+        1.8.19-1~bpo9+1 100
+           100 http://ftp.debian.org/debian stretch-backports/main amd64 Packages
+        1.7.5-2 500
+           500 http://deb.debian.org/debian stretch/main amd64 Packages
 
 
 Procesos muertos
