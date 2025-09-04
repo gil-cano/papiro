@@ -32,6 +32,16 @@ Elimina vacios de lista
 
     filter(None, newlist)
 
+Unicode to utf-8
+-----------------
+
+.. sourcecode:: python
+
+    booktype = u'Scientific'
+    if isinstance(booktype, unicode):
+        booktype = booktype.encode('utf-8')
+
+
 Directorios
 ===========
 
