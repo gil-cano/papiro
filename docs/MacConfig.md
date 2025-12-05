@@ -31,6 +31,7 @@ Password:
 /opt/homebrew/share/zsh/site-functions/_brew
 /opt/homebrew/etc/bash_completion.d/brew
 /opt/homebrew
+/etc/paths.d/homebrew
 ==> The following new directories will be created:
 /opt/homebrew/bin
 /opt/homebrew/etc
@@ -48,15 +49,47 @@ Password:
 /opt/homebrew/Caskroom
 /opt/homebrew/Frameworks
 ==> The Xcode Command Line Tools will be installed.
+
 Press RETURN/ENTER to continue or any other key to abort:
-...
-==> Installing Command Line Tools for Xcode-14.3
-==> /usr/bin/sudo /usr/sbin/softwareupdate -i Command\ Line\ Tools\ for\ Xcode-14.3
+==> /usr/bin/sudo /usr/bin/install -d -o root -g wheel -m 0755 /opt/homebrew
+==> /usr/bin/sudo /bin/mkdir -p /opt/homebrew/bin /opt/homebrew/etc /opt/homebrew/include /opt/homebrew/lib /opt/homebrew/sbin /opt/homebrew/share /opt/homebrew/var /opt/homebrew/opt /opt/homebrew/share/zsh /opt/homebrew/share/zsh/site-functions /opt/homebrew/var/homebrew /opt/homebrew/var/homebrew/linked /opt/homebrew/Cellar /opt/homebrew/Caskroom /opt/homebrew/Frameworks
+==> /usr/bin/sudo /bin/chmod ug=rwx /opt/homebrew/bin /opt/homebrew/etc /opt/homebrew/include /opt/homebrew/lib /opt/homebrew/sbin /opt/homebrew/share /opt/homebrew/var /opt/homebrew/opt /opt/homebrew/share/zsh /opt/homebrew/share/zsh/site-functions /opt/homebrew/var/homebrew /opt/homebrew/var/homebrew/linked /opt/homebrew/Cellar /opt/homebrew/Caskroom /opt/homebrew/Frameworks
+==> /usr/bin/sudo /bin/chmod go-w /opt/homebrew/share/zsh /opt/homebrew/share/zsh/site-functions
+==> /usr/bin/sudo /usr/sbin/chown gil /opt/homebrew/bin /opt/homebrew/etc /opt/homebrew/include /opt/homebrew/lib /opt/homebrew/sbin /opt/homebrew/share /opt/homebrew/var /opt/homebrew/opt /opt/homebrew/share/zsh /opt/homebrew/share/zsh/site-functions /opt/homebrew/var/homebrew /opt/homebrew/var/homebrew/linked /opt/homebrew/Cellar /opt/homebrew/Caskroom /opt/homebrew/Frameworks
+==> /usr/bin/sudo /usr/bin/chgrp admin /opt/homebrew/bin /opt/homebrew/etc /opt/homebrew/include /opt/homebrew/lib /opt/homebrew/sbin /opt/homebrew/share /opt/homebrew/var /opt/homebrew/opt /opt/homebrew/share/zsh /opt/homebrew/share/zsh/site-functions /opt/homebrew/var/homebrew /opt/homebrew/var/homebrew/linked /opt/homebrew/Cellar /opt/homebrew/Caskroom /opt/homebrew/Frameworks
+==> /usr/bin/sudo /usr/sbin/chown -R gil:admin /opt/homebrew
+==> Searching online for the Command Line Tools
+==> /usr/bin/sudo /usr/bin/touch /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress
+==> Installing Command Line Tools for Xcode-16.4
+==> /usr/bin/sudo /usr/sbin/softwareupdate -i Command\ Line\ Tools\ for\ Xcode-16.4
 Software Update Tool
-...
-Warning: /opt/homebrew/bin is not in your PATH.
-  Instructions on how to configure your shell for Homebrew
-  can be found in the 'Next steps' section below.
+
+Finding available software
+
+Downloading Command Line Tools for Xcode
+Downloaded Command Line Tools for Xcode
+Installing Command Line Tools for Xcode
+Done with Command Line Tools for Xcode
+Done.
+==> /usr/bin/sudo /usr/bin/xcode-select --switch /Library/Developer/CommandLineTools
+==> /usr/bin/sudo /bin/rm -f /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress
+==> Downloading and installing Homebrew...
+remote: Enumerating objects: 316801, done.
+remote: Counting objects: 100% (178/178), done.
+remote: Compressing objects: 100% (115/115), done.
+remote: Total 316801 (delta 95), reused 109 (delta 63), pack-reused 316623 (from 3)
+remote: Enumerating objects: 55, done.
+remote: Counting objects: 100% (34/34), done.
+remote: Total 55 (delta 34), reused 34 (delta 34), pack-reused 21 (from 1)
+==> /usr/bin/sudo /bin/mkdir -p /etc/paths.d
+==> /usr/bin/sudo tee /etc/paths.d/homebrew
+/opt/homebrew/bin
+==> /usr/bin/sudo /usr/sbin/chown root:wheel /etc/paths.d/homebrew
+==> /usr/bin/sudo /bin/chmod a+r /etc/paths.d/homebrew
+==> Updating Homebrew...
+==> Downloading https://ghcr.io/v2/homebrew/core/portable-ruby/blobs/sha256:c6946ba2c387b47934e77c352c2056489421003ec7ddb2abf246cef2168ec140
+#################################################################################################################################################################### 100.0%
+==> Pouring portable-ruby-3.4.7.arm64_big_sur.bottle.tar.gz
 ==> Installation successful!
 
 ==> Homebrew has enabled anonymous aggregate formulae and cask analytics.
@@ -68,8 +101,9 @@ No analytics data has been sent yet (nor will any be during this install run).
   https://github.com/Homebrew/brew#donations
 
 ==> Next steps:
-- Run these two commands in your terminal to add Homebrew to your PATH:
-    (echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/gil/.zprofile
+- Run these commands in your terminal to add Homebrew to your PATH:
+    echo >> /Users/gil/.zprofile
+    echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/gil/.zprofile
     eval "$(/opt/homebrew/bin/brew shellenv)"
 - Run brew help to get started
 - Further documentation:
