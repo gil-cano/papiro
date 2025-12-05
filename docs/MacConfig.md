@@ -123,18 +123,21 @@ brew install git
 
 ```console
 ==> Installing git
-==> Pouring git--2.41.0_2.arm64_ventura.bottle.tar.gz
+==> Pouring git--2.52.0.arm64_sequoia.bottle.tar.gz
 ==> Caveats
 The Tcl/Tk GUIs (e.g. gitk, git-gui) are now in the `git-gui` formula.
 Subversion interoperability (git-svn) is now in the `git-svn` formula.
-
+==> Summary
+🍺  /opt/homebrew/Cellar/git/2.52.0: 1,718 files, 59.8MB
+==> Running `brew cleanup git`...
+Disable this behaviour by setting `HOMEBREW_NO_INSTALL_CLEANUP=1`.
+Hide these hints with `HOMEBREW_NO_ENV_HINTS=1` (see `man brew`).
+==> Caveats
 zsh completions and functions have been installed to:
   /opt/homebrew/share/zsh/site-functions
-==> Summary
-🍺  /opt/homebrew/Cellar/git/2.41.0_2: 1,633 files, 49.5MB
-==> Running `brew cleanup git`...
-Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
-Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+==> git
+The Tcl/Tk GUIs (e.g. gitk, git-gui) are now in the `git-gui` formula.
+Subversion interoperability (git-svn) is now in the `git-svn` formula.
 ```
 
 ## Configurando Git por primera vez
