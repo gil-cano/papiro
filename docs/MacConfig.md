@@ -111,7 +111,8 @@ No analytics data has been sent yet (nor will any be during this install run).
 ```
 
 ```shell
-(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/gil/.zprofile
+echo >> /Users/gil/.zprofile
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/gil/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 ```
 
