@@ -116,6 +116,12 @@ echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/gil/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 ```
 
+# iTerm2
+
+```shell
+brew install --cask  iterm2
+```
+
 # Git
 ```shell
 brew install git
