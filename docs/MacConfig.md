@@ -344,25 +344,33 @@ Antes de installar python debemos instalar varios modulos si queremos tenerlos d
 brew info python
 ```
 ```console
-==> python@3.11: stable 3.11.4 (bottled)
+==> python@3.14: stable 3.14.1 (bottled)
 Interpreted, interactive, object-oriented programming language
+https://www.python.org/
+Not installed
+From: https://github.com/Homebrew/homebrew-core/blob/HEAD/Formula/p/python@3.14.rb
+License: Python-2.0
 ==> Dependencies
-Build: pkg-config ✘
-Required: mpdecimal ✘, openssl@3 ✘, sqlite ✘, xz ✘
+Build: pkgconf ✔
+Required: mpdecimal ✘, openssl@3 ✔, sqlite ✘, xz ✘, zstd ✘
 ==> Caveats
-tkinter is no longer included with this formula, but it is available separately:
-  brew install python-tk@3.11
+Python is installed as
+  /opt/homebrew/bin/python3
 
-gdbm (`dbm.gnu`) is no longer included in this formula, but it is available separately:
-  brew install python-gdbm@3.11
+Unversioned symlinks `python`, `python-config`, `pip` etc. pointing to
+`python3`, `python3-config`, `pip3` etc., respectively, are installed into
+  /opt/homebrew/opt/python@3.14/libexec/bin
+
+`idle3.14` requires tkinter, which is available separately:
+  brew install python-tk@3.14
 ```
 
-> [!NOTE]  
-> Monterrey: gdbm ✔, mpdecimal ✘, openssl@1.1 ✘, readline ✔, sqlite ✔, xz ✔
+> [!NOTE]
+> Mac OS Monterrey: gdbm ✔, mpdecimal ✘, openssl@1.1 ✘, readline ✔, sqlite ✔, xz ✔
 
 ```shell
 # Install python build deps
-brew install mpdecimal openssl readline sqlite xz
+brew install mpdecimal sqlite xz zstd
 ```
 
 ## openssl
@@ -439,6 +447,10 @@ brew install libyaml
 brew install bzip2
 ```
 ```console
+==> Fetching downloads for: bzip2
+✔︎ Bottle Manifest bzip2 (1.0.8)                                                                                                               [Downloaded   12.8KB/ 12.8KB]
+✔︎ Bottle bzip2 (1.0.8)                                                                                                                        [Downloaded  175.4KB/175.4KB]
+==> Pouring bzip2--1.0.8.arm64_sequoia.bottle.2.tar.gz
 ==> Caveats
 bzip2 is keg-only, which means it was not symlinked into /opt/homebrew,
 because macOS already provides this software and installing another version in
@@ -450,6 +462,11 @@ If you need to have bzip2 first in your PATH, run:
 For compilers to find bzip2 you may need to set:
   export LDFLAGS="-L/opt/homebrew/opt/bzip2/lib"
   export CPPFLAGS="-I/opt/homebrew/opt/bzip2/include"
+==> Summary
+🍺  /opt/homebrew/Cellar/bzip2/1.0.8: 27 files, 529.6KB
+==> Running `brew cleanup bzip2`...
+Disable this behaviour by setting `HOMEBREW_NO_INSTALL_CLEANUP=1`.
+Hide these hints with `HOMEBREW_NO_ENV_HINTS=1` (see `man brew`).
 ```
 
 ## openssl@1.1 para python 2.7.18
@@ -459,6 +476,11 @@ brew install openssl@1.1
 ```
 
 ```console
+==> Fetching downloads for: openssl@1.1
+Warning: openssl@1.1 has been deprecated because it is not supported upstream! It was disabled on 2024-11-11.
+✔︎ Bottle Manifest openssl@1.1 (1.1.1w)                                                                                                        [Downloaded   11.2KB/ 11.2KB]
+✔︎ Bottle openssl@1.1 (1.1.1w)                                                                                                                 [Downloaded    5.3MB/  5.3MB]
+==> Pouring openssl@1.1--1.1.1w.arm64_sonoma.bottle.tar.gz
 ==> Caveats
 A CA file has been bootstrapped using certificates from the system
 keychain. To add additional certificates, place .pem files in
@@ -477,8 +499,13 @@ For compilers to find openssl@1.1 you may need to set:
   export LDFLAGS="-L/opt/homebrew/opt/openssl@1.1/lib"
   export CPPFLAGS="-I/opt/homebrew/opt/openssl@1.1/include"
 
-For pkg-config to find openssl@1.1 you may need to set:
+For pkgconf to find openssl@1.1 you may need to set:
   export PKG_CONFIG_PATH="/opt/homebrew/opt/openssl@1.1/lib/pkgconfig"
+==> Summary
+🍺  /opt/homebrew/Cellar/openssl@1.1/1.1.1w: 8,102 files, 18.9MB
+==> Running `brew cleanup openssl@1.1`...
+Disable this behaviour by setting `HOMEBREW_NO_INSTALL_CLEANUP=1`.
+Hide these hints with `HOMEBREW_NO_ENV_HINTS=1` (see `man brew`).
 ```
 
 ## Pillow
