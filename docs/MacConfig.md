@@ -1,15 +1,6 @@
 # Configuración de macOS
 
-> [!NOTE]  
-> macOS Ventura elimino `python`.
-> Sí lo necesitas debes ejecutar `python3` que instalara `the command line developer tools`.
-
-<img src="_static/python3-cldt.png" alt="The command line developer tools" width="600">
-
-> [!NOTE]
-> [Si tienes problemas con CLT](https://mac.install.guide/commandlinetools/3.html)
-
-# Instalación de brew
+## Instalación de brew
 
 `brew` es un manejador de paquetes.
 cask applicaciones graficas
@@ -116,13 +107,32 @@ echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/gil/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 ```
 
-# iTerm2
+## iTerm2
 
 ```shell
 brew install --cask  iterm2
 ```
+## Firefox
 
-# Git
+```shell
+brew install --cask firefox@developer-edition
+```
+
+```shell
+brew install --cask firefox
+```
+
+Para cambiar el idioma de `Firefox` a español:
+
+- Abrir `Firefox`.
+- En la barra de menú, da clic en `Firefox` y selecciona `settings`.
+- En el panel `General` ve a la sección de `Language`.
+- En el menú da clic en la opción `Search for more languages`.
+- Selecciona `Español (MX)` y da clic en el botón `Add`.
+- Mueve `Español` a la primera posición de la lista.
+- Reinicia `Firefox`
+
+## Git
 ```shell
 brew install git
 ```
@@ -343,6 +353,16 @@ https://cli.github.com/manual/
 
 
 # Python
+
+> [!NOTE]  
+> macOS Ventura elimino `python`.
+> Sí lo necesitas debes ejecutar `python3` que instalara `the command line developer tools`.
+
+<img src="_static/python3-cldt.png" alt="The command line developer tools" width="600">
+
+> [!NOTE]
+> [Si tienes problemas con CLT](https://mac.install.guide/commandlinetools/3.html)
+
 
 Antes de installar python debemos instalar varios modulos si queremos tenerlos disponibles.
 
