@@ -2,9 +2,35 @@
 
 https://sourabhbajaj.com/mac-setup/LaTeX/
 
-
 ```shell
 brew install --cask mactex
+```
+
+```console
+==> Caveats
+You must restart your terminal window for the installation of MacTeX CLI
+tools to take effect.
+
+Alternatively, Bash and Zsh users can run the command:
+
+  eval "$(/usr/libexec/path_helper)"
+
+==> Downloading https://mirror.ctan.org/systems/mac/mactex/mactex-20250308.pkg
+==> Downloading from https://latex.us/systems/mac/mactex/mactex-20250308.pkg
+Password:
+installer: Package name is MacTeX
+installer: choices changes file '/private/tmp/choices20251208-4860-vgd1vd.xml' applied
+installer: Installing at base path /
+installer: The install was successful.
+🍺  mactex was successfully installed!
+==> Caveats
+==> mactex
+You must restart your terminal window for the installation of MacTeX CLI
+tools to take effect.
+
+Alternatively, Bash and Zsh users can run the command:
+
+  eval "$(/usr/libexec/path_helper)"
 ```
 
 ## compilers
