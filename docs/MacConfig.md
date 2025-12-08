@@ -132,6 +132,13 @@ Para cambiar el idioma de `Firefox` a español:
 - Mueve `Español` a la primera posición de la lista.
 - Reinicia `Firefox`
 
+## Visual Studio Code
+
+```shell
+brew install --cask visual-studio-code
+```
+Ver [Visual Studio Code](vscode)
+
 ## Git
 ```shell
 brew install git
@@ -777,13 +784,6 @@ API en C para postgres
 brew install libpq
 # brew install libpq --build-from-source
 ```
-
-# Visual Studio Code
-
-```shell
-brew install --cask visual-studio-code
-```
-Ver [Visual Studio Code](vscode)
 
 # latex
 
