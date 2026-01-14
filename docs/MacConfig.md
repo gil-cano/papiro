@@ -763,9 +763,24 @@ brew install libpq
 # brew install libpq --build-from-source
 ```
 
+
 # latex
 
 Ver [$\LaTeX$](latex)
+
+
+# klogg
+
+```sh
+brew install --cask klogg
+```
+
+
+# discord
+
+```sh
+brew install --cask discord
+```
 
 # Zen
 
@@ -773,11 +788,7 @@ Ver [$\LaTeX$](latex)
 brew install --cask zen-browser
 ```
 
-# klogg
 
-```sh
-brew install --cask klogg
-```
 ## pipx
 ```sh
 brew install pipx
