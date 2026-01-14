@@ -33,6 +33,11 @@ Alternatively, Bash and Zsh users can run the command:
   eval "$(/usr/libexec/path_helper)"
 ```
 
+
+```console
+export PATH=$PATH:/Library/TeX/texbin/
+```
+
 ## compilers
 
 See [Choosing a LaTeX Compiler](https://es.overleaf.com/learn/latex/Choosing_a_LaTeX_Compiler)
