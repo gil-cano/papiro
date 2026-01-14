@@ -4,7 +4,9 @@
 
 ## Instalación
 
-Descarga la aplicación y arrastrala a la carpeta :file:`Applications`
+```shell
+brew install --cask  iterm2
+```
 
 | Teclas  | Descripción       |
 | :---    | ---               |
@@ -32,7 +34,7 @@ En `iTerm2 <http://www.iterm2.com/>`_ podemos configurar en que directorio se ab
 
 ### Source Code Pro
 
-`Source Code Pro <https://github.com/adobe-fonts/source-code-pro>`_ es un tipo de letra para programadores. Este tipo de letra tambien se usa en :ref:`sublimetext`
+`Source Code Pro <https://github.com/adobe-fonts/source-code-pro>`_ es un tipo de letra para programadores.
 
 Se instala con brew
 
@@ -56,17 +58,15 @@ En iTerm2 :menuselection:`Preferences --> Profiles --> Text` seleccionamos el ti
 
 Para probar algunos caracteres en la terminal:
 
-.. code-block:: shell
+```shell
+echo "\ue0b0 \u00b1 \ue0a0 \u27a6 \u2718 \u26a1 \u2699"
+```
 
-   echo "\ue0b0 \u00b1 \ue0a0 \u27a6 \u2718 \u26a1 \u2699"
-
-Nerd Fonts
-~~~~~~~~~~
+## Nerd Fonts
 
 `Nerd Fonts <http://nerdfonts.com>`_
 
-oh-my-posh
-----------
+## oh-my-posh
 
 .. code-block:: shell
 
@@ -123,23 +123,6 @@ O en :menuselection:`Preferencias --> Perfil --> Terminal`  solicitar que no se 
 
 Módificaciones al PATH
 ----------------------
-
-gettetx
-~~~~~~~
-
-Para agregar :command:`gettext` al path modificamos el archivo :file:`.bash_profile` o el archivo :file:`.zshrc`
-
-.. code-block:: shell
-
-    export PATH=/usr/local/opt/gettext/bin:$PATH
-
-latex
-~~~~~
-
-.. code-block:: shell
-
-   export PATH=$PATH:/Library/TeX/texbin/
-
 
 Zsh
 ---
