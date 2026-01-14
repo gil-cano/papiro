@@ -651,29 +651,6 @@ pyenv uninstall 3.9.16
 * [Troubleshooting / FAQ](https://github.com/pyenv/pyenv/wiki#suggested-build-environment)
 * [ERROR: The Python zlib extension was not compiled](https://github.com/pyenv/pyenv/wiki/Common-build-problems#keg-only-homebrew-packages-are-forcibly-linked--added-to-path)
 
-## pipx
-```sh
-brew install pipx
-pipx install pls
-pipx list
-pipx ensurepath
-```
-
-```shell
-pipx reinstall-all
-```
-
-```sh
-# Created by `pipx` on 2022-12-06 15:32:16
-export PATH="$PATH:/Users/gil/.local/bin"
-```
-
-```shell
-# pipx configuration with pyenv
-export PIPX_DEFAULT_PYTHON="$HOME/.pyenv/versions/3.11.9/bin/python"
-```
-
-
 # Buildout
 Creamos en el home un directorio .buildout
 
@@ -799,6 +776,27 @@ brew install --cask zen-browser
 
 ```sh
 brew install --cask klogg
+```
+## pipx
+```sh
+brew install pipx
+pipx install pls
+pipx list
+pipx ensurepath
+```
+
+```shell
+pipx reinstall-all
+```
+
+```sh
+# Created by `pipx` on 2022-12-06 15:32:16
+export PATH="$PATH:/Users/gil/.local/bin"
+```
+
+```shell
+# pipx configuration with pyenv
+export PIPX_DEFAULT_PYTHON="$HOME/.pyenv/versions/3.11.9/bin/python"
 ```
 
 # Referencias
