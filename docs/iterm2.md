@@ -1,6 +1,6 @@
 # iTerm2
 
-`iTerm2 <http://www.iterm2.com/>`_ es un remplazo de la Terminal de Apple.
+[iTerm2](http://www.iterm2.com) es un remplazo de la Terminal de Apple.
 
 ## Instalación
 
@@ -19,16 +19,11 @@ brew install --cask  iterm2
 
 ## Ventanas y Pestañas
 
-En `iTerm2 <http://www.iterm2.com/>`_ podemos configurar en que directorio se abriran las nuevas ventanas o pestañas.
+En [iTerm2](http://www.iterm2.com) podemos configurar en que directorio se abriran las nuevas ventanas o pestañas.
 
-.. image:: _static/working_directory.png
-   :alt: iTerm2 (Locale)
-   :width: 80%
+<img src="_static/working_directory.png" alt="Term2 (Locale)" width="600">
 
-.. image:: _static/working_directory_tabs_windows.png
-   :alt: iTerm2 (Locale)
-   :width: 80%
-
+<img src="_static/working_directory_tabs_windows.png" alt="iTerm2 (Locale)" width="600">
 
 ## Tipo de letra
 
