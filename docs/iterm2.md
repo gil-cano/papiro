@@ -16,14 +16,26 @@ brew install --cask  iterm2
 | ⌘ ⌥ UP  |cambia de terminal |
 | ⌘ /     | resalta la posición del cursos |
 
+## Apariencia
+
+<img src="_static/iterm2_appearance.png" alt="Term2 (Appearance)" width="600">
+
 
 ## Ventanas y Pestañas
 
 En [iTerm2](http://www.iterm2.com) podemos configurar en que directorio se abriran las nuevas ventanas o pestañas.
 
-<img src="_static/working_directory.png" alt="Term2 (Locale)" width="600">
+<img src="_static/iterm2_general.png" alt="Term2 (General)" width="600">
 
-<img src="_static/working_directory_tabs_windows.png" alt="iTerm2 (Locale)" width="600">
+<img src="_static/iterm2_general_advance.png" alt="iTerm2 (General Advance)" width="600">
+
+
+## Dimensiones de terminal
+
+<img src="_static/iterm2_window.png" alt="iTerm2 (Window)" width="600">
+
+
+
 
 ## Tipo de letra
 
