@@ -331,11 +331,11 @@ Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
 ```
 
 ## GitHub CLI
-```sh
+```shell
 brew install gh
 ```
 
-```sh
+```shell
 gh auth login
 ? What account do you want to log into? GitHub.com
 ? What is your preferred protocol for Git operations? HTTPS
@@ -349,7 +349,7 @@ The minimum required scopes are 'repo', 'read:org', 'workflow'.
 ✓ Logged in as login-name
 ```
 
-```sh
+```shell
 gh auth logout
 gh auth login --with-token < mytoken.txt
 gh auth status
@@ -623,7 +623,7 @@ To enable auto-activation add to your profile:
 
 agregamos eso a nuestro .zshrc
 
-```sh
+```console
 # pyenv configuration for Zsh
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
@@ -635,7 +635,7 @@ if which pyenv-virtualenv-init > /dev/null; then
 fi
 ```
 
-```sh
+```shell
 pyenv install 2.7.18
 pyenv install 3.9.17
 pyenv install 3.11.9
@@ -654,7 +654,7 @@ pyenv uninstall 3.9.16
 # Buildout
 Creamos en el home un directorio .buildout
 
-```sh
+```shell
 mkdir -p .buildout/eggs
 mkdir -p .buildout/downloads
 mkdir -p .buildout/extends
@@ -662,7 +662,7 @@ touch .buildout/default.cfg
 ```
 El archivo default.cfg debe contener algo como lo siguiente:
 
-```sh
+```console
 [buildout]
 eggs-directory = /Users/username/.buildout/eggs
 download-cache = /Users/username/.buildout/downloads
@@ -675,7 +675,7 @@ socket-timeout = 3
 ## wv
 wv permite el acceso a archivos de tipo Microsoft Word
 
-```sh
+```shell
 brew install wv
 ```
 
@@ -683,18 +683,18 @@ brew install wv
 
 nos da las herramientas **pdftotext** y **pdftohtml**
 
-```sh
+```shell
 brew install poppler
 ```
 
 
 ## Plone 4, 5
 
-```sh
+```shell
 gh repo clone useer-name/plone-project
 ```
 
-```sh
+```shell
 git clone plone-project
 cd  plone-project
 pyenv virtualenv 2.7.18 plone4.3
@@ -707,14 +707,20 @@ CFLAGS="-Wno-error=incompatible-function-pointer-types -I$(brew --prefix zlib)/i
 
 # Plone 6
 
-```sh
+```shell
+brew install uv
+```
+
+```shell
 mkdir my_project
 cd my_project
-pyenv virtualenv 3.10.10 plone6.0
+make install
 ```
 
 
-```sh
+# Plone Tools (deprecated)
+
+```shell
 pipx install cookiecutter
 pipx install plonecli
 pipx inject plonecli bobtemplates.plone
@@ -724,7 +730,7 @@ pipx install tox
 pipx install zpretty
 ```
 
-```sh
+```shell
 brew install black
 ```
 
@@ -733,7 +739,7 @@ brew install black
 
 A cat(1) clone with wings.
 
-```sh
+```shell
 brew install bat
 ```
 
