@@ -33,9 +33,10 @@ Alternatively, Bash and Zsh users can run the command:
   eval "$(/usr/libexec/path_helper)"
 ```
 
+ls binarios quedan en:
 
 ```console
-export PATH=$PATH:/Library/TeX/texbin/
+/Library/TeX/texbin/
 ```
 
 ## compilers
