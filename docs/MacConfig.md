@@ -717,24 +717,6 @@ cd my_project
 make install
 ```
 
-
-# Plone Tools (deprecated)
-
-```shell
-pipx install cookiecutter
-pipx install plonecli
-pipx inject plonecli bobtemplates.plone
-pipx list --include-injected
-pipx install isort
-pipx install tox
-pipx install zpretty
-```
-
-```shell
-brew install black
-```
-
-
 # Tools
 
 A cat(1) clone with wings.
@@ -743,20 +725,8 @@ A cat(1) clone with wings.
 brew install bat
 ```
 
-
 ```shell
-pipx install httpie
-```
-
-Linux/OSX/FreeBSD resource monitor 
-
-```sh
-pipx install bpytop
-```
-
-Pgcli es una interfaz en la linea de comandos para `Postgresql`
-```shell
-pipx install pgcli
+brew install black
 ```
 
 
@@ -764,7 +734,7 @@ pipx install pgcli
 
 API en C para postgres
 
-```sql
+```shell
 brew install libpq
 # brew install libpq --build-from-source
 ```
@@ -777,26 +747,26 @@ Ver [$\LaTeX$](latex)
 
 # klogg
 
-```sh
+```shell
 brew install --cask klogg
 ```
 
 
 # discord
 
-```sh
+```shell
 brew install --cask discord
 ```
 
 # Zen
 
-```sh
+```shell
 brew install --cask zen-browser
 ```
 
 
 ## pipx
-```sh
+```shell
 brew install pipx
 pipx install pls
 pipx list
@@ -804,8 +774,39 @@ pipx ensurepath
 ```
 
 ```shell
+pipx install isort
+pipx install tox
+pipx install zpretty
+```
+
+```shell
+pipx install httpie
+```
+
+Linux/OSX/FreeBSD resource monitor 
+
+```shell
+pipx install bpytop
+```
+
+Pgcli es una interfaz en la linea de comandos para `Postgresql`
+```shell
+pipx install pgcli
+```
+
+
+```shell
 pipx reinstall-all
 ```
+
+(deprecated)
+
+```shell
+pipx install plonecli
+pipx inject plonecli bobtemplates.plone
+pipx list --include-injected
+```
+
 
 ```sh
 # Created by `pipx` on 2022-12-06 15:32:16
