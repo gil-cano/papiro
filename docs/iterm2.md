@@ -50,6 +50,41 @@ Para que `ls` liste los archivos y direcorios con colores se agrega al archivo `
 export CLICOLOR=1
 ```
 
+## prompt
+
+Para mostrar la rama de git en el prompt usamos el script `git-prompt.sh` que indica lo siguiente:
+
+> [!NOTE]
+> This script allows you to see repository status in your prompt.
+> 
+> To enable:
+> 
+>    1) Copy this file to somewhere (e.g. ~/.git-prompt.sh).
+>    2) Add the following line to your .bashrc/.zshrc/.profile:
+>        . ~/.git-prompt.sh   # dot path/to/this-file
+>    3) Change your PS1 to call __git_ps1 as
+>        command-substitution:
+>        Bash: PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
+>        ZSH:  setopt PROMPT_SUBST ; PS1='[%n@%m %c$(__git_ps1 " (%s)")]\$ '
+>        the optional argument will be used as format string.
+
+```shell
+cp /opt/homebrew/opt/git/etc/bash_completion.d/git-prompt.sh ~/.git-prompt.sh
+```
+
+Agregamos al archivo `.zprofile`
+
+```console
+. ~/.git-prompt.sh
+```
+
+Agregamos al archivo `.zshrc`
+
+```console
+# see repository status in your prompt
+setopt PROMPT_SUBST ; PS1='[%n@%m %c$(__git_ps1 " (%s)")]\$ '
+```
+
 ## Tipo de letra
 
 ### Maple Mono
