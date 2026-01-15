@@ -35,33 +35,42 @@ En [iTerm2](http://www.iterm2.com) podemos configurar en que directorio se abrir
 <img src="_static/iterm2_window.png" alt="iTerm2 (Window)" width="600">
 
 
+runs once at login for environment variables and settings inherited by all shells, while ~/.zshrc runs for every interactive shell (like new terminal tabs) for aliases, functions, prompts, and behaviors, loading after ~/.zprofile in a login session, making it ideal for day-to-day interactive use. Use zprofile for persistent PATH or EDITOR, and zshrc for aliases (ll), prompts (PS1), and interactive tweaks.
 
+
+## Colores
+
+> [!TIP]
+> El archivo `.zprofile` se ejecuta una vez al inicio de sessión y se usa para configurar variables de ambiente y configuración heredada por todos las terminales.
+> El archivo `.zshrc` se ejecuta para cada pestaña o ventana y se usa para personalizar el entorno de la terminal.
+
+Para que `ls` liste los archivos y direcorios con colores se agrega al archivo `.zshrc`. 
+
+```console
+export CLICOLOR=1
+```
 
 ## Tipo de letra
 
-### Source Code Pro
+### Maple Mono
 
-`Source Code Pro <https://github.com/adobe-fonts/source-code-pro>`_ es un tipo de letra para programadores.
-
-Se instala con brew
+[Maple Mono](https://font.subf.dev/en/)
 
 ```shell
-brew tap homebrew/cask-fonts
-brew search nerd-font
-brew install font-source-code-pro
-brew install --cask font-fira-code-nerd-font
-brew install --cask font-intel-one-mono
-brew install font-jetbrains-mono-nerd-font
-brew list
-brew uninstall font-intel-one-mono
+brew search font-maple
+```
+
+```shell
+brew install --cask font-maple-mono-normal-nf
+```
+
+```shell
 brew list --casks
 ```
 
 En iTerm2 :menuselection:`Preferences --> Profiles --> Text` seleccionamos el tipo de letra.
 
-.. image:: _static/iterm2font.png
-   :alt: Font for iTerm2
-   :width: 80%
+<img src="_static/iterm2font.png" alt="iFont for iTerm2" width="600">
 
 Para probar algunos caracteres en la terminal:
 
@@ -69,9 +78,27 @@ Para probar algunos caracteres en la terminal:
 echo "\ue0b0 \u00b1 \ue0a0 \u27a6 \u2718 \u26a1 \u2699"
 ```
 
+
+### Source Code Pro
+
+[Source Code Pro](https://github.com/adobe-fonts/source-code-pro) es un tipo de letra para programadores.
+
+Se instala con brew
+
+```shell
+brew install --cask font-source-code-pro
+```
+
 ## Nerd Fonts
 
 `Nerd Fonts <http://nerdfonts.com>`_
+
+```shell
+brew install --cask font-fira-code-nerd-font
+brew install --cask font-jetbrains-mono-nerd-font
+brew list
+```
+
 
 ## oh-my-posh
 
