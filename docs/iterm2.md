@@ -61,7 +61,7 @@ brew search font-maple
 ```
 
 ```shell
-brew install --cask font-maple-mono-nf
+brew install --cask font-maple-mono-normal-nf
 ```
 
 ```shell
