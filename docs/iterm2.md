@@ -52,29 +52,25 @@ export CLICOLOR=1
 
 ## Tipo de letra
 
-### Source Code Pro
+### Maple Mono
 
-`Source Code Pro <https://github.com/adobe-fonts/source-code-pro>`_ es un tipo de letra para programadores.
-
-Se instala con brew
+[Maple Mono](https://font.subf.dev/en/)
 
 ```shell
-brew tap homebrew/cask-fonts
-brew search nerd-font
-brew install font-source-code-pro
-brew install --cask font-fira-code-nerd-font
-brew install --cask font-intel-one-mono
-brew install font-jetbrains-mono-nerd-font
-brew list
-brew uninstall font-intel-one-mono
+brew search font-maple
+```
+
+```shell
+brew install --cask font-maple-mono-nf
+```
+
+```shell
 brew list --casks
 ```
 
 En iTerm2 :menuselection:`Preferences --> Profiles --> Text` seleccionamos el tipo de letra.
 
-.. image:: _static/iterm2font.png
-   :alt: Font for iTerm2
-   :width: 80%
+<img src="_static/iterm2font.png" alt="iFont for iTerm2" width="600">
 
 Para probar algunos caracteres en la terminal:
 
@@ -82,9 +78,27 @@ Para probar algunos caracteres en la terminal:
 echo "\ue0b0 \u00b1 \ue0a0 \u27a6 \u2718 \u26a1 \u2699"
 ```
 
+
+### Source Code Pro
+
+[Source Code Pro](https://github.com/adobe-fonts/source-code-pro) es un tipo de letra para programadores.
+
+Se instala con brew
+
+```shell
+brew install --cask font-source-code-pro
+```
+
 ## Nerd Fonts
 
 `Nerd Fonts <http://nerdfonts.com>`_
+
+```shell
+brew install --cask font-fira-code-nerd-font
+brew install --cask font-jetbrains-mono-nerd-font
+brew list
+```
+
 
 ## oh-my-posh
 
