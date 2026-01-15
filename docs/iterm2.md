@@ -102,20 +102,19 @@ brew list
 
 ## oh-my-posh
 
-.. code-block:: shell
-
-   brew install oh-my-posh
+```shell
+brew install oh-my-posh
+```
 
 Add the following to ~/.zshrc:
 
-.. code-block:: shell
+```shell
+eval "$(oh-my-posh prompt init zsh)"
+```
 
-    eval "$(oh-my-posh prompt init zsh)"
-
-
-.. code-block:: shell
-
-    source ~/.zshrc
+```shell
+source ~/.zshrc
+```
 
 Salto de palabras
 -----------------
@@ -133,19 +132,19 @@ Python, Plone
 
 Cuando iniciamos una instancia de Plone marca el error
 
-.. code-block:: shell
-
-    ValueError: unknown locale: UTF-8
+```console
+ValueError: unknown locale: UTF-8
+```
 
 Hay dos maneras de solucionar esto:
 
 - agregar al archivo :file:`.bash_profile` o en el archivo :file:`.zprofile`
 
-.. code-block:: shell
-
-    # iTerm2 fix
-    export LC_ALL=en_US.UTF-8
-    export LANG=en_US.UTF-8
+```console
+# iTerm2 fix
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+```
 
 O en :menuselection:`Preferencias --> Perfil --> Terminal`  solicitar que no se asigne la variable de localización de manera automática (ver imagen)
 
@@ -154,43 +153,6 @@ O en :menuselection:`Preferencias --> Perfil --> Terminal`  solicitar que no se 
    :alt: iTerm2 (Locale)
    :width: 80%
 
-
-Módificaciones al PATH
-----------------------
-
-Zsh
----
-
-Cambiamos a `Zsh <https://www.zsh.org>`_ como shell default
-
-.. code-block:: shell
-
-   $ echo $SHELL
-   $ chsh -s $(which zsh)
-
-Salir de sesión y volver a entrar.
-
-.. code-block:: shell
-
-   $ echo $SHELL
-
-Si queremos usar una version mas reciente de `Zsh <https://www.zsh.org>`_ podemos instalarla con :ref:`brew`
-
-
-.. code-block:: shell
-
-   $ brew install zsh
-
-Usamos la versión Zsh de Homebrew
-
-.. code-block:: shell
-
-   $ chsh -s /usrl/local/bin/zsh
-
-
-.. warning::
-
-   En macOS Mojave no cambia y manda el siguiente mensaje: ``chsh: /usr/local/bin/zsh: non-standard shell``
 
 
 
@@ -220,122 +182,6 @@ Editamos el archivo :file:`.zshrc` para definir el tema
 
     ZSH_THEME="agnoster"
 
-
-Spaceship-prompt
-~~~~~~~~~~~~~~~~
-
-`Spaceship ZSH <https://github.com/denysdovhan/spaceship-prompt>`_
-
-copiamos el reposistorio:
-
-.. code-block:: shell
-
-   $ git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
-
-
-Hacemos una liga simbolica :file:`spaceship.zsh-theme` al directorio de temas personalizados de `oh-my-zsh <https://ohmyz.sh/>`_
-
-.. code-block:: shell
-
-   $ ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
-
-
-En el archivo :file:`.zshrc` selccionamos el tema
-
-.. code-block:: shell
-
-   ZSH_THEME="spaceship"
-
-.. warning::
-
-   La rama 4.0 agrego soporte para python
-
-
-Configuración del prompt en el archivo :file:`.zshrc`
-
-.. code-block:: shell
-
-   SPACESHIP_PROMPT_ORDER=(
-       user
-       dir
-       # host
-       git
-       # package
-       python
-       # docker
-       venv
-       line_sep
-       char
-   )
-
-   SPACESHIP_PROMPT_FIRST_PREFIX_SHOW="true"
-   SPACESHIP_CHAR_PREFIX="\uf79f"
-   SPACESHIP_CHAR_SUFFIX=" "
-   SPACESHIP_CHAR_COLOR_SUCCESS="yellow"
-   SPACESHIP_DIR_COLOR="green"
-   SPACESHIP_GIT_BRANCH_PREFIX="\uf7a3"
-   SPACESHIP_GIT_BRANCH_COLOR="magenta"
-   SPACESHIP_VENV_COLOR="yellow"
-   SPACESHIP_VENV_PREFIX="\u "
-
-   # spaceship-prompt v.4.0
-   SPACESHIP_PYTHON_SHOW="true"
-   SPACESHIP_PYTHON_SYMBOL="\ue235 "
-   SPACESHIP_PYTHON_COLOR="yellow"
-
-
-
-Powerlevel9k
-~~~~~~~~~~~~
-
-.. warning::
-
-   This may be removed
-
-`powerlevel9k <https://github.com/bhilburn/powerlevel9k>`_
-
-
-copiamos el reposistorio:
-
-.. code-block:: shell
-
-   $ git clone https://github.com/bhilburn/powerlevel9k.git "$ZSH_CUSTOM/themes/powerlevel9k"
-
-Hacemos una liga simbolica :file:`spaceship.zsh-theme` al directorio de temas personalizados de `oh-my-zsh <https://ohmyz.sh/>`_
-
-.. code-block:: shell
-
-   $ ln -s "$ZSH_CUSTOM/themes/powerlevel9k/powerlevel9k.zsh-theme" "$ZSH_CUSTOM/themes/powerlevel9k.zsh-theme"
-
-
-En el archivo :file:`.zshrc` selccionamos el tema
-
-.. code-block:: shell
-
-   ZSH_THEME="powerlevel9k"
-
-cobalt2
-~~~~~~~
-
-`Cobalt2 <https://github.com/wesbos/Cobalt2-iterm>`_
-
-.. code-block:: shell
-
-   $ cp cobalt2.zsh-theme "$ZSH_CUSTOM/themes/cobalt2.zsh-theme"
-
-En el archivo :file:`.zshrc` selccionamos el tema
-
-.. code-block:: shell
-
-   ZSH_THEME="cobalt2"
-
-En la terminal iTerm2 :menuselection:`Preferences --> Profiles --> Colors` importa el archivo :file:`cobalt2.itermcolors` mediante el menu :file:`Color Presets`
-
-En la terminal iTerm2 :menuselection:`Preferences --> Profiles --> Text` cambiamos la fuente para cada tipo (Regular y Non-ASCII) a `Sauce Code Pro Nerd Font Complete`
-
-.. code-block:: shell
-
-   $ source ~/.zshrc
 
 
 Plugins
