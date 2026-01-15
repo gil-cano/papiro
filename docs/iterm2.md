@@ -35,7 +35,20 @@ En [iTerm2](http://www.iterm2.com) podemos configurar en que directorio se abrir
 <img src="_static/iterm2_window.png" alt="iTerm2 (Window)" width="600">
 
 
+runs once at login for environment variables and settings inherited by all shells, while ~/.zshrc runs for every interactive shell (like new terminal tabs) for aliases, functions, prompts, and behaviors, loading after ~/.zprofile in a login session, making it ideal for day-to-day interactive use. Use zprofile for persistent PATH or EDITOR, and zshrc for aliases (ll), prompts (PS1), and interactive tweaks.
 
+
+## Colores
+
+> [!TIP]
+> El archivo `.zprofile` se ejecuta una vez al inicio de sessión y se usa para configurar variables de ambiente y configuración heredada por todos las terminales.
+> El archivo `.zshrc` se ejecuta para cada pestaña o ventana y se usa para personalizar el entorno de la terminal.
+
+Para que `ls` liste los archivos y direcorios con colores se agrega al archivo `.zshrc`. 
+
+```console
+export CLICOLOR=1
+```
 
 ## Tipo de letra
 
