@@ -29,16 +29,12 @@ Install 'code' command in PATH
 
 ## Extenciones
 
-* [Plone support for VSCode](https://github.com/plone/plone-vs-utilities?tab=readme-ov-file)
+* [python](https://marketplace.visualstudio.com/items?itemName=ms-python.python), Extension Pack [Pylance],[Python Debugger],[Python Environments]
+* [Plone support for VSCode](https://github.com/plone/plone-vs-utilities)
+* [Rainbow CSV](https://marketplace.visualstudio.com/items?itemName=mechatroner.rainbow-csv)
+* [Catppuccin for VSCode](https://marketplace.visualstudio.com/items?itemName=Catppuccin.catppuccin-vsc)
 * [Github Theme](https://marketplace.visualstudio.com/items?itemName=GitHub.github-vscode-theme) 
 * [MyST-Markdown](https://marketplace.visualstudio.com/items?itemName=ExecutableBookProject.myst-highlight)
-* [Rainbow CSV](https://marketplace.visualstudio.com/items?itemName=mechatroner.rainbow-csv)
-* [ZCML language configuration](https://marketplace.visualstudio.com/items?itemName=erral.erral-zcmlLanguageConfiguration)
-requiere zpretty
-
-```shell
-pipx install zpretty
-```
 
 ## GitHub theme for VS Code
 
