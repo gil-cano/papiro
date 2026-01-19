@@ -27,6 +27,19 @@ Install 'code' command in PATH
 
 [Visual Studio Code on macOS](https://code.visualstudio.com/docs/setup/mac)
 
+## Extenciones
+
+* [Plone support for VSCode](https://github.com/plone/plone-vs-utilities?tab=readme-ov-file)
+* [Github Theme](https://marketplace.visualstudio.com/items?itemName=GitHub.github-vscode-theme) 
+* [MyST-Markdown](https://marketplace.visualstudio.com/items?itemName=ExecutableBookProject.myst-highlight)
+* [Rainbow CSV](https://marketplace.visualstudio.com/items?itemName=mechatroner.rainbow-csv)
+* [ZCML language configuration](https://marketplace.visualstudio.com/items?itemName=erral.erral-zcmlLanguageConfiguration)
+requiere zpretty
+
+```shell
+pipx install zpretty
+```
+
 ## GitHub theme for VS Code
 
 Instala la extension [GitHub Theme](https://github.com/primer/github-vscode-theme)
@@ -158,17 +171,6 @@ Abre la paleta de comandos (<kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>P</kbd>) y se
 Instala la extensión [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)
 
 
-## Extenciones
-
-* [Github Theme](https://marketplace.visualstudio.com/items?itemName=GitHub.github-vscode-theme) 
-* [MyST-Markdown](https://marketplace.visualstudio.com/items?itemName=ExecutableBookProject.myst-highlight)
-* [Rainbow CSV](https://marketplace.visualstudio.com/items?itemName=mechatroner.rainbow-csv)
-* [ZCML language configuration](https://marketplace.visualstudio.com/items?itemName=erral.erral-zcmlLanguageConfiguration)
-requiere zpretty
-
-```shell
-pipx install zpretty
-```
 
 ## trim trailing whitespace
 You can configure Visual Studio Code to automatically trim trailing whitespace on save: Press Ctrl + , to open the settings screen. In the search bar, type Files: Trim Trailing Whitespace
