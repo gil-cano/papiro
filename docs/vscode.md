@@ -5,25 +5,23 @@
 [Visual Studio Code](https://code.visualstudio.com) incluye el comando `code`, para abrir archivos desde una terminal.
 
 * Inicia VS Code.
-* Abre la paleta de comandos con <kbd>F1</kbd> o (<kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>P</kbd>) y escribe 'shell command' para encontrar el comando:
+* Abre la paleta de comandos con <kbd>F1</kbd> o (<kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>P</kbd>) y escribe `shell command` para encontrar el comando:
 
 ```console
 Shell Command: Install 'code' command in PATH
 ```
 
-```{figure} _static/vscode/vsc_shell.png
-:alt: Install 'code' command in PATH
+<img src="_static/vscode/vsc_shell.png" alt="Install 'code' command in PATH" width="600">
 
-Install 'code' command in PATH
-```
  * Reinicia la terminal para que el nuevo `$PATH` tome efecto.
 
-```{note}
+
+
 | Teclas        | Descripción        |
-| :---          | ---                |
+|---------------|--------------------|
 | <kbd>F1</kbd> | paleta de comandos |
 | <kbd>⌘</kbd> <kbd>⇧</kbd> <kbd>P</kbd>  | paleta de comandos |
-```
+
 
 [Visual Studio Code on macOS](https://code.visualstudio.com/docs/setup/mac)
 
@@ -38,7 +36,7 @@ Install 'code' command in PATH
 
 
 ## trim trailing whitespace
-You can configure Visual Studio Code to automatically trim trailing whitespace on save: Press Ctrl + , to open the settings screen. In the search bar, type Files: Trim Trailing Whitespace
+You can configure Visual Studio Code to automatically trim trailing whitespace on save: Press <kbd>⌘</kbd> + <kbd>,</kbd>, to open the settings screen. In the search bar, type Files: Trim Trailing Whitespace
 
 ## Crea tus propios snippets
 Para crear o editar tus propios snippets, selecciona `Configure User Snippets` en `code > Setting...` y despues selecciona el lenguaje (python.json).
