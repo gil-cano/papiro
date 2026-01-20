@@ -36,6 +36,36 @@ Install 'code' command in PATH
 * [Github Theme](https://marketplace.visualstudio.com/items?itemName=GitHub.github-vscode-theme) 
 * [MyST-Markdown](https://marketplace.visualstudio.com/items?itemName=ExecutableBookProject.myst-highlight)
 
+
+## trim trailing whitespace
+You can configure Visual Studio Code to automatically trim trailing whitespace on save: Press Ctrl + , to open the settings screen. In the search bar, type Files: Trim Trailing Whitespace
+
+## Crea tus propios snippets
+Para crear o editar tus propios snippets, selecciona `Configure User Snippets` en `code > Setting...` y despues selecciona el lenguaje (python.json).
+
+```json
+{
+	"Add debugger": {
+		"prefix": "pdb",
+		"body": [
+			"import pdb; pdb.set_trace()",
+			"$0"
+		],
+		"description": "break into the debugger"
+	}
+}
+```
+
+## Excluye archivos de la navegación
+En `code > Setting... > Setting` buscar la sección `Files: excludes`. Agregar los patrones 
+
+```
+**/*.mo
+**/*.pyc
+**/*.pyo
+```
+
+
 ## GitHub theme for VS Code
 
 Instala la extension [GitHub Theme](https://github.com/primer/github-vscode-theme)
@@ -49,10 +79,6 @@ Color theme
 ```
 
 ## Python en Visual Studio Code
-
-Instala la extensión [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
-
-Por default instala las extensiones: [Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance) y [Python Debugger](https://marketplace.visualstudio.com/items?itemName=ms-python.debugpy).
 
 [Python in Visual Studio Code](https://code.visualstudio.com/docs/languages/python)
 
@@ -168,33 +194,6 @@ Instala la extensión [LaTeX Workshop](https://marketplace.visualstudio.com/item
 
 
 
-## trim trailing whitespace
-You can configure Visual Studio Code to automatically trim trailing whitespace on save: Press Ctrl + , to open the settings screen. In the search bar, type Files: Trim Trailing Whitespace
-
-## Crea tus propios snippets
-Para crear o editar tus propios snippets, selecciona `Configure User Snippets` en `code > Setting...` y despues selecciona el lenguaje (python.json).
-
-```json
-{
-	"Add debugger": {
-		"prefix": "pdb",
-		"body": [
-			"import pdb; pdb.set_trace()",
-			"$0"
-		],
-		"description": "break into the debugger"
-	}
-}
-```
-
-## Excluye archivos de la navegación
-En `code > Setting... > Setting` buscar la sección `Files: excludes`. Agregar los patrones 
-
-```
-**/*.mo
-**/*.pyc
-**/*.pyo
-```
 
 ## Font
 
