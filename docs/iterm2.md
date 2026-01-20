@@ -52,8 +52,9 @@ export CLICOLOR=1
 Para mostrar la rama de git en el prompt usamos el script `git-prompt.sh` que indica lo siguiente:
 
 > [!NOTE]
-> This script allows you to see repository status in your prompt.
-> 
+> ```verbatim
+>  This script allows you to see repository status in your prompt.
+>
 > To enable:
 > 
 >    1) Copy this file to somewhere (e.g. ~/.git-prompt.sh).
@@ -64,6 +65,8 @@ Para mostrar la rama de git en el prompt usamos el script `git-prompt.sh` que in
 >        Bash: PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
 >        ZSH:  setopt PROMPT_SUBST ; PS1='[%n@%m %c$(__git_ps1 " (%s)")]\$ '
 >        the optional argument will be used as format string.
+> ```
+
 
 ```shell
 cp /opt/homebrew/opt/git/etc/bash_completion.d/git-prompt.sh ~/.git-prompt.sh
@@ -102,7 +105,7 @@ brew list --casks
 
 En iTerm2 :menuselection:`Preferences --> Profiles --> Text` seleccionamos el tipo de letra.
 
-<img src="_static/iterm2font.png" alt="iFont for iTerm2" width="600">
+<img src="_static/iterm2_font.png" alt="iFont for iTerm2" width="600">
 
 Para probar algunos caracteres en la terminal:
 
