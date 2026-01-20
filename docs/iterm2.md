@@ -160,6 +160,53 @@ fi
 ```
 
 
+.zprofile
+```console
+eval "$(/opt/homebrew/bin/brew shellenv zsh)"
+
+# iTerm2 fixes
+# zsh: character not in range
+# Plone: ValueError: unknown locale: UTF-8
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
+# Created by `pipx` on 2023-10-01 15:48:36
+export PATH="$PATH:/Users/gil/.local/bin"
+```
+
+.zshrc
+```
+# Oh My posh configuration
+# eval "$(oh-my-posh prompt init zsh)"
+if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
+#  eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/space.omp.json)"
+   eval "$(oh-my-posh init zsh --config ~/.poshthemes/space.omp.json)"
+fi
+
+# pyenv configuration for Zsh
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+# Enable auto-activation of pyenv virtualenvs
+if which pyenv-virtualenv-init > /dev/null; then
+  eval "$(pyenv virtualenv-init -)";
+fi
+
+# pipx configuration with pyenv
+export PIPX_DEFAULT_PYTHON="$HOME/.pyenv/versions/3.12.10/bin/python"
+
+# Created by `pipx` on 2023-10-01 15:48:36
+export PATH="$PATH:/Users/gil/.local/bin"
+
+#export LDFLAGS="-L/opt/homebrew/opt/readline/lib -L/opt/homebrew/opt/sqlite/lib -L/opt/homebrew/opt/bzip2/lib -L/opt/homebrew/opt/jpeg/lib -L/opt/homebrew/opt/zlib/lib"
+#export CPPFLAGS="-I/opt/homebrew/opt/readline/include -I/opt/homebrew/opt/sqlite/include -I/opt/homebrew/opt/bzip2/include -I/opt/homebrew/opt/jpeg/include -I/opt/homebrew/opt/zlib/include"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+```
+
 Salto de palabras
 -----------------
 
@@ -182,10 +229,12 @@ ValueError: unknown locale: UTF-8
 
 Hay dos maneras de solucionar esto:
 
-- agregar al archivo :file:`.bash_profile` o en el archivo :file:`.zprofile`
+- agregar al archivo en el archivo :file:`.zprofile`
 
 ```console
-# iTerm2 fix
+# iTerm2 fixes
+# zsh: character not in range
+# Plone: ValueError: unknown locale: UTF-8
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 ```
