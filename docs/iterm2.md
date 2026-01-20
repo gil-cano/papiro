@@ -205,6 +205,15 @@ Para actuzalizar a la ultima versión.
    $ omz update
 
 
+```console
+# eval "$(oh-my-posh prompt init zsh)"
+if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
+#  eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/space.omp.json)"
+   eval "$(oh-my-posh init zsh --config ~/.poshthemes/space.omp.json)"
+fi
+```
+
+
 Temas
 -----
 
