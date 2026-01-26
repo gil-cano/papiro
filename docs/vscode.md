@@ -5,27 +5,64 @@
 [Visual Studio Code](https://code.visualstudio.com) incluye el comando `code`, para abrir archivos desde una terminal.
 
 * Inicia VS Code.
-* Abre la paleta de comandos con <kbd>F1</kbd> o (<kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>P</kbd>) y escribe 'shell command' para encontrar el comando:
+* Abre la paleta de comandos con <kbd>F1</kbd> o (<kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>P</kbd>) y escribe `shell command` para encontrar el comando:
 
 ```console
 Shell Command: Install 'code' command in PATH
 ```
 
-```{figure} _static/vscode/vsc_shell.png
-:alt: Install 'code' command in PATH
+<img src="_static/vscode/vsc_shell.png" alt="Install 'code' command in PATH" width="600">
 
-Install 'code' command in PATH
-```
  * Reinicia la terminal para que el nuevo `$PATH` tome efecto.
 
-```{note}
+
+
 | Teclas        | Descripción        |
-| :---          | ---                |
+|---------------|--------------------|
 | <kbd>F1</kbd> | paleta de comandos |
 | <kbd>⌘</kbd> <kbd>⇧</kbd> <kbd>P</kbd>  | paleta de comandos |
-```
+
 
 [Visual Studio Code on macOS](https://code.visualstudio.com/docs/setup/mac)
+
+## Extenciones
+
+* [python](https://marketplace.visualstudio.com/items?itemName=ms-python.python), Extension Pack [Pylance],[Python Debugger],[Python Environments]
+* [Plone support for VSCode](https://github.com/plone/plone-vs-utilities)
+* [Rainbow CSV](https://marketplace.visualstudio.com/items?itemName=mechatroner.rainbow-csv)
+* [Catppuccin for VSCode](https://marketplace.visualstudio.com/items?itemName=Catppuccin.catppuccin-vsc)
+* [Github Theme](https://marketplace.visualstudio.com/items?itemName=GitHub.github-vscode-theme) 
+* [MyST-Markdown](https://marketplace.visualstudio.com/items?itemName=ExecutableBookProject.myst-highlight)
+
+
+## trim trailing whitespace
+You can configure Visual Studio Code to automatically trim trailing whitespace on save: Press <kbd>⌘</kbd> + <kbd>,</kbd>, to open the settings screen. In the search bar, type Files: Trim Trailing Whitespace
+
+## Crea tus propios snippets
+Para crear o editar tus propios snippets, selecciona `Configure User Snippets` en `code > Setting...` y despues selecciona el lenguaje (python.json).
+
+```json
+{
+	"Add debugger": {
+		"prefix": "pdb",
+		"body": [
+			"import pdb; pdb.set_trace()",
+			"$0"
+		],
+		"description": "break into the debugger"
+	}
+}
+```
+
+## Excluye archivos de la navegación
+En `code > Setting... > Setting` buscar la sección `Files: excludes`. Agregar los patrones 
+
+```
+**/*.mo
+**/*.pyc
+**/*.pyo
+```
+
 
 ## GitHub theme for VS Code
 
@@ -40,10 +77,6 @@ Color theme
 ```
 
 ## Python en Visual Studio Code
-
-Instala la extensión [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
-
-Por default instala las extensiones: [Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance) y [Python Debugger](https://marketplace.visualstudio.com/items?itemName=ms-python.debugpy).
 
 [Python in Visual Studio Code](https://code.visualstudio.com/docs/languages/python)
 
@@ -158,45 +191,7 @@ Abre la paleta de comandos (<kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>P</kbd>) y se
 Instala la extensión [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)
 
 
-## Extenciones
 
-* [Github Theme](https://marketplace.visualstudio.com/items?itemName=GitHub.github-vscode-theme) 
-* [MyST-Markdown](https://marketplace.visualstudio.com/items?itemName=ExecutableBookProject.myst-highlight)
-* [Rainbow CSV](https://marketplace.visualstudio.com/items?itemName=mechatroner.rainbow-csv)
-* [ZCML language configuration](https://marketplace.visualstudio.com/items?itemName=erral.erral-zcmlLanguageConfiguration)
-requiere zpretty
-
-```shell
-pipx install zpretty
-```
-
-## trim trailing whitespace
-You can configure Visual Studio Code to automatically trim trailing whitespace on save: Press Ctrl + , to open the settings screen. In the search bar, type Files: Trim Trailing Whitespace
-
-## Crea tus propios snippets
-Para crear o editar tus propios snippets, selecciona `Configure User Snippets` en `code > Setting...` y despues selecciona el lenguaje (python.json).
-
-```json
-{
-	"Add debugger": {
-		"prefix": "pdb",
-		"body": [
-			"import pdb; pdb.set_trace()",
-			"$0"
-		],
-		"description": "break into the debugger"
-	}
-}
-```
-
-## Excluye archivos de la navegación
-En `code > Setting... > Setting` buscar la sección `Files: excludes`. Agregar los patrones 
-
-```
-**/*.mo
-**/*.pyc
-**/*.pyo
-```
 
 ## Font
 
