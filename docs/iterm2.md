@@ -137,18 +137,23 @@ brew list
 
 ## oh-my-posh
 
+Instalamos [oh-my-posh](https://ohmyposh.dev/)
+
 ```shell
 brew install oh-my-posh
 ```
 
-Add the following to ~/.zshrc:
+Agregamos la siguiente linea al final del archivo `~/.zshrc`:
 
 ```shell
-eval "$(oh-my-posh prompt init zsh)"
+if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
+  eval "$(oh-my-posh init zsh)"
+fi
 ```
+Una vez agregado, recargamos el profile para que se vean los cambios.
 
 ```shell
-source ~/.zshrc
+exec zsh
 ```
 
 ```console
