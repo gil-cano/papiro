@@ -143,7 +143,7 @@ Instalamos [oh-my-posh](https://ohmyposh.dev/)
 brew install oh-my-posh
 ```
 
-Agregamos la siguiente linea al final del archivo `~/.zshrc`:
+Agregamos la siguiente linea al final del archivo `.zshrc`:
 
 ```shell
 if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
@@ -155,17 +155,25 @@ Una vez agregado, recargamos el profile para que se vean los cambios.
 ```shell
 exec zsh
 ```
+para camboar el tema del prompt indoicamos el archivo de configuración:
+
+```shell
+mkdir ~/.poshthemes
+cp $(brew --prefix oh-my-posh)/themes/space.omp.json ~/.poshthemes
+```
+
+actualizamos el archivo `.zshrc`
 
 ```console
-# eval "$(oh-my-posh prompt init zsh)"
 if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
-#  eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/space.omp.json)"
    eval "$(oh-my-posh init zsh --config ~/.poshthemes/space.omp.json)"
 fi
 ```
 
 
-.zprofile
+
+`.zprofile`
+
 ```console
 eval "$(/opt/homebrew/bin/brew shellenv zsh)"
 
