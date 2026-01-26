@@ -145,7 +145,7 @@ brew install oh-my-posh
 
 Agregamos la siguiente linea al final del archivo `.zshrc`:
 
-```shell
+```console
 if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
   eval "$(oh-my-posh init zsh)"
 fi
