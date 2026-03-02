@@ -108,10 +108,10 @@ npm -v
 ```
 
 ```console
-10.9.2
+10.9.4
 ```
 
-actualizar la versión de npm
+actualizar a la ultima versión de npm (11.11.0)
 
 ```shell
 npm install -g npm
