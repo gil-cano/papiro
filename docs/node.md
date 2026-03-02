@@ -64,10 +64,10 @@ listar versiones de node instaladas de manera local
 nvm ls
 ```
 
-Instalar una version especificad de node
+Instalar la version necesaria de node [Volto node supports](https://6.docs.plone.org/volto/contributing/version-policy.html)
 
 ```shell
-nvm install 22.15.0
+nvm install 22.22.0
 ```
 
 Instalamos la ultima versión de soporte a largo plazo - long term support (LTS)
