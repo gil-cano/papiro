@@ -79,7 +79,7 @@ nvm install --lts
 Cambiar versión de node
 
 ```shell
-nvm use 22.15.0
+nvm use 22.22.0
 ```
 
 verificar la versión de node
@@ -89,7 +89,7 @@ node -v
 ```
 
 ```console
-v22.15.0
+v22.22.0
 ```
 
 o
@@ -98,7 +98,7 @@ nvm version
 ```
 
 ```console
-v22.15.0
+v22.22.0
 ```
 
 verificar la versión de npm
