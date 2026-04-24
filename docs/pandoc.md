@@ -27,3 +27,7 @@ jupyter nbconvert --to pdf your_notebook.ipynb
 ```shell
 pandoc --to pdf --from ipynb -o output.pdf your_notebook.ipynb
 ```
+
+```shell
+uv run jupyter nbconvert --to latex your_notebook.ipynb
+```
