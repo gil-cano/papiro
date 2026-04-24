@@ -17,3 +17,13 @@ https://github.com/Wandmalfarbe/pandoc-latex-template/issues/202
 
 https://github.com/Wandmalfarbe/pandoc-latex-template/issues/96#issuecomment-3016690275
 
+
+## Jupyter Notebooks
+
+```shell
+jupyter nbconvert --to pdf your_notebook.ipynb
+```
+
+```shell
+pandoc --to pdf --from ipynb -o output.pdf your_notebook.ipynb
+```
