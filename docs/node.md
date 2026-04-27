@@ -128,7 +128,7 @@ npm i -g corepack@latest && corepack enable
 ## Volto
 
 ```shell
-pipx run cookieplone project
+uvx cookieplone
 ```
 
 ver [Mastering Plone 6 Developmnet](https://training.plone.org/5/mastering-plone/installation.html#installing-plone-frontend)
