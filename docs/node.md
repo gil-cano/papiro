@@ -67,7 +67,7 @@ nvm ls
 Instalar la version necesaria de node [Volto node supports](https://6.docs.plone.org/volto/contributing/version-policy.html)
 
 ```shell
-nvm install 22.22.0
+nvm install 22.22.2
 ```
 
 Instalamos la ultima versión de soporte a largo plazo - long term support (LTS)
@@ -79,7 +79,7 @@ nvm install --lts
 Cambiar versión de node
 
 ```shell
-nvm use 22.22.0
+nvm use 22.22.2
 ```
 
 verificar la versión de node
@@ -89,7 +89,7 @@ node -v
 ```
 
 ```console
-v22.22.0
+v22.22.2
 ```
 
 o
@@ -98,7 +98,7 @@ nvm version
 ```
 
 ```console
-v22.22.0
+v22.22.2
 ```
 
 verificar la versión de npm
