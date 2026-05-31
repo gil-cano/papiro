@@ -23,6 +23,25 @@ export NVM_DIR="$HOME/.nvm"
 [[ -r $NVM_DIR/bash_completion ]] && \. $NVM_DIR/bash_completion
 ```
 
+# Versiones
+
+Plone usa las siguinets [versiones](https://6.docs.plone.org/volto/contributing/version-policy.html#plone-python-and-plone-rest-api-compatibility) de Volto
+
+| Plone | Python       | Volto            |
+| ----- | ------------ | ---------------- |
+| 6.2   | 3.10-3.14    | 19.0.0           |
+| 6.1   | 3.10-3.13    | 18.0.0           |
+
+Volto usa las siguientes [versiones](https://6.docs.plone.org/volto/contributing/version-policy.html#node-js|) de Node.js
+
+
+| Node.js | Volto       |
+| ------- | ----------- |
+| 22, 24  | Volto 19    |
+| 20, 22  | Volto 18    |
+
+
+
 ## Instalación
 
 ### nvm
@@ -76,12 +95,6 @@ Instalamos la ultima versión de soporte a largo plazo - long term support (LTS)
 nvm install --lts
 ```
 
-Cambiar versión de node
-
-```shell
-nvm use 22.22.2
-```
-
 verificar la versión de node
 
 ```shell
@@ -89,7 +102,7 @@ node -v
 ```
 
 ```console
-v22.22.2
+v24.16.0
 ```
 
 o
@@ -98,23 +111,13 @@ nvm version
 ```
 
 ```console
-v22.22.2
+v24.16.0
 ```
 
-verificar la versión de npm
+Cambiar versión de node
 
 ```shell
-npm -v
-```
-
-```console
-10.9.7
-```
-
-actualizar a la ultima versión de npm (11.11.0)
-
-```shell
-npm install -g npm
+nvm use 22.22.2
 ```
 
 ## corepack
@@ -123,6 +126,24 @@ Habilitamos corepack para que Node.js instale `pnpm` como manejador de paquetes.
 
 ```shell
 npm i -g corepack@latest && corepack enable
+```
+
+## pnpm
+
+Descarga e instala pnpm (Performant npm)
+
+```shell
+corepack prepare pnpm@latest --activate
+```
+
+verificamos la versión.
+
+```shell
+pnpm -v
+```
+
+```console
+11.5.0
 ```
 
 ## Volto
@@ -138,4 +159,4 @@ ver [Mastering Plone 6 Developmnet](https://training.plone.org/5/mastering-plone
 
 [Node.js](https://6.docs.plone.org/volto/contributing/version-policy.html#node-js)
 
-[Version policy] 
+[Version policy]
