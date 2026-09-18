@@ -49,8 +49,9 @@ Volto usa las siguientes [versiones](https://6.docs.plone.org/volto/contributing
 Primero instalamos un manejador de versiones de node [node version manager](https://github.com/nvm-sh/nvm)`.
 
 ```shell
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.7/install.sh | bash
 ```
+
 ```console
 => Compressing and cleaning up git repository
 
